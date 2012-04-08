@@ -1,0 +1,392 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "DefaultWhite.002" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "DefaultWhite.019" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+OBJECT world
+kids 19
+OBJECT poly
+name "ImatFuselageL1"
+data 18
+ImatFuselageL1.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.782468 -1.055029 1.031049
+-7.036144 -0.840811 0.975665
+-6.782468 -0.840811 0.97942
+-7.036144 -1.055029 1.027294
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+3 -0.001953125 0.1875
+0 0.0224609375 0.1875
+2 0.0224609375 0.875
+1 -0.001953125 0.875
+kids 0
+OBJECT poly
+name "ImatFuselageL2"
+data 18
+ImatFuselageL2.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.782468 -1.055029 1.031049
+-6.528791 -1.055029 1.034794
+-6.782468 -0.840811 0.97942
+-6.528791 -0.840811 0.986998
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+0 -0.001953125 0.1875
+1 0.0224609375 0.1875
+3 0.0224609375 0.875
+2 -0.001953125 0.875
+kids 0
+OBJECT poly
+name "ImatFuselageL3"
+data 18
+ImatFuselageL3.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.528791 -1.055029 1.034794
+-6.275114 -1.055029 1.040508
+-6.528791 -0.840811 0.986998
+-6.275113 -0.840811 0.99691
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+0 -0.001953125 0.1875
+1 0.0224609375 0.1875
+3 0.0224609375 0.875
+2 -0.001953125 0.875
+kids 0
+OBJECT poly
+name "ImatFuselageL4"
+data 18
+ImatFuselageL4.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.021438 -1.055029 1.044261
+-6.275114 -1.055029 1.040507
+-6.275113 -0.840811 0.99691
+-6.021437 -0.840811 1.004861
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+1 -0.001953125 0.1875
+0 0.0224609375 0.1875
+3 0.0224609375 0.875
+2 -0.001953125 0.875
+kids 0
+OBJECT poly
+name "ImatFuselageL5"
+data 18
+ImatFuselageL5.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-5.76776 -1.055029 1.043934
+-6.021438 -1.055029 1.044261
+-5.76776 -0.840811 1.008733
+-6.021437 -0.840811 1.004862
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+0 0.0224609375 0.1875
+2 0.0224609375 0.875
+3 -0.001953125 0.875
+1 -0.001953125 0.1875
+kids 0
+OBJECT poly
+name "ImatFuselageL6"
+data 18
+ImatFuselageL6.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-5.514084 -0.840811 1.012605
+-5.76776 -1.055029 1.043934
+-5.514084 -1.055029 1.043607
+-5.76776 -0.840811 1.008733
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+2 0.0224609375 0.1875
+0 0.0224609375 0.875
+3 -0.001953125 0.875
+1 -0.001953125 0.1875
+kids 0
+OBJECT poly
+name "ImatFuselageL6.001"
+data 8
+Mesh.001
+crease 30.000000
+numvert 0
+numsurf 0
+kids 0
+OBJECT poly
+name "ImatFuselageR1"
+data 18
+ImatFuselageR1.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-5.514084 -0.840811 -1.013006
+-5.76776 -1.055029 -1.044335
+-5.514084 -1.055029 -1.044008
+-5.76776 -0.840811 -1.009135
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+3 0.0224609375 0.875
+0 -0.001953125 0.875
+2 -0.001953125 0.1875
+1 0.0224609375 0.1875
+kids 0
+OBJECT poly
+name "ImatFuselageR2"
+data 18
+ImatFuselageR2.002
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-5.76776 -1.055029 -1.044335
+-6.021438 -1.055029 -1.044662
+-5.76776 -0.840811 -1.009135
+-6.021437 -0.840811 -1.005263
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+0 -0.001953125 0.1875
+1 0.0224609375 0.1875
+3 0.0224609375 0.875
+2 -0.001953125 0.875
+kids 0
+OBJECT poly
+name "ImatFuselageR3"
+data 18
+ImatFuselageR3.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.021438 -1.055029 -1.044662
+-6.275114 -1.055029 -1.040908
+-6.275113 -0.840811 -0.997311
+-6.021437 -0.840811 -1.005263
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+3 -0.001953125 0.875
+0 -0.001953125 0.1875
+1 0.0224609375 0.1875
+2 0.0224609375 0.875
+kids 0
+OBJECT poly
+name "ImatFuselageR4"
+data 18
+ImatFuselageR4.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.528791 -1.055029 -1.035195
+-6.275114 -1.055029 -1.040909
+-6.528791 -0.840811 -0.987399
+-6.275113 -0.840811 -0.997311
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+0 0.0224609375 0.1875
+2 0.0224609375 0.875
+3 -0.001953125 0.875
+1 -0.001953125 0.1875
+kids 0
+OBJECT poly
+name "ImatFuselageR5"
+data 18
+ImatFuselageR5.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.782468 -1.055029 -1.03145
+-6.528791 -1.055029 -1.035195
+-6.782468 -0.840811 -0.979821
+-6.528791 -0.840811 -0.987399
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+0 0.0224609375 0.1875
+2 0.0224609375 0.875
+3 -0.001953125 0.875
+1 -0.001953125 0.1875
+kids 0
+OBJECT poly
+name "ImatFuselageR6"
+data 18
+ImatFuselageR6.001
+texture "immat.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-6.782468 -1.055029 -1.03145
+-7.036144 -0.840811 -0.976066
+-6.782468 -0.840811 -0.979821
+-7.036144 -1.055029 -1.027695
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+2 -0.001953125 0.875
+0 -0.001953125 0.1875
+3 0.0224609375 0.1875
+1 0.0224609375 0.875
+kids 0
+OBJECT poly
+name "ImatPanel1"
+data 14
+ImatPanel1.001
+texture "immat-white.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-9.391521 -1.37767 -0.558341
+-9.391521 -1.389643 -0.558341
+-9.391521 -1.37767 -0.547061
+-9.391521 -1.389643 -0.547061
+numsurf 1
+SURF 0x20
+mat 2
+refs 4
+0 0.0224609375 0.875
+2 -0.001953125 0.875
+3 -0.001953125 0.1875
+1 0.0224609375 0.1875
+kids 0
+OBJECT poly
+name "ImatPanel2"
+data 14
+ImatPanel2.001
+texture "immat-white.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-9.391521 -1.37767 -0.569621
+-9.391521 -1.37767 -0.558341
+-9.391521 -1.389643 -0.558341
+-9.391521 -1.389643 -0.569621
+numsurf 1
+SURF 0x20
+mat 2
+refs 4
+0 0.0224609375 0.875
+1 -0.001953125 0.875
+2 -0.001953125 0.1875
+3 0.0224609375 0.1875
+kids 0
+OBJECT poly
+name "ImatPanel3"
+data 14
+ImatPanel3.001
+texture "immat-white.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-9.391521 -1.37767 -0.580901
+-9.391521 -1.37767 -0.569621
+-9.391521 -1.389643 -0.569621
+-9.391521 -1.389643 -0.580901
+numsurf 1
+SURF 0x20
+mat 2
+refs 4
+0 0.0224609375 0.875
+1 -0.001953125 0.875
+2 -0.001953125 0.1875
+3 0.0224609375 0.1875
+kids 0
+OBJECT poly
+name "ImatPanel4"
+data 14
+ImatPanel4.001
+texture "immat-white.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-9.391521 -1.37767 -0.592181
+-9.391521 -1.37767 -0.580901
+-9.391521 -1.389643 -0.580901
+-9.391521 -1.389643 -0.592181
+numsurf 1
+SURF 0x20
+mat 2
+refs 4
+0 0.0224609375 0.875
+1 -0.001953125 0.875
+2 -0.001953125 0.1875
+3 0.0224609375 0.1875
+kids 0
+OBJECT poly
+name "ImatPanel5"
+data 14
+ImatPanel5.001
+texture "immat-white.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-9.391521 -1.37767 -0.603461
+-9.391521 -1.37767 -0.592181
+-9.391521 -1.389643 -0.592181
+-9.391521 -1.389643 -0.603461
+numsurf 1
+SURF 0x20
+mat 2
+refs 4
+0 0.0224609375 0.875
+1 -0.001953125 0.875
+2 -0.001953125 0.1875
+3 0.0224609375 0.1875
+kids 0
+OBJECT poly
+name "ImatPanel6"
+data 14
+ImatPanel6.001
+texture "immat-white.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+-9.391521 -1.37767 -0.603461
+-9.391521 -1.389643 -0.603461
+-9.391521 -1.389643 -0.614741
+-9.391521 -1.37767 -0.614741
+numsurf 1
+SURF 0x20
+mat 2
+refs 4
+3 0.0224609375 0.875
+0 -0.001953125 0.875
+1 -0.001953125 0.1875
+2 0.0224609375 0.1875
+kids 0

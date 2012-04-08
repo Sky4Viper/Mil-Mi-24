@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Mil Mi 24 Hind (Yasim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)/ Zel (FDM)</author>
+    <status>alpha</status>
+    <license>GPL v2</license>
+
+    <flight-model>yasim</flight-model>
+    <aero>mi24</aero>
+
+    <fuel-fraction>0.8</fuel-fraction>
+
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   3 </model>
+    </rating>
+
+    <startup>
+      <splash-texture>Aircraft/Mil-Mi-24/mi24-splash.png</splash-texture>
+    </startup> 
+
+    <sound>
+      <path>Aircraft/Mil-Mi-24/Sounds/mi24-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Mil-Mi-24/Models/mi24.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <mi24>
+        <state type="int">0</state>
+        <engine type="float">0</engine>
+        <rotor-step-deg type="float">-1</rotor-step-deg>
+      </mi24>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
+        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3" alias="/smoke/colors/knob-red">1</float>                      <!-- 3 smoke mixer red setting -->
+        <float n="4" alias="/smoke/colors/knob-green">1</float>                    <!-- 4 smoke mixer green setting -->
+        <float n="5" alias="/smoke/colors/knob-blue">1</float>                     <!-- 5 smoke mixer blue setting -->
+        <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Co-Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Right Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="3">
+      <name>Load</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>20000</max-lb>
+    </weight>
+    
+    <help>
+      <title>AirCrane - background and help</title>
+      <line></line>
+      <key>
+        <name>{</name>
+        <desc>Start engines</desc>
+      </key>
+      <key>
+        <name>}</name>
+        <desc>Shutdown engines</desc>
+      </key>
+      <key>
+        <name>R</name>
+        <desc>Toggle rotor brake</desc>
+      </key>
+      <key>
+        <name>r</name>
+        <desc>Apply rotor brake</desc>
+      </key>
+      <key>
+        <name>Ctrl d</name>
+        <desc>Toggle S.A.S.</desc>
+      </key>
+      <key>
+        <name>Ctrl e</name>
+        <desc>Toggle C.A.S.</desc>
+      </key>
+      <key>
+        <name>Ctrl f</name>
+        <desc>Auto hover</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/mi24-menu.xml"/>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking>1</brake-parking>
+    </gear>
+    <rotor>
+      <reltarget>1</reltarget>
+      <maxreltorque>1</maxreltorque>
+    </rotor>
+  </controls>
+
+  <instrumentation>
+    <gsdi>
+      <serviceable type="bool">true</serviceable>
+      <enabled type="bool">true</enabled>
+    </gsdi>
+  </instrumentation>
+
+  <input>
+    <keyboard include="Nasal/mi24-keyboard.xml"/>
+  </input>
+
+  <rotors>
+    <main>
+      <rpm type="double">0</rpm>
+      <cone-deg type="double">0</cone-deg>
+      <cone1-deg type="double">0</cone1-deg>
+      <cone2-deg type="double">0</cone2-deg>
+      <cone3-deg type="double">0</cone3-deg>
+      <cone4-deg type="double">0</cone4-deg>
+    </main>
+  </rotors>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Mil-Mi-24/Nasal/doors.nas</file>
+    </doors>
+    <mi24>
+      <file>Aircraft/Mil-Mi-24/Nasal/immat.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/light.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/mi24.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/liveries.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/bladevisible.nas</file>
+    </mi24>
+  </nasal>
+
+</PropertyList>
+

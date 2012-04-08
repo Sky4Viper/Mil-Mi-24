@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- Les missiles 9K 121 -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.412 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.628 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.845 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -3.061 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.533 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m> -2.925 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.412 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.628 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.845 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  3.061 </y-m>
+      <z-m> -0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.533 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <offsets>
+      <x-m>  0.011 </x-m>
+      <y-m>  2.925 </y-m>
+      <z-m> -0.301 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

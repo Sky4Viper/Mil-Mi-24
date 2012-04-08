@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>tailrotor.ac</path>
+
+  <animation>
+    <object-name>rotortail</object-name>
+  </animation>
+
+  <!-- Blades -->
+  <model>
+    <name>Blade1</name>
+    <path>Aircraft/Mil-Mi-24/Models/TailRotor/blade.xml</path>
+  </model>
+
+  <model>
+    <name>Blade2</name>
+    <path>Aircraft/Mil-Mi-24/Models/TailRotor/blade.xml</path>
+    <offsets>
+      <heading-deg> 120 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Blade3</name>
+    <path>Aircraft/Mil-Mi-24/Models/TailRotor/blade.xml</path>
+    <offsets>
+      <heading-deg> 240 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>rotorcomplet</name>
+    <object-name>rotortail</object-name>
+    <object-name>Blade1</object-name>
+    <object-name>Blade2</object-name>
+    <object-name>Blade3</object-name>
+  </animation>
+
+  <!-- Rotation du rotor -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorcomplet</object-name>
+    <property>rotors/tail/blade[0]/position-deg</property>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
