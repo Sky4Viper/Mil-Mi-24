@@ -5,7 +5,7 @@
   <!-- Les missiles 9K 121 -->
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -2.412 </y-m>
@@ -14,7 +14,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -2.628 </y-m>
@@ -23,7 +23,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -2.845 </y-m>
@@ -32,7 +32,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -3.061 </y-m>
@@ -41,7 +41,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -2.533 </y-m>
@@ -50,7 +50,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m> -2.925 </y-m>
@@ -60,7 +60,7 @@
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  2.412 </y-m>
@@ -69,7 +69,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  2.628 </y-m>
@@ -78,7 +78,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  2.845 </y-m>
@@ -87,7 +87,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  3.061 </y-m>
@@ -96,7 +96,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  2.533 </y-m>
@@ -105,7 +105,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/9k-121.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/9k-121.xml</path>
     <offsets>
       <x-m>  0.011 </x-m>
       <y-m>  2.925 </y-m>

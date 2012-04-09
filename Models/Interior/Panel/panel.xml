@@ -18,7 +18,7 @@
   <model>
     <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m>  0.002 </x-m>
+      <x-m> -0.018 </x-m>
       <y-m> -0.040 </y-m>
       <z-m>  0.230 </z-m>
     </offsets>
@@ -41,6 +41,16 @@
       <x-m> 0.004 </x-m>
       <y-m> 0.090 </y-m>
       <z-m> 0.226 </z-m>
+    </offsets>
+  </model>
+
+  <!-- MAP -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/Instruments/map/map.xml</path>
+    <offsets>
+      <x-m> -0.005 </x-m>
+      <y-m>  0.285 </y-m>
+      <z-m>  0.235 </z-m>
     </offsets>
   </model>
 
