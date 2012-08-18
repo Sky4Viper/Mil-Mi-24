@@ -1,338 +1,378 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Based on Bo105 and Alouette 2 -->
 <PropertyList>
 
   <fx>
 
-    <engine>
-      <name>Start external</name>
+    <!-- ******************** Engine 1 ***************************** -->
+    <starter>
+      <name>starter_external_start</name>
       <mode>once</mode>
       <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
       <condition>
         <and>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+          <property>controls/engines/engine[0]/starter</property>
           <not>
             <property>sim/crashed</property>
           </not>
-          <and>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>0</value> <!-- Pilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>8</value> <!-- Copilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>9</value> <!-- Crane view -->
-              </equals>
-            </not>
-          </and>
+          <not>
+            <equals>
+              <property>sim/current-view/view-number</property>
+              <value> 0 </value>
+            </equals>
+          </not>
         </and>
       </condition>
       <volume>
-	<factor>0.12</factor>
+        <factor> 0.3 </factor>
       </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine>
+      <reference-dist> 100 </reference-dist>
+      <max-dist> 1000 </max-dist>
+    </starter>
 
-    <engine>
-      <name>Start internal</name>
+    <starter>
+      <name>starter_internal_start</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-start-in.wav</path>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
       <condition>
         <and>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+          <property>controls/engines/engine[0]/starter</property>
           <not>
             <property>sim/crashed</property>
           </not>
-          <or>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>0</value> <!-- Pilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>8</value> <!-- Copilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>9</value> <!-- Crane view -->
-            </equals>
-          </or>
+          <equals>
+            <property>sim/current-view/view-number</property>
+            <value> 0 </value>
+          </equals>
         </and>
       </condition>
       <volume>
-	<factor>0.12</factor>
+        <factor> 0.15 </factor>
       </volume>
-      <reference-dist>50</reference-dist>
-      <max-dist>200</max-dist>
-    </engine>
+      <reference-dist> 50 </reference-dist>
+      <max-dist> 200 </max-dist>
+    </starter>
 
     <engine>
-      <name>Turbine external</name>
-      <mode>looped</mode>
+      <name>turbine_external-loop</name>
+      <mode>once</mode>
       <path>Aircraft/Mil-Mi-24/Sounds/turbine-loop.wav</path>
       <condition>
         <and>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+          <property>engines/engine[0]/running</property>
           <not>
             <property>sim/crashed</property>
           </not>
-          <and>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>0</value> <!-- Pilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>8</value> <!-- Copilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>9</value> <!-- Crane view -->
-              </equals>
-            </not>
-          </and>
+          <not>
+            <equals>
+              <property>sim/current-view/view-number</property>
+              <value> 0 </value>
+            </equals>
+          </not>
         </and>
       </condition>
       <volume>
-	<factor>0.12</factor>
+        <factor> 0.5 </factor>
       </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <reference-dist> 100 </reference-dist>
+      <max-dist> 1000 </max-dist>
     </engine>
 
     <engine>
-      <name>Turbine internal</name>
-      <mode>looped</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-loop-in.wav</path>
+      <name>turbine_internal-loop</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-loop.wav</path>
       <condition>
         <and>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+          <property>engines/engine[0]/running</property>
           <not>
             <property>sim/crashed</property>
           </not>
-          <or>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>0</value> <!-- Pilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>8</value> <!-- Copilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>9</value> <!-- Crane view -->
-            </equals>
-          </or>
+          <equals>
+            <property>sim/current-view/view-number</property>
+            <value> 0 </value>
+          </equals>
         </and>
       </condition>
       <volume>
-	<factor>0.12</factor>
+        <factor> 0.15 </factor>
       </volume>
-      <reference-dist>50</reference-dist>
-      <max-dist>200</max-dist>
+      <reference-dist> 50 </reference-dist>
+      <max-dist> 200 </max-dist>
     </engine>
 
     <engine>
-      <name>Shutdown external</name>
+      <name>turbine_external-shutdown</name>
       <mode>once</mode>
       <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
       <condition>
         <and>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+          <not>
+            <property>engines/engine[0]/running</property>
+          </not>
           <not>
             <property>sim/crashed</property>
           </not>
-          <and>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>0</value> <!-- Pilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>8</value> <!-- Copilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>9</value> <!-- Crane view -->
-              </equals>
-            </not>
-          </and>
+          <not>
+            <equals>
+              <property>sim/current-view/view-number</property>
+              <value> 0 </value>
+            </equals>
+          </not>
         </and>
       </condition>
       <volume>
-	<factor>0.12</factor>
+        <factor> 0.3 </factor>
       </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <reference-dist> 100 </reference-dist>
+      <max-dist> 1000 </max-dist>
     </engine>
 
     <engine>
-      <name>Shutdown internal</name>
+      <name>turbine_internal-shutdown</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop-in.wav</path>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
       <condition>
         <and>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+          <not>
+            <property>engines/engine[0]/running</property>
+          </not>
           <not>
             <property>sim/crashed</property>
           </not>
-          <or>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>0</value> <!-- Pilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>8</value> <!-- Copilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>9</value> <!-- Crane view -->
-            </equals>
-          </or>
+          <equals>
+            <property>sim/current-view/view-number</property>
+            <value> 0 </value>
+          </equals>
         </and>
       </condition>
       <volume>
-	<factor>0.12</factor>
+        <factor> 0.15 </factor>
       </volume>
-      <reference-dist>50</reference-dist>
-      <max-dist>200</max-dist>
+      <reference-dist> 50 </reference-dist>
+      <max-dist> 200 </max-dist>
     </engine>
 
+    <!-- ******************** Engine 2 ***************************** -->
+    <starter>
+      <name>starter_external_start</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
+      <condition>
+        <and>
+          <property>controls/engines/engine[1]/starter</property>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+          <not>
+            <equals>
+              <property>sim/current-view/view-number</property>
+              <value> 0 </value>
+            </equals>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <factor> 0.3 </factor>
+      </volume>
+      <reference-dist> 100 </reference-dist>
+      <max-dist> 1000 </max-dist>
+    </starter>
+
+    <starter>
+      <name>starter_internal_start</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
+      <condition>
+        <and>
+          <property>controls/engines/engine[1]/starter</property>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+          <equals>
+            <property>sim/current-view/view-number</property>
+            <value> 0 </value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <factor> 0.15 </factor>
+      </volume>
+      <reference-dist> 50 </reference-dist>
+      <max-dist> 200 </max-dist>
+    </starter>
+
+    <engine>
+      <name>turbine_external-loop</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-loop.wav</path>
+      <condition>
+        <and>
+          <property>engines/engine[1]/running</property>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+          <not>
+            <equals>
+              <property>sim/current-view/view-number</property>
+              <value> 0 </value>
+            </equals>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <factor> 0.5 </factor>
+      </volume>
+      <reference-dist> 100 </reference-dist>
+      <max-dist> 1000 </max-dist>
+    </engine>
+
+    <engine>
+      <name>turbine_internal-loop</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-loop.wav</path>
+      <condition>
+        <and>
+          <property>engines/engine[1]/running</property>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+          <equals>
+            <property>sim/current-view/view-number</property>
+            <value> 0 </value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <factor> 0.15 </factor>
+      </volume>
+      <reference-dist> 50 </reference-dist>
+      <max-dist> 200 </max-dist>
+    </engine>
+
+    <engine>
+      <name>turbine_external-shutdown</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
+      <condition>
+        <and>
+          <not>
+            <property>engines/engine[1]/running</property>
+          </not>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+          <not>
+            <equals>
+              <property>sim/current-view/view-number</property>
+              <value> 0 </value>
+            </equals>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <factor> 0.3 </factor>
+      </volume>
+      <reference-dist> 100 </reference-dist>
+      <max-dist> 1000 </max-dist>
+    </engine>
+
+    <engine>
+      <name>turbine_internal-shutdown</name>
+      <mode>once</mode>
+      <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
+      <condition>
+        <and>
+          <not>
+            <property>engines/engine[1]/running</property>
+          </not>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+          <equals>
+            <property>sim/current-view/view-number</property>
+            <value> 0 </value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <factor> 0.15 </factor>
+      </volume>
+      <reference-dist> 50 </reference-dist>
+      <max-dist> 200 </max-dist>
+    </engine>
+
+    <!-- ********************* Rotors ****************************** -->
     <rotor>
-      <name>Rotor external</name>
+      <name>rotor-external</name>
       <mode>looped</mode>
       <path>Aircraft/Mil-Mi-24/Sounds/rotor-loop.wav</path>
       <condition>
         <and>
           <greater-than>
             <property>rotors/main/rpm</property>
-            <value>50</value>
+            <value> 50 </value>
           </greater-than>
+          <not>
+            <equals>
+              <property>sim/current-view/view-number</property>
+              <value> 0 </value>
+            </equals>
+          </not>
           <not>
             <property>sim/crashed</property>
           </not>
-          <and>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>0</value> <!-- Pilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>8</value> <!-- Copilote view -->
-              </equals>
-            </not>
-            <not>
-              <equals>
-                <property>sim/current-view/view-number</property>
-                <value>9</value> <!-- Crane view -->
-              </equals>
-            </not>
-          </and>
         </and>
       </condition>
       <volume>
-        <property>rotors/gear/torque-sound-filtered</property>
+        <property>rotors/main/rpm</property>
+        <factor> 0.02 </factor>
       </volume>
       <pitch>
         <property>rotors/main/rpm</property>
-        <factor>0.00263</factor>
-        <offset>-0.0</offset>
-        <max>2.5</max>
+        <factor> 0.00263 </factor>
+        <offset> 0.00000 </offset>
+        <min> 0.0 </min>
+        <max> 1.5 </max>
       </pitch>
-      <position>
-        <x> -2 </x>
-        <y> 0 </y>
-        <z> 1 </z>
-      </position>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <reference-dist> 100 </reference-dist>
+      <max-dist> 1000 </max-dist>
     </rotor>
 
     <rotor>
-      <name>Rotor internal</name>
+      <name>rotor-external</name>
       <mode>looped</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/rotor-loop-in.wav</path>
+      <path>Aircraft/Mil-Mi-24/Sounds/rotor-loop.wav</path>
       <condition>
         <and>
           <greater-than>
             <property>rotors/main/rpm</property>
-            <value>50</value>
+            <value> 50 </value>
           </greater-than>
+          <equals>
+            <property>sim/current-view/view-number</property>
+            <value> 0 </value>
+          </equals>
           <not>
             <property>sim/crashed</property>
           </not>
-          <or>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>0</value> <!-- Pilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>8</value> <!-- Copilote view -->
-            </equals>
-            <equals>
-              <property>sim/current-view/view-number</property>
-              <value>9</value> <!-- Crane view -->
-            </equals>
-          </or>
         </and>
       </condition>
       <volume>
-        <property>rotors/gear/torque-sound-filtered</property>
+        <property>rotors/main/rpm</property>
+        <factor> 0.002 </factor>
       </volume>
       <pitch>
         <property>rotors/main/rpm</property>
-        <factor>0.004255</factor>
-        <offset>-0.0</offset>
-        <max>2.5</max>
+        <factor> 0.00263 </factor>
+        <offset> 0.00000 </offset>
+        <min> 0.0 </min>
+        <max> 1.5 </max>
       </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
+      <reference-dist> 50 </reference-dist>
+      <max-dist> 200 </max-dist>
     </rotor>
+    <!-- *********************************************************** -->
 
     <contact>
       <name>ground contact</name>
@@ -347,8 +387,8 @@
       <pitch>
         <factor>0.01</factor>
       </pitch>
-      <reference-dist>5.0</reference-dist>
-      <max-dist>10.0</max-dist>
+      <reference-dist> 5 </reference-dist>
+      <max-dist> 10 </max-dist>
     </contact>
 
     <contact>
@@ -364,8 +404,8 @@
       <pitch>
         <factor>0.01</factor>
       </pitch>
-      <reference-dist>5.0</reference-dist>
-      <max-dist>10.0</max-dist>
+      <reference-dist> 5 </reference-dist>
+      <max-dist> 10 </max-dist>
     </contact>
 
     <contact>
@@ -381,8 +421,8 @@
       <pitch>
         <factor>0.01</factor>
       </pitch>
-      <reference-dist>5.0</reference-dist>
-      <max-dist>10.0</max-dist>
+      <reference-dist> 5 </reference-dist>
+      <max-dist> 10 </max-dist>
     </contact>
 
     <wind>
@@ -408,8 +448,8 @@
         <factor>0.01</factor>
         <offset>1.25</offset>
       </pitch>
-      <reference-dist>10.0</reference-dist>
-      <max-dist>20.0</max-dist>
+      <reference-dist> 10 </reference-dist>
+      <max-dist> 20 </max-dist>
     </wind>
 
     <crash>
@@ -428,3 +468,4 @@
   </fx>
 
 </PropertyList>
+

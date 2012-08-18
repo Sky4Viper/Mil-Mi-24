@@ -3,11 +3,11 @@
 <PropertyList>
 
   <sim>
-
+  
     <model>
       <livery>
-        <name type="string">Hrz</name>
-        <texture>Liveries/HRZ.png</texture>
+        <name type="string">Croatian Air Force H-305</name>
+        <texture>Liveries/H-305.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
@@ -20,7 +20,7 @@
         </emission>
       </livery>
     </model>
-
+    
   </sim>
-
+  
 </PropertyList>
