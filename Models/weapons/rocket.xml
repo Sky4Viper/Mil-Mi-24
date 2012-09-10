@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -15,6 +15,20 @@
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>rocket</object-name>
   </effect>
+
+
+ <!-- Smoke -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Rocket/Smoke.xml</path>
+    <offsets>
+      <x-m>  2.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  0 </z-m>
+    </offsets>
+  </model>
+
+
+
 
 </PropertyList>
 

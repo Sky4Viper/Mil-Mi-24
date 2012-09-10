@@ -177,6 +177,11 @@
     </offsets>
   </model>
 
+  <!-- L'interieur -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Interior/interior.xml</path>
+  </model>
+
   <!-- Effets sur le sol -->
   <!-- Roue avant -->
   <model>
@@ -206,11 +211,6 @@
       <y-m>  1.343 </y-m>
       <z-m> -2.445 </z-m>
     </offsets>
-  </model>
-
-  <!-- L'interieur -->
-  <model>
-    <path>Aircraft/Mil-Mi-24/Models/Interior/interior.xml</path>
   </model>
 
   <!-- Les roquettes -->
