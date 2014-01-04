@@ -22,22 +22,15 @@
     <object-name>intvitrepilote</object-name>
   </animation>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/glass</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitresG</object-name>
     <object-name>intvitresD</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>intvitres</object-name>
-    <object-name>intvitresG</object-name>
-    <object-name>intvitresD</object-name>
-  </animation>
-
+    <object-name>intvitrepilote</object-name>
+  </effect>
+  
   <!-- Planche de bord -->
   <model>
     <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/panel.xml</path>
@@ -77,9 +70,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>IntLaPortePilote</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>IntLaPortePilote</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -100 </factor>
     <axis>
       <x1-m> -5.021 </x1-m>
@@ -99,12 +106,35 @@
   </animation>
 
   <animation>
+    <name>IntPorteCargoDroite</name>
+    <object-name>intporteDH</object-name>
+    <object-name>intvitresD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteCargoGauche</object-name>
+    <object-name>intporteGB</object-name>
+    <object-name>IntPorteCargoDroite</object-name>
+    <object-name>intporteDB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>IntPorteCargoGauche</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -125 </dep></entry>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -125 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.837 </x1-m>
@@ -119,10 +149,10 @@
   <animation>
     <type>rotate</type>
     <object-name>intporteGB</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 115 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 115 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.837 </x1-m>
@@ -135,18 +165,12 @@
   </animation>
 
   <animation>
-    <name>IntPorteCargoDroite</name>
-    <object-name>intporteDH</object-name>
-    <object-name>intvitresD</object-name>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>IntPorteCargoDroite</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -125 </dep></entry>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -125 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.294 </x1-m>
@@ -161,10 +185,10 @@
   <animation>
     <type>rotate</type>
     <object-name>intporteDB</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 115 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 115 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.294 </x1-m>
@@ -177,4 +201,3 @@
   </animation>
 
 </PropertyList>
-

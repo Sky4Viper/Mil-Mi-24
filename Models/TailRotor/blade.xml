@@ -12,12 +12,12 @@
     <object-name>propdisc</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>propblur</object-name>
     <object-name>propdisc</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Sélection blade/blur/disc tail rotor-->
   <animation>
     <type>select</type>
@@ -53,7 +53,7 @@
     <condition>
       <less-than>
         <property>rotors/tail/rpm</property>
-	<value>150</value>
+        <value>150</value>
       </less-than>
     </condition>
   </animation>
@@ -71,4 +71,3 @@
   </animation>
 
 </PropertyList>
-

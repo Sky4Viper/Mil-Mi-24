@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 64 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 OBJECT world
 kids 3
 OBJECT poly
@@ -8,7 +8,7 @@ loc 0 0 -0
 data 7
 boutons
 texture "map.png"
-texrep 1 1
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 194
 0.045213 -0.087461 0.057402
@@ -1493,7 +1493,7 @@ loc 0 0 -0
 data 4
 fond
 texture "map.png"
-texrep 1 1
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 32
 0.023814 -0.10922 -0.132846
@@ -1725,7 +1725,7 @@ loc 0 0 -0
 data 3
 map
 texture "map.png"
-texrep 1 1
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 4
 0.024997 -0.074295 -0.116156

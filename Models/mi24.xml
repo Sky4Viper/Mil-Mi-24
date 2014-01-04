@@ -49,6 +49,8 @@
     <object-name>supports</object-name>
     <object-name>supportrotor</object-name>
     <object-name>antennes</object-name>
+    <object-name>supportslampes</object-name>
+    <object-name>perche</object-name>
     
     <object-name>trous</object-name>
     <object-name>cachesentrees</object-name>
@@ -62,13 +64,16 @@
     <object-name>roueD</object-name>
     <object-name>patte</object-name>
     <object-name>sousmissiles</object-name>
-
+    <object-name>cables</object-name>
+    
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
     <object-name>vitrepilote</object-name>
     <object-name>vitresG</object-name>
     <object-name>vitresD</object-name>
-    <object-name>cables</object-name>
+    <object-name>lampes</object-name>
+    <object-name>lampeRed</object-name>
+    <object-name>lampeGreen</object-name>
   </animation>
 
   <animation>
@@ -93,6 +98,8 @@
     <object-name>supports</object-name>
     <object-name>supportrotor</object-name>
     <object-name>antennes</object-name>
+    <object-name>supportslampes</object-name>
+    <object-name>perche</object-name>
     
     <object-name>trous</object-name>
     <object-name>cachesentrees</object-name>
@@ -106,7 +113,8 @@
     <object-name>roueD</object-name>
     <object-name>patte</object-name>
     <object-name>sousmissiles</object-name>
-
+    <object-name>cables</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
@@ -115,16 +123,10 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
-<!--
+  
   <effect>
-    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Bump//bumpspec</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>porteGH</object-name>
     <object-name>porteGB</object-name>
@@ -145,28 +147,28 @@
     <object-name>supports</object-name>
     <object-name>supportrotor</object-name>
     <object-name>antennes</object-name>
+    <object-name>supportslampes</object-name>
+    <object-name>perche</object-name>
   </effect>
- -->
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/glass</inherits-from>
     <object-name>vitres</object-name>
     <object-name>vitresG</object-name>
     <object-name>vitresD</object-name>
     <object-name>vitrepilote</object-name>
-    <object-name>cables</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>vitresG</object-name>
-    <object-name>vitresD</object-name>
-    <object-name>vitrepilote</object-name>
-    <object-name>cables</object-name>
-  </animation>
-
+    <object-name>lampes</object-name>
+    <object-name>lampeRed</object-name>
+    <object-name>lampeGreen</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Mil-Mi-24/Models/shadow.xml</path>
@@ -489,9 +491,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>LaPortePilote</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>LaPortePilote</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -100 </factor>
     <axis>
       <x1-m> -5.021 </x1-m>
@@ -511,9 +527,32 @@
   </animation>
 
   <animation>
+    <name>PorteCargoDroite</name>
+    <object-name>porteDH</object-name>
+    <object-name>vitresD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>PorteCargoGauche</object-name>
+    <object-name>porteGB</object-name>
+    <object-name>PorteCargoDroite</object-name>
+    <object-name>porteDB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>PorteCargoGauche</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
       <entry><ind> 1.0 </ind><dep> -125 </dep></entry>
@@ -531,7 +570,7 @@
   <animation>
     <type>rotate</type>
     <object-name>porteGB</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
       <entry><ind> 1.0 </ind><dep> 115 </dep></entry>
@@ -547,15 +586,9 @@
   </animation>
 
   <animation>
-    <name>PorteCargoDroite</name>
-    <object-name>porteDH</object-name>
-    <object-name>vitresD</object-name>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteCargoDroite</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
       <entry><ind> 1.0 </ind><dep> -125 </dep></entry>
@@ -573,7 +606,7 @@
   <animation>
     <type>rotate</type>
     <object-name>porteDB</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
       <entry><ind> 1.0 </ind><dep> 115 </dep></entry>
@@ -588,5 +621,68 @@
     </axis>
   </animation>
 
-</PropertyList>
+  <!-- Essais d'ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 3.76332 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.24353 </z-m>
+    </offsets>
+  </model>
 
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> -3.42259 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -2.25873 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m> -1.51349 </x-m>
+      <y-m> -3.82606 </y-m>
+      <z-m> -0.96380 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -1.51349 </x-m>
+      <y-m>  3.82606 </y-m>
+      <z-m> -0.96380 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/light/BlueLight.xml</path>
+    <offsets>
+      <x-m> -0.68523 </x-m>
+      <y-m> -2.71300 </y-m>
+      <z-m> -1.06265 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/light/BlueLight.xml</path>
+    <offsets>
+      <x-m> -0.68523 </x-m>
+      <y-m>  2.71300 </y-m>
+      <z-m> -1.06265 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m>  7.34349 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.17281 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

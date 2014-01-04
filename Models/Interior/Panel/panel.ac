@@ -7,7 +7,7 @@ name "fond"
 loc 0 0 -0
 data 4
 fond
-texture "colors.png"
+texture "panel.png"
 texrep 1 1
 crease 30.000001
 numvert 86
@@ -635,7 +635,7 @@ name "instr1"
 loc 0 0 -0
 data 6
 instr1
-texture "colors.png"
+texture "panel.png"
 texrep 1 1
 crease 30.000001
 numvert 31
@@ -865,7 +865,7 @@ name "panel"
 loc 0 0 -0
 data 5
 panel
-texture "colors.png"
+texture "panel.png"
 texrep 1 1
 crease 30.000001
 numvert 124
@@ -1583,7 +1583,7 @@ name "separation"
 loc 0 0 -0
 data 10
 separation
-texture "colors.png"
+texture "panel.png"
 texrep 1 1
 crease 30.000001
 numvert 88

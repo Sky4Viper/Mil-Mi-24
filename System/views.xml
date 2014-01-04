@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <chase-distance-m type="double" archive="y"> -30 </chase-distance-m>
+  <chase-distance-m type="double" archive="y"> -25 </chase-distance-m>
 
   <view n="100">
     <name>Passanger Seat View</name>

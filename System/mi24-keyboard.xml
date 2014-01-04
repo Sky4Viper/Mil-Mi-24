@@ -4,33 +4,33 @@
 
   <!-- ###### -->   
   <key n="101">
-      <name>e</name>
-      <desc>Rockets</desc>
+    <name>e</name>
+    <desc>Rockets</desc>
+    <binding>
+      <command>nasal</command>
+      <script>guns.fire_Rocket()</script>
+    </binding>
+    <mod-up>
       <binding>
-          <command>nasal</command>
-          <script>guns.fire_Rocket()</script>
+        <command>nasal</command>
+        <script>guns.stop_Rocket()</script>
       </binding>
-      <mod-up>
-         <binding>
-             <command>nasal</command>
-             <script>guns.stop_Rocket()</script>
-         </binding>
-      </mod-up>
+    </mod-up>
   </key>
 
   <key n="102">
-      <name>f</name>
-      <desc>Gun trigger</desc> 
+    <name>f</name>
+    <desc>Gun trigger</desc> 
+    <binding>
+      <command>nasal</command>
+      <script>guns.fire_MG()</script>
+    </binding>
+    <mod-up>
       <binding>
-          <command>nasal</command>
-          <script>guns.fire_MG()</script>
+        <command>nasal</command>
+        <script>guns.stop_MG()</script>
       </binding>
-      <mod-up>
-         <binding>
-             <command>nasal</command>
-             <script>guns.stop_MG()</script>
-         </binding>
-      </mod-up>
+    </mod-up>
   </key>   
   <!-- ###### -->
 
@@ -39,7 +39,7 @@
     <desc>Passenger door</desc>
     <binding>
       <command>nasal</command>
-      <script>doors.doorsystem.passengerexport();</script>
+      <script>doors.passenger.toggle();</script>
     </binding>
   </key>
 
@@ -48,7 +48,7 @@
     <desc>Crew door</desc>
     <binding>
       <command>nasal</command>
-      <script>doors.doorsystem.crewexport();</script>
+      <script>doors.crew.toggle();</script>
     </binding>
   </key>
 
@@ -98,4 +98,3 @@
   </key>
 
 </PropertyList>
-

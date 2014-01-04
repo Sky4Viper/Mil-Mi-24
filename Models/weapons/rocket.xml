@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -16,7 +16,6 @@
     <object-name>rocket</object-name>
   </effect>
 
-
  <!-- Smoke -->
   <model>
     <path>Aircraft/Mil-Mi-24/Models/Effects/Rocket/Smoke.xml</path>
@@ -26,9 +25,6 @@
       <z-m>  0 </z-m>
     </offsets>
   </model>
-
-
-
 
 </PropertyList>
 

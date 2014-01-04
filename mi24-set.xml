@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <sim include="Nasal/views.xml">
+  <sim include="System/views.xml">
 
     <description>Mil Mi 24 Hind (Yasim)</description>
     <author>BARANGER Emmanuel (3D/FDM)/ Zel (FDM), Raptor (Guns system)</author>
@@ -119,18 +119,6 @@
         <name>r</name>
         <desc>Apply rotor brake</desc>
       </key>
-      <key>
-        <name>Ctrl d</name>
-        <desc>Toggle S.A.S.</desc>
-      </key>
-      <key>
-        <name>Ctrl e</name>
-        <desc>Toggle C.A.S.</desc>
-      </key>
-      <key>
-        <name>Ctrl f</name>
-        <desc>Auto hover</desc>
-      </key>
       <!-- ################### -->
       <key>
         <name>e</name>
@@ -180,7 +168,7 @@
   </instrumentation>
 
   <input>
-    <keyboard include="Nasal/mi24-keyboard.xml"/>
+    <keyboard include="System/mi24-keyboard.xml"/>
   </input>
 
   <rotors>

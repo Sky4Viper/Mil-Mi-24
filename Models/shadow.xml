@@ -10,6 +10,7 @@
     <!-- Objets transparents -->
     <object-name>shadowfuselage</object-name>
     <object-name>shadowrotor</object-name>
+    <nopreview/>
   </animation>
 
   <animation>
@@ -18,6 +19,13 @@
     <object-name>shadowrotor</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>shadowfuselage</object-name>
+    <object-name>shadowrotor</object-name>
+  </effect>
+  
   <animation>
     <type>select</type>
     <object-name>shadowfuselage</object-name>
