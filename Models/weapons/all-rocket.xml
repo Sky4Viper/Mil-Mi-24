@@ -19,7 +19,7 @@
   <!-- Les roquettes -->
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.044 </y-m>
@@ -28,7 +28,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.044 </y-m>
@@ -37,7 +37,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.075 </y-m>
@@ -46,7 +46,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.044 </y-m>
@@ -55,7 +55,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.070 </y-m>
@@ -64,7 +64,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.129 </y-m>
@@ -73,7 +73,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.156 </y-m>
@@ -82,7 +82,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.145 </y-m>
@@ -91,7 +91,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m> -0.110 </y-m>
@@ -101,7 +101,7 @@
 
   <!-- Centre -->
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.000 </y-m>
@@ -111,7 +111,7 @@
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.044 </y-m>
@@ -120,7 +120,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.044 </y-m>
@@ -129,7 +129,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.075 </y-m>
@@ -138,7 +138,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.044 </y-m>
@@ -147,7 +147,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.070 </y-m>
@@ -156,7 +156,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.129 </y-m>
@@ -165,7 +165,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.156 </y-m>
@@ -174,7 +174,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.145 </y-m>
@@ -183,7 +183,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Ka-50/Models/weapons/rocket.xml</path>
+    <path>Aircraft/Mil-Mi-24/Models/weapons/rocket.xml</path>
     <offsets>
       <x-m> -0.088 </x-m>
       <y-m>  0.110 </y-m>
