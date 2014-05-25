@@ -13,8 +13,8 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
     
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
@@ -153,7 +153,7 @@
   
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/glass</inherits-from>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
     <object-name>vitresG</object-name>
     <object-name>vitresD</object-name>
@@ -185,6 +185,16 @@
   </model>
 
   <!-- Effets sur le sol -->
+  <!-- Rotor effect -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Particles/particles.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> -2.0 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Roue avant -->
   <model>
     <path>Aircraft/Mil-Mi-24/Models/Effects/ground/ground0.xml</path>

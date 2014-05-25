@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Mil Mi 24 Hind</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>{</name>
+    <desc>Start engines</desc>
+  </key>
+  <key>
+    <name>}</name>
+    <desc>Shutdown engines</desc>
+  </key>
+  <key>
+    <name>R</name>
+    <desc>Toggle rotor brake</desc>
+  </key>
+  <key>
+    <name>r</name>
+    <desc>Apply rotor brake</desc>
+  </key>
+  <!-- ################### -->
+  <key>
+    <name>e</name>
+    <desc>Rockets</desc>
+  </key>
+  <key>
+    <name>f</name>
+    <desc>Gun</desc>
+  </key>
+  <!-- ################### -->
+  
+</PropertyList>

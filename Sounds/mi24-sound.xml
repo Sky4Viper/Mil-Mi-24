@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!--
-     Based on Bo105 and Alouette 2
+<!-- Based on Bo105 and Alouette 2
      Updated by Raptor
      Updated by Helijah September 2012
 -->
 <PropertyList>
-
+  
   <fx>
-
+    
     <engine>
       <name>Start external</name>
       <mode>once</mode>
@@ -28,7 +27,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>Start internal</name>
       <mode>once</mode>
@@ -48,7 +47,7 @@
       <reference-dist>50</reference-dist>
       <max-dist>200</max-dist>
     </engine>
-
+    
     <engine>
       <name>Turbine external</name>
       <mode>looped</mode>
@@ -68,7 +67,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>Turbine internal</name>
       <mode>looped</mode>
@@ -88,7 +87,7 @@
       <reference-dist>50</reference-dist>
       <max-dist>200</max-dist>
     </engine>
-
+    
     <engine>
       <name>Shutdown external</name>
       <mode>once</mode>
@@ -108,7 +107,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>Shutdown internal</name>
       <mode>once</mode>
@@ -128,7 +127,7 @@
       <reference-dist>50</reference-dist>
       <max-dist>200</max-dist>
     </engine>
-
+    
     <rotor>
       <name>Rotor external</name>
       <mode>looped</mode>
@@ -159,7 +158,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rotor>
-
+    
     <rotor>
       <name>Rotor internal</name>
       <mode>looped</mode>
@@ -185,7 +184,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rotor>
-
+    
     <contact>
       <name>ground contact</name>
       <mode>once</mode>
@@ -202,7 +201,7 @@
       <reference-dist>5.0</reference-dist>
       <max-dist>10.0</max-dist>
     </contact>
-
+    
     <contact>
       <name>ground contact</name>
       <mode>once</mode>
@@ -219,7 +218,7 @@
       <reference-dist>5.0</reference-dist>
       <max-dist>10.0</max-dist>
     </contact>
-
+    
     <contact>
       <name>ground contact</name>
       <mode>once</mode>
@@ -236,7 +235,7 @@
       <reference-dist>5.0</reference-dist>
       <max-dist>10.0</max-dist>
     </contact>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -263,7 +262,7 @@
       <reference-dist>10.0</reference-dist>
       <max-dist>20.0</max-dist>
     </wind>
-
+    
     <crash>
       <name>intense ground contact</name>
       <mode>once</mode>
@@ -276,7 +275,7 @@
         <factor>0.1</factor>
       </pitch>
     </crash>
-
+    
     <!-- Gun fire -->
     <guns>
       <name>gunfire</name>
@@ -286,7 +285,7 @@
       </condition>
       <path>Aircraft/Mil-Mi-24/Sounds/gun.wav</path>
     </guns>
-
+    
     <!-- rockets away -->
     <crash>
       <name>Rockets</name>
@@ -295,7 +294,7 @@
       </condition>
       <path>Aircraft/Mil-Mi-24/Sounds/rocket_away.wav</path>
     </crash>
-
+    
   </fx>
-
+  
 </PropertyList>

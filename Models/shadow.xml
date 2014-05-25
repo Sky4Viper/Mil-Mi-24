@@ -49,7 +49,8 @@
   <animation>
     <type>rotate</type>
     <object-name>AllShadow</object-name>
-    <property>/orientation/pitch-deg</property>
+    <!-- orientation/pitch-deg -->
+    <property>sim/multiplay/generic/float[12]</property>
     <factor> -1 </factor>
     <axis>
       <x> 0 </x>
@@ -62,7 +63,8 @@
   <animation>
     <type>rotate</type>
     <object-name>AllShadow</object-name>
-    <property>/orientation/roll-deg</property>
+    <!-- orientation/roll-deg -->
+    <property>sim/multiplay/generic/float[13]</property>
     <factor> 1 </factor>
     <axis>
       <x> 1 </x>
@@ -75,6 +77,7 @@
   <animation>
    <type>translate</type>
     <object-name>AllShadow</object-name>
+    <!-- position/gear-agl-m -->
    <property>sim/multiplay/generic/float[2]</property>
    <factor> -1 </factor>
    <axis>
@@ -87,7 +90,8 @@
   <animation>
     <type>rotate</type>
     <object-name>shadowrotor</object-name>
-    <property>rotors/main/blade[0]/position-deg</property>
+    <!-- rotors/main/blade[0]/position-deg -->
+    <property>sim/multiplay/generic/float[14]</property>
     <axis>
       <x>  0 </x>
       <y>  0 </y>
@@ -96,4 +100,3 @@
   </animation>
 
 </PropertyList>
-

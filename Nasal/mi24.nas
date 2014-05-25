@@ -100,7 +100,7 @@ var engines = func {
       update_state(1);
     }
   } else {
-    rotor.setValue(0);				# engines stopped
+    rotor.setValue(0);        # engines stopped
     state.setValue(0);
     interpolate(engine, 0, 4);
   }
@@ -113,14 +113,14 @@ var update_engine = func {
 }
 
 #var update_rotor_cone_angle = func {
-#	r = rotor_rpm.getValue();
-#	var f = 1 - r / 100;
-#	f = clamp (f, 0.1 , 1);
-#	c = cone.getValue();
-#	cone1.setDoubleValue( f *c *0.40 + (1-f) * c );
-#	cone2.setDoubleValue( f *c *0.35);
-#	cone3.setDoubleValue( f *c *0.30);
-#	cone4.setDoubleValue( f *c *0.25);
+# r = rotor_rpm.getValue();
+# var f = 1 - r / 100;
+# f = clamp (f, 0.1 , 1);
+# c = cone.getValue();
+# cone1.setDoubleValue( f *c *0.40 + (1-f) * c );
+# cone2.setDoubleValue( f *c *0.35);
+# cone3.setDoubleValue( f *c *0.30);
+# cone4.setDoubleValue( f *c *0.25);
 #}
 
 # 0.50
@@ -187,93 +187,93 @@ var update_torque_sound_filtered = func(dt) {
 
 # skid slide sound
 var Skid = {
-	new : func(n) {
-		var m = { parents : [Skid] };
-		var soundN = props.globals.getNode("sim/sound", 1).getChild("slide", n, 1);
-		var gearN = props.globals.getNode("gear", 1).getChild("gear", n, 1);
+  new : func(n) {
+    var m = { parents : [Skid] };
+    var soundN = props.globals.getNode("sim/sound", 1).getChild("slide", n, 1);
+    var gearN = props.globals.getNode("gear", 1).getChild("gear", n, 1);
 
-		m.compressionN = gearN.getNode("compression-norm", 1);
-		m.rollspeedN = gearN.getNode("rollspeed-ms", 1);
-		m.frictionN = gearN.getNode("ground-friction-factor", 1);
-		m.wowN = gearN.getNode("wow", 1);
-		m.volumeN = soundN.getNode("volume", 1);
-		m.pitchN = soundN.getNode("pitch", 1);
+    m.compressionN = gearN.getNode("compression-norm", 1);
+    m.rollspeedN = gearN.getNode("rollspeed-ms", 1);
+    m.frictionN = gearN.getNode("ground-friction-factor", 1);
+    m.wowN = gearN.getNode("wow", 1);
+    m.volumeN = soundN.getNode("volume", 1);
+    m.pitchN = soundN.getNode("pitch", 1);
 
-		m.compressionN.setDoubleValue(0);
-		m.rollspeedN.setDoubleValue(0);
-		m.frictionN.setDoubleValue(0);
-		m.volumeN.setDoubleValue(0);
-		m.pitchN.setDoubleValue(0);
-		m.wowN.setBoolValue(1);
-		m.self = n;
-		return m;
-	},
-	update : func {
-		me.wowN.getBoolValue() or return;
-		var rollspeed = abs(me.rollspeedN.getValue());
-		me.pitchN.setDoubleValue(rollspeed * 0.6);
+    m.compressionN.setDoubleValue(0);
+    m.rollspeedN.setDoubleValue(0);
+    m.frictionN.setDoubleValue(0);
+    m.volumeN.setDoubleValue(0);
+    m.pitchN.setDoubleValue(0);
+    m.wowN.setBoolValue(1);
+    m.self = n;
+    return m;
+  },
+  update : func {
+    me.wowN.getBoolValue() or return;
+    var rollspeed = abs(me.rollspeedN.getValue());
+    me.pitchN.setDoubleValue(rollspeed * 0.6);
 
-		var s = normatan(20 * rollspeed);
-		var f = clamp((me.frictionN.getValue() - 0.5) * 2);
-		var c = clamp(me.compressionN.getValue() * 2);
-		me.volumeN.setDoubleValue(s * f * c * 2);
-		#if (!me.self) {
-		#	cprint("33;1", sprintf("S=%0.3f  F=%0.3f  C=%0.3f  >>  %0.3f", s, f, c, s * f * c));
-		#}
-	},
+    var s = normatan(20 * rollspeed);
+    var f = clamp((me.frictionN.getValue() - 0.5) * 2);
+    var c = clamp(me.compressionN.getValue() * 2);
+    me.volumeN.setDoubleValue(s * f * c * 2);
+    #if (!me.self) {
+    # cprint("33;1", sprintf("S=%0.3f  F=%0.3f  C=%0.3f  >>  %0.3f", s, f, c, s * f * c));
+    #}
+  },
 };
 
 var skid = [];
 for (var i = 0; i < 3; i += 1) {
-	append(skid, Skid.new(i));
+  append(skid, Skid.new(i));
 }
 
 var update_slide = func {
-	forindex (var i; skid) {
-		skid[i].update();
-	}
+  forindex (var i; skid) {
+    skid[i].update();
+  }
 }
 
 # crash handler =====================================================
 #var load = nil;
 var crash = func {
-	if (arg[0]) {
-		# crash
-		setprop("rotors/main/rpm", 0);
-		setprop("rotors/main/blade[0]/flap-deg", -60);
-		setprop("rotors/main/blade[1]/flap-deg", -50);
-		setprop("rotors/main/blade[2]/flap-deg", -40);
-		setprop("rotors/main/blade[3]/flap-deg", -30);
-		setprop("rotors/main/blade[4]/flap-deg", -20);
-		setprop("rotors/main/blade[5]/flap-deg", -10);
-		setprop("rotors/main/blade[0]/incidence-deg", -30);
-		setprop("rotors/main/blade[1]/incidence-deg", -20);
-		setprop("rotors/main/blade[2]/incidence-deg", -50);
-		setprop("rotors/main/blade[3]/incidence-deg", -55);
-		setprop("rotors/main/blade[4]/incidence-deg", -60);
-		setprop("rotors/main/blade[5]/incidence-deg", -65);
-		setprop("rotors/tail/rpm", 0);
-		strobe_switch.setValue(0);
-		beacon_switch.setValue(0);
-		nav_light_switch.setValue(0);
-		rotor.setValue(0);
-		torque_pct.setValue(torque_val = 0);
-		stall_filtered.setValue(stall_val = 0);
-		state.setValue(0);
+  if (arg[0]) {
+    # crash
+    setprop("rotors/main/rpm", 0);
+    setprop("rotors/main/blade[0]/flap-deg", -60);
+    setprop("rotors/main/blade[1]/flap-deg", -50);
+    setprop("rotors/main/blade[2]/flap-deg", -40);
+    setprop("rotors/main/blade[3]/flap-deg", -30);
+    setprop("rotors/main/blade[4]/flap-deg", -20);
+    setprop("rotors/main/blade[5]/flap-deg", -10);
+    setprop("rotors/main/blade[0]/incidence-deg", -30);
+    setprop("rotors/main/blade[1]/incidence-deg", -20);
+    setprop("rotors/main/blade[2]/incidence-deg", -50);
+    setprop("rotors/main/blade[3]/incidence-deg", -55);
+    setprop("rotors/main/blade[4]/incidence-deg", -60);
+    setprop("rotors/main/blade[5]/incidence-deg", -65);
+    setprop("rotors/tail/rpm", 0);
+    strobe_switch.setValue(0);
+    beacon_switch.setValue(0);
+    nav_light_switch.setValue(0);
+    rotor.setValue(0);
+    torque_pct.setValue(torque_val = 0);
+    stall_filtered.setValue(stall_val = 0);
+    state.setValue(0);
 
-	} else {
-		# uncrash (for replay)
-		setprop("rotors/tail/rpm", 1500);
-		setprop("rotors/main/rpm", 235);
-		for (i = 0; i < 4; i += 1) {
-			setprop("rotors/main/blade[" ~ i ~ "]/flap-deg", 0);
-			setprop("rotors/main/blade[" ~ i ~ "]/incidence-deg", 0);
-		}
-		strobe_switch.setValue(1);
-		beacon_switch.setValue(1);
-		rotor.setValue(1);
-		state.setValue(5);
-	}
+  } else {
+    # uncrash (for replay)
+    setprop("rotors/tail/rpm", 1500);
+    setprop("rotors/main/rpm", 235);
+    for (i = 0; i < 4; i += 1) {
+      setprop("rotors/main/blade[" ~ i ~ "]/flap-deg", 0);
+      setprop("rotors/main/blade[" ~ i ~ "]/incidence-deg", 0);
+    }
+    strobe_switch.setValue(1);
+    beacon_switch.setValue(1);
+    rotor.setValue(1);
+    state.setValue(5);
+  }
 }
 
 # "manual" rotor animation for flight data recorder replay ============
@@ -287,23 +287,23 @@ var blade6_pos = props.globals.getNode("rotors/main/blade[5]/position-deg", 1);
 var rotorangle = 0;
 
 var rotoranim_loop = func {
-	i = rotor_step.getValue();
-	if (i >= 0.0) {
-		blade1_pos.setValue(rotorangle);
-		blade2_pos.setValue(rotorangle + 60);
-		blade3_pos.setValue(rotorangle + 120);
-		blade4_pos.setValue(rotorangle + 180);
-		blade5_pos.setValue(rotorangle + 240);
-		blade6_pos.setValue(rotorangle + 300);
-		rotorangle += i;
-		settimer(rotoranim_loop, 0.1);
-	}
+  i = rotor_step.getValue();
+  if (i >= 0.0) {
+    blade1_pos.setValue(rotorangle);
+    blade2_pos.setValue(rotorangle + 60);
+    blade3_pos.setValue(rotorangle + 120);
+    blade4_pos.setValue(rotorangle + 180);
+    blade5_pos.setValue(rotorangle + 240);
+    blade6_pos.setValue(rotorangle + 300);
+    rotorangle += i;
+    settimer(rotoranim_loop, 0.1);
+  }
 }
 
 var init_rotoranim = func {
-	if (rotor_step.getValue() >= 0.0) {
-		settimer(rotoranim_loop, 0.1);
-	}
+  if (rotor_step.getValue() >= 0.0) {
+    settimer(rotoranim_loop, 0.1);
+  }
 }
 
 # view management ===================================================
@@ -312,35 +312,35 @@ var elapsedN = props.globals.getNode("/sim/time/elapsed-sec", 1);
 var flap_mode = 0;
 var down_time = 0;
 controls.flapsDown = func(v) {
-	if (!flap_mode) {
-		if (v < 0) {
-			down_time = elapsedN.getValue();
-			flap_mode = 1;
-			dynamic_view.lookat(
-					5,     # heading left
-					-20,   # pitch up
-					0,     # roll right
-					0.2,   # right
-					0.6,   # up
-					0.85,  # back
-					0.2,   # time
-					55,    # field of view
-			);
-		} elsif (v > 0) {
-			flap_mode = 2;
-			var p = "/sim/view/dynamic/enabled";
-			setprop(p, !getprop(p));
-		}
+  if (!flap_mode) {
+    if (v < 0) {
+      down_time = elapsedN.getValue();
+      flap_mode = 1;
+      dynamic_view.lookat(
+          5,     # heading left
+          -20,   # pitch up
+          0,     # roll right
+          0.2,   # right
+          0.6,   # up
+          0.85,  # back
+          0.2,   # time
+          55,    # field of view
+      );
+    } elsif (v > 0) {
+      flap_mode = 2;
+      var p = "/sim/view/dynamic/enabled";
+      setprop(p, !getprop(p));
+    }
 
-	} else {
-		if (flap_mode == 1) {
-			if (elapsedN.getValue() < down_time + 0.2) {
-				return;
-			}
-			dynamic_view.resume();
-		}
-		flap_mode = 0;
-	}
+  } else {
+    if (flap_mode == 1) {
+      if (elapsedN.getValue() < down_time + 0.2) {
+        return;
+      }
+      dynamic_view.resume();
+    }
+    flap_mode = 0;
+  }
 }
 
 
@@ -348,18 +348,18 @@ controls.flapsDown = func(v) {
 # me.x_offset, me.y_offset, me.z_offset, and me.fov_offset
 #
 dynamic_view.register(func {
-	var lowspeed = 1 - normatan(me.speedN.getValue() / 50);
-	var r = sin(me.roll) * cos(me.pitch);
+  var lowspeed = 1 - normatan(me.speedN.getValue() / 50);
+  var r = sin(me.roll) * cos(me.pitch);
 
-	me.heading_offset =						# heading change due to
-		(me.roll < 0 ? -50 : -30) * r * abs(r);			#    roll left/right
+  me.heading_offset =           # heading change due to
+    (me.roll < 0 ? -50 : -30) * r * abs(r);     #    roll left/right
 
-	me.pitch_offset =						# pitch change due to
-		(me.pitch < 0 ? -50 : -50) * sin(me.pitch) * lowspeed	#    pitch down/up
-		+ 15 * sin(me.roll) * sin(me.roll);			#    roll
+  me.pitch_offset =           # pitch change due to
+    (me.pitch < 0 ? -50 : -50) * sin(me.pitch) * lowspeed #    pitch down/up
+    + 15 * sin(me.roll) * sin(me.roll);     #    roll
 
-	me.roll_offset =						# roll change due to
-		-15 * r * lowspeed;					#    roll
+  me.roll_offset =            # roll change due to
+    -15 * r * lowspeed;         #    roll
 });
 
 # main() ============================================================
@@ -368,16 +368,16 @@ var adf_rotation = props.globals.getNode("/instrumentation/adf/rotation-deg", 1)
 var hi_heading = props.globals.getNode("/instrumentation/heading-indicator/indicated-heading-deg", 1);
 
 var main_loop = func {
-	# adf_rotation.setDoubleValue(hi_heading.getValue());
+  # adf_rotation.setDoubleValue(hi_heading.getValue());
 
-	var dt = delta_time.getValue();
-	update_torque(dt);
-	update_stall(dt);
-	update_torque_sound_filtered(dt);
-	update_slide();
-	update_engine();
-	update_rotor_cone_angle();
-	settimer(main_loop, 0);
+  var dt = delta_time.getValue();
+  update_torque(dt);
+  update_stall(dt);
+  update_torque_sound_filtered(dt);
+  update_slide();
+  update_engine();
+  update_rotor_cone_angle();
+  settimer(main_loop, 0);
 }
 
 
@@ -389,37 +389,35 @@ var config_dialog = nil;
 # initialization
 setlistener("/sim/signals/fdm-initialized", func {
 
-	init_rotoranim();
-	collective.setDoubleValue(1);
+  init_rotoranim();
+  collective.setDoubleValue(1);
 
-	setlistener("/sim/signals/reinit", func {
-		cmdarg().getBoolValue() and return;
-		cprint("32;1", "reinit");
-		turbine_timer.stop();
-		collective.setDoubleValue(1);
-		variant.scan();
-		crashed = 0;
-	});
+  setlistener("/sim/signals/reinit", func {
+    cmdarg().getBoolValue() and return;
+    cprint("32;1", "reinit");
+    turbine_timer.stop();
+    collective.setDoubleValue(1);
+    variant.scan();
+    crashed = 0;
+  });
 
-	setlistener("sim/crashed", func {
-		cprint("31;1", "crashed ", cmdarg().getValue());
-		turbine_timer.stop();
-		if (cmdarg().getBoolValue()) {
-			crash(crashed = 1);
-		}
-	});
+  setlistener("sim/crashed", func {
+    cprint("31;1", "crashed ", cmdarg().getValue());
+    turbine_timer.stop();
+    if (cmdarg().getBoolValue()) {
+      crash(crashed = 1);
+    }
+  });
 
-	setlistener("/sim/freeze/replay-state", func {
-		cprint("33;1", cmdarg().getValue() ? "replay" : "pause");
-		if (crashed) {
-			crash(!cmdarg().getBoolValue())
-		}
-	});
+  setlistener("/sim/freeze/replay-state", func {
+    cprint("33;1", cmdarg().getValue() ? "replay" : "pause");
+    if (crashed) {
+      crash(!cmdarg().getBoolValue())
+    }
+  });
 
-	# the attitude indicator needs pressure
-	# settimer(func { setprop("engines/engine/rpm", 3000) }, 8);
+  # the attitude indicator needs pressure
+  # settimer(func { setprop("engines/engine/rpm", 3000) }, 8);
 
-	main_loop();
+  main_loop();
 });
-
-

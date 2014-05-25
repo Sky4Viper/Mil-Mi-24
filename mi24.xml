@@ -3,11 +3,11 @@
 <!--
      Mil Mi 24 by Zel (2012)
      Updated with Melchior's script by helijah (2012)
+     Add "YASIM_VERSION_CURRENT" by helijah (2014)
 
      It's a dev version not a final version.
 -->
-
-<airplane mass="17000">
+<airplane mass="17000" version="YASIM_VERSION_CURRENT">
 
   <approach speed="45" aoa="16">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
@@ -280,4 +280,3 @@
   </hitch>
 
 </airplane>
-
