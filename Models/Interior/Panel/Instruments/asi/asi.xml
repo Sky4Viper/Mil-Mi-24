@@ -17,7 +17,7 @@
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
   
@@ -97,4 +97,3 @@
   </animation>
 
 </PropertyList>
-
