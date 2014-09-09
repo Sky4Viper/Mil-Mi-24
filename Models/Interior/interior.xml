@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>intporteGH</object-name>
+    <object-name>intporteGB</object-name>
+    <object-name>intporteDH</object-name>
+    <object-name>intporteDB</object-name>
+    <object-name>intportepilote</object-name>
+    <object-name>intcockpit</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitresG</object-name>
+    <object-name>intvitresD</object-name>
+    <object-name>intvitrepilote</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intvitres</object-name>
+    <object-name>intvitresG</object-name>
+    <object-name>intvitresD</object-name>
+    <object-name>intvitrepilote</object-name>
+  </effect>
+  
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -6.161 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.155 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -5.764 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.067 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilote
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -1.607 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.300 </z-m>
+    </offsets>
+  </model>
+-->
+
+  <!-- Porte pilote -->
+  <animation>
+    <name>IntLaPortePilote</name>
+    <object-name>intportepilote</object-name>
+    <object-name>intvitrepilote</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntLaPortePilote</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPortePilote</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -100 </factor>
+    <axis>
+      <x1-m> -5.021 </x1-m>
+      <y1-m>  0.867 </y1-m>
+      <z1-m> -1.019 </z1-m>
+      <x2-m> -5.021 </x2-m>
+      <y2-m>  0.805 </y2-m>
+      <z2-m> -0.836 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Portes de la soute -->
+  <animation>
+    <name>IntPorteCargoGauche</name>
+    <object-name>intporteGH</object-name>
+    <object-name>intvitresG</object-name>
+  </animation>
+
+  <animation>
+    <name>IntPorteCargoDroite</name>
+    <object-name>intporteDH</object-name>
+    <object-name>intvitresD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteCargoGauche</object-name>
+    <object-name>intporteGB</object-name>
+    <object-name>IntPorteCargoDroite</object-name>
+    <object-name>intporteDB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteCargoGauche</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -125 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -3.837 </x1-m>
+      <y1-m> -0.875 </y1-m>
+      <z1-m> -0.546 </z1-m>
+      <x2-m> -3.294 </x2-m>
+      <y2-m> -0.879 </y2-m>
+      <z2-m> -0.546 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteGB</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 115 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -3.837 </x1-m>
+      <y1-m> -0.822 </y1-m>
+      <z1-m> -1.770 </z1-m>
+      <x2-m> -3.294 </x2-m>
+      <y2-m> -0.831 </y2-m>
+      <z2-m> -1.770 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteCargoDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -125 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -3.294 </x1-m>
+      <y1-m>  0.879 </y1-m>
+      <z1-m> -0.546 </z1-m>
+      <x2-m> -3.837 </x2-m>
+      <y2-m>  0.875 </y2-m>
+      <z2-m> -0.546 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteDB</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 115 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -3.294 </x1-m>
+      <y1-m>  0.831 </y1-m>
+      <z1-m> -1.770 </z1-m>
+      <x2-m> -3.837 </x2-m>
+      <y2-m>  0.822 </y2-m>
+      <z2-m> -1.770 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>

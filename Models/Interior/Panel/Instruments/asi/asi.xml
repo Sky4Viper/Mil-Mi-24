@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+ <path>asi.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>ones</object-name>
+    <object-name>tenths</object-name>
+    <object-name>hundredths</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>    
+
+  <!-- Airspeed Needle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>velocities/airspeed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 100 </ind><dep>  45.5 </dep></entry>
+      <entry><ind> 200 </ind><dep> 122.0 </dep></entry>
+      <entry><ind> 300 </ind><dep> 187.5 </dep></entry>
+      <entry><ind> 400 </ind><dep> 247.0 </dep></entry>
+      <entry><ind> 500 </ind><dep> 273.0 </dep></entry>
+      <entry><ind> 800 </ind><dep> 350.0 </dep></entry>
+    </interpolation>   
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!--  Mach Digits -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>ones</object-name>
+    <property>velocities/mach</property>
+    <factor> 0.1 </factor>
+    <step> 1 </step>
+    <scroll> 0.001 </scroll>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>tenths</object-name>
+    <property>velocities/mach</property>
+    <factor> 1 </factor>
+    <step> 0.1 </step>
+    <scroll> 0.001 </scroll>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>hundredths</object-name>
+    <property>velocities/mach</property>
+    <factor> 10 </factor>
+    <step> 0.01 </step>
+    <scroll> 0.001 </scroll>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

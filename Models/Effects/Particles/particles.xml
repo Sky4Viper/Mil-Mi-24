@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <particlesystem>
+
+    <name>dirt</name>
+    <texture>smoke.png</texture>
+    <emissive>false</emissive>
+    <lighting>false</lighting>
+
+    <offsets>
+      <roll-deg> 90 </roll-deg>
+    </offsets>
+
+    <attach>world</attach>
+
+    <align>billboard</align>
+
+    <placer>
+      <type>point</type>
+    </placer>
+
+    <condition>
+      <not>
+        <property>/sim/paused</property>
+      </not>
+      <not>
+        <property>/sim/crashed</property>
+      </not>
+      <less-than>
+        <!-- position/altitude-agl-ft -->
+        <property>sim/multiplay/generic/float[3]</property>
+        <value>70</value>
+      </less-than>
+      <greater-than>
+        <!-- rotors/main/rpm -->
+        <property>sim/multiplay/generic/float[4]</property>
+        <value> 100 </value>
+      </greater-than>
+    </condition>
+
+    <shooter>
+      <theta-min-deg>   0 </theta-min-deg>
+      <theta-max-deg> 360 </theta-max-deg>
+      <phi-min-deg>  -0.1 </phi-min-deg>
+      <phi-max-deg>   0.1 </phi-max-deg>
+      <speed-mps>
+        <!-- rotors/main/rpm -->
+        <property>sim/multiplay/generic/float[4]</property>
+        <factor> 0.1 </factor>
+        <spread> 2.0 </spread>
+      </speed-mps>
+      <rotation-speed>
+        <x-min-deg-sec> 0 </x-min-deg-sec>
+        <y-min-deg-sec> 0 </y-min-deg-sec>
+        <z-min-deg-sec> 0 </z-min-deg-sec>
+        <x-max-deg-sec> 0 </x-max-deg-sec>
+        <y-max-deg-sec> 0 </y-max-deg-sec>
+        <z-max-deg-sec> 0 </z-max-deg-sec>
+      </rotation-speed>
+    </shooter>
+
+    <counter>
+      <particles-per-sec>
+        <!-- position/altitude-agl-ft -->
+        <property>sim/multiplay/generic/float[3]</property>
+        <factor> -40 </factor>
+        <offset-m> 2000 </offset-m>
+      </particles-per-sec>
+    </counter>
+
+    <particle>
+      <start>
+        <color>
+          <red><value>   0.6 </value></red>
+          <green><value> 0.6 </value></green>
+          <blue><value>  0.6 </value></blue>
+          <alpha>
+            <!-- rotors/main/rpm -->
+            <property>sim/multiplay/generic/float[4]</property>
+            <factor> 0.00189 </factor>
+            <max> 0.6 </max>
+          </alpha>
+        </color>
+        <size>
+          <value> 0.5 </value>
+        </size>
+      </start>
+
+      <end>
+        <color>
+          <red><value>   0.9 </value></red>
+          <green><value> 0.9 </value></green>
+          <blue><value>  0.9 </value></blue>
+          <alpha>
+            <!-- rotors/main/rpm -->
+            <property>sim/multiplay/generic/float[4]</property>
+            <factor> 0.00316 </factor>
+            <max> 1.0 </max>
+          </alpha>
+        </color>
+        <size>
+          <value> 0.8 </value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>0.50</value>
+      </life-sec>
+
+      <mass-kg>  0.01 </mass-kg>
+      <radius-m> 0.01 </radius-m>
+    </particle>
+
+    <program>
+      <fluid>   air  </fluid>
+      <gravity> true </gravity>
+      <wind>    true </wind>
+    </program>
+
+  </particlesystem>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>dirt</object-name>
+    <!-- orientation/pitch-deg -->
+    <property>sim/multiplay/generic/float[12]</property>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>dirt</object-name>
+    <!-- orientation/roll-deg -->
+    <property>sim/multiplay/generic/float[13]</property>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>dirt</object-name>
+    <!-- position/gear-agl-m -->
+    <property>sim/multiplay/generic/float[2]</property>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

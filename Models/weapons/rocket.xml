@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>rocket.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>rocket</object-name>
+
+    <!-- Transparence -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>rocket</object-name>
+  </effect>
+
+</PropertyList>
