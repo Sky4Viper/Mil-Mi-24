@@ -34,11 +34,25 @@
       <and>
         <not><property>sim/freeze/replay-state</property></not>
         <not><property>sim/rendering/shadows/enabled</property></not>
+        <less-than>
+          <property>sim/multiplay/generic/float[2]</property>
+          <value>2000</value>
+        </less-than>
+        <and>
+          <greater-than>
+            <property>orientation/roll-deg</property>
+            <value>-90</value>
+          </greater-than>
+          <less-than>
+            <property>orientation/roll-deg</property>
+            <value>90</value>
+          </less-than>
+        </and>
       </and>
     </condition>
   </animation>
 
-  <!-- Une ombre pour OSG en attendant mieux ;) basé sur l'ombre du DC 3-->
+  <!-- A shadow for OSG waiting better ;) based on DC3's shadow -->
   <animation>
     <name>AllShadow</name>
     <object-name>shadowfuselage</object-name>
@@ -51,6 +65,18 @@
     <object-name>AllShadow</object-name>
     <!-- orientation/pitch-deg -->
     <property>sim/multiplay/generic/float[12]</property>
+    <condition>
+      <and>
+        <greater-than>
+          <property>orientation/roll-deg</property>
+          <value>-90</value>
+        </greater-than>
+        <less-than>
+          <property>orientation/roll-deg</property>
+          <value>90</value>
+        </less-than>
+      </and>
+    </condition>
     <factor> -1 </factor>
     <axis>
       <x> 0 </x>

@@ -10,7 +10,7 @@ data 4
 face
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 33
 0 -0.000001 -0
 0 0.038287 -0.025582
@@ -246,7 +246,7 @@ data 4
 fond
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 48
 0.005699 0.025123 -0.037535
 0.005699 0.008848 -0.044293
@@ -577,7 +577,7 @@ data 10
 hundredths
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 4
 0.000011 0.011015 -0.003486
 -0.000011 -0.011015 -0.003486
@@ -599,7 +599,7 @@ data 6
 needle
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 14
 0.000406 -0.018679 -0.001779
 0.000406 -0.018679 0.001779
@@ -693,7 +693,7 @@ data 4
 ones
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 4
 0.000011 0.011015 -0.003486
 -0.000011 -0.011015 -0.003486
@@ -715,7 +715,7 @@ data 6
 tenths
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 4
 -0.000011 -0.011015 0.003486
 0.000011 0.011015 0.003486
@@ -735,7 +735,7 @@ name "vitre"
 loc 0.001382 -0.001067 0.002621
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 33
 0.002771 -0.000001 -0
 0.002771 0.038287 -0.025582

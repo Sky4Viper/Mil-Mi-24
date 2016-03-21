@@ -5,6 +5,21 @@
   <path>Impact.ac</path>
 
   <animation>
+    <object-name>sphere</object-name>
+    <object-name>puff-black2</object-name>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>puff-black2</object-name>
+    <emission>
+      <red>   2 </red>
+      <green> 2 </green>
+      <blue>  2 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
     <enable-hot type="bool">false</enable-hot>
   </animation>
 
