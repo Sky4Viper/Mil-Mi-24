@@ -4,6 +4,11 @@
 
   <path>mi24.ac</path>
 
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/Piper-PA-28/Sounds/mi24-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Mil-Mi-24/Models/Liveries", 10);
@@ -179,6 +184,16 @@
     </offsets>
   </model>
 
+  <!-- Poussière -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Particles/particles.xml</path>
+    <offsets>
+      <x-m> -2.405 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.720 </z-m>
+    </offsets>
+  </model>
+  
   <!-- L'interieur -->
   <model>
     <path>Aircraft/Mil-Mi-24/Models/Interior/interior.xml</path>

@@ -10,7 +10,7 @@ data 10
 intcockpit
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 434
 -1.270383 -0.029348 0.001271
 -1.058984 -0.494209 0.557148
@@ -2825,7 +2825,7 @@ data 9
 interieur
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 310
 -0.517086 -0.198523 -0.881737
 -0.448412 -0.161424 -0.884452
@@ -5102,7 +5102,7 @@ data 10
 intporteDB
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 41
 0.594645 0.261788 -0.082503
 -0.594644 0.261788 -0.07793
@@ -5378,7 +5378,7 @@ data 10
 intporteDH
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 56
 -0.594645 -0.249221 -0.054293
 0.594645 -0.269027 -0.058865
@@ -5753,7 +5753,7 @@ data 10
 intporteGB
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 41
 0.594645 0.261788 0.082503
 -0.594645 0.261788 0.07793
@@ -6029,7 +6029,7 @@ data 10
 intporteGH
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 56
 -0.594644 -0.249221 0.054294
 0.594645 -0.269027 0.058865
@@ -6404,7 +6404,7 @@ data 14
 intportepilote
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 119
 0.2695 -0.504273 -0.294334
 0.338174 -0.467174 -0.297049
@@ -7198,7 +7198,7 @@ data 7
 inttour
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 236
 -0.335211 -0.297065 -0.881737
 -0.266537 -0.259966 -0.884452
@@ -8528,7 +8528,7 @@ name "intvitres"
 loc -4.820508 -0.937941 0
 data 9
 intvitres
-crease 30.000001
+crease 180.000005
 numvert 373
 2.097261 -0.200351 0.936696
 2.097261 -0.026921 0.929709
@@ -10972,7 +10972,7 @@ name "intvitresD"
 loc -3.508018 -0.993991 -0.924415
 data 10
 intvitresD
-crease 30.000001
+crease 180.000005
 numvert 12
 -0.415228 0.045778 -0.001894
 -0.415228 -0.1443 -0.011609
@@ -10987,28 +10987,28 @@ numvert 12
 0.415228 0.034257 -0.00465
 0.415228 0.1443 0.008286
 numsurf 4
-SURF 0x20
+SURF 0x00
 mat 1
 refs 4
 10 1 0.618701517582
 3 0 0.632179737091
 7 0 0
 8 1 0
-SURF 0x20
+SURF 0x00
 mat 1
 refs 4
 11 1 1
 9 0 1
 3 0 0.632179737091
 10 1 0.618701517582
-SURF 0x20
+SURF 0x00
 mat 1
 refs 4
 4 1 0.645138919353
 0 0 0.658621311188
 1 0 0
 2 1 0
-SURF 0x20
+SURF 0x00
 mat 1
 refs 4
 6 0 1
@@ -11021,7 +11021,7 @@ name "intvitresG"
 loc -3.508018 -0.993991 0.924415
 data 10
 intvitresG
-crease 30.000001
+crease 180.000005
 numvert 12
 0.415228 0.1443 -0.008286
 0.415228 0.034257 0.00465
