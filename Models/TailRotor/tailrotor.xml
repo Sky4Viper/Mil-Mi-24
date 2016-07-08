@@ -6,6 +6,7 @@
 
   <animation>
     <object-name>rotortail</object-name>
+    <object-name>rotortail2</object-name>
   </animation>
 
   <!-- Blades -->
@@ -33,6 +34,7 @@
   <animation>
     <name>rotorcomplet</name>
     <object-name>rotortail</object-name>
+    <object-name>rotortail2</object-name>
     <object-name>Blade1</object-name>
     <object-name>Blade2</object-name>
     <object-name>Blade3</object-name>
@@ -50,4 +52,17 @@
     </axis>
   </animation>
 
+  <!-- Rotation du rotor -->
+  <animation>
+    <type>translate</type>
+    <object-name>rotortail2</object-name>
+    <property>rotors/tail/blade/incidence-deg</property>
+    <factor> 0.0025 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
 </PropertyList>

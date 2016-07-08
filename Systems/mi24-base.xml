@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <sim include="System/views.xml">
+  <sim include="views.xml">
 
     <fuel-fraction>0.8</fuel-fraction>
 
@@ -89,21 +89,21 @@
       <max-lb>20000</max-lb>
     </weight>
     
-    <help include="System/help.xml"/>
+    <help include="help.xml"/>
 
-    <instrumentation include="Aircraft/Mil-Mi-24/System/instrumentation.xml"/>
+    <instrumentation include="instrumentation.xml"/>
     
-    <menubar include="Dialogs/mi24-menu.xml"/>
+    <menubar include="../Dialogs/mi24-menu.xml"/>
 
   </sim>
 
-  <controls include="System/controls.xml"/>
+  <controls include="controls.xml"/>
 
-  <instrumentation include="System/instrumentation2.xml"/>
+  <instrumentation include="instrumentation2.xml"/>
 
-  <input include="System/mi24-keyboard.xml"/>
+  <input include="mi24-keyboard.xml"/>
 
-  <rotors include="System/rotors.xml"/>
+  <rotors include="rotors.xml"/>
 
   <nasal>
     <doors>

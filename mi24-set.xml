@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<PropertyList include="mi24-base.xml">
+<PropertyList include="Systems/mi24-base.xml">
 
-  <sim include="System/views.xml">
+  <sim>
 
     <description>Mil Mi 24 Hind (Yasim)</description>
     <author>BARANGER Emmanuel (3D/FDM)/ Zel (FDM), Raptor (Guns system)</author>
+    
     <status>alpha</status>
     <license>GPL v2</license>
 
     <flight-model>yasim</flight-model>
-    <aero>mi24-yasim</aero>
+    <aero>Systems/mi24-yasim</aero>
 
     <rating>
       <FDM type="int">     3 </FDM>

@@ -14,7 +14,8 @@
     <object-name>intporteDB</object-name>
     <object-name>intportepilote</object-name>
     <object-name>intcockpit</object-name>
-
+    <object-name>planchet</object-name>
+    
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
     <object-name>intvitresG</object-name>
