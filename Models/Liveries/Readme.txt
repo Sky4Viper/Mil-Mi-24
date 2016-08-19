@@ -48,3 +48,9 @@ czaf_black_tiger : Czech Air Force Black Tiger
 These liveries were made by : Martin Měřinský 2013
 
 Thank to him
+
+eagle            :
+
+These liveries were made by : Enrico CASTALDI 2016
+
+Thank to him

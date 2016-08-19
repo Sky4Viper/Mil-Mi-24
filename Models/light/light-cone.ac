@@ -11,7 +11,7 @@ data 4
 Cone
 texture "light-gradient-lamp.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000001
 numvert 193
 -34.735821 0 0.000001
 -27.955269 0.000008 5.717249
@@ -1527,7 +1527,7 @@ data 12
 Cone-texture
 texture "light-gradient-lamp.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000001
 numvert 193
 -34.584267 1.091419 1.091419
 -34.584267 -1.091426 -1.091419
@@ -3043,7 +3043,7 @@ data 5
 Light
 texture "lights.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000001
 numvert 24
 0.12 0.12 -0
 -0.12 0.12 -0

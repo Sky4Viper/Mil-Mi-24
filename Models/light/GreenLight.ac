@@ -9,7 +9,7 @@ data 5
 Light
 texture "lights.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000001
 numvert 24
 0.5 0.5 -0
 -0.5 0.5 -0
