@@ -78,12 +78,13 @@ Equipage                      :
 
 
 Quelques touches utiles :
-=========================
-m - master arm ON/Off
-< - select gun
-> - select rockets
-f - launch flares (pickle)
-d - fire selected weapon (trigger)
+=================
+- "m" - master arm ON/Off
+- "<" - select gun
+- ">" - select rockets
+- "q" - ripple mode select (0-salvo / 1-1 x rocket /2-4 x rockets)
+- "f" - launch flares (pickle)
+- "d" - fire selected weapon (trigger)
 
 Remerciements
 =============
