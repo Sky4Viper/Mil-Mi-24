@@ -32,7 +32,7 @@
     <minimum-fg-version>2018.2.0</minimum-fg-version>
 
     <flight-model>yasim</flight-model>
-    <aero>Systems/mi24-yasim</aero>
+    <aero>Systems/mi24p-yasim</aero>
 
     <rating>
       <FDM type="int">     4 </FDM>
@@ -50,12 +50,12 @@
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-1.png</path>
+        <path>Previews/mi24p-1.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-2.png</path>
+        <path>Previews/mi24p-2.png</path>
       </preview>
       <preview>
         <type>exterior</type>
@@ -65,7 +65,7 @@
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-4.png</path>
+        <path>Previews/mi24p-4.png</path>
       </preview>
       <preview>
         <type>exterior</type>
@@ -80,7 +80,7 @@
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-5.png</path>
+        <path>Previews/mi24p-7.png</path>
       </preview>
     </previews>
 
