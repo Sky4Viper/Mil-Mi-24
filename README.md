@@ -1,6 +1,8 @@
 # Mil-Mi-24
 FG Aircraft  | Mil-Mi-24 by Helijah | Updated by SkyDive
 
+<img src=https://github.com/Sky4Viper/Mil-Mi-24/blob/main/Previews/mi24p-1.png  alt=Mi-24P-splashscreen7><br>
+
 English/Français
 
 [English]
