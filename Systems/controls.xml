@@ -2,27 +2,65 @@
 
 <PropertyList>
 
+  <lighting>
+    <instrument-lights type="bool">false</instrument-lights>
+    <nav-lights type="bool">false</nav-lights>
+    <taxi-lights type="bool">false</taxi-lights>
+    <strobe-lights type="bool">false</strobe-lights>
+    <landing-lights type="bool">false</landing-lights>
+    <luminosite-lights type="float">1</luminosite-lights>
+    <floods-lights type="float">1</floods-lights>
+    <elt type="bool">false</elt>
+  </lighting>
+
   <engines>
     <engine n="0">
-      <magnetos>0</magnetos>
+      <boost type="double">1</boost>
+      <throttle type="double">0</throttle>
     </engine>
     <engine n="1">
-      <magnetos>0</magnetos>
+      <boost type="double">1</boost>
+      <throttle type="double">0</throttle>
     </engine>
   </engines>
-  <gear>
-    <brake-parking>1</brake-parking>
-  </gear>
+
+  <electric>
+    <battery-switch>0</battery-switch>
+    <generator>0</generator>
+    <alimentation>
+      <deice type="int">0</deice>
+    </alimentation>
+    <engines>
+      <engine n="0">
+        <fuel-pump>0</fuel-pump>
+      </engine>
+      <engine n="1">
+        <fuel-pump>0</fuel-pump>
+      </engine>
+    </engines>
+  </electric>
+
   <rotor>
     <reltarget>1</reltarget>
     <maxreltorque>1</maxreltorque>
   </rotor>
+
   <!-- ################ -->
   <armament>
-    <trigger>  0 </trigger>
-    <trigger1> 0 </trigger1>
-    <trigger2> 0 </trigger2>
+    <trigger type="bool">  0 </trigger>
+    <pickle type="bool"> 0 </pickle>
   </armament>
   <!-- ################ -->
-  
+
+  <gear>
+    <brake-parking type="bool">1</brake-parking>
+    <emergency type="bool">false</emergency>
+  </gear>
+
+  <flight>
+    <rudder-trim>   0.00 </rudder-trim>
+    <aileron-trim>  0.00 </aileron-trim>
+    <elevator-trim> 0.00 </elevator-trim>
+  </flight>
+
 </PropertyList>

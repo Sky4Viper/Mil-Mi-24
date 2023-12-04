@@ -61,7 +61,7 @@ var update_state = func {
         max_rel_torque.setValue(0.01);
         target_rel_rpm.setValue(0.002);
         interpolate(engine, 0.05, 0.2, 0.03, 1, 0.07, 0.1, 0.04, 0.9, 0.02, 0.5);
-      } else { 
+      } else {
         if (new_state == (3)) {
           if (rotor_rpm.getValue() > 100) {
             #rotor is running at high rpm, so accel. engine faster
@@ -163,7 +163,7 @@ stall.setDoubleValue(0);
 
 var update_stall = func(dt) {
   var s = stall.getValue();
-    if (s < stall_val) {
+  if (s < stall_val) {
     var f = dt / (0.3 + dt);
     stall_val = s * f + stall_val * (1 - f);
   } else {
@@ -343,7 +343,6 @@ controls.flapsDown = func(v) {
   }
 }
 
-
 # register function that may set me.heading_offset, me.pitch_offset, me.roll_offset,
 # me.x_offset, me.y_offset, me.z_offset, and me.fov_offset
 #
@@ -351,15 +350,15 @@ dynamic_view.register(func {
   var lowspeed = 1 - normatan(me.speedN.getValue() / 50);
   var r = sin(me.roll) * cos(me.pitch);
 
-  me.heading_offset =           # heading change due to
-    (me.roll < 0 ? -50 : -30) * r * abs(r);     #    roll left/right
+  me.heading_offset =                                        # heading change due to
+    (me.roll < 0 ? -50 : -30) * r * abs(r);                  # roll left/right
 
-  me.pitch_offset =           # pitch change due to
-    (me.pitch < 0 ? -50 : -50) * sin(me.pitch) * lowspeed #    pitch down/up
-    + 15 * sin(me.roll) * sin(me.roll);     #    roll
+  me.pitch_offset =                                          # pitch change due to
+    (me.pitch < 0 ? -50 : -50) * sin(me.pitch) * lowspeed    # pitch down/up
+    + 15 * sin(me.roll) * sin(me.roll);                      # roll
 
-  me.roll_offset =            # roll change due to
-    -15 * r * lowspeed;         #    roll
+  me.roll_offset =                                           # roll change due to
+    -15 * r * lowspeed;                                      # roll
 });
 
 # main() ============================================================
@@ -379,7 +378,6 @@ var main_loop = func {
   update_rotor_cone_angle();
   settimer(main_loop, 0);
 }
-
 
 var crashed = 0;
 var variant = nil;

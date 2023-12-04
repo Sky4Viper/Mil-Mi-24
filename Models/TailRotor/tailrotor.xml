@@ -12,12 +12,12 @@
   <!-- Blades -->
   <model>
     <name>Blade1</name>
-    <path>Aircraft/Mil-Mi-24/Models/TailRotor/blade.xml</path>
+    <path>blade.xml</path>
   </model>
 
   <model>
     <name>Blade2</name>
-    <path>Aircraft/Mil-Mi-24/Models/TailRotor/blade.xml</path>
+    <path>blade.xml</path>
     <offsets>
       <heading-deg> 120 </heading-deg>
     </offsets>
@@ -25,7 +25,7 @@
 
   <model>
     <name>Blade3</name>
-    <path>Aircraft/Mil-Mi-24/Models/TailRotor/blade.xml</path>
+    <path>blade.xml</path>
     <offsets>
       <heading-deg> 240 </heading-deg>
     </offsets>
@@ -64,5 +64,5 @@
       <z> 1 </z>
     </axis>
   </animation>
-  
+
 </PropertyList>

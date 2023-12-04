@@ -9,14 +9,13 @@
     <object-name>separation</object-name>
     <object-name>fond</object-name>
     <object-name>panel</object-name>
-    <object-name>instr1</object-name>
     <object-name>map</object-name>
     <object-name>boutons</object-name>
   </animation>
 
   <!-- AI -->
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <path>Instruments/ai/ai.xml</path>
     <offsets>
       <x-m> -0.018 </x-m>
       <y-m> -0.040 </y-m>
@@ -24,33 +23,125 @@
     </offsets>
   </model>
 
+  <!-- AI backup -->
+  <model>
+    <path>Instruments/ai2/ai.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.090 </y-m>
+      <z-m> 0.160 </z-m>
+    </offsets>
+  </model>
+
   <!-- ALT -->
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <path>Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.003 </x-m>
+      <x-m>  0.002 </x-m>
       <y-m> -0.160 </y-m>
-      <z-m>  0.100 </z-m>
+      <z-m>  0.160 </z-m>
     </offsets>
   </model>
 
   <!-- ASI -->
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <path>Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m> 0.004 </x-m>
-      <y-m> 0.090 </y-m>
-      <z-m> 0.226 </z-m>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.160 </y-m>
+      <z-m>  0.266 </z-m>
     </offsets>
   </model>
 
   <!-- MAP -->
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/Instruments/map/map.xml</path>
+    <path>Instruments/map/map.xml</path>
     <offsets>
       <x-m> -0.005 </x-m>
       <y-m>  0.285 </y-m>
       <z-m>  0.235 </z-m>
+    </offsets>
+  </model>
+
+  <!-- INSTR
+  <model>
+    <path>Instruments/instr/instr.xml</path>
+    <offsets>
+      <x-m> -0.02497 </x-m>
+      <y-m>  0.00562 </y-m>
+      <z-m>  0.44817 </z-m>
+      <pitch-deg>-8</pitch-deg>
+    </offsets>
+  </model>  -->
+
+  <!-- GUNSIGHT -->
+  <model>
+    <path>Instruments/gunsight/gunsight.xml</path>
+    <offsets>
+      <x-m> 0.117649 </x-m>
+      <y-m>  0.00262 </y-m>
+      <z-m>  0.505254 </z-m>
+      <pitch-deg>-8</pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- GMETER -->
+  <model>
+    <path>Instruments/g/gmeter.xml</path>
+    <offsets>
+      <x-m> 0.009 </x-m>
+      <y-m> -0.182 </y-m>
+      <z-m>  0.389 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.087 </y-m>
+      <z-m> 0.266 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RADAR ALT -->
+  <model>
+    <path>Instruments/radaralt/rad-alt.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.274 </y-m>
+      <z-m>  0.294 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RADIO COMPASS -->
+  <model>
+    <path>Instruments/rrc/rrc.xml</path>
+    <offsets>
+      <x-m> -0.005 </x-m>
+      <y-m> -0.040 </y-m>
+      <z-m>  0.048 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TORQUE -->
+  <model>
+    <path>Instruments/rotorpcnt/rotorpcnt.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.236 </y-m>
+      <z-m>  0.082 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COMPASS -->
+  <model>
+    <path>Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m> 0.122649 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.848254 </z-m>
     </offsets>
   </model>
 

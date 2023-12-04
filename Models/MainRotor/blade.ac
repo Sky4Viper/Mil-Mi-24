@@ -9,7 +9,7 @@ data 7
 attache
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 317
 0.685808 0.074702 0.032617
 0.685808 0.074702 0.012782
@@ -2533,7 +2533,7 @@ data 8
 attache2
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 185
 0.663018 0.072959 -0.059601
 0.663018 0.072959 -0.079965
@@ -4103,7 +4103,7 @@ data 8
 attache3
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 438
 0.627235 0.022944 -0.01533
 0.627235 0.025494 -0.010559
@@ -7595,7 +7595,7 @@ data 8
 attache4
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 219
 0.529357 0.025234 -0.151322
 0.529357 0 -0.151322
@@ -9589,7 +9589,7 @@ data 7
 bielle1
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 258
 0.499823 -0.011833 -0.159189
 0.482114 0 -0.159189
@@ -11730,7 +11730,7 @@ data 7
 bielle2
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 254
 0.493574 -0.015448 -0.16557
 0.493889 -0.011848 -0.170979
@@ -13713,7 +13713,7 @@ data 6
 blade1
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 67
 0.853864 0.025204 0.072607
 0.911001 0 0.277059
@@ -14253,7 +14253,7 @@ data 6
 blade2
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 20
 4.195402 0 0.277134
 2.654367 0 0.277097
@@ -14354,7 +14354,7 @@ data 6
 blade3
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 27
 5.27573 0 0.337153
 5.738041 0 0.337172
@@ -14488,7 +14488,7 @@ data 6
 blade4
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 32
 6.207566 0 0.277191
 6.207566 0.004 0.267191
@@ -14714,7 +14714,7 @@ data 9
 propblur1
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 12
 2.664468 0.043096 -0.000003
 2.61327 0.043096 0.519809
@@ -14765,7 +14765,7 @@ data 9
 propblur2
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 12
 2.664468 0.043096 -0.000003
 2.61327 0.043096 0.519809
@@ -14816,7 +14816,7 @@ data 9
 propblur3
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 12
 3.892834 -0.037992 1.61246
 4.13261 -0.037992 0.822024
@@ -14867,7 +14867,7 @@ data 9
 propblur4
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 9
 5.747283 0.034882 -0.000005
 5.636849 0.034882 1.121234
@@ -14924,7 +14924,7 @@ data 9
 propdisc1
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 20
 2.503779 0.015544 -0.911305
 2.633456 0.015544 -0.405331
@@ -15011,7 +15011,7 @@ data 9
 propdisc2
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 20
 2.503779 0.015544 -0.911305
 2.633456 0.015544 -0.405331
@@ -15098,7 +15098,7 @@ data 9
 propdisc3
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 20
 3.818795 -0.015535 1.780725
 4.09282 -0.015535 1.0015
@@ -15185,7 +15185,7 @@ data 9
 propdisc4
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 15
 6.873823 -0.00012 -2.501869
 7.229833 -0.00012 -1.112783

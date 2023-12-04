@@ -1,44 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
- <PropertyList>
-   
-   <path>light-cone.ac</path>
-   
-   <animation>
-     <object-name>Cone</object-name>
-     <object-name>Cone-texture</object-name>
-     <object-name>Light</object-name>
-   </animation> 
-   
-   <effect>
-     <inherits-from>Effects/model-transparent</inherits-from>
-     <object-name>Cone</object-name>
-     <object-name>Cone-texture</object-name>
-   </effect>
-   
-   <effect>
-     <inherits-from>Effects/light-cone</inherits-from>
-     <object-name>Cone</object-name>
-     <object-name>Cone-texture</object-name>
-   </effect>
-   
-   <animation>
-     <type>material</type>
-     <object-name>Light</object-name>
-     <emission>
-       <red>   2 </red>
-       <green> 2 </green>
-       <blue>  2 </blue>
-     </emission>
-   </animation>
-   
-   <animation>
+<PropertyList>
+
+  <model>
+    <name>lightcone</name>
+    <path>Classic/light-cone.xml</path>
+  </model>
+
+  <animation>
     <type>select</type>
-    <object-name>Cone</object-name>
-    <object-name>Cone-texture</object-name>
-    <object-name>Light</object-name>
+    <object-name>lightcone</object-name>
     <condition>
-      <property>/controls/lighting/landing-lights</property>
+      <not><property>/sim/rendering/shaders/skydome</property></not>
+    </condition>
+  </animation>
+
+  <model>
+    <name>lightconeALS</name>
+    <path>Procedural/light-cone.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>lightconeALS</object-name>
+    <condition>
+      <property>/sim/rendering/shaders/skydome</property>
     </condition>
   </animation>
 

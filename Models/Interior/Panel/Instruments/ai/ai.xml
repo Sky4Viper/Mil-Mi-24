@@ -16,23 +16,38 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>bezel</object-name>
+    <object-name>bigknob</object-name>
+    <object-name>knob</object-name>
+    <object-name>wings</object-name>
+    <object-name>riminside</object-name>
+    <object-name>rollarrow</object-name>
+    <object-name>ball</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-  
+
   <animation>
     <type>material</type>
     <object-name>wings</object-name>
     <object-name>riminside</object-name>
     <object-name>rollarrow</object-name>
     <object-name>ball</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
     <emission>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
       <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
     </emission>
   </animation>
 

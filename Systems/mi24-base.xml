@@ -8,7 +8,7 @@
 
     <startup>
       <splash-texture>Aircraft/Mil-Mi-24/mi24-splash.png</splash-texture>
-    </startup> 
+    </startup>
 
     <sound>
       <path>Aircraft/Mil-Mi-24/Sounds/mi24-sound.xml</path>
@@ -35,36 +35,36 @@
 
     <multiplay>
       <chat_display>1</chat_display>
-      <generic> 
-        <int n="0"    type="int">  0 </int>                                         <!-- 0 immat -->
-        <int n="1"    type="int">  0 </int>                                         <!-- 1 immat -->
-        <int n="2"    type="int">  0 </int>                                         <!-- 2 immat -->
-        <int n="3"    type="int">  0 </int>                                         <!-- 3 immat -->
-        <int n="4"    type="int">  0 </int>                                         <!-- 4 immat -->
-        <int n="5"    type="int">  0 </int>                                         <!-- 5 immat -->
-        <int n="6"    type="bool" alias="controls/smoke"> 0 </int>                  <!-- 6 smoke/bomb/torpedo -->
-        <int n="7"    type="int">  0 </int>                                         <!-- 7 color -->
-        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
-        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
-        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
-        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
-        <float n="4"  alias="/rotors/main/rpm"/>
-        <float n="5"  alias="/engines/engine[0]/cranking"/>
-        <float n="6"  alias="/gear/gear[0]/wow/"/>
-        <float n="7"  alias="/gear/gear[1]/wow/"/>
-        <float n="8"  alias="/gear/gear[2]/wow/"/>
-        <float n="9"  alias="/gear/gear[0]/rollspeed-ms"/>
-        <float n="10" alias="/gear/gear[1]/rollspeed-ms"/>
-        <float n="11" alias="/gear/gear[2]/rollspeed-ms"/>
-        <float n="12" alias="/orientation/pitch-deg"/>
-        <float n="13" alias="/orientation/roll-deg"/>
-        <float n="14" alias="/rotors/main/blade[0]/position-deg"/>
+      <generic>
+        <int    n="0"  type="int">0</int>
+        <int    n="1"  type="int">0</int>
+        <int    n="2"  type="int">0</int>
+        <int    n="3"  type="int">0</int>
+        <int    n="4"  type="int">0</int>
+        <int    n="5"  type="int">0</int>
+        <int    n="6"  type="bool" alias="controls/smoke">0</int>
+        <int    n="7"  type="int">0</int>
+        <float  n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float  n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float  n="2"  alias="/position/gear-agl-m">0</float>
+        <float  n="3"  alias="/position/altitude-ft">0</float>
+        <float  n="4"  alias="/rotors/main/rpm"/>
+        <float  n="5"  alias="/engines/engine[0]/cranking"/>
+        <float  n="6"  alias="/gear/gear[0]/wow/"/>
+        <float  n="7"  alias="/gear/gear[1]/wow/"/>
+        <float  n="8"  alias="/gear/gear[2]/wow/"/>
+        <float  n="9"  alias="/gear/gear[0]/rollspeed-ms"/>
+        <float  n="10" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float  n="11" alias="/gear/gear[2]/rollspeed-ms"/>
+        <float  n="12" alias="/orientation/pitch-deg"/>
+        <float  n="13" alias="/orientation/roll-deg"/>
+        <float  n="14" alias="/rotors/main/blade[0]/position-deg"/>
         <!-- For Bombable -->
-        <int type="int" n="10" alias="controls/armament/trigger">0</int>
-        <string n="9" type="string" />
+        <int    n="10" type="int" alias="controls/armament/trigger">0</int>
+        <string n="9"  type="string" />
       </generic>
     </multiplay>
-    
+
     <weight n="0">
       <name>Pilot</name>
       <weight-lb>180</weight-lb>
@@ -88,11 +88,11 @@
       <weight-lb>0</weight-lb>
       <max-lb>20000</max-lb>
     </weight>
-    
+
     <help include="help.xml"/>
 
     <instrumentation include="instrumentation.xml"/>
-    
+
     <menubar include="../Dialogs/mi24-menu.xml"/>
 
   </sim>
@@ -110,16 +110,25 @@
       <file>Aircraft/Mil-Mi-24/Nasal/doors.nas</file>
     </doors>
     <mi24>
-      <file>Aircraft/Mil-Mi-24/Nasal/immat.nas</file>
       <file>Aircraft/Mil-Mi-24/Nasal/light.nas</file>
       <file>Aircraft/Mil-Mi-24/Nasal/mi24.nas</file>
       <file>Aircraft/Mil-Mi-24/Nasal/liveries.nas</file>
-      <file>Aircraft/Mil-Mi-24/Nasal/bladevisible.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/map.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/convert.nas</file>
     </mi24>
+    <gmeter>
+      <file>Aircraft/Mil-Mi-24/Nasal/gmeter.nas</file>
+    </gmeter>
     <!-- ########### -->
     <guns>
       <file>Aircraft/Mil-Mi-24/Nasal/weapons.nas</file>
     </guns>
+    <launchauthorizer>
+			<file>Aircraft/Mil-Mi-24/Nasal/launchauthorizer.nas</file>
+    </launchauthorizer>
+    <rockets>
+		<file>Aircraft/Mil-Mi-24/Nasal/rockets.nas</file>
+	</rockets>
     <!-- ########### -->
   </nasal>
 

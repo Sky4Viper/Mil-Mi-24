@@ -12,12 +12,19 @@
     <object-name>propdisc</object-name>
   </animation>
 
+  <animation>
+    <type>noshadow</type>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>propblur</object-name>
     <object-name>propdisc</object-name>
   </effect>
-  
+
   <!-- Sélection blade/blur/disc tail rotor-->
   <animation>
     <type>select</type>
@@ -46,7 +53,7 @@
       </and>
     </condition>
   </animation>
-
+  <!--
   <animation>
     <type>select</type>
     <object-name>blade</object-name>
@@ -57,7 +64,7 @@
       </less-than>
     </condition>
   </animation>
-
+  -->
   <!-- Incidence de la pale -->
   <animation>
     <type>rotate</type>

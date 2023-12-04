@@ -9,7 +9,7 @@ data 5
 rotor
 texture "mainrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 801
 -0 -0.581082 -0.084768
 0.016537 -0.581082 -0.083139

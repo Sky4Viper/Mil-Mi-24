@@ -3,12 +3,12 @@
 <PropertyList>
 
   <!-- Chaque pales est formée de 4 parties
-  
+
        Axe 0               Axe 1               Axe 2               Axe 3
          +______blade1_______+_______blade2______+______blade3_______+_____blade4________
       center
         of
-       rotor 
+       rotor
 
   -->
   <path>blade.ac</path>
@@ -36,7 +36,19 @@
     <object-name>propdisc4</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>propblur1</object-name>
+    <object-name>propblur2</object-name>
+    <object-name>propblur3</object-name>
+    <object-name>propblur4</object-name>
+    <object-name>propdisc1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propdisc3</object-name>
+    <object-name>propdisc4</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>propblur1</object-name>
@@ -48,7 +60,7 @@
     <object-name>propdisc3</object-name>
     <object-name>propdisc4</object-name>
   </effect>
-  
+
   <!-- Sélection blade/blur/disc main rotor-->
   <animation>
     <name>DiscComplet</name>
@@ -101,7 +113,7 @@
     <object-name>blade3</object-name>
     <object-name>blade4</object-name>
   </animation>
-
+  <!--
   <animation>
     <type>select</type>
     <object-name>PaleComplete</object-name>
@@ -118,7 +130,7 @@
       </or>
     </condition>
   </animation>
-
+  -->
   <!-- Axe 0 de pliage des pâles pour le cône -->
   <animation>
     <name>Total0</name>

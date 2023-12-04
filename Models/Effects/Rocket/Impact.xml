@@ -8,7 +8,7 @@
     <object-name>sphere</object-name>
     <object-name>puff-black2</object-name>
   </animation>
-  
+
   <animation>
     <type>material</type>
     <object-name>puff-black2</object-name>
@@ -18,7 +18,7 @@
       <blue>  2 </blue>
     </emission>
   </animation>
-  
+
   <animation>
     <enable-hot type="bool">false</enable-hot>
   </animation>
@@ -107,7 +107,7 @@
 
   <!-- Fire -->
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Effects/Rocket/rocketExplo.xml</path>
+    <path>rocketExplo.xml</path>
     <offsets>
       <x-m> 2 </x-m>
       <y-m> 0 </y-m>

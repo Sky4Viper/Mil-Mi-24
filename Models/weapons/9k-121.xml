@@ -12,7 +12,7 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/ArmReflect</inherits-from>
     <object-name>tube</object-name>
   </effect>
 

@@ -4,16 +4,28 @@
      Mil Mi 24 by Zel (2012)
      Updated with Melchior's script by helijah (2012)
      Add "YASIM_VERSION_CURRENT" by helijah (2014)
+     Updated : BARANGER Emmanuel 02/2021
 
      It's a dev version not a final version.
+
+     Sources  : https://en.wikipedia.org/wiki/Mil_Mi-24
+
+     Length             : 17.50 m    (    57 ft 5 in ) fuselage only
+                          19.79 m    (    65 ft      ) including rotors
+     Wingspan           :   6.5 m    (    21 ft 4 in ) stub wings
+     Height             :   6.5 m    (    21 ft 4 in )
+     Empty weight       :  8500 kg   ( 18739 lb      )
+     Max takeoff weight : 12000 kg   ( 26455 lb      )
+     Powerplant         : 2 Isotov TV3-117 turboshaft engines, 2200 hp each
+     Maximum speed      :   335 km/h (   181 kn      )
 -->
-<airplane mass="17000" version="YASIM_VERSION_CURRENT">
+<airplane mass="18739" version="YASIM_VERSION_CURRENT" mtow-lbs="26455">
 
   <approach speed="45" aoa="16">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
   </approach>
 
-  <cruise speed="170" alt="0">
+  <cruise speed="181" alt="0">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
   </cruise>
 
@@ -62,28 +74,34 @@
          cyclic-factor="0.8"
          rotor-correction-factor="0.95"
          downwashfactor="1.0">
-         <control-input control="CYCLICAIL"  axis="/controls/flight/aileron"             src0="-1" src1="1" dst0="-0.04" dst1=" 0.04"/>
+         <!-- <control-input control="CYCLICAIL"  axis="/controls/flight/aileron"             src0="-1" src1="1" dst0="-0.04" dst1=" 0.04"/>
          <control-input control="CYCLICAIL"  axis="/controls/flight/aileron-trim"/>
-         
+
          <control-input control="CYCLICELE"  axis="/controls/flight/elevator"            src0="-1" src1="1" dst0="-0.04" dst1=" 0.04"/>
          <control-input control="CYCLICELE"  axis="/controls/flight/elevator-trim"/>
-         
-         <control-input control="COLLECTIVE" axis="/controls/engines/engine[0]/throttle" src0="-1" src1="1" dst0=" 0.15" dst1="-0.01"/>
+
+         <control-input control="COLLECTIVE" axis="/controls/engines/engine[0]/throttle" src0="-1" src1="1" dst0=" 0.15" dst1="-0.01"/> -->
+
+         <control-input axis="/controls/flight/aileron-trim" control="CYCLICAIL"/>
+         <control-input axis="/controls/flight/aileron" control="CYCLICAIL" src0="-1.0" src1="1.0" dst0="-0.04" dst1="0.04"/>
+         <control-input axis="/controls/flight/elevator-trim" control="CYCLICELE"/>
+         <control-input axis="/controls/flight/elevator" control="CYCLICELE" src0="-1.0" src1="1.0" dst0="-0.04" dst1="0.04"/>
+         <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="0.15" dst1="-0.01"/>
   </rotor>
 
   <rotor name="tail"
          x="-7.795" y="0.803" z="1.534"
          nx="0.0" ny="-1.0" nz="0.1"
          fx="1" fy="0" fz="0"
-         ccw="0"
+         ccw="1"
          mincollective="-20" maxcollective="14"
-         diameter="3.49" 
+         diameter="3.49"
          numblades="3"
          chord="0.3"
          weightperblade="20"
          relbladecenter="0.5"
          dynamic="0.7"
-         rpm="750" 
+         rpm="750"
          rellenflaphinge="0"
          delta3="0"
          translift="0"
@@ -105,19 +123,20 @@
          rel-len-blade-start="0.33"
          rotor-correction-factor="0.9">
          <control-input control="COLLECTIVE" axis="/controls/flight/rudder" invert="true" src0=" -1" src1="1" dst0="-1.400" dst1="1.4"/>
+         <control-input control="COLLECTIVE"  axis="/controls/flight/rudder-trim" invert="true"/>
          <control-input control="COLLECTIVE" axis="/controls/engines/engine[0]/throttle"  src0="0.1" src1="1" dst0="0.0007" dst1="-0.00055"/>
   </rotor>
-  
-  <rotorgear max-power-engine="2200"
+
+  <!-- <rotorgear max-power-engine="2200"
              max-power-rotor-brake="250"
              rotorgear-friction="4"
              engine-prop-factor="0.01"
              engine-accel-limit="10"
              yasimdragfactor="30"
              yasimliftfactor="100">
-             <control-input control="ROTORGEARENGINEON" axis="/controls/engines/engine[0]/magnetos"/>
-             <control-input control="ROTORBRAKE" axis="/controls/rotor/brake"                     src0="0" src1="1" dst0="0" dst1="1"/>
-             <control-input control="ROTORRELTARGET" axis="/controls/rotor/reltarget"             src0="0" src1="2" dst0="0" dst1="2"/>
+             <control-input control="ROTORGEARENGINEON"       axis="/controls/engines/engine[0]/magnetos"/>
+             <control-input control="ROTORBRAKE"              axis="/controls/rotor/brake"        src0="0" src1="1" dst0="0" dst1="1"/>
+             <control-input control="ROTORRELTARGET"          axis="/controls/rotor/reltarget"    src0="0" src1="2" dst0="0" dst1="2"/>
              <control-input control="ROTORENGINEMAXRELTORQUE" axis="/controls/rotor/maxreltorque" src0="0" src1="2" dst0="0" dst1="2"/>
   </rotorgear>
 
@@ -128,11 +147,38 @@
              engine-accel-limit="10"
              yasimdragfactor="30"
              yasimliftfactor="100">
-             <control-input control="ROTORGEARENGINEON" axis="/controls/engines/engine[1]/magnetos"/>
-             <control-input control="ROTORBRAKE" axis="/controls/rotor/brake"                     src0="0" src1="1" dst0="0" dst1="1"/>
-             <control-input control="ROTORRELTARGET" axis="/controls/rotor/reltarget"             src0="0" src1="2" dst0="0" dst1="2"/>
+             <control-input control="ROTORGEARENGINEON"       axis="/controls/engines/engine[1]/magnetos"/>
+             <control-input control="ROTORBRAKE"              axis="/controls/rotor/brake"        src0="0" src1="1" dst0="0" dst1="1"/>
+             <control-input control="ROTORRELTARGET"          axis="/controls/rotor/reltarget"    src0="0" src1="2" dst0="0" dst1="2"/>
              <control-input control="ROTORENGINEMAXRELTORQUE" axis="/controls/rotor/maxreltorque" src0="0" src1="2" dst0="0" dst1="2"/>
-  </rotorgear>
+  </rotorgear> -->
+
+     <!-- Engine:  Klimov TV3-117, power: 1,640kW each-->
+   <rotorgear max-power-engine="1640"
+     max-power-rotor-brake="300"
+     rotorgear-friction="0.5"
+     engine-prop-factor="0.005"
+     engine-accel-limit="3"
+     yasimdragfactor="60"
+     yasimliftfactor="100">
+     <control-input control="ROTORGEARENGINEON"       axis="/controls/engines/engine[0]/magnetos"/>
+     <control-input control="ROTORBRAKE"              axis="/controls/rotor/brake"        src0="0" src1="1" dst0="0" dst1="1"/>
+     <control-input control="ROTORRELTARGET"          axis="/controls/rotor/reltarget"    src0="0" src1="2" dst0="0" dst1="2"/>
+     <control-input control="ROTORENGINEMAXRELTORQUE" axis="/controls/rotor/maxreltorque" src0="0" src1="2" dst0="0" dst1="2"/>
+   </rotorgear>
+
+   <rotorgear max-power-engine="1640"
+     max-power-rotor-brake="300"
+     rotorgear-friction="0.5"
+     engine-prop-factor="0.005"
+     engine-accel-limit="3"
+     yasimdragfactor="60"
+     yasimliftfactor="100">
+     <control-input control="ROTORGEARENGINEON"       axis="/controls/engines/engine[1]/magnetos"/>
+     <control-input control="ROTORBRAKE"              axis="/controls/rotor/brake"        src0="0" src1="1" dst0="0" dst1="1"/>
+     <control-input control="ROTORRELTARGET"          axis="/controls/rotor/reltarget"    src0="0" src1="2" dst0="0" dst1="2"/>
+     <control-input control="ROTORENGINEMAXRELTORQUE" axis="/controls/rotor/maxreltorque" src0="0" src1="2" dst0="0" dst1="2"/>
+   </rotorgear>
 
   <!-- Fuse -->
   <fuselage ax=" 7.716" ay="0" az="-1.453" bx=" 7.298" by="0" bz="-1.453" width="1.188" taper="0.10" midpoint="1.0"
@@ -190,42 +236,52 @@
         spring="3"
         damp="1.0"
         sfric="1.5"
-        dfric="0.8">
-        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
-        <control-output control="STEER" prop="controls/gear/steering"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        dfric="0.8"
+        stiction="0">
+        
+        <control-input  control="STEER"  axis="/controls/flight/rudder" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
+        <control-input  control="EXTEND" axis="/controls/gear/gear-down"/>
+
+        <control-output control="STEER"  prop="controls/gear/steering"/>
         <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
-        <control-speed control="EXTEND" transition-time="7"/>
+
+        <control-speed  control="EXTEND" transition-time="7"/>
   </gear>
 
   <!-- left gear -->
-  <gear x="0.744" y="1.343" z="-2.695"
+  <gear x="0.744" y="1.643" z="-2.695"
         compression="0.1"
         spring="3.2"
         damp="1.0"
         sfric="1.5"
         dfric="0.8"
-        initial-load="1">
-        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        initial-load="1"
+        stiction="1">
+        <control-input  control="BRAKE"  axis="/controls/gear/brake-left"/>
+        <control-input  control="BRAKE"  axis="/controls/gear/brake-parking"/>
+        <control-input  control="EXTEND" axis="/controls/gear/gear-down"/>
+
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
-        <control-speed control="EXTEND" transition-time="7"/>
+
+        <control-speed  control="EXTEND" transition-time="7"/>
   </gear>
 
   <!-- right gear -->
-  <gear x="0.744" y="-1.343" z="-2.695"
+  <gear x="0.744" y="-1.643" z="-2.695"
         compression="0.1"
         spring="3.2"
         damp="1.0"
         sfric="1.5"
         dfric="0.8"
-        initial-load="1">
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        initial-load="1"
+        stiction="1">
+        <control-input  control="BRAKE"  axis="/controls/gear/brake-right"/>
+        <control-input  control="BRAKE"  axis="/controls/gear/brake-parking"/>
+        <control-input  control="EXTEND" axis="/controls/gear/gear-down"/>
+
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
-        <control-speed control="EXTEND" transition-time="7"/>
+
+        <control-speed  control="EXTEND" transition-time="7"/>
   </gear>
 
   <!-- Tail skid -->
@@ -267,16 +323,16 @@
   <weight x="8.6" y=".53" z="-2." mass-prop="/sim/weight[0]/weight-lb"/>
 
   <!-- hitch -->
-  <hitch name="aerotow" 
-         x="0.6" y="0.0" z="-0.7" 
+  <hitch name="aerotow"
+         x="0.6" y="0.0" z="-0.7"
          force-is-calculated-by-other="0">
-         <tow length="30" 
-              weight-per-meter="0.035" 
-              elastic-constant="9000" 
-              break-force="80000" 
+         <tow length="30"
+              weight-per-meter="0.035"
+              elastic-constant="9000"
+              break-force="80000"
               mp-auto-connect-period="0.0"/>
-         <winch max-tow-length="100" 
-                min-tow-length="30" 
+         <winch max-tow-length="100"
+                min-tow-length="30"
                 initial-tow-length="30"/>
          <control-input axis="/controls/aerotow/find-aircraft" control="FINDAITOW"/>
   </hitch>

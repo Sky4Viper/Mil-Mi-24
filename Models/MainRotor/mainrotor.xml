@@ -11,12 +11,12 @@
   <!-- Blades -->
   <model>
     <name>Blade1</name>
-    <path>Aircraft/Mil-Mi-24/Models/MainRotor/blade1.xml</path>
+    <path>blade1.xml</path>
   </model>
 
   <model>
     <name>Blade2</name>
-    <path>Aircraft/Mil-Mi-24/Models/MainRotor/blade2.xml</path>
+    <path>blade2.xml</path>
     <offsets>
       <heading-deg> 72 </heading-deg>
     </offsets>
@@ -24,7 +24,7 @@
 
   <model>
     <name>Blade3</name>
-    <path>Aircraft/Mil-Mi-24/Models/MainRotor/blade3.xml</path>
+    <path>blade3.xml</path>
     <offsets>
       <heading-deg> 144 </heading-deg>
     </offsets>
@@ -32,7 +32,7 @@
 
   <model>
     <name>Blade4</name>
-    <path>Aircraft/Mil-Mi-24/Models/MainRotor/blade4.xml</path>
+    <path>blade4.xml</path>
     <offsets>
       <heading-deg> 216 </heading-deg>
     </offsets>
@@ -40,7 +40,7 @@
 
   <model>
     <name>Blade5</name>
-    <path>Aircraft/Mil-Mi-24/Models/MainRotor/blade5.xml</path>
+    <path>blade5.xml</path>
     <offsets>
       <heading-deg> 288 </heading-deg>
     </offsets>
@@ -55,7 +55,7 @@
     <object-name>Blade5</object-name>
   </animation>
 
-  <!-- Rotation du rotor 
+  <!-- Rotation du rotor
   <animation>
     <type>rotate</type>
     <object-name>touteslespales</object-name>

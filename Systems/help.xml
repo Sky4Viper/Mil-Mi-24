@@ -5,12 +5,8 @@
   <title>Mil Mi 24 Hind</title>
   <line>______________________________________________</line>
   <key>
-    <name>{</name>
-    <desc>Start engines</desc>
-  </key>
-  <key>
     <name>}</name>
-    <desc>Shutdown engines</desc>
+    <desc>AutoStart/AutoStop</desc>
   </key>
   <key>
     <name>R</name>
@@ -22,13 +18,29 @@
   </key>
   <!-- ################### -->
   <key>
-    <name>e</name>
-    <desc>Rockets</desc>
+    <name>q</name>
+    <desc>Ripple mode select (Salvo-1-4)</desc>
+  </key>
+  <key>
+    <name>&lt;</name>
+    <desc>Select gun</desc>
+  </key>
+  <key>
+    <name>&gt;</name>
+    <desc>Select rockets</desc>
+  </key>
+  <key>
+    <name>m</name>
+    <desc>Master Arm On/Off</desc>
+  </key>
+  <key>
+    <name>d</name>
+    <desc>Fire Selected weapon</desc>
   </key>
   <key>
     <name>f</name>
-    <desc>Gun</desc>
+    <desc>Launch flares</desc>
   </key>
-  <!-- ################### -->
-  
+  <!-- ################### -->  
+
 </PropertyList>

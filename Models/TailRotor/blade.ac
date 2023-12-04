@@ -9,7 +9,7 @@ data 5
 blade
 texture "tailrotor.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 321
 1.590769 -0.005707 0.20682
 0.290029 -0.006707 -0.065887
@@ -2483,7 +2483,7 @@ data 8
 propblur
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 6
 1.752133 -0.000013 -0.000001
 1.718465 -0.000013 0.341824
@@ -2536,7 +2536,7 @@ data 8
 propdisc
 texture "prop.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 7
 -0.000001 0.007767 0.000001
 -0.000001 -0.007767 0.000001

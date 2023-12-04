@@ -7,6 +7,55 @@
       <label>Mil Mi 24</label>
       <enabled type="bool">true</enabled>
       <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/battery-switch</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/engine/generator</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/instrument-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/nav-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/strobe-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/switches/starterkey-insert</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/engines/engine[0]/fuel-pump</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/engines/engine[1]/fuel-pump</property>
+        </binding>
+        <binding>
+          <condition>
+            <property>controls/electric/battery-switch</property>
+          </condition>
+          <command>nasal</command>
+          <script>mi24.engines(1)</script>
+        </binding>
+        <binding>
+          <condition>
+            <not><property>controls/electric/battery-switch</property></not>
+          </condition>
+          <command>nasal</command>
+          <script>mi24.engines(0)</script>
+        </binding>
+      </item>
+      <item>
         <label>Select Livery</label>
         <binding>
           <command>nasal</command>
@@ -14,25 +63,12 @@
         </binding>
       </item>
       <item>
-        <label>Blades visible</label>
-        <binding>
-          <command>nasal</command>
-          <script>
-            var p = "rotors/main/bladesvisible";
-            setprop(p, var i = !getprop(p));
-            gui.popupTip("Blades visible " ~ (i ? "On" : "Off"));
-          </script>
-        </binding>
-      </item>
-      <!--
-      <item>
-        <label>Immatriculation</label>
-        <binding>
-          <command>nasal</command>
-          <script>mi24.immat_dialog.toggle()</script>
-        </binding>
-      </item>
-      -->
+					<label>Reload S-8 rockets</label>
+					<binding>
+						<command>nasal</command>
+						<script>rockets.reload()</script>
+					</binding>
+				</item>
     </menu>
   </default>
 

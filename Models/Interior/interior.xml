@@ -15,7 +15,7 @@
     <object-name>intportepilote</object-name>
     <object-name>intcockpit</object-name>
     <object-name>planchet</object-name>
-    
+
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
     <object-name>intvitresG</object-name>
@@ -23,18 +23,18 @@
     <object-name>intvitrepilote</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
+    <inherits-from>../Effects/Glass/glassrain</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitresG</object-name>
     <object-name>intvitresD</object-name>
     <object-name>intvitrepilote</object-name>
   </effect>
-  
+
   <!-- Planche de bord -->
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Interior/Panel/panel.xml</path>
+    <path>Panel/panel.xml</path>
     <offsets>
       <x-m> -6.161 </x-m>
       <y-m>  0.000 </y-m>
@@ -42,19 +42,75 @@
     </offsets>
   </model>
 
-  <!-- Pilote -->
+  <!-- Pilote 
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Pilot/pilot.xml</path>
+    <path>../Pilot/pilot.xml</path>
     <offsets>
       <x-m> -5.764 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -1.067 </z-m>
     </offsets>
+  </model> -->
+
+  <!-- Pilot -->
+	
+	<model>
+    <name>Pilot</name>
+		<path>../Pilot/pilot.xml</path>
+		<offsets>
+			<x-m> -5.32249 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.16469 </z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<condition>
+			<not>
+				<property>/sim/current-view/internal</property>
+			</not>
+		</condition>
+	</model>
+
+  <model>
+    <name>Gunner</name>
+		<path>../Pilot/pilot.xml</path>
+		<offsets>
+			<x-m> -6.71774 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.73936 </z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<condition>
+			<not>
+				<property>/sim/current-view/internal</property>
+			</not>
+		</condition>
+	</model>
+
+  <!-- Seat -->
+
+  <model>
+        <name>PilotSeat</name>
+        <path>../Interior/Seat/seat.ac</path>
+        <offsets>
+            <x-m>-5.31587</x-m>
+            <y-m> 0.000</y-m>
+            <z-m>-0.933551</z-m>
+        </offsets>
+  </model>
+
+  <model>
+        <name>GunnerSeat</name>
+        <path>../Interior/Seat/seat.ac</path>
+        <offsets>
+            <x-m>-6.69669</x-m>
+            <y-m> 0.000</y-m>
+            <z-m>-1.48828</z-m>
+        </offsets>
   </model>
 
   <!-- Copilote
   <model>
-    <path>Aircraft/Mil-Mi-24/Models/Pilot/pilot.xml</path>
+    <path>../Pilot/pilot.xml</path>
     <offsets>
       <x-m> -1.607 </x-m>
       <y-m>  0.000 </y-m>
@@ -83,7 +139,7 @@
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>IntLaPortePilote</object-name>
@@ -111,7 +167,7 @@
     <object-name>intporteDH</object-name>
     <object-name>intvitresD</object-name>
   </animation>
-  
+
   <animation>
     <type>pick</type>
     <object-name>IntPorteCargoGauche</object-name>
@@ -128,7 +184,7 @@
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>IntPorteCargoGauche</object-name>

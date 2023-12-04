@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.7
 OBJECT world
 kids 9
 OBJECT poly
@@ -10,7 +10,7 @@ data 4
 ball
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 242
 0.073695 -0 -0
 0.072279 0.014269 -0
@@ -1943,7 +1943,7 @@ data 5
 bezel
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 32
 -0.014428 0.053516 0.07459
 0.004809 0.053516 0.07459
@@ -2126,7 +2126,7 @@ data 7
 bigknob
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 33
 0.007283 0.006019 0.013943
 0.007283 0.011122 0.010671
@@ -2378,7 +2378,7 @@ data 4
 knob
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 33
 0.006933 0.006025 0.005831
 0.006933 0.008521 0
@@ -2630,7 +2630,7 @@ data 9
 riminside
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 64
 -0.013869 -0.0103 -0.042785
 -0.013869 -0.000913 -0.043624
@@ -2929,7 +2929,7 @@ data 9
 rollarrow
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 8
 -0.008158 -0.008639 -0
 0.004532 0.004799 -0.004506
@@ -2988,7 +2988,7 @@ data 9
 rollindex
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 26
 0 0.018455 -0.054072
 0 0.008057 -0.048663
@@ -3107,7 +3107,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 180.000005
+crease 30.000005
 numvert 33
 0.038084 0.000005 0.000032
 0.038084 0.058662 -0.039161
@@ -3343,7 +3343,7 @@ data 5
 wings
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 206
 0.000053 0.005175 0.000212
 0.000053 0.005116 0.000814
