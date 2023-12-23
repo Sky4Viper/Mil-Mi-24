@@ -18,6 +18,7 @@
             	<command>nasal</command>
             	<script><![CDATA[
                 		setprop("controls/armament/weapon-type", 1);
+                    #setprop("sim/messages/copilot", "Guns");
                 		screen.log.write("GSh-30-2K cannon selected", 0.5, 0.5, 1);
                 		]]>
 				      </script>
@@ -36,6 +37,7 @@
             	<command>nasal</command>
             	<script><![CDATA[
                 		setprop("controls/armament/weapon-type", 2);
+                    #setprop("sim/messages/copilot", "Rockets");
                 		screen.log.write("S-8 rockets selected", 0.5, 0.5, 1);
                 		]]>
 				      </script>
@@ -164,6 +166,7 @@
             	<command>nasal</command>
             	<script><![CDATA[
                 		setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
+                    #setprop("sim/messages/copilot", "Master-arm");
                 		screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
                 		]]>
 				</script>
@@ -215,6 +218,10 @@
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/starterkey-insert</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/ralt-switch</property>
       </binding>
       <binding>
         <command>property-toggle</command>

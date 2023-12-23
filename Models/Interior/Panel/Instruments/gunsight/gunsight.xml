@@ -121,9 +121,12 @@
         <object-name>wpn-light.006</object-name>
         <emission> 
             <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-            <red>0.4</red>
+            <!-- <red>0.4</red>
             <green>0.3</green>
-            <blue>0.1</blue>
+            <blue>0.1</blue> -->
+            <red>2.0</red>
+            <green>1.94</green>
+            <blue>1.75</blue>
         </emission>
       <condition>
         <property>controls/electric/battery-switch</property>
@@ -279,6 +282,10 @@
         <property>/controls/armament/weapon-type</property>
         <value>1</value>
         </equals>
+        <equals>
+				  <property>/sim/variant-id</property>
+				  <value>1</value>
+			  </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
     </animation>
@@ -300,9 +307,13 @@
       <object-name>wpn-light.005</object-name>
       <condition>
         <equals>
-        <property>/controls/armament/weapon-type</property>
-        <value>1</value>
+          <property>/controls/armament/weapon-type</property>
+          <value>1</value>
         </equals>
+        <equals>
+				  <property>/sim/variant-id</property>
+				  <value>2</value>
+			  </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
     </animation>

@@ -5,7 +5,8 @@
   <path>map.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
+    <object-name>map-box</object-name>
+    <object-name>map-box-glass</object-name>
     <object-name>canvasCadre</object-name>
     <object-name>boutons</object-name>
     <object-name>ZoomMoins</object-name>
@@ -14,12 +15,28 @@
 
   <animation>
     <type>noshadow</type>
-    <object-name>fond</object-name>
+    <object-name>map-box</object-name>
+    <object-name>map-box-glass</object-name>
     <object-name>canvasCadre</object-name>
     <object-name>boutons</object-name>
     <object-name>ZoomMoins</object-name>
     <object-name>ZoomPlus</object-name>
   </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>map-box-glass</object-name>
+  </animation>
+
+  <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>/sim/rendering/rembrandt/enabled</property>
+        </condition>
+        <object-name>map-box-glass</object-name>
+  </effect>
 
   <animation>
     <type>material</type>
@@ -34,6 +51,25 @@
       <blue>  0.30 </blue>
     </emission>
   </animation>
+
+  <animation>
+		<type>select</type>
+		<object-name>canvasCadre</object-name>
+		<condition>
+				<!-- <property>controls/electric/battery-switch</property> -->
+        <property>/sim/current-view/internal</property>
+		</condition>
+	</animation>
+
+  <!-- <animation>
+		<type>select</type>
+		<object-name>map-box-glass</object-name>
+		<condition>
+        <not>
+          <property>/sim/rendering/rembrandt/enabled</property>
+        </not>
+    </condition>
+	</animation> -->
 
   <animation>
     <type>pick</type>

@@ -7,8 +7,11 @@
   <animation>
     <object-name>fond</object-name>
     <object-name>face</object-name>
+    <object-name>course-card</object-name>
     <object-name>needle1</object-name>
     <object-name>needle2</object-name>
+    <object-name>course-knob</object-name>
+    <object-name>visses</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitre</object-name>
@@ -18,8 +21,11 @@
     <type>noshadow</type>
     <object-name>fond</object-name>
     <object-name>face</object-name>
+    <object-name>course-card</object-name>
     <object-name>needle1</object-name>
     <object-name>needle2</object-name>
+    <object-name>course-knob</object-name>
+    <object-name>visses</object-name>
     <object-name>vitre</object-name>
   </animation>
 
@@ -32,6 +38,7 @@
   <animation>
     <type>material</type>
     <object-name>face</object-name>
+    <object-name>course-card</object-name>
     <object-name>needle1</object-name>
     <object-name>needle2</object-name>
     <condition>
@@ -39,15 +46,25 @@
     </condition>
     <emission>
       <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-      <red>   0.50 </red>
+      <!-- <red>   0.50 </red>
       <green> 0.40 </green>
-      <blue>  0.30 </blue>
+      <blue>  0.30 </blue> -->
+
+      <!-- <red>0.8</red>
+      <green>0.3</green>
+      <blue>0.1</blue> -->
+
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.75</blue>
+
     </emission>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>face</object-name>
+    <object-name>course-card</object-name>
+    <object-name>needle2</object-name>
     <property>orientation/heading-magnetic-deg</property>
     <factor>1</factor>
     <axis>
@@ -57,7 +74,18 @@
     </axis>
   </animation>
 
-  <!-- Needle 1 VOR -->
+  <animation>
+  <type>rotate</type>
+  <object-name>needle2</object-name>
+  <property>autopilot/settings/heading-bug-deg</property>
+  <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+  </axis>
+</animation>
+
+  <!-- Needle 1 VOR
   <animation>
     <type>rotate</type>
     <object-name>needle1</object-name>
@@ -78,18 +106,59 @@
       <y> 0 </y>
       <z> 0 </z>
     </axis>
-  </animation>
+  </animation>  -->
 
   <!-- Needle 2 ADF -->
   <animation>
     <type>rotate</type>
-    <object-name>needle2</object-name>
+    <object-name>needle1</object-name>
     <property>instrumentation/adf/indicated-bearing-deg</property>
     <axis>
-      <x> 1 </x>
+      <x> -1 </x>
       <y> 0 </y>
       <z> 0 </z>
     </axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>course-knob</object-name>
+    <increase>
+          <binding>
+              <command>property-adjust</command>
+              <property>autopilot/settings/heading-bug-deg</property>
+              <step>1.0</step>
+              <min>1</min>
+              <max>361</max>
+              <wrap>true</wrap>
+          </binding>
+          <!-- <binding>
+            <command>nasal</command>
+            <script>switchclicksound.click("adf-dial")</script>
+          </binding> -->
+    </increase>
+    <decrease>
+          <binding>
+              <command>property-adjust</command>
+              <property>autopilot/settings/heading-bug-deg</property>
+              <step>-1.0</step>
+              <min>1</min>
+              <max>361</max>
+              <wrap>true</wrap>
+          </binding>
+          <!-- <binding>
+                <command>nasal</command>
+                <script>switchclicksound.click("adf-dial")</script>
+          </binding> -->
+    </decrease>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>course-adj</tooltip-id>
+                <label>Set heading %4.0f</label>
+                <property>autopilot/settings/heading-bug-deg</property>
+        </binding>
+    </hovered>
   </animation>
 
 </PropertyList>

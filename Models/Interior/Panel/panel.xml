@@ -15,11 +15,14 @@
 
   <!-- AI -->
   <model>
-    <path>Instruments/ai/ai.xml</path>
+    <path>Instruments/ai/pkp-72m.xml</path>
     <offsets>
-      <x-m> -0.018 </x-m>
-      <y-m> -0.040 </y-m>
-      <z-m>  0.230 </z-m>
+      <!-- <x-m> -0.045 </x-m>
+      <y-m> -0.0615 </y-m>
+      <z-m>  0.0931 </z-m> -->
+      <x-m> -0.047149 </x-m>
+      <y-m> -0.061411 </y-m>
+      <z-m>  0.09235 </z-m>
     </offsets>
   </model>
 
@@ -27,19 +30,9 @@
   <model>
     <path>Instruments/ai2/ai.xml</path>
     <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.090 </y-m>
-      <z-m> 0.160 </z-m>
-    </offsets>
-  </model>
-
-  <!-- ALT -->
-  <model>
-    <path>Instruments/alt/alt.xml</path>
-    <offsets>
-      <x-m>  0.002 </x-m>
-      <y-m> -0.160 </y-m>
-      <z-m>  0.160 </z-m>
+      <x-m> 0.008814 </x-m>
+      <y-m> 0.060396 </y-m>
+      <z-m> -0.0106 </z-m>
     </offsets>
   </model>
 
@@ -47,41 +40,65 @@
   <model>
     <path>Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.001 </x-m>
-      <y-m> -0.160 </y-m>
-      <z-m>  0.266 </z-m>
+      <x-m>  0.013096 </x-m>
+      <y-m> -0.186003 </y-m>
+      <z-m> 0.093887 </z-m>
     </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.013096 </x-m>
+      <y-m> -0.186003 </y-m>
+      <z-m> -0.01134 </z-m>
+    </offsets>
+  </model>
+
+  <!-- GSDI -->
+  <model>
+    <path>Instruments/gsdi/gsdi.xml</path>
+    <offsets>
+      <x-m>  0.011706 </x-m>
+      <y-m> -0.294214 </y-m>
+      <z-m>  0.101212 </z-m>
+    </offsets>
+    <!-- <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.2</x-offset>
+			<y-offset>1.2</y-offset>
+			<z-offset>1.2</z-offset>
+			</animation>
+    </overlay> -->
   </model>
 
   <!-- MAP -->
   <model>
     <path>Instruments/map/map.xml</path>
+    <!-- <offsets>
+      <x-m> 0.03942 </x-m>
+      <y-m>  0.295 </y-m>
+      <z-m>  0.0929 </z-m>
+    </offsets> -->
     <offsets>
-      <x-m> -0.005 </x-m>
-      <y-m>  0.285 </y-m>
-      <z-m>  0.235 </z-m>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.002 </y-m>
+      <z-m> -0.008 </z-m>
+      <pitch-deg>8</pitch-deg>
     </offsets>
   </model>
-
-  <!-- INSTR
-  <model>
-    <path>Instruments/instr/instr.xml</path>
-    <offsets>
-      <x-m> -0.02497 </x-m>
-      <y-m>  0.00562 </y-m>
-      <z-m>  0.44817 </z-m>
-      <pitch-deg>-8</pitch-deg>
-    </offsets>
-  </model>  -->
 
   <!-- GUNSIGHT -->
   <model>
     <path>Instruments/gunsight/gunsight.xml</path>
     <offsets>
-      <x-m> 0.117649 </x-m>
+      <x-m> 0.202069 </x-m>
       <y-m>  0.00262 </y-m>
-      <z-m>  0.505254 </z-m>
-      <pitch-deg>-8</pitch-deg>
+      <z-m>  0.363154 </z-m>
+      <pitch-deg>2</pitch-deg>
     </offsets>
   </model>
 
@@ -89,9 +106,9 @@
   <model>
     <path>Instruments/g/gmeter.xml</path>
     <offsets>
-      <x-m> 0.009 </x-m>
-      <y-m> -0.182 </y-m>
-      <z-m>  0.389 </z-m>
+      <x-m> 0.008133 </x-m>
+      <y-m>-0.220079 </y-m>
+      <z-m> 0.273126 </z-m>
     </offsets>
   </model>
 
@@ -99,19 +116,38 @@
   <model>
     <path>Instruments/vsi/vsi.xml</path>
     <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.087 </y-m>
-      <z-m> 0.266 </z-m>
+      <x-m>  0.006085 </x-m>
+      <y-m> 0.060396 </y-m>
+      <z-m> 0.093887 </z-m>
     </offsets>
+  </model>
+
+  <!-- FUEL -->
+  <model>
+    <path>Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m> 0.013096 </x-m>
+      <y-m> 0.257104 </y-m>
+      <z-m>-0.116066 </z-m>
+    </offsets>
+    <!-- <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.2</x-offset>
+			<y-offset>1.2</y-offset>
+			<z-offset>1.2</z-offset>
+			</animation>
+    </overlay> -->
   </model>
 
   <!-- RADAR ALT -->
   <model>
-    <path>Instruments/radaralt/rad-alt.xml</path>
+    <path>Instruments/rv-5m/rv-5m.xml</path>
     <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m> -0.274 </y-m>
-      <z-m>  0.294 </z-m>
+      <x-m>  0.008767 </x-m>
+      <y-m> -0.293448 </y-m>
+      <z-m> -0.012621 </z-m>
     </offsets>
   </model>
 
@@ -119,30 +155,120 @@
   <model>
     <path>Instruments/rrc/rrc.xml</path>
     <offsets>
-      <x-m> -0.005 </x-m>
-      <y-m> -0.040 </y-m>
-      <z-m>  0.048 </z-m>
+      <x-m>  0.001858 </x-m>
+      <y-m> -0.061411 </y-m>
+      <z-m> -0.044372 </z-m>
+      <!-- <pitch-deg>-11</pitch-deg> -->
     </offsets>
   </model>
 
-  <!-- TORQUE -->
+  <!-- ROTOR RPM -->
   <model>
-    <path>Instruments/rotorpcnt/rotorpcnt.xml</path>
+    <path>Instruments/rpm/rpm-r.xml</path>
     <offsets>
-      <x-m>  0.001 </x-m>
-      <y-m> -0.236 </y-m>
-      <z-m>  0.082 </z-m>
+      <x-m>  0.012008 </x-m>
+      <y-m> -0.29026 </y-m>
+      <z-m> -0.120237 </z-m>
     </offsets>
+  </model>
+
+  <!-- ENGINE RPM -->
+  <model>
+    <path>Instruments/rpm/rpm-e.xml</path>
+    <offsets>
+      <x-m>  0.012008 </x-m>
+      <y-m> -0.172843 </y-m>
+      <z-m> -0.120237 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Power Tourbine Inlete Temperature -->
+
+  <model>
+    <path>Instruments/ptit/ptit.xml</path>
+    <offsets>
+      <x-m>  0.012508 </x-m>
+      <y-m>  0.027363 </y-m>
+      <z-m> -0.120237 </z-m>
+    </offsets>
+  </model>
+
+  <!-- DRIFT ANGLE -->
+  <model>
+    <path>Instruments/driftangle/driftangle.xml</path>
+    <offsets>
+      <x-m>  0.027459 </x-m>
+      <y-m> 0.139765 </y-m>
+      <z-m> -0.122791 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.9</x-offset>
+			<y-offset>0.9</y-offset>
+			<z-offset>0.9</z-offset>
+			</animation>
+    </overlay>
   </model>
 
   <!-- COMPASS -->
   <model>
     <path>Instruments/compass/compass.xml</path>
     <offsets>
-      <x-m> 0.122649 </x-m>
+      <x-m> 0.167069 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.848254 </z-m>
+      <z-m>  0.706154 </z-m>
+      <pitch-deg>10</pitch-deg>
     </offsets>
+  </model>
+
+  <!-- CLOCK -->
+  <model>
+    <path>Instruments/achs/achs.xml</path>
+    <offsets>
+      <x-m> 0.009587 </x-m>
+      <y-m> 0.186212 </y-m>
+      <z-m>  0.25881 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.95</x-offset>
+			<y-offset>0.9</y-offset>
+			<z-offset>0.9</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- RWR -->
+  <model>
+    <path>Instruments/rwr/rwr.xml</path>
+    <offsets>
+      <x-m> 0.006098 </x-m>
+      <y-m> 0.274458 </y-m>
+      <z-m> 0.239352 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ROTOR BLADE TILT -->
+  <model>
+    <path>Instruments/rtr/rtr.xml</path>
+    <offsets>
+      <x-m>  0.006085 </x-m>
+      <y-m> -0.381295 </y-m>
+      <z-m>  0.014038 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.85</x-offset>
+			<y-offset>0.85</y-offset>
+			<z-offset>0.85</z-offset>
+			</animation>
+    </overlay>
   </model>
 
 </PropertyList>

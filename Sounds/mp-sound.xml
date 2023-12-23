@@ -14,10 +14,10 @@
       <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
       <condition>
         <and>
-          <greater-than>
+          <equals>
             <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+            <value>1</value>
+          </equals>
           <not><property>sim/current-view/internal</property></not>
         </and>
       </condition>
@@ -34,10 +34,10 @@
       <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
       <condition>
         <and>
-          <greater-than>
+          <equals>
             <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+            <value>1</value>
+          </equals>
           <property>sim/current-view/internal</property>
         </and>
       </condition>
@@ -56,9 +56,10 @@
         <and>
           <greater-than>
             <property>sim/model/mi24/state</property>
-            <value>0</value>
+            <value>1</value>
           </greater-than>
           <not><property>sim/current-view/internal</property></not>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>
@@ -76,9 +77,10 @@
         <and>
           <greater-than>
             <property>sim/model/mi24/state</property>
-            <value>0</value>
+            <value>1</value>
           </greater-than>
           <property>sim/current-view/internal</property>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>
@@ -139,6 +141,7 @@
             <value>0</value>
           </greater-than>
           <not><property>sim/current-view/internal</property></not>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>
@@ -170,6 +173,7 @@
             <value>0</value>
           </greater-than>
           <property>sim/current-view/internal</property>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>

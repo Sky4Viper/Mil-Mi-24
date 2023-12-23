@@ -74,10 +74,13 @@
     <type>select</type>
     <object-name>DiscComplet</object-name>
     <condition>
+	<and>
       <greater-than>
         <property>rotors/main/rpm</property>
         <value>150</value>
       </greater-than>
+	<not><property>/sim/crashed</property></not>
+	</and>
     </condition>
   </animation>
 
@@ -102,6 +105,7 @@
           <property>rotors/main/rpm</property>
           <value>150.001</value>
         </less-than>
+	<not><property>/sim/crashed</property></not>
       </and>
     </condition>
   </animation>

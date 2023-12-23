@@ -68,7 +68,14 @@
 						<command>nasal</command>
 						<script>rockets.reload()</script>
 					</binding>
-				</item>
+			</item>
+      <item>
+					<label>Exaust IR coolers (toggle)</label>
+					<binding>
+          <command>property-toggle</command>
+          <property>sim/model/mi24/ir-cooler</property>
+        </binding>
+			</item>
     </menu>
   </default>
 

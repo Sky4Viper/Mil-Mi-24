@@ -119,14 +119,14 @@ var triggerControl = func {
 		# var PylonsInner_ON = (getprop("controls/armament/pylon-inner-sel") == 1);
 		
 		# if(mounted1L or mounted2L) {
-			var fireTime1 = 0.75; #continuous fire for 0.15s intervals
-			var fireTime2 = 0.75; #continuous fire for 0.15s intervals
+			var fireTime1 = 1.0; #continuous fire for 0.15s intervals
+			#var fireTime2 = 0.75; #continuous fire for 0.15s intervals
 
 			# if(mounted1L and mounted2L and PylonsOuter_ON and PylonsInner_ON and getprop("/controls/armament/rocketsLeft1") > 0 and getprop("/controls/armament/rocketsLeft2") > 0  and RippleType ==0) {
 			# 	setprop("/controls/armament/trigger-S-5-L", 1);
 			# 	setprop("/controls/armament/trigger-S-5-R", 1);
 
-			#     var rocketsLeft1 = getprop("/controls/armament/rocketsLeft1");
+			     var rocketsLeft1 = getprop("/controls/armament/rocketsLeft1");
 			#     var rocketsLeft2 = getprop("/controls/armament/rocketsLeft2");
 
 			#     setprop("/controls/armament/rocketsCount1", rocketsLeft1);
@@ -137,7 +137,7 @@ var triggerControl = func {
 			#     interpolate("/controls/armament/rocketsCount2", 0,
 			# 	fireTime2*(rocketsLeft2/16));
 
-			#     outOfAmmo1.restart(fireTime1*(rocketsLeft1/16)); 
+			     outOfAmmo1.restart(fireTime1*(rocketsLeft1/20)); 
 			#     outOfAmmo2.restart(fireTime2*(rocketsLeft2/16));
 			# }
 

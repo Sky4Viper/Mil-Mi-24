@@ -1,13 +1,14 @@
 AC3Db
-MATERIAL "glass_mat" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 1 1 1  shi 128  trans 0.802
+MATERIAL "glass_mat" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 1.000 1.000 1.000  spec 1.000 1.000 1.000  shi 64 trans 0.802
 MATERIAL "base_mat" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 MATERIAL "light-green" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 1.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
 MATERIAL "light-purple" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.500 0.100 0.900  spec 0.000 0.000 0.000  shi 64 trans 0.000
 MATERIAL "light-red" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 1.000 0.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
 MATERIAL "light-yellow" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 1.000 0.773 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
-MATERIAL "gunsight_mat" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0.2
+MATERIAL "gunsight_mat" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.200 0.200 0.200  shi 64 trans 0.200
+MATERIAL "wpn-light-mat" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 1.000 0.773 0.000  spec 0.200 0.200 0.200  shi 64 trans 0.150
 OBJECT world
-name "Blender_exporter_v3.3__gunsight.ac"
+name "gunsight.ac"
 kids 17
 OBJECT poly
 name "Glass"
@@ -11885,7 +11886,7 @@ name "wpn-light.001"
 data 17
 Gunsight.mesh.010
 crease 45.0
-texture "instr.png"
+texture "panel-lights-on.png"
 numvert 4
 0.00619 -0.01329 0.0136
 0.00619 -0.01329 -0.00309
@@ -11893,7 +11894,7 @@ numvert 4
 0.00619 -0.02426 0.0136
 numsurf 1
 SURF 0X10
-mat 5
+mat 7
 refs 4
 0 0.237926 0.405497
 3 0.237926 0.340251
@@ -11905,7 +11906,7 @@ name "wpn-light.002"
 data 17
 Gunsight.mesh.011
 crease 45.0
-texture "instr.png"
+texture "panel-lights-on.png"
 numvert 4
 0.00619 -0.01329 -0.00493
 0.00619 -0.01329 -0.02162
@@ -11913,7 +11914,7 @@ numvert 4
 0.00619 -0.02426 -0.00493
 numsurf 1
 SURF 0X10
-mat 5
+mat 7
 refs 4
 0 0.325592 0.406912
 3 0.325592 0.341666
@@ -11925,7 +11926,7 @@ name "wpn-light.003"
 data 17
 Gunsight.mesh.012
 crease 45.0
-texture "instr.png"
+texture "panel-lights-on.png"
 numvert 4
 0.00619 -0.01329 -0.02346
 0.00619 -0.01329 -0.04016
@@ -11933,7 +11934,7 @@ numvert 4
 0.00619 -0.02426 -0.02346
 numsurf 1
 SURF 0X10
-mat 5
+mat 7
 refs 4
 0 0.412949 0.409373
 3 0.412949 0.344127
@@ -11945,7 +11946,7 @@ name "wpn-light.004"
 data 17
 Gunsight.mesh.013
 crease 45.0
-texture "instr.png"
+texture "panel-lights-on.png"
 numvert 4
 0.00619 -0.02645 0.0136
 0.00619 -0.02645 -0.00309
@@ -11953,7 +11954,7 @@ numvert 4
 0.00619 -0.03742 0.0136
 numsurf 1
 SURF 0X10
-mat 5
+mat 7
 refs 4
 0 0.236027 0.326968
 3 0.236027 0.261722
@@ -11965,7 +11966,7 @@ name "wpn-light.005"
 data 17
 Gunsight.mesh.014
 crease 45.0
-texture "instr.png"
+texture "panel-lights-on.png"
 numvert 4
 0.00619 -0.02645 -0.00493
 0.00619 -0.02645 -0.02162
@@ -11973,7 +11974,7 @@ numvert 4
 0.00619 -0.03742 -0.00493
 numsurf 1
 SURF 0X10
-mat 5
+mat 7
 refs 4
 0 0.324631 0.327945
 3 0.324631 0.262699
@@ -11985,7 +11986,7 @@ name "wpn-light.006"
 data 17
 Gunsight.mesh.015
 crease 45.0
-texture "instr.png"
+texture "panel-lights-on.png"
 numvert 4
 0.00619 -0.02645 -0.02346
 0.00619 -0.02645 -0.04016
@@ -11993,7 +11994,7 @@ numvert 4
 0.00619 -0.03742 -0.02346
 numsurf 1
 SURF 0X10
-mat 5
+mat 7
 refs 4
 0 0.411787 0.328569
 3 0.411787 0.263323

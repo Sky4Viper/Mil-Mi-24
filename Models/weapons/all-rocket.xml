@@ -20,6 +20,25 @@
     <object-name>tubes.001</object-name>
   </effect>
 
+  <model>
+		<name>S8fire</name>
+		<path>Aircraft/Mil-Mi-24/Models/Effects/guns/gsh30/gsh30-fire.xml</path>
+		<condition>
+			<equals>
+				<property>controls/armament/trigger-s8</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+    <offsets>
+			<x-m>-1.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+			<heading-deg>180</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
   <!-- Les roquettes -->
   <!-- Gauche -->
   <model>

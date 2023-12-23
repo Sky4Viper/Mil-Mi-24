@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>rtr.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
+  <effect>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <!-- <red>   0.50 </red>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue> -->
+
+      <!-- <red>0.8</red>
+      <green>0.3</green>
+      <blue>0.1</blue> -->
+
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.75</blue>
+
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>rotors/main/cone-deg</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <!-- <entry><ind> 1 </ind><dep> -27.9 </dep></entry>
+      <entry><ind> 3 </ind><dep> -55.8 </dep></entry>
+      <entry><ind> 5 </ind><dep> -83.7 </dep></entry>
+      <entry><ind> 7 </ind><dep> -111.6 </dep></entry>
+      <entry><ind> 9 </ind><dep> -139.5 </dep></entry>
+      <entry><ind> 11 </ind><dep> -167.4 </dep></entry>
+      <entry><ind> 13 </ind><dep> -195.3 </dep></entry> -->
+      <entry><ind> 1.5 </ind><dep> -223.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

@@ -32,25 +32,24 @@
     <object-name>intvitrepilote</object-name>
   </effect>
 
-  <!-- Planche de bord -->
   <model>
     <path>Panel/panel.xml</path>
     <offsets>
-      <x-m> -6.161 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.155 </z-m>
+      <x-m> -6.06052 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> -1.0129 </z-m>
+      <pitch-deg>-10</pitch-deg>
     </offsets>
   </model>
 
-  <!-- Pilote 
   <model>
-    <path>../Pilot/pilot.xml</path>
+    <path>Panel/panel-cpg.xml</path>
     <offsets>
-      <x-m> -5.764 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.067 </z-m>
+      <x-m> -7.26879 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> -1.542 </z-m>
     </offsets>
-  </model> -->
+  </model>
 
   <!-- Pilot -->
 	
@@ -108,16 +107,29 @@
         </offsets>
   </model>
 
-  <!-- Copilote
+  <!-- Pilot Cyclic stick -->
   <model>
-    <path>../Pilot/pilot.xml</path>
+    <name>PilotCyclic</name>
+        <path>../Interior/Cyclic/cyclic.ac</path>
     <offsets>
-      <x-m> -1.607 </x-m>
+      <x-m> -6.161 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.300 </z-m>
+      <z-m> -1.155 </z-m>
     </offsets>
   </model>
--->
+
+  <!-- FAN -->
+  <model>
+    <name>Ventilator</name>
+    <path>../Interior/Panel/Instruments/fan/fan.xml</path>
+    <offsets>
+      <x-m> -5.98553 </x-m>
+      <y-m>  0.219759 </y-m>
+      <z-m>  -0.416591 </z-m>
+      <pitch-deg>5</pitch-deg>
+      <heading-deg>-25</heading-deg>
+    </offsets>
+  </model>
 
   <!-- Porte pilote -->
   <animation>
@@ -191,7 +203,7 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1 </ind><dep> -125 </dep></entry>
+      <entry><ind> 1 </ind><dep> -108 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.837 </x1-m>
@@ -227,7 +239,7 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1 </ind><dep> -125 </dep></entry>
+      <entry><ind> 1 </ind><dep> -108 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.294 </x1-m>

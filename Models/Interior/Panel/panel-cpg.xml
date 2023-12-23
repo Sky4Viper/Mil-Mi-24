@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel-cpg.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel-base</object-name>
+    <object-name>instruments-placeholder</object-name>
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Instruments/ai/pkp-72m.xml</path>
+    <offsets>
+      <x-m> -0.029141 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.03109 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.65</x-offset>
+			<y-offset>0.65</y-offset>
+			<z-offset>0.65</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.007435 </x-m>
+      <y-m> -0.088406 </y-m>
+      <z-m>  0.031263 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.8</x-offset>
+			<y-offset>0.8</y-offset>
+			<z-offset>0.8</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> 0.007435 </x-m>
+      <y-m> 0.088405 </y-m>
+      <z-m> 0.031263 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.8</x-offset>
+			<y-offset>0.8</y-offset>
+			<z-offset>0.8</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- GUNSIGHT
+  <model>
+    <path>Instruments/gunsight/gunsight.xml</path>
+    <offsets>
+      <x-m> 0.202069 </x-m>
+      <y-m>  0.00262 </y-m>
+      <z-m>  0.363154 </z-m>
+      <pitch-deg>2</pitch-deg>
+    </offsets>
+  </model>  -->
+
+  <!-- RADIO COMPASS -->
+  <model>
+    <path>Instruments/rrc/rrc.xml</path>
+    <offsets>
+      <x-m> 0.000735 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> -0.051797 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.65</x-offset>
+			<y-offset>0.65</y-offset>
+			<z-offset>0.65</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- ROTOR RPM -->
+  <model>
+    <path>Instruments/rpm/rpm-r.xml</path>
+    <offsets>
+      <x-m> 0.007435 </x-m>
+      <y-m> -0.088406 </y-m>
+      <z-m> -0.051797 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.8</x-offset>
+			<y-offset>0.8</y-offset>
+			<z-offset>0.8</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <!-- ENGINE RPM -->
+  <model>
+    <path>Instruments/rpm/rpm-e.xml</path>
+    <offsets>
+      <x-m> 0.007435 </x-m>
+      <y-m> 0.088405 </y-m>
+      <z-m> -0.051797 </z-m>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.8</x-offset>
+			<y-offset>0.8</y-offset>
+			<z-offset>0.8</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+</PropertyList>

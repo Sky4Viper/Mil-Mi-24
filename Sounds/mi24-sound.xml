@@ -56,9 +56,10 @@
         <and>
           <greater-than>
             <property>sim/model/mi24/state</property>
-            <value>0</value>
+            <value>1</value>
           </greater-than>
           <not><property>sim/current-view/internal</property></not>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>
@@ -76,9 +77,10 @@
         <and>
           <greater-than>
             <property>sim/model/mi24/state</property>
-            <value>0</value>
+            <value>1</value>
           </greater-than>
           <property>sim/current-view/internal</property>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>
@@ -94,14 +96,10 @@
       <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
       <condition>
         <and>
-          <less-than>
+          <equals>
             <property>sim/model/mi24/state</property>
-            <value>5</value>
-          </less-than>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+            <value>6</value>
+          </equals>
           <not><property>sim/current-view/internal</property></not>
         </and>
       </condition>
@@ -118,14 +116,10 @@
       <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
       <condition>
         <and>
-           <less-than>
+           <equals>
             <property>sim/model/mi24/state</property>
-            <value>5</value>
-          </less-than>
-          <greater-than>
-            <property>sim/model/mi24/state</property>
-            <value>0</value>
-          </greater-than>
+            <value>6</value>
+          </equals>
           <property>sim/current-view/internal</property>
         </and>
       </condition>
@@ -147,6 +141,7 @@
             <value>0</value>
           </greater-than>
           <not><property>sim/current-view/internal</property></not>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>
@@ -178,6 +173,7 @@
             <value>0</value>
           </greater-than>
           <property>sim/current-view/internal</property>
+          <not><property>sim/crashed</property></not>
         </and>
       </condition>
       <volume>
@@ -402,6 +398,67 @@
       </pitch>
     </crash>
 
+            <!-- Rita AoA warning -->
+		
+    <ritaaoa>
+			<name>Rita AoA Warning</name>
+			<mode>looped</mode>
+			<path>Aircraft/Mil-Mi-24/Sounds/RitaHighAoA.wav</path>
+			<type>avionics</type>
+			<condition>
+				<and>
+					<or>
+					<greater-than>
+						<property>/orientation/alpha-deg</property>
+						<value>24.8</value>
+					</greater-than>
+					<less-than>
+            			<property>/accelerations/pilot/z-accel-fps_sec</property>
+            			<value>-101.3156625</value>
+          			</less-than>
+          			<greater-than>
+            			<!-- G load < -1.0 = 31.17405-->
+            			<property>/accelerations/pilot/z-accel-fps_sec</property>
+            			<value>30.17405</value>
+          			</greater-than>
+					</or>
+					<not>
+					    <property>/gear/gear[0]/wow</property>
+					    <property>/gear/gear[1]/wow</property>
+					    <property>/gear/gear[2]/wow</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+        		<property>/sim/current-view/internal</property>
+        		<factor>1.0</factor>
+      		</volume>
+		</ritaaoa>
+
+        <!-- Rita danger altitude warning -->
+
+    <ritadangeralt>
+            <name>Rita danger altitude</name>
+            <mode>once</mode>
+            <path>Aircraft/Mil-Mi-24/Sounds/RitaAltitude.wav</path>
+            <type>avionics</type>
+            <condition>
+                <property>/controls/electric/ralt-switch</property>
+                <less-than>
+                    <property>/position/altitude-agl-ft</property>
+                    <property>controls/instrumentation/danger-altitude-ft</property>
+                </less-than>
+                <less-than>
+                    <property>/gear/gear[0]/position-norm</property>
+                    <value>1</value>
+                </less-than>
+            </condition>
+            <volume>
+        		<property>/sim/current-view/internal</property>
+        		<factor>1.0</factor>
+      		</volume>
+    </ritadangeralt>
+
     <!-- Weapons in-range beep -->
 
 		<inrange>
@@ -471,13 +528,40 @@
     </guns>
     
     <!-- rockets away -->
-    <crash>
-      <name>Rockets</name>
+    <rockets-salvo>
+      <name>rockets-salvo</name>
       <condition>
         <property>controls/armament/trigger-s8</property>
       </condition>
-      <path>Aircraft/Mil-Mi-24/Sounds/rocket_away.wav</path>
-    </crash>
+      <path>Aircraft/Mil-Mi-24/Sounds/rockets_ripple2.wav</path>
+
+      <volume>
+				<factor>1.0</factor>
+				<max>3.0</max>
+			</volume>
+			
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+     </rockets-salvo>
+
+    <rocket-single>
+			<name>rocket-single</name>
+			<mode>once</mode>
+			<path>Aircraft/Mil-Mi-24/Sounds/rockets.wav</path>
+			
+			<condition>
+        <property>controls/armament/trigger-s8</property>
+      </condition>
+
+			<volume>
+				<factor>1.0</factor>
+				<max>3.0</max>
+			</volume>
+			
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			
+		</rocket-single>
 
     <!-- Flare/Chaff release -->
 		

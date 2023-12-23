@@ -49,9 +49,17 @@
     </condition>
     <emission>
       <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-      <red>   0.50 </red>
+      <!-- <red>   0.50 </red>
       <green> 0.40 </green>
-      <blue>  0.30 </blue>
+      <blue>  0.30 </blue> -->
+
+      <!-- <red>0.8</red>
+      <green>0.3</green>
+      <blue>0.1</blue> -->
+
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.75</blue>
     </emission>
   </animation>
 
@@ -59,7 +67,7 @@
     <type>rotate</type>
     <object-name>needle100</object-name>
     <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor> 0.36 </factor>
+    <factor>0.1097279</factor>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -71,7 +79,7 @@
     <type>rotate</type>
     <object-name>needle1000</object-name>
     <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor> 0.036 </factor>
+    <factor>0.01097279</factor>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -81,9 +89,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>needle10000</object-name>
+    <object-name>needle-lp</object-name>
     <property>instrumentation/altimeter/indicated-altitude-ft</property>
-    <factor> 0.0036 </factor>
+    <factor>0.001097279</factor>
     <axis>
       <x> -1 </x>
       <y>  0 </y>

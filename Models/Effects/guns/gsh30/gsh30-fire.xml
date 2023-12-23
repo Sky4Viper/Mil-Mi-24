@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>gsh30-muzzle-flash.xml</path>
+    <offsets>
+			<x-m>-3.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m> 0.0</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+  </model>
+
+  <!-- <model>
+    <path>gsh-30-fire.xml</path>
+  </model> -->
+
+</PropertyList>

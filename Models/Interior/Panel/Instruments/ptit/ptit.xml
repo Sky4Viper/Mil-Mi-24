@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>ptit.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>needle3</object-name>
+    <object-name>needle4</object-name>
+    <object-name>visses</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>needle3</object-name>
+    <object-name>needle4</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
+  <effect>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>needle3</object-name>
+    <object-name>needle4</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <!-- <red>0.8</red>
+      <green>0.3</green>
+      <blue>0.1</blue> -->
+
+      <red>1.0</red>
+      <green>0.94</green>
+      <blue>0.75</blue>
+
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle1</object-name>
+    <property>rotors/main/rpm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 700 </ind><dep> 145 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.000455 </x-m>
+      <y-m> -0.017818 </y-m>
+      <z-m> 0.004334 </z-m>
+    </center>
+    <axis>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle2</object-name>
+    <property>rotors/main/rpm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 700 </ind><dep> 145 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.000455 </x-m>
+      <y-m> 0.017818 </y-m>
+      <z-m> 0.004334 </z-m>
+    </center>
+    <axis>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle3</object-name>
+    <property>rotors/main/rpm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 700 </ind><dep> 115 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.000455 </x-m>
+      <y-m> -0.017818 </y-m>
+      <z-m> -0.013612 </z-m>
+    </center>
+    <axis>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  0.0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle4</object-name>
+    <property>rotors/main/rpm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 700 </ind><dep> 115 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.000455 </x-m>
+      <y-m> 0.017818 </y-m>
+      <z-m> -0.013612 </z-m>
+    </center>
+    <axis>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  0.0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

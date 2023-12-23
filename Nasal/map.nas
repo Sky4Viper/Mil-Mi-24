@@ -166,6 +166,7 @@ var MAPCanvas = {
       m.makeUrl  = string.compileTemplate('http://{server}.tile.osm.org/{z}/{x}/{y}.png');
       m.servers = ["a", "b", "c"];
       m.makePath = string.compileTemplate(m.maps_base ~ '/osm-{type}/{z}/{x}/{y}.png');
+      #m.makePath = string.compileTemplate(m.maps_base ~ 'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png');
       
       #Setting up red little aircraft
       m.center_tile_offset = [

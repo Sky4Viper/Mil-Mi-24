@@ -23,6 +23,7 @@
         <state type="int">0</state>
         <engine type="float">0</engine>
         <rotor-step-deg type="float">-1</rotor-step-deg>
+        <ir-cooler type="bool">true</ir-cooler>
       </mi24>
     </model>
 
@@ -91,7 +92,17 @@
 
     <help include="help.xml"/>
 
-    <instrumentation include="instrumentation.xml"/>
+    <!-- <instrumentation include="instrumentation.xml"/> -->
+
+    <instrumentation>
+      <path>Aircraft/Mil-Mi-24/Systems/instrumentation.xml</path>
+
+      <gsdi>
+        <serviceable type="bool">true</serviceable>
+        <enabled type="bool">true</enabled>
+      </gsdi>
+
+    </instrumentation>
 
     <menubar include="../Dialogs/mi24-menu.xml"/>
 

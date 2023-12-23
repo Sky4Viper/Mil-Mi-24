@@ -612,7 +612,7 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -125 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -108 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.837 </x1-m>
@@ -648,7 +648,7 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -125 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -108 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.294 </x1-m>
@@ -744,23 +744,46 @@
 
   <!-- effects -->
 
+	<!-- Engine blur-->
+	
 	<model>
-		<name>fire</name>
-		<path>Aircraft/rah-66/models/effects/fire.xml</path>
-		<condition>
-			<equals>
-				<property>sim/crashed</property>
-				<value type="bool">true</value>
-			</equals>
-		</condition>
-		<offsets>
-			<x-m>-1.05</x-m>
-			<y-m> 0.00</y-m>
-			<z-m> 0.75</z-m>
-			<heading-deg>0</heading-deg>
-			<roll-deg>0</roll-deg>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
+		<name>blur-left</name>
+    	<path>Aircraft/Mil-Mi-24/Models/Effects/Engine/exaust-blur.xml</path>
+    	<offsets>
+    		<x-m>-2.01605</x-m>
+    		<y-m>-0.679625</y-m>
+    		<z-m>0.257159</z-m>
+        <heading-deg>-96.7</heading-deg>
+			  <roll-deg>0</roll-deg>
+			  <pitch-deg>0</pitch-deg>
+    	</offsets>
+    	<condition>
+			  <property>/controls/engines/engine[0]/magnetos</property>
+    		<greater-than>
+    		<property>rotors/main/rpm</property>
+    		<value>5</value>
+    		</greater-than>
+    	</condition>
+  </model>
+
+  <model>
+		<name>blur-left</name>
+    	<path>Aircraft/Mil-Mi-24/Models/Effects/Engine/exaust-blur.xml</path>
+    	<offsets>
+    		<x-m>-2.01605</x-m>
+    		<y-m>-0.679625</y-m>
+    		<z-m>0.257159</z-m>
+        <heading-deg>96.7</heading-deg>
+			  <roll-deg>0</roll-deg>
+			  <pitch-deg>0</pitch-deg>
+    	</offsets>
+    	<condition>
+			  <property>/controls/engines/engine[0]/magnetos</property>
+    		<greater-than>
+    		<property>rotors/main/rpm</property>
+    		<value>5</value>
+    		</greater-than>
+    	</condition>
+  </model>
 
 </PropertyList>

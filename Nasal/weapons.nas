@@ -49,7 +49,7 @@ Pickle = func {
 
                 MasterArm = getprop("controls/armament/master-arm");
 				GunsON = (getprop("controls/armament/weapon-type") ==1);
-        #         BombsON = getprop("controls/armament/bombs-sel");
+        		# BombsON = getprop("controls/armament/bombs-sel");
 				# BombMode = getprop("controls/armament/bomb-mode");
                 S8RocketsON = (getprop("controls/armament/weapon-type") ==2);
 

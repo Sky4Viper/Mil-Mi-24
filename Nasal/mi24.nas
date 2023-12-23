@@ -45,6 +45,7 @@ var cone4 = props.globals.getNode("rotors/main/cone4-deg", 1);
 # 3 engine idle
 # 4 engine accel
 # 5 engine sound loop
+# 6 shutdown sound in progress
 
 var update_state = func {
   var s = state.getValue();
@@ -84,8 +85,13 @@ var update_state = func {
             if (new_state == (5)) {
               max_rel_torque.setValue(1);
               target_rel_rpm.setValue(1.03);
-            }
+            } else {
+            if (new_state == (6)) {
+              max_rel_torque.setValue(0.01);
+              target_rel_rpm.setValue(0.002);
+            } 
           }
+          } 
         }
       }
     }
@@ -100,10 +106,17 @@ var engines = func {
       update_state(1);
     }
   } else {
-    rotor.setValue(0);        # engines stopped
-    state.setValue(0);
-    interpolate(engine, 0, 4);
-  }
+		if (s >= 2 and s <= 5) {
+			turbine_timer.stop();
+			rotor.setValue(0);				
+			state.setValue(6);
+			settimer(func { state.setValue(0) }, 71);	# engines spooling down
+		} else {
+      rotor.setValue(0);        # engines stopped
+      state.setValue(0);
+      interpolate(engine, 0, 4);
+    }
+    }
 }
 
 var update_engine = func {
@@ -223,14 +236,14 @@ var Skid = {
   },
 };
 
-var skid = [];
+var skidb = [];
 for (var i = 0; i < 3; i += 1) {
-  append(skid, Skid.new(i));
+  append(skidb, Skid.new(i));
 }
 
 var update_slide = func {
-  forindex (var i; skid) {
-    skid[i].update();
+  forindex (var i; skidb) {
+    skidb[i].update();
   }
 }
 
@@ -253,6 +266,7 @@ var crash = func {
     setprop("rotors/main/blade[4]/incidence-deg", -60);
     setprop("rotors/main/blade[5]/incidence-deg", -65);
     setprop("rotors/tail/rpm", 0);
+    setprop("sim/model/mi24/state", 0);
     strobe_switch.setValue(0);
     beacon_switch.setValue(0);
     nav_light_switch.setValue(0);

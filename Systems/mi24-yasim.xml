@@ -31,7 +31,7 @@
 
   <rotor name="main"
          x="2.407" y="0.00" z="1.302"
-         nx="0.02" ny="0" nz="1."
+         nx="0.04" ny="0" nz="1."
          fx="1" fy="0" fz="0"
          ccw="0"
          mincollective="-80" maxcollective="80"
@@ -284,14 +284,14 @@
         <control-speed  control="EXTEND" transition-time="7"/>
   </gear>
 
-  <!-- Tail skid -->
+  <!-- Tail skid
   <gear x="-14" y="0" z="1.21"
         skid="1"
         compression="0.01"
         spring="0.1"
         sfric="1"
         dfric="1">
-  </gear>
+  </gear> -->
 
   <!-- Tail skid-->
   <gear x="-6.953" y="0" z="-1.194"
