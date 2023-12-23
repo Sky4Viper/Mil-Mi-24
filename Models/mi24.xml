@@ -77,6 +77,16 @@
     <object-name>patte</object-name>
     <object-name>sousmissiles</object-name>
     <object-name>cables</object-name>
+    <object-name>flare-disp</object-name>
+
+    <object-name>gun-base</object-name>
+    <object-name>gun-core</object-name>
+    <object-name>gun-barels</object-name>
+
+    <object-name>IR-cooler-tube</object-name>
+    <object-name>IR-cooler-housing</object-name>
+    <object-name>IR-cooler-rim</object-name>
+    <object-name>IR-cooler-gill</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
@@ -133,6 +143,16 @@
     <object-name>patte</object-name>
     <object-name>sousmissiles</object-name>
     <object-name>cables</object-name>
+    <object-name>flare-disp</object-name>
+
+    <object-name>gun-base</object-name>
+    <object-name>gun-core</object-name>
+    <object-name>gun-barels</object-name>
+
+    <object-name>IR-cooler-tube</object-name>
+    <object-name>IR-cooler-housing</object-name>
+    <object-name>IR-cooler-rim</object-name>
+    <object-name>IR-cooler-gill</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -183,11 +203,40 @@
     <object-name>perche</object-name>
     <object-name>air</object-name>
     <object-name>poignees</object-name>
+    <object-name>gun-base</object-name>
+    <object-name>IR-cooler-tube</object-name>
+    <object-name>IR-cooler-housing</object-name>
+    <object-name>cachesentrees</object-name>
+    <object-name>flare-disp</object-name>
   </effect>
 
-  <!-- working for Compositor -->
+  <!-- working for Compositor 
   <effect>
     <inherits-from>Effects/Glass/glassrain</inherits-from>
+    <object-name>vitres</object-name>
+    <object-name>vitresG</object-name>
+    <object-name>vitresD</object-name>
+    <object-name>vitrepilote</object-name>
+    <object-name>lampes</object-name>
+    <object-name>lampeRed</object-name>
+    <object-name>lampeGreen</object-name>
+  </effect>
+
+  <animation>
+		<type>shader</type> 
+		<shader>chrome</shader> 
+		<texture>glass_shader.png</texture> 
+		<object-name>vitres</object-name>
+    <object-name>vitresG</object-name>
+    <object-name>vitresD</object-name>
+    <object-name>vitrepilote</object-name>
+    <object-name>lampes</object-name>
+    <object-name>lampeRed</object-name>
+    <object-name>lampeGreen</object-name>
+	</animation> -->
+
+  <effect>
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/mi24-glass-combined</inherits-from>
     <object-name>vitres</object-name>
     <object-name>vitresG</object-name>
     <object-name>vitresD</object-name>
@@ -345,7 +394,7 @@
     <type>rotate</type>
     <object-name>porteA</object-name>
     <property>gear/gear[0]/position-norm</property>
-    <factor> 105 </factor>
+    <factor> 107 </factor>
     <center>
       <x-m> -5.701 </x-m>
       <y-m>  0.000 </y-m>
@@ -437,6 +486,7 @@
   </animation>
 
   <!-- Les trains de roues -->
+
   <animation>
     <name>TrainAvant</name>
     <object-name>axeA</object-name>
@@ -469,26 +519,48 @@
   </animation>
 
   <animation>
+    <type>rotate</type>
+    <object-name>axeA0</object-name>
+    <object-name>roueA</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 44 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -5.53719 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.50297 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
     <name>TrainGauche</name>
     <object-name>axeG</object-name>
     <object-name>roueG</object-name>
   </animation>
+
 
   <animation>
     <type>rotate</type>
     <object-name>TrainGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> -95 </dep></entry>
+      <entry><ind> 0 </ind><dep> -109 </dep></entry>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -0.916 </x1-m>
       <y1-m> -0.747 </y1-m>
-      <z1-m> -1.658 </z1-m>
+      <z1-m> -1.758 </z1-m>
       <x2-m> -0.916 </x2-m>
       <y2-m> -0.424 </y2-m>
-      <z2-m> -2.043 </z2-m>
+      <z2-m> -2.143 </z2-m>
     </axis>
   </animation>
 
@@ -503,16 +575,16 @@
     <object-name>TrainDroit</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> -95 </dep></entry>
+      <entry><ind> 0 </ind><dep> -109 </dep></entry>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -0.916 </x1-m>
       <y1-m>  0.424 </y1-m>
-      <z1-m> -2.043 </z1-m>
+      <z1-m> -2.143 </z1-m>
       <x2-m> -0.916 </x2-m>
       <y2-m>  0.747 </y2-m>
-      <z2-m> -1.658 </z2-m>
+      <z2-m> -1.758 </z2-m>
     </axis>
   </animation>
 
@@ -520,7 +592,6 @@
 
   <animation>
 		<type>rotate</type>
-    <object-name>axeA4</object-name>
     <object-name>axeA</object-name>
     <object-name>axeA0</object-name>
     <object-name>axeA3</object-name>
@@ -539,6 +610,92 @@
 			<z>-1.0</z>
 		</axis>
 	</animation>
+
+  <!-- compression -->
+
+  <animation>
+    <type>translate</type>
+		  <object-name>axeA</object-name>
+      <object-name>axeA0</object-name>
+      <object-name>axeA3</object-name>
+      <object-name>roueA</object-name>
+    	<property>gear/gear[0]/compression-norm</property>
+    	<axis>
+      		<x>0</x>
+      		<y>0</y>
+      		<z>-1</z>
+    	</axis>
+      <interpolation>
+		    <entry>
+		      <ind> 0.0</ind>
+		      <dep> 0.0</dep>
+		    </entry>
+		    <!-- <entry>
+          <ind> 0.27</ind>
+          <dep> -0.11</dep>
+		    </entry> -->
+		    <entry>
+		      <ind> 1.0</ind>
+		      <dep> -0.18</dep>
+		    </entry>
+	    </interpolation>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainGauche</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <axis>
+        <x1-m> -0.557518 </x1-m>
+        <y1-m>  -0.350569 </y1-m>
+        <z1-m> -2.10621 </z1-m>
+        <x2-m> -0.909962 </x2-m>
+        <y2-m>  -0.43643 </y2-m>
+        <z2-m> -2.15506 </z2-m>
+    </axis>
+	<interpolation>
+		<entry>
+		<ind> 0.0</ind>
+		<dep> -3.0</dep>
+		</entry>
+		<entry>
+		<ind> 0.1</ind>
+		<dep> 1.0</dep>
+		</entry>
+		<entry>
+		<ind> 1.0</ind>
+		<dep> 4.0</dep>
+		</entry>
+	</interpolation>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainDroit</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <axis>
+        <x2-m> -0.557518 </x2-m>
+        <y2-m>  0.350569 </y2-m>
+        <z2-m> -2.10621 </z2-m>
+        <x1-m> -0.909962 </x1-m>
+        <y1-m>  0.43643 </y1-m>
+        <z1-m> -2.15506 </z1-m>
+    </axis>
+	<interpolation>
+		<entry>
+		<ind> 0.0</ind>
+		<dep> -3.0</dep>
+		</entry>
+		<entry>
+		<ind> 0.1</ind>
+		<dep> 1.0</dep>
+		</entry>
+		<entry>
+		<ind> 1.0</ind>
+		<dep> 4.0</dep>
+		</entry>
+	</interpolation>
+  </animation>
 
   <!-- Porte pilote -->
   <animation>
@@ -576,6 +733,17 @@
     </axis>
   </animation>
 
+  <animation>
+		<type>select</type>
+		<object-name>IR-cooler-tube</object-name>
+    <object-name>IR-cooler-housing</object-name>
+    <object-name>IR-cooler-rim</object-name>
+    <object-name>IR-cooler-gill</object-name>
+		<condition>
+				<property>/sim/model/mi24/ir-cooler</property>
+		</condition>
+	</animation>
+
   <!-- Portes de la soute -->
   <animation>
     <name>PorteCargoGauche</name>
@@ -612,7 +780,7 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -108 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -107 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.837 </x1-m>
@@ -648,7 +816,7 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -108 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -107 </dep></entry>
     </interpolation>
     <axis>
       <x1-m> -3.294 </x1-m>
@@ -742,15 +910,55 @@
     </offsets>
   </model>
 
-  <!-- effects -->
+  <!-- Gsh30 effects -->
 
-	<!-- Engine blur-->
+  
+
+	<!-- <model>
+		<name>gsh30fire</name>
+		<path>Aircraft/Mil-Mi-24/Models/Effects/guns/gsh30-fire.xml</path>
+    <condition>
+			<equals>
+				<trigger>controls/armament/trigger-mg</trigger>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-8.07701</x-m>
+			<y-m> 0.749253</y-m>
+			<z-m> -1.75409</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> -->
+
+  <!-- <model>
+		<name>gsh30fire</name>
+		<path>Aircraft/Mil-Mi-24/Models/Effects/guns/gsh30/gsh30-fire.xml</path>
+		<condition>
+			<equals>
+				<property>controls/armament/trigger-mg</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+    <offsets>
+			<x-m>-8.07701</x-m>
+			<y-m> 0.749253</y-m>
+			<z-m> -1.75409</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> -->
+
+  <!-- Engine blur-->
 	
 	<model>
 		<name>blur-left</name>
     	<path>Aircraft/Mil-Mi-24/Models/Effects/Engine/exaust-blur.xml</path>
     	<offsets>
-    		<x-m>-2.01605</x-m>
+    		<x-m>-3.03833</x-m>
     		<y-m>-0.679625</y-m>
     		<z-m>0.257159</z-m>
         <heading-deg>-96.7</heading-deg>
@@ -760,9 +968,12 @@
     	<condition>
 			  <property>/controls/engines/engine[0]/magnetos</property>
     		<greater-than>
-    		<property>rotors/main/rpm</property>
-    		<value>5</value>
+    		  <property>rotors/main/rpm</property>
+    		  <value>5</value>
     		</greater-than>
+        <not>
+          <property>/sim/model/mi24/ir-cooler</property>
+        </not>
     	</condition>
   </model>
 
@@ -770,7 +981,7 @@
 		<name>blur-left</name>
     	<path>Aircraft/Mil-Mi-24/Models/Effects/Engine/exaust-blur.xml</path>
     	<offsets>
-    		<x-m>-2.01605</x-m>
+    		<x-m>-3.03833</x-m>
     		<y-m>-0.679625</y-m>
     		<z-m>0.257159</z-m>
         <heading-deg>96.7</heading-deg>
@@ -780,10 +991,32 @@
     	<condition>
 			  <property>/controls/engines/engine[0]/magnetos</property>
     		<greater-than>
-    		<property>rotors/main/rpm</property>
-    		<value>5</value>
+    		  <property>rotors/main/rpm</property>
+    		  <value>5</value>
     		</greater-than>
+        <not>
+          <property>/sim/model/mi24/ir-cooler</property>
+        </not>
     	</condition>
   </model>
+
+  <!-- <model>
+		<name>gsh30fire</name>
+		<path>Aircraft/Su-25/Models/Effects/Gun/Flame.xml</path>
+		<condition>
+			<equals>
+				<property>controls/armament/trigger-mg</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+    <offsets>
+			<x-m>-8.07701</x-m>
+			<y-m> 0.749253</y-m>
+			<z-m> -1.75409</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> -->
 
 </PropertyList>

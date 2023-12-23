@@ -27,7 +27,7 @@
   </cannon>
 
   <rocket-bullet>
-    <model>Aircraft/Mil-Mi-24/Models/Effects/Rocket/Rocket.xml</model>
+    <model>Aircraft/Mil-Mi-24/Models/Effects/Rocket-S-8/Tracer/rocket.xml</model>
     <trigger>controls/armament/trigger-s8</trigger>
     <speed>2296</speed>                         <!-- ft/sec (700m/s) -->
     <repeat>true</repeat>
@@ -44,11 +44,11 @@
     <collision-report>sim/ai/aircraft/collision/gun</collision-report>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-    <submodel-path>Aircraft/Mil-Mi-24/Models/Effects/Impact/S-8/s-8-impact.xml</submodel-path>
+    <submodel-path>Aircraft/Mil-Mi-24/Models/Effects/Rocket-S-8/Impact/s-8-impact.xml</submodel-path>
   </rocket-bullet>
 
   <rocket-smoke>
-    <model>Aircraft/Mil-Mi-24/Models/Effects/Rocket/rocket_blank.xml</model>
+    <model>Aircraft/Mil-Mi-24/Models/Effects/Rocket-S-8/Tracer/rocket_blank.xml</model>
     <trigger>controls/armament/trigger-s8</trigger>
     <speed>2296</speed>                         <!-- ft/sec (700m/s) -->
     <repeat>true</repeat>
