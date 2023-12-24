@@ -43,6 +43,27 @@
   </model>
 
   <model>
+    <path>Panel/Instruments/gear/gear.xml</path>
+    <offsets>
+      <x-m> -5.99995 </x-m>
+      <y-m> -0.478048 </y-m>
+      <z-m> -1.16168 </z-m>
+      <!-- <roll-deg>90</roll-deg> -->
+      <pitch-deg>-39.5273</pitch-deg>
+      <heading-deg>19.1971</heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>1.1</x-offset>
+			<y-offset>1.1</y-offset>
+			<z-offset>1.1</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <model>
     <path>Panel/panel-cpg.xml</path>
     <offsets>
       <x-m> -7.26879 </x-m>
