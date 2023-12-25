@@ -596,6 +596,12 @@
     <object-name>axeA0</object-name>
     <object-name>axeA3</object-name>
     <object-name>roueA</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[0]/position-norm</property>
+        <value>1.0</value>
+      </equals>
+    </condition>
 
 		<property>controls/flight/rudder</property>
 		<factor>25</factor>

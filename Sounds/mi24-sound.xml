@@ -469,7 +469,8 @@
       		<condition>
         		<and>
           			<property>/controls/armament/master-arm</property>
-		  			<property>/controls/armament/LAMarkerON</property>
+                <property>controls/electric/gunsight-auto</property>
+		  			    <property>/controls/armament/LAMarkerON</property>
         		</and>
       		</condition>
       		<volume>
@@ -486,7 +487,8 @@
       		<condition>
         		<and>
           			<property>/controls/armament/master-arm</property>
-		  			<property>/controls/armament/LAMarkerON</property>
+                <property>controls/electric/gunsight-auto</property>
+		  			    <property>/controls/armament/LAMarkerON</property>
         		</and>
       		</condition>
       		<volume>

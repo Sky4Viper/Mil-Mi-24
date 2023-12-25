@@ -1,6 +1,6 @@
 <PropertyList>
 
-    <path>gunsight.ac</path>
+    <path>asp-17vp.ac</path>
 
     <effect>
         <inherits-from>Effects/model-transparent</inherits-from>
@@ -9,13 +9,40 @@
 
     <animation>
 		<type>noshadow</type>
-		    <object-name>Sight</object-name>
-            <object-name>Glass</object-name>
+		    <object-name>Sight-Fixed</object-name>
+        <object-name>Sight-Auto</object-name>
+        <object-name>Glass</object-name>
+        <object-name>gunsight-base</object-name>
+        <object-name>gunsight-base.001</object-name>
+        <object-name>gunsight-base.002</object-name>
+        <object-name>gunsight-base-bg</object-name>
+        <object-name>knobs</object-name>
+        <object-name>knob.001</object-name>
+        <object-name>knob.002</object-name>
+        <object-name>knob.003</object-name>
+        <object-name>switch-base</object-name>
+        <object-name>switch.001</object-name>
+        <object-name>switch.002</object-name>
+        <object-name>switch.003</object-name>
+        <object-name>lamp-green</object-name>
+        <object-name>lamp-green-on</object-name>
+        <object-name>lamp-red</object-name>
+        <object-name>lamp-red-on</object-name>
+        <object-name>lamp-yellow</object-name>
+        <object-name>lamp-yellow-on</object-name>
+        <object-name>lamp-purple</object-name>
+        <object-name>lamp-purple-on</object-name>
+        <object-name>wpn-light.001</object-name>
+        <object-name>wpn-light.002</object-name>
+        <object-name>wpn-light.003</object-name>
+        <object-name>wpn-light.004</object-name>
+        <object-name>wpn-light.005</object-name>
+        <object-name>wpn-light.006</object-name>
 	  </animation>
     
     <!-- <animation>
         <type>material</type>
-        <object-name>Sight</object-name>
+        <object-name>Sight-Fixed</object-name>
         <emission>
             <red>1.0</red>
             <green>1.0</green>
@@ -28,20 +55,63 @@
         <condition>
             <property>/sim/rendering/rembrandt/enabled</property>
         </condition>
-        <object-name>Sight</object-name>
+        <object-name>Sight-Fixed</object-name>
+        <object-name>Sight-Auto</object-name>
         <object-name>Glass</object-name>
     </effect>
 
     <animation>
     <type>select</type>
-    <object-name>Sight</object-name>
+    <object-name>Sight-Fixed</object-name>
     <condition>
       <property>controls/electric/battery-switch</property>
+      <not><property>controls/electric/gunsight-auto</property></not>
       <equals>
         <property>sim/current-view/internal</property>
         <value>true</value>     
       </equals>
     </condition>
+    </animation>
+
+    <animation>
+    <type>select</type>
+    <object-name>Sight-Auto</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+      <property>controls/electric/gunsight-auto</property>
+      <equals>
+        <property>sim/current-view/internal</property>
+        <value>true</value>     
+      </equals>
+    </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>gunsight-base-bg</object-name>
+      <emission>
+        <red>0.6</red>
+        <green>0.6</green>
+        <blue>0.6</blue>
+        <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      </emission>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <object-name>switch-base</object-name>
+      <emission>
+        <red>0.2</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+        <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      </emission>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
     </animation>
 
     <animation>
@@ -135,7 +205,8 @@
 
     <animation>
     <type>material</type>
-    <object-name>Sight</object-name>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
     <emission>
         <red>1</red>
         <green>0.7</green>
@@ -163,7 +234,54 @@
 
     <animation>
     <type>texmultiple</type>
-    <object-name>Sight</object-name>
+    <object-name>Sight-Fixed</object-name>
+    <transform>
+      <property>/accelerations/pilot/z-accel-fps_sec</property>
+      <subtype>textranslate</subtype>
+      <factor>0.0022</factor>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </transform>
+    <!-- <transform>
+      <property>/controls/armament/pipperoffset</property>
+      <subtype>textranslate</subtype>
+      <factor>-15.0</factor>
+      <min>-7</min>
+      <max>7</max>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </transform>
+    <transform>
+      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+      <subtype>textranslate</subtype>
+      <factor>0.05</factor>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </transform> -->
+    <transform>
+      <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+      <subtype>textranslate</subtype>
+      <factor>0.06</factor>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </transform>
+    </animation>
+
+    <animation>
+    <type>texmultiple</type>
+    <object-name>Sight-Auto</object-name>
     <transform>
       <property>/accelerations/pilot/z-accel-fps_sec</property>
       <subtype>textranslate</subtype>
@@ -234,6 +352,7 @@
       <object-name>lamp-yellow.on</object-name>
       <condition>
         <property>/controls/armament/LAMarkerON</property>
+        <property>controls/electric/gunsight-auto</property>
         <property>controls/electric/battery-switch</property>
       </condition>
     </animation>
@@ -244,7 +363,7 @@
       <condition>
         <equals>
         <property>/controls/armament/weapon-type</property>
-        <value>2</value>
+        <value>3</value>
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
@@ -328,6 +447,57 @@
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>switch.001</object-name>
+      <property>controls/electric/gunsight-sync</property>
+      <offset-deg>20</offset-deg>
+      <factor>-40</factor>
+      <center>
+        <x-m>0.001065</x-m>
+        <y-m>-0.096258</y-m>
+        <z-m>-0.051284</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>switch.002</object-name>
+      <property>controls/electric/gunsight-auto</property>
+      <offset-deg>20</offset-deg>
+      <factor>-40</factor>
+      <center>
+        <x-m>0.001065</x-m>
+        <y-m>-0.096258</y-m>
+        <z-m>-0.073672</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>switch.002</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/gunsight-auto</property>
+        </binding>
+      </action>
     </animation>
 
 </PropertyList>
