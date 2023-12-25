@@ -16,17 +16,18 @@ A little history
 Mil Mi-24V (Hind-E) and Mi-24P (Hind-F)
 ==============
 
-- Manufacturer                  :
-- Type                          :
-- Year                          :
-- Powerplant                    :
-- Wingspan                      :
-- Length                        :
-- Height                        :
-- weight                        :
-- Cruise speed                  :
-- Range                         :
-- Crew                          :
+- Manufacturer                  : Mil
+- Type                          : Attack helicopter
+- Year                          : 1972
+- Powerplant                    : 2 Isotov TV3-117 turboshaft engines, 2200 hp each
+- Wingspan                      : 6.5 m
+- Length                        : 17.50 m
+- Height                        : 6.5 m
+- mpty weight                   : 8500 kg (18739 lb)
+- Takeoff weight                : 12000 kg (26455 lb)
+- Cruise speed                  : 335 km/h
+- Range                         : 450 km
+- Crew                          : 2
 
 Some useful keys:
 =================
