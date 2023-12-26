@@ -10,8 +10,8 @@
     <repeat>true</repeat>
     <delay>0.21</delay>
     <count>-1</count>
-    <yaw-offset>0</yaw-offset>
-    <pitch-offset>0.1</pitch-offset>
+    <yaw-offset>sim/model/turret[0]/heading</yaw-offset>
+    <pitch-offset>sim/model/turret[0]/pitch</pitch-offset>
     <life>20</life>
     <wind>false</wind>
     <weight>0.13007235</weight>   
@@ -278,9 +278,9 @@
     <impact alias="../../cannon/impact"/>
     <impact-report alias="../../cannon/impact-report"/>
     <submodel-path alias="../../cannon/submodel-path"/>
-    <x-offset> 11.75 </x-offset> <!-- -3.580 m = 11.75 ft -->
-    <y-offset>  0.0 </y-offset> <!-- -0.260 m =  0.85 ft -->
-    <z-offset> -4.9519477 </z-offset> <!-- -1.50928 m = -4.9519477 ft -->
+    <x-offset> 27.953 </x-offset> <!-- -8.51996 m = 27.953 ft -->
+    <y-offset>  0.000 </y-offset> <!--  0.00000 m =  0.000 ft -->
+    <z-offset> -7.293 </z-offset> <!-- -2.22304 m = -7.293 ft -->
   </submodel>
 
   <submodel>

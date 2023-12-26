@@ -138,8 +138,11 @@
 			<file>Aircraft/Mil-Mi-24/Nasal/launchauthorizer.nas</file>
     </launchauthorizer>
     <rockets>
-		<file>Aircraft/Mil-Mi-24/Nasal/rockets.nas</file>
-	</rockets>
+	   <file>Aircraft/Mil-Mi-24/Nasal/rockets.nas</file>
+	 </rockets>
+   <turrets>
+      <file>Aircraft/Mil-Mi-24/Nasal/turrets.nas</file>
+    </turrets>
     <!-- ########### -->
   </nasal>
 

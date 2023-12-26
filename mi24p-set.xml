@@ -14,16 +14,16 @@
 	<author>Sergei "Skydive" Solyshko</author>
 	<authors>
 		<author n="0">
-			<name>Sergei "Skydive" Solyshko</name>
+			<name>Sergei "Skydive" Solyshko (3D/Cockpit)</name>
 		</author>
 		<author n="1">
 			<name>BARANGER Emmanuel (3D/FDM)</name>
 		</author>
-    		<author n="2">
-			<name>Zel (FDM), Raptor (Guns system)</name>
+    <author n="2">
+			<name>Zel (FDM)</name>
 		</author>
-    		<author n="3">
-			<name>Zel (FDM), Raptor (Guns system)</name>
+    <author n="3">
+			<name>Raptor (Guns system)</name>
 		</author>
 	</authors>
 

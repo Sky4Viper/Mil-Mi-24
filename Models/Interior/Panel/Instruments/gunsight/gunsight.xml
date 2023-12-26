@@ -487,6 +487,34 @@
 
     <animation>
       <type>pick</type>
+      <object-name>switch.001</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-assign</command>
+          <property>sim/model/turret[0]/heading</property>
+          <value>0.1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>sim/model/turret[0]/pitch</property>
+          <value>1</value>
+        </binding>
+      </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>turret-reset</tooltip-id>
+         <label>Reset Turret Rotation Angle</label>
+       </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
       <object-name>switch.002</object-name>
       <action>
         <button>0</button>
@@ -498,6 +526,13 @@
           <property>controls/electric/gunsight-auto</property>
         </binding>
       </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>sight-auto</tooltip-id>
+         <label>Sight Auto Mode Toggle</label>
+       </binding>
+      </hovered>
     </animation>
 
 </PropertyList>

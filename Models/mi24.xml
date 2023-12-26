@@ -1025,4 +1025,43 @@
 		</offsets>
 	</model> -->
 
+    <!--==========Turning Turret =====================-->
+  <animation>
+    <type>rotate</type>
+    <object-name>tourelle</object-name>
+    <object-name>gun-base</object-name>
+    <object-name>gun-core</object-name>
+    <object-name>gun-barels</object-name>
+    <property>sim/model/turret[0]/heading</property>
+    <center>
+      <x-m> -7.47883 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.93837 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>gun-base</object-name>
+    <object-name>gun-core</object-name>
+    <object-name>gun-barels</object-name>
+    <property>sim/model/turret[0]/pitch</property>
+    <offset-deg> 5 </offset-deg>
+    <center>
+      <x-m> -7.6923 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -2.22304 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
 </PropertyList>
