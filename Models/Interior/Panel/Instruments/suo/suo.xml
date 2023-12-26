@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>suo.ac</path>
+
+  <animation>
+    <object-name>suo-panel</object-name>
+    <object-name>suo-switch.001</object-name>
+    <object-name>suo-knob.001</object-name>
+    <object-name>suo-knob.002</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>suo-panel</object-name>
+  </animation>
+
+</PropertyList>
