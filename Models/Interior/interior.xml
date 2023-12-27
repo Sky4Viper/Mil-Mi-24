@@ -92,7 +92,7 @@
 
   <model>
     <name>Gunner</name>
-		<path>../Pilot/pilot.xml</path>
+		<path>../Pilot/copilot.xml</path>
 		<offsets>
 			<x-m> -6.71774 </x-m>
       <y-m>  0.000 </y-m>
