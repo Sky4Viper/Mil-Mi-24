@@ -5,17 +5,8 @@
   <sim>
 
     <expected-aircraft-dir-name>Mil-Mi-24</expected-aircraft-dir-name>
-	  <description>Mil Mi-24V Hind-E (Yasim)</description>
-	  <variant-id type="int">1</variant-id>
-
-	  <long-description>(Hind-E) Entered production in 1976. Manufactured 1976-1986. It was the most widely produced version with more than 1,500 made.
-    Armed with the more advanced 9M114 Shturm-V (AT-6 Spiral). Four of these missiles are mounted on four outer wing pylons. 
-    In 1986 it was modernised to carry 16 9M114 Shturm-V (AT-6 Spiral) missiles.Also armed with 12.7 mm turret,
-    B8V20 unguided missile launchers (20x S-8 rockets), B13L1 unguided missile launchers (S-13 rockets), heavy rockets S-24B. 
-    Engines TV3-117V
-	  </long-description>
+    <description>Mil Mi 24V Hind-E (Yasim)</description>
 	
-	<author>Sergei "Skydive" Solyshko</author>
 	<authors>
 		<author n="0">
 			<name>Sergei "Skydive" Solyshko (3D/Cockpit)</name>
@@ -31,6 +22,13 @@
 		</author>
 	</authors>
 
+  	<long-description>(Hind-E) Entered production in 1976. Manufactured 1976-1986. It was the most widely produced version with more than 1,500 made.
+    Armed with the more advanced 9M114 Shturm-V (AT-6 Spiral). Four of these missiles are mounted on four outer wing pylons. 
+    In 1986 it was modernised to carry 16 9M114 Shturm-V (AT-6 Spiral) missiles.Also armed with 12.7 mm turret,
+    B8V20 unguided missile launchers (20x S-8 rockets), B13L1 unguided missile launchers (S-13 rockets), heavy rockets S-24B. 
+    Engines TV3-117V
+	  </long-description>
+
     <aircraft-version>0.41</aircraft-version>
     <status>alpha</status>
     <minimum-fg-version>2018.2.0</minimum-fg-version>
@@ -38,11 +36,13 @@
     <flight-model>yasim</flight-model>
     <aero>Systems/mi24-yasim</aero>
 
+    <variant-id type="int">1</variant-id>
+
     <rating>
-      <FDM type="int">     4 </FDM>
-      <systems type="int"> 1 </systems>
-      <cockpit type="int"> 1 </cockpit>
-      <model type="int">   4 </model>
+      <FDM     type="int"> 4 </FDM>
+      <systems type="int"> 2 </systems>
+      <cockpit type="int"> 3 </cockpit>
+      <model   type="int"> 4 </model>
     </rating>
 
     <previews>

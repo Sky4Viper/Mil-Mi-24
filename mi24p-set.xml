@@ -5,13 +5,8 @@
   <sim>
 
     <expected-aircraft-dir-name>Mil-Mi-24</expected-aircraft-dir-name>
-	  <description>Mil Mi-24P Hind-F (Yasim)</description>
-	  <variant-id type="int">2</variant-id>
+    <description>Mil Mi 24 Hind-F (Yasim)</description>
 
-	  <long-description>(Hind-F) The gunship version, which replaced the 12.7mm machine-gun with a fixed side-mounted 30mm GSh-30-2K twin-barrel autocannon. Entered production in 1981.
-	  </long-description>
-	
-	<author>Sergei "Skydive" Solyshko</author>
 	<authors>
 		<author n="0">
 			<name>Sergei "Skydive" Solyshko (3D/Cockpit)</name>
@@ -27,6 +22,10 @@
 		</author>
 	</authors>
 
+    <long-description>
+      (Hind-F) The gunship version, which replaced the 12.7mm machine-gun with a fixed side-mounted 30mm GSh-30-2K twin-barrel autocannon. Entered production in 1981.
+    </long-description>
+
     <aircraft-version>0.41</aircraft-version>
     <status>alpha</status>
     <minimum-fg-version>2018.2.0</minimum-fg-version>
@@ -34,11 +33,15 @@
     <flight-model>yasim</flight-model>
     <aero>Systems/mi24p-yasim</aero>
 
+    <variant-of>mi24</variant-of>
+
+    <variant-id type="int">2</variant-id>
+
     <rating>
-      <FDM type="int">     4 </FDM>
-      <systems type="int"> 1 </systems>
-      <cockpit type="int"> 1 </cockpit>
-      <model type="int">   4 </model>
+      <FDM     type="int"> 4 </FDM>
+      <systems type="int"> 2 </systems>
+      <cockpit type="int"> 3 </cockpit>
+      <model   type="int"> 4 </model>
     </rating>
 
     <previews>
