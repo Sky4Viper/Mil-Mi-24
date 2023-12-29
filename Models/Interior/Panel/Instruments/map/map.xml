@@ -5,37 +5,25 @@
   <path>map.ac</path>
 
   <animation>
-    <object-name>map-box</object-name>
-    <object-name>map-box-glass</object-name>
+    <object-name>fond</object-name>
+    <object-name>switches</object-name>
     <object-name>canvasCadre</object-name>
-    <object-name>boutons</object-name>
-    <object-name>ZoomMoins</object-name>
-    <object-name>ZoomPlus</object-name>
+
+    <object-name>vitre</object-name>
   </animation>
 
   <animation>
     <type>noshadow</type>
-    <object-name>map-box</object-name>
-    <object-name>map-box-glass</object-name>
+    <object-name>fond</object-name>
+    <object-name>switches</object-name>
     <object-name>canvasCadre</object-name>
-    <object-name>boutons</object-name>
-    <object-name>ZoomMoins</object-name>
-    <object-name>ZoomPlus</object-name>
-  </animation>
-  
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>map-box-glass</object-name>
+    <object-name>vitre</object-name>
   </animation>
 
+  <!-- working for Compositor -->
   <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-        <condition>
-            <property>/sim/rendering/rembrandt/enabled</property>
-        </condition>
-        <object-name>map-box-glass</object-name>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
   </effect>
 
   <animation>
@@ -45,7 +33,7 @@
       <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
-      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
       <red>   0.50 </red>
       <green> 0.40 </green>
       <blue>  0.30 </blue>
@@ -53,62 +41,11 @@
   </animation>
 
   <animation>
-		<type>select</type>
-		<object-name>canvasCadre</object-name>
-		<condition>
-				<!-- <property>controls/electric/battery-switch</property> -->
-        <property>/sim/current-view/internal</property>
-		</condition>
-	</animation>
-
-  <!-- <animation>
-		<type>select</type>
-		<object-name>map-box-glass</object-name>
-		<condition>
-        <not>
-          <property>/sim/rendering/rembrandt/enabled</property>
-        </not>
+    <type>select</type>
+    <object-name>canvasCadre</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
     </condition>
-	</animation> -->
-
-  <animation>
-    <type>pick</type>
-    <object-name>ZoomPlus</object-name>
-    <visible>false</visible>
-    <action>
-      <!--  scroll up
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-toggle</command>
-        <property>sim/model/click</property>
-      </binding>
-      <binding>
-        <command>nasal</command>
-        <script>mi24.MAPCanvas.changeZoomMap(1)</script>*
-      </binding>
-      -->
-    </action>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>ZoomMoins</object-name>
-    <visible>false</visible>
-    <action>
-      <!--  scroll down
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-toggle</command>
-        <property>sim/model/click</property>
-      </binding>
-      <binding>
-        <command>nasal</command>
-        <script>mi24.MAPCanvas.changeZoomMap(-1)</script>
-      </binding>
-      -->
-    </action>
   </animation>
 
 </PropertyList>

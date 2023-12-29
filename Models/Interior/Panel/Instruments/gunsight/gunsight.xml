@@ -25,13 +25,13 @@
         <object-name>switch.002</object-name>
         <object-name>switch.003</object-name>
         <object-name>lamp-green</object-name>
-        <object-name>lamp-green-on</object-name>
+        <object-name>lamp-green.on</object-name>
         <object-name>lamp-red</object-name>
-        <object-name>lamp-red-on</object-name>
+        <object-name>lamp-red.on</object-name>
         <object-name>lamp-yellow</object-name>
-        <object-name>lamp-yellow-on</object-name>
+        <object-name>lamp-yellow.on</object-name>
         <object-name>lamp-purple</object-name>
-        <object-name>lamp-purple-on</object-name>
+        <object-name>lamp-purple.on</object-name>
         <object-name>wpn-light.001</object-name>
         <object-name>wpn-light.002</object-name>
         <object-name>wpn-light.003</object-name>

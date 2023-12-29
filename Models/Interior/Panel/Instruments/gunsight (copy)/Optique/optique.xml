@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>optique.ac</path>
+
+  <animation>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.7 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Sight-Fixed</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+      <not><property>controls/electric/gunsight-auto</property></not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Sight-Auto</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+      <property>controls/electric/gunsight-auto</property>
+    </condition>
+  </animation>
+
+  <!-- *********************** -->
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Fixed</object-name>
+    <property>/accelerations/pilot/z-accel-fps_sec</property>
+    <factor> 0.0005 </factor>
+    <min> -0.035 </min>
+    <max>  0.020 </max>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Fixed</object-name>
+    <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <factor> 0.006 </factor>
+    <min> -0.01 </min>
+    <max>  0.01 </max>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  <!-- *********************** -->
+
+  <!-- *********************** -->
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto</object-name>
+    <property>/accelerations/pilot/z-accel-fps_sec</property>
+    <factor> 0.0005 </factor>
+    <min> -0.035 </min>
+    <max>  0.020 </max>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto</object-name>
+    <property>/controls/armament/pipperoffset</property>
+    <min> -0.035 </min>
+    <max>  0.020 </max>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto</object-name>
+    <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+    <factor> 0.005 </factor>
+    <min> -0.015 </min>
+    <max>  0.015 </max>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  <!-- *********************** -->
+
+</PropertyList>

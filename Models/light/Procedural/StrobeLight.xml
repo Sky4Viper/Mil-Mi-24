@@ -9,7 +9,7 @@
     <condition>
       <and>
         <property>/sim/model/lights/sbc1/state</property>
-        <property>/controls/lighting/nav-lights</property>
+        <property>controls/lighting/strobe</property>
       </and>
     </condition>
   </animation>

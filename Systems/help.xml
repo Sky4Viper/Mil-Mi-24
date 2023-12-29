@@ -18,6 +18,10 @@
   </key>
   <!-- ################### -->
   <key>
+    <name>m</name>
+    <desc>Master Arm On/Off</desc>
+  </key>
+  <key>
     <name>q</name>
     <desc>Ripple mode select (Salvo-1-4)</desc>
   </key>
@@ -30,17 +34,13 @@
     <desc>Select rockets</desc>
   </key>
   <key>
-    <name>m</name>
-    <desc>Master Arm On/Off</desc>
-  </key>
-  <key>
-    <name>d</name>
+    <name>e</name>
     <desc>Fire Selected weapon</desc>
   </key>
   <key>
     <name>f</name>
     <desc>Launch flares</desc>
   </key>
-  <!-- ################### -->  
+  <!-- ################### -->
 
 </PropertyList>

@@ -6,8 +6,9 @@
 
   <animation>
     <!-- Objets opaques -->
+    <object-name>cover</object-name>
     <object-name>panel-base</object-name>
-    <object-name>instruments-placeholder</object-name>
+    <object-name>instruments_placehold</object-name>
   </animation>
 
   <!-- AI -->
@@ -15,17 +16,17 @@
     <path>Instruments/ai/pkp-72m.xml</path>
     <offsets>
       <x-m> -0.029141 </x-m>
-      <y-m> 0.0 </y-m>
-      <z-m> 0.03109 </z-m>
+      <y-m>  0.000000 </y-m>
+      <z-m>  0.031090 </z-m>
     </offsets>
     <overlay>
-			<animation n="100">
-			<type>scale</type>
-			<property>constants/zero</property>
-			<x-offset>0.65</x-offset>
-			<y-offset>0.65</y-offset>
-			<z-offset>0.65</z-offset>
-			</animation>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.65 </x-offset>
+        <y-offset> 0.65 </y-offset>
+        <z-offset> 0.65 </z-offset>
+      </animation>
     </overlay>
   </model>
 
@@ -33,18 +34,18 @@
   <model>
     <path>Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m> 0.007435 </x-m>
+      <x-m>  0.007435 </x-m>
       <y-m> -0.088406 </y-m>
       <z-m>  0.031263 </z-m>
     </offsets>
     <overlay>
-			<animation n="100">
-			<type>scale</type>
-			<property>constants/zero</property>
-			<x-offset>0.8</x-offset>
-			<y-offset>0.8</y-offset>
-			<z-offset>0.8</z-offset>
-			</animation>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.8 </x-offset>
+        <y-offset> 0.8 </y-offset>
+        <z-offset> 0.8 </z-offset>
+      </animation>
     </overlay>
   </model>
 
@@ -57,13 +58,13 @@
       <z-m> 0.031263 </z-m>
     </offsets>
     <overlay>
-			<animation n="100">
-			<type>scale</type>
-			<property>constants/zero</property>
-			<x-offset>0.8</x-offset>
-			<y-offset>0.8</y-offset>
-			<z-offset>0.8</z-offset>
-			</animation>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.8 </x-offset>
+        <y-offset> 0.8 </y-offset>
+        <z-offset> 0.8 </z-offset>
+      </animation>
     </overlay>
   </model>
 
@@ -72,28 +73,28 @@
     <path>Instruments/gunsight/gunsight.xml</path>
     <offsets>
       <x-m> 0.202069 </x-m>
-      <y-m>  0.00262 </y-m>
-      <z-m>  0.363154 </z-m>
+      <y-m> 0.002620 </y-m>
+      <z-m> 0.363154 </z-m>
       <pitch-deg>2</pitch-deg>
     </offsets>
-  </model>  -->
+  </model> -->
 
   <!-- RADIO COMPASS -->
   <model>
     <path>Instruments/rrc/rrc.xml</path>
     <offsets>
-      <x-m> 0.000735 </x-m>
-      <y-m> 0.0 </y-m>
+      <x-m>  0.000735 </x-m>
+      <y-m>  0.000000 </y-m>
       <z-m> -0.051797 </z-m>
     </offsets>
     <overlay>
-			<animation n="100">
-			<type>scale</type>
-			<property>constants/zero</property>
-			<x-offset>0.65</x-offset>
-			<y-offset>0.65</y-offset>
-			<z-offset>0.65</z-offset>
-			</animation>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.65 </x-offset>
+        <y-offset> 0.65 </y-offset>
+        <z-offset> 0.65 </z-offset>
+      </animation>
     </overlay>
   </model>
 
@@ -101,18 +102,18 @@
   <model>
     <path>Instruments/rpm/rpm-r.xml</path>
     <offsets>
-      <x-m> 0.007435 </x-m>
+      <x-m>  0.007435 </x-m>
       <y-m> -0.088406 </y-m>
       <z-m> -0.051797 </z-m>
     </offsets>
     <overlay>
-			<animation n="100">
-			<type>scale</type>
-			<property>constants/zero</property>
-			<x-offset>0.8</x-offset>
-			<y-offset>0.8</y-offset>
-			<z-offset>0.8</z-offset>
-			</animation>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.8 </x-offset>
+        <y-offset> 0.8 </y-offset>
+        <z-offset> 0.8 </z-offset>
+      </animation>
     </overlay>
   </model>
 
@@ -120,18 +121,18 @@
   <model>
     <path>Instruments/rpm/rpm-e.xml</path>
     <offsets>
-      <x-m> 0.007435 </x-m>
-      <y-m> 0.088405 </y-m>
+      <x-m>  0.007435 </x-m>
+      <y-m>  0.088405 </y-m>
       <z-m> -0.051797 </z-m>
     </offsets>
     <overlay>
-			<animation n="100">
-			<type>scale</type>
-			<property>constants/zero</property>
-			<x-offset>0.8</x-offset>
-			<y-offset>0.8</y-offset>
-			<z-offset>0.8</z-offset>
-			</animation>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.8 </x-offset>
+        <y-offset> 0.8 </y-offset>
+        <z-offset> 0.8 </z-offset>
+      </animation>
     </overlay>
   </model>
 

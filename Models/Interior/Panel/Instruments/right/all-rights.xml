@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>right.xml</path>
+    <offsets>
+      <x-m> -5.17409 </x-m>
+      <y-m>  0.47631 </y-m>
+      <z-m> -1.40320 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

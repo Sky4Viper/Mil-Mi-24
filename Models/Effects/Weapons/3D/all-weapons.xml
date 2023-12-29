@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left -->
+  <model>
+    <path>/b8v20/b8v20.xml</path>
+    <offsets>
+      <x-m> -1.336 </x-m>
+      <y-m> -2.016 </y-m>
+      <z-m> -1.367 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>/b8v20/b8v20.xml</path>
+    <offsets>
+      <x-m> -1.336 </x-m>
+      <y-m> -2.713 </y-m>
+      <z-m> -1.509 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>/9k-121/9k-121.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m> -3.577 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/9m120/9m120-2.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m> -3.577 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/9k-121/9k-121.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m> -3.892 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/9m120/9m120-1.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m> -3.892 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>/b8v20/b8v20.xml</path>
+    <offsets>
+      <x-m> -1.336 </x-m>
+      <y-m>  2.016 </y-m>
+      <z-m> -1.367 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>/b8v20/b8v20.xml</path>
+    <offsets>
+      <x-m> -1.336 </x-m>
+      <y-m>  2.713 </y-m>
+      <z-m> -1.509 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>/9k-121/9k-121.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m>  3.577 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/9m120/9m120-3.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m>  3.577 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/9k-121/9k-121.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m>  3.892 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/9m120/9m120-4.xml</path>
+    <offsets>
+      <x-m> -1.273 </x-m>
+      <y-m>  3.892 </y-m>
+      <z-m> -1.721 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
+  </model>
+
+</PropertyList>

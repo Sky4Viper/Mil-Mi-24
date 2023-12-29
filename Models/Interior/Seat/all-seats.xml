@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Pilot -->
+  <model>
+    <path>seat.ac</path>
+    <offsets>
+      <x-m> -5.315870 </x-m>
+      <y-m>  0.000000 </y-m>
+      <z-m> -0.933551 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Gunner -->
+  <model>
+    <path>seat.ac</path>
+    <offsets>
+      <x-m> -6.69669 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.48828 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

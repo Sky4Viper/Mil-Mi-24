@@ -7,14 +7,18 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
-    <object-name>inttour</object-name>
+    <object-name>intcockpit</object-name>
+    <object-name>intportepilote</object-name>
     <object-name>intporteGH</object-name>
     <object-name>intporteGB</object-name>
     <object-name>intporteDH</object-name>
     <object-name>intporteDB</object-name>
-    <object-name>intportepilote</object-name>
-    <object-name>intcockpit</object-name>
+    <object-name>inttour</object-name>
     <object-name>planchet</object-name>
+    <object-name>interieur_bench</object-name>
+    <object-name>left-paanel</object-name>
+    <object-name>raduga</object-name>
+    <object-name>separation</object-name>
 
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
@@ -25,6 +29,7 @@
 
   <!-- working for Compositor -->
   <effect>
+    <!-- <inherits-from>../Effects/Glass/glass</inherits-from> -->
     <inherits-from>../Effects/Glass/glassrain</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitresG</object-name>
@@ -33,123 +38,35 @@
   </effect>
 
   <model>
-    <path>Panel/panel.xml</path>
-    <offsets>
-      <x-m> -6.06052 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> -1.0129 </z-m>
-      <pitch-deg>-10</pitch-deg>
-    </offsets>
+    <path>Panel/all-panels.xml</path>
   </model>
 
   <model>
-    <path>Panel/Instruments/gear/gear.xml</path>
-    <offsets>
-      <x-m> -5.99995 </x-m>
-      <y-m> -0.478048 </y-m>
-      <z-m> -1.16168 </z-m>
-      <!-- <roll-deg>90</roll-deg> -->
-      <pitch-deg>-39.5273</pitch-deg>
-      <heading-deg>19.1971</heading-deg>
-    </offsets>
-    <overlay>
-			<animation n="100">
-			<type>scale</type>
-			<property>constants/zero</property>
-			<x-offset>1.1</x-offset>
-			<y-offset>1.1</y-offset>
-			<z-offset>1.1</z-offset>
-			</animation>
-    </overlay>
+    <path>../Pilot/all-pilots.xml</path>
   </model>
 
   <model>
-    <path>Panel/panel-cpg.xml</path>
-    <offsets>
-      <x-m> -7.26879 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> -1.542 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Pilot -->
-	
-	<model>
-    <name>Pilot</name>
-		<path>../Pilot/pilot.xml</path>
-		<offsets>
-			<x-m> -5.32249 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.16469 </z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-		<condition>
-			<not>
-				<property>/sim/current-view/internal</property>
-			</not>
-		</condition>
-	</model>
-
-  <model>
-    <name>Gunner</name>
-		<path>../Pilot/copilot.xml</path>
-		<offsets>
-			<x-m> -6.71774 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.73936 </z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-		<condition>
-			<not>
-				<property>/sim/current-view/internal</property>
-			</not>
-		</condition>
-	</model>
-
-  <!-- Seat -->
-
-  <model>
-        <name>PilotSeat</name>
-        <path>../Interior/Seat/seat.ac</path>
-        <offsets>
-            <x-m>-5.31587</x-m>
-            <y-m> 0.000</y-m>
-            <z-m>-0.933551</z-m>
-        </offsets>
+    <path>Seat/all-seats.xml</path>
   </model>
 
   <model>
-        <name>GunnerSeat</name>
-        <path>../Interior/Seat/seat.ac</path>
-        <offsets>
-            <x-m>-6.69669</x-m>
-            <y-m> 0.000</y-m>
-            <z-m>-1.48828</z-m>
-        </offsets>
+    <path>Panel/Instruments/gear/gear-panel.xml</path>
   </model>
 
-  <!-- Pilot Cyclic stick -->
   <model>
-    <name>PilotCyclic</name>
-        <path>../Interior/Cyclic/cyclic.ac</path>
-    <offsets>
-      <x-m> -6.161 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.155 </z-m>
-    </offsets>
+    <path>Panel/Instruments/right/all-rights.xml</path>
   </model>
 
-  <!-- FAN -->
   <model>
-    <name>Ventilator</name>
-    <path>../Interior/Panel/Instruments/fan/fan.xml</path>
-    <offsets>
-      <x-m> -5.98553 </x-m>
-      <y-m>  0.219759 </y-m>
-      <z-m>  -0.416591 </z-m>
-      <pitch-deg>5</pitch-deg>
-      <heading-deg>-25</heading-deg>
-    </offsets>
+    <path>Panel/Instruments/raduga/all-radugas.xml</path>
+  </model>
+
+  <model>
+    <path>Panel/Instruments/fan/all-fans.xml</path>
+  </model>
+
+  <model>
+    <path>Cyclic/all-cyclics.xml</path>
   </model>
 
   <!-- Porte pilote -->

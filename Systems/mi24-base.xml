@@ -4,7 +4,7 @@
 
   <sim include="views.xml">
 
-    <fuel-fraction>0.8</fuel-fraction>
+    <fuel-fraction>1</fuel-fraction>
 
     <startup>
       <splash-texture>Aircraft/Mil-Mi-24/mi24-splash.png</splash-texture>
@@ -15,24 +15,51 @@
     </sound>
 
     <model>
-      <path archive="y">Aircraft/Mil-Mi-24/Models/mi24.xml</path>
+      <path             archive="y">Aircraft/Mil-Mi-24/Models/mi24.xml</path>
       <livery>
-        <file type="string">default</file>
+        <file           type="string"></file>
       </livery>
       <mi24>
-        <state type="int">0</state>
-        <engine type="float">0</engine>
+        <state          type="int">0</state>
+        <engine         type="float">0</engine>
         <rotor-step-deg type="float">-1</rotor-step-deg>
-        <ir-cooler type="bool">false</ir-cooler>
+        <effects>
+          <particles>
+            <rotorwash>
+              <enabled            type="bool">true</enabled>
+              <redcombinedstart   type="float">0.3</redcombinedstart>
+              <greencombinedstart type="float">0.3</greencombinedstart>
+              <bluecombinedstart  type="float">.3</bluecombinedstart>
+              <redcombinedend     type="float">0.5</redcombinedend>
+              <greencombinedend   type="float">0.5</greencombinedend>
+              <bluecombinedend    type="float">0.5</bluecombinedend>
+            </rotorwash>
+            <enabled       type="bool">true</enabled>
+            <redcombined   type="float">0</redcombined>
+            <greencombined type="float">0</greencombined>
+            <bluecombined  type="float">0</bluecombined>
+          </particles>
+        </effects>
       </mi24>
+      <turret n="0">
+        <heading>0</heading>
+        <pitch>0</pitch>
+      </turret>
     </model>
 
-    <!-- ##################### -->
-    <submodels>
-      <serviceable type="bool">true</serviceable>
-      <path>Aircraft/Mil-Mi-24/Models/Effects/guns/submodels.xml</path>
-    </submodels>
-    <!-- ##################### -->
+   <!-- <instrumentation include="instrumentation.xml"/> -->
+
+    <instrumentation>
+      <path>Aircraft/Mil-Mi-24/Systems/instrumentation.xml</path>
+
+      <gsdi>
+        <serviceable type="bool">true</serviceable>
+        <enabled type="bool">true</enabled>
+      </gsdi>
+
+    </instrumentation>
+
+
 
     <multiplay>
       <chat_display>1</chat_display>
@@ -50,7 +77,7 @@
         <float  n="2"  alias="/position/gear-agl-m">0</float>
         <float  n="3"  alias="/position/altitude-ft">0</float>
         <float  n="4"  alias="/rotors/main/rpm"/>
-        <float  n="5"  alias="/engines/engine[0]/cranking"/>
+        <float  n="5"  alias="/sim/model/mi24/state"/>
         <float  n="6"  alias="/gear/gear[0]/wow/"/>
         <float  n="7"  alias="/gear/gear[1]/wow/"/>
         <float  n="8"  alias="/gear/gear[2]/wow/"/>
@@ -92,8 +119,6 @@
 
     <help include="help.xml"/>
 
-    <!-- <instrumentation include="instrumentation.xml"/> -->
-
     <instrumentation>
       <path>Aircraft/Mil-Mi-24/Systems/instrumentation.xml</path>
 
@@ -125,24 +150,25 @@
       <file>Aircraft/Mil-Mi-24/Nasal/mi24.nas</file>
       <file>Aircraft/Mil-Mi-24/Nasal/liveries.nas</file>
       <file>Aircraft/Mil-Mi-24/Nasal/map.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/Electrical.nas</file>
       <file>Aircraft/Mil-Mi-24/Nasal/convert.nas</file>
     </mi24>
     <gmeter>
       <file>Aircraft/Mil-Mi-24/Nasal/gmeter.nas</file>
     </gmeter>
     <!-- ########### -->
+    <turrets>
+      <file>Aircraft/Mil-Mi-24/Nasal/turrets.nas</file>
+    </turrets>
     <guns>
       <file>Aircraft/Mil-Mi-24/Nasal/weapons.nas</file>
     </guns>
     <launchauthorizer>
-			<file>Aircraft/Mil-Mi-24/Nasal/launchauthorizer.nas</file>
+      <file>Aircraft/Mil-Mi-24/Nasal/launchauthorizer.nas</file>
     </launchauthorizer>
     <rockets>
-	   <file>Aircraft/Mil-Mi-24/Nasal/rockets.nas</file>
-	 </rockets>
-   <turrets>
-      <file>Aircraft/Mil-Mi-24/Nasal/turrets.nas</file>
-    </turrets>
+      <file>Aircraft/Mil-Mi-24/Nasal/rockets.nas</file>
+    </rockets>
     <!-- ########### -->
   </nasal>
 

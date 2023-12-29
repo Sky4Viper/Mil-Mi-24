@@ -34,15 +34,10 @@
       <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
-      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-      <!-- <red>0.8</red>
-      <green>0.3</green>
-      <blue>0.1</blue> -->
-
-      <red>1.0</red>
-      <green>0.94</green>
-      <blue>0.75</blue>
-
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
     </emission>
   </animation>
 
@@ -50,13 +45,13 @@
     <type>rotate</type>
     <object-name>needle1</object-name>
     <property>consumables/fuel/total-fuel-lbs</property>
-  <interpolation>
-	  <entry><ind>0.0</ind><dep>-189</dep></entry>
-    <entry><ind>442.0</ind><dep>-124</dep></entry>
-    <entry><ind>662.0</ind><dep>-97</dep></entry>
-    <entry><ind>1545</ind><dep>14</dep></entry>
-	  <entry><ind>1820</ind><dep>65</dep></entry>
-  </interpolation>
+    <interpolation>
+      <entry><ind>    0.0 </ind><dep> -189 </dep></entry>
+      <entry><ind>  442.0 </ind><dep> -124 </dep></entry>
+      <entry><ind>  662.0 </ind><dep>  -97 </dep></entry>
+      <entry><ind> 1545.0 </ind><dep>   14 </dep></entry>
+      <entry><ind> 1820.0 </ind><dep>   65 </dep></entry>
+    </interpolation>
     <axis>
       <x> -1 </x>
       <y>  0 </y>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>b8v20.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>tubes</object-name>
+    <object-name>tubes.001</object-name>
+    <object-name>tubes.002</object-name>
+
+    <!-- Transparence -->
+  </animation>
+
+  <effect>
+    <!-- <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from> -->
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/ArmReflect</inherits-from>
+    <object-name>tubes</object-name>
+    <object-name>tubes.001</object-name>
+  </effect>
+
+  <!-- <model>
+		<name>S8fire</name>
+		<path>Aircraft/Mil-Mi-24/Models/Effects/guns/gsh30/gsh30-fire.xml</path>
+		<condition>
+			<equals>
+				<property>controls/armament/trigger-s8</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+    <offsets>
+			<x-m>-1.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+			<heading-deg>180</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> -->
+
+  <!-- Les roquettes -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.044 </y-m>
+      <z-m>  0.152 </z-m>
+    </offsets>
+    <!-- <condition>
+        <equals>
+				  <property>/controls/armament/weapon-type</property>
+          <value>2</value>
+        </equals>
+		</condition> -->
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>18</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.044 </y-m>
+      <z-m>  0.068 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>17</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.075 </y-m>
+      <z-m> -0.002 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>16</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.044 </y-m>
+      <z-m> -0.071 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.070 </y-m>
+      <z-m> -0.142 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>14</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.129 </y-m>
+      <z-m> -0.096 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>13</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.156 </y-m>
+      <z-m> -0.029 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>12</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.145 </y-m>
+      <z-m>  0.046 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>11</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m> -0.110 </y-m>
+      <z-m>  0.109 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>10</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <!-- Centre -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.158 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>9</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.044 </y-m>
+      <z-m>  0.152 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>8</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.044 </y-m>
+      <z-m>  0.068 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>7</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.075 </y-m>
+      <z-m> -0.002 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>6</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.044 </y-m>
+      <z-m> -0.071 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>5</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.070 </y-m>
+      <z-m> -0.142 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>4</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.129 </y-m>
+      <z-m> -0.096 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>3</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.156 </y-m>
+      <z-m> -0.029 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>2</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.145 </y-m>
+      <z-m>  0.046 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>1</value>
+			</greater-than>
+		</condition>
+  </model>
+
+  <model>
+    <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/b8v20/s8.xml</path>
+    <offsets>
+      <x-m> 0.088 </x-m>
+      <y-m>  0.110 </y-m>
+      <z-m>  0.109 </z-m>
+    </offsets>
+    <condition>
+			<greater-than>
+				<property>/controls/armament/rocketsCount1</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
+  </model>
+
+</PropertyList>

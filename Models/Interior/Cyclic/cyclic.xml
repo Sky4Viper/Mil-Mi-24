@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>cyclic.ac</path>
+
+  <animation>
+    <object-name>stickbase</object-name>
+    <object-name>controlstick</object-name>
+    <object-name>controlstick_brake</object-name>
+    <object-name>stick_button</object-name>
+    <object-name>trim_hat</object-name>
+  </animation>
+
+  <animation>
+    <name>AllStick</name>
+    <object-name>controlstick</object-name>
+    <object-name>controlstick_brake</object-name>
+    <object-name>stick_button</object-name>
+    <object-name>trim_hat</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AllStick</object-name>
+    <property>controls/flight/elevator</property>
+    <factor> -10 </factor>
+    <center>
+      <x-m> 0.00000 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.11911 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AllStick</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> -10 </factor>
+    <center>
+      <x-m> 0.00000 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.11911 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

@@ -4,63 +4,73 @@
 
   <lighting>
     <instrument-lights type="bool">false</instrument-lights>
-    <nav-lights type="bool">false</nav-lights>
-    <taxi-lights type="bool">false</taxi-lights>
-    <strobe-lights type="bool">false</strobe-lights>
-    <landing-lights type="bool">false</landing-lights>
+    <nav-lights        type="bool">false</nav-lights>
+    <taxi-lights       type="bool">false</taxi-lights>
+    <beacon            type="bool">false</beacon>
+    <strobe            type="bool">false</strobe>
+    <landing-lights    type="bool">false</landing-lights>
     <luminosite-lights type="float">1</luminosite-lights>
-    <floods-lights type="float">1</floods-lights>
-    <elt type="bool">false</elt>
+    <floods-lights     type="float">1</floods-lights>
+    <elt               type="bool">false</elt>
   </lighting>
 
+  <APU>
+    <master            type="bool">true</master>
+    <battery           type="double">28.0</battery>
+    <running           type="bool">true</running>
+    <off-start-run     type="int">1</off-start-run>
+  </APU>
+
   <engines>
-    <engine n="0">
-      <boost type="double">1</boost>
-      <throttle type="double">0</throttle>
+    <engine            n="0">
+      <boost           type="double">1</boost>
+      <throttle        type="double">0</throttle>
     </engine>
-    <engine n="1">
-      <boost type="double">1</boost>
-      <throttle type="double">0</throttle>
+    <engine            n="1">
+      <boost           type="double">1</boost>
+      <throttle        type="double">0</throttle>
     </engine>
   </engines>
 
   <electric>
-    <battery-switch>0</battery-switch>
+    <battery-switch    type="bool">false</battery-switch>
     <generator>0</generator>
     <alimentation>
-      <deice type="int">0</deice>
+      <deice           type="int">0</deice>
     </alimentation>
     <engines>
-      <engine n="0">
+      <engine          n="0">
         <fuel-pump>0</fuel-pump>
       </engine>
-      <engine n="1">
+      <engine          n="1">
         <fuel-pump>0</fuel-pump>
       </engine>
     </engines>
   </electric>
 
   <rotor>
-    <reltarget>1</reltarget>
-    <maxreltorque>1</maxreltorque>
+    <reltarget         type="double">1</reltarget>
+    <maxreltorque      type="double">1</maxreltorque>
+    <brake             type="bool">true</brake>
   </rotor>
 
   <!-- ################ -->
   <armament>
-    <trigger type="bool">  0 </trigger>
-    <pickle type="bool"> 0 </pickle>
+    <trigger>  0 </trigger>
+    <trigger1> 0 </trigger1>
+    <trigger2> 0 </trigger2>
   </armament>
   <!-- ################ -->
 
   <gear>
-    <brake-parking type="bool">1</brake-parking>
-    <emergency type="bool">false</emergency>
+    <brake-parking     type="bool">1</brake-parking>
+    <emergency         type="bool">false</emergency>
   </gear>
 
   <flight>
-    <rudder-trim>   0.00 </rudder-trim>
-    <aileron-trim>  0.00 </aileron-trim>
-    <elevator-trim> 0.00 </elevator-trim>
+    <rudder-trim       type="double"> 0.00 </rudder-trim>
+    <aileron-trim      type="double"> 0.00 </aileron-trim>
+    <elevator-trim     type="double"> 0.00 </elevator-trim>
   </flight>
 
 </PropertyList>

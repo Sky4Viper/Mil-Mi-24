@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>seat.ac</path>
+
+  <animation>
+    <object-name>seat_coushion</object-name>
+    <object-name>seat_main</object-name>
+    <object-name>seat_headrest</object-name>
+    <object-name>seat_storage</object-name>
+    <object-name>seat_base</object-name>
+    <object-name>seat_cylinder</object-name>
+  </animation>
+
+</PropertyList>

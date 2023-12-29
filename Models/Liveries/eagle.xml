@@ -2,13 +2,13 @@
 
 <!-- © 2016 Enrico CASTALDI GPLv2+ -->
 <PropertyList>
-  
+
   <sim>
-    
+
     <model>
       <livery>
         <name type="string">Eagle</name>
-        <texture>Liveries/1024x1024/eagle.png</texture>
+        <texture>Liveries/2048x2048/eagle.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
@@ -16,7 +16,7 @@
         </specular>
       </livery>
     </model>
-    
+
   </sim>
-  
+
 </PropertyList>

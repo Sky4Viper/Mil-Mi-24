@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!--========== Turning Turret =====================-->
+  <model>
+    <name>FireEffect</name>
+    <path>fire.xml</path>
+    <condition>
+      <property>controls/armament/trigger-mg</property>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>1</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -8.51996 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -2.22304 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>FireEffect</object-name>
+    <property>sim/model/turret[0]/heading</property>
+    <center>
+      <x-m> -7.47883 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.93837 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>FireEffect</object-name>
+    <property>sim/model/turret[0]/pitch</property>
+    <offset-deg> 5 </offset-deg>
+    <center>
+      <x-m> -7.6923 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -2.22304 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!--==========     GSh-30     =====================-->
+  <model>
+    <name>FireEffect1GSh30</name>
+    <path>fire.xml</path>
+    <condition>
+      <property>controls/armament/trigger-mg</property>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -8.08313 </x-m>
+      <y-m>  0.74925 </y-m>
+      <z-m> -1.75409 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.4 </x-offset>
+        <y-offset> 1.4 </y-offset>
+        <z-offset> 1.4 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <name>FireEffect2GSh30</name>
+    <path>fire.xml</path>
+    <condition>
+      <property>controls/armament/trigger-mg</property>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -8.08313 </x-m>
+      <y-m>  0.74925 </y-m>
+      <z-m> -1.87580 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.4 </x-offset>
+        <y-offset> 1.4 </y-offset>
+        <z-offset> 1.4 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+</PropertyList>

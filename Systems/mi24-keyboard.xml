@@ -5,129 +5,145 @@
   <keyboard>
 
     <!-- ###### -->
-
     <key n="60">
-        		<name>&lt;</name>
-        		<desc>Select Gun</desc>
-        		<!-- <binding>
-					    <command>property-assign</command>
-					    <property>controls/armament/weapon-type</property>
-              <value>1</value>
-				    </binding> -->
-            <binding>
-            	<command>nasal</command>
-            	<script><![CDATA[
-                		setprop("controls/armament/weapon-type", 1);
-                		screen.log.write("YakB-12.7 machine gun selected", 0.5, 0.5, 1);
-                		]]>
-				      </script>
-        	  </binding>
-    </key>
-    <key n="62">
-        		<name>&gt;</name>
-        		<desc>Select Rockets</desc>
-        		<!-- <binding>
-					    <command>property-assign</command>
-					    <property>controls/armament/weapon-type</property>
-              <value>2</value>
-				    </binding> -->
-            <binding>
-            	<command>nasal</command>
-            	<script><![CDATA[
-                		setprop("controls/armament/weapon-type", 2);
-                		screen.log.write("S-8 rockets selected", 0.5, 0.5, 1);
-                		]]>
-				      </script>
-        	  </binding>
-    </key>
-
-    <key n="100">
-				<name>d</name>
-				<desc>Fire selected weapons</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/armament/trigger</property>
-					<value>true</value>
-				</binding>
-			<mod-up>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/armament/trigger</property>
-					<value>false</value>
-				</binding>
-			</mod-up>
-		</key>
-
-    <!-- <key n="101">
-      <name>e</name>
-      <desc>Rockets</desc>
+      <name>&lt;</name>
+      <desc>Select Gun</desc>
+      <!-- <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+            setprop("controls/armament/weapon-type", 1);
+            var mod = getprop("/sim/variant-id");
+            if (mod == 1 ) {
+              screen.log.write("YakB-12.7 machine gun selected", 0.5, 0.5, 1);
+            } elsif (mod == 2 ) {
+              screen.log.write("GSh-30-2K cannon selected", 0.5, 0.5, 1);
+            }
+          ]]>
+        </script>
+      </binding> -->
+      <binding>
+        <command>property-adjust</command>
+         <property>controls/armament/weapon-type</property>
+        <step>-1.0</step>
+        <min>1</min>
+        <max>6</max>
+        <wrap>false</wrap>
+      </binding>
       <binding>
         <command>nasal</command>
-        <script>guns.fire_Rocket()</script>
+        <script>
+          <![CDATA[
+            screen.log.write("Selected weapon: " ~ getprop("controls/armament/weapon-type"), 0.5, 0.5, 1);
+          ]]>
+        </script>
+      </binding>
+    </key>
+
+    <key n="62">
+      <name>&gt;</name>
+      <desc>Select Rockets</desc>
+      <!-- <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+            setprop("controls/armament/weapon-type", 2);
+            screen.log.write("S-8 rockets selected", 0.5, 0.5, 1);
+          ]]>
+        </script>
+      </binding> -->
+      <binding>
+        <command>property-adjust</command>
+         <property>controls/armament/weapon-type</property>
+        <step>1.0</step>
+        <min>1</min>
+        <max>6</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+            screen.log.write("Selected weapon: " ~ getprop("controls/armament/weapon-type"), 0.5, 0.5, 1);
+          ]]>
+        </script>
+      </binding>
+    </key>
+
+    <key n="101">
+      <name>e</name>
+      <desc>Fire selected weapons</desc>
+      <binding>
+        <condition>
+          <property>controls/armament/master-arm</property>
+        </condition>
+        <command>property-assign</command>
+        <property>controls/armament/trigger</property>
+        <value>true</value>
       </binding>
       <mod-up>
         <binding>
-          <command>nasal</command>
-          <script>guns.stop_Rocket()</script>
+          <command>property-assign</command>
+          <property>controls/armament/trigger</property>
+          <value>false</value>
         </binding>
       </mod-up>
     </key>
 
     <key n="102">
       <name>f</name>
-      <desc>Gun trigger</desc>
+      <desc>Launch Flares</desc>
       <binding>
-        <command>nasal</command>
-        <script>guns.fire_MG()</script>
+        <command>property-assign</command>
+        <property>controls/armament/pickle</property>
+        <value>true</value>
       </binding>
       <mod-up>
         <binding>
-          <command>nasal</command>
-          <script>guns.stop_MG()</script>
+          <command>property-assign</command>
+          <property>controls/armament/pickle</property>
+          <value>false</value>
         </binding>
       </mod-up>
-    </key> -->
+    </key>
 
-    <key n="102">
-				<name>f</name>
-				<desc>Launch Flares</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/armament/pickle</property>
-					<value>true</value>
-				</binding>
-			<mod-up>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/armament/pickle</property>
-					<value>false</value>
-				</binding>
-			</mod-up>
-		</key>
+    <key n="109">
+      <name>m</name>
+      <desc>Masterarm</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+            setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
+            screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
+          ]]>
+        </script>
+      </binding>
+    </key>
 
     <key n="113">
       <name>q</name>
       <desc>Ripple Mode Cycle</desc>
       <binding>
         <command>property-adjust</command>
-         <property>/controls/armament/salvo-ripple</property>
-        <step>1.0</step>
-        <min>0</min>
-        <max>3</max>
+        <property>/controls/armament/salvo-ripple</property>
+        <step> 1 </step>
+        <min>  0 </min>
+        <max>  3 </max>
         <wrap>true</wrap>
       </binding>
       <binding>
-          <command>nasal</command>
-          <script><![CDATA[
-              screen.log.write("Ripple mode: " ~ getprop("/controls/armament/salvo-ripple"), 0.5, 0.5, 1);
-              ]]>
-				  </script>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+            screen.log.write("Ripple mode: " ~ getprop("/controls/armament/salvo-ripple"), 0.5, 0.5, 1);
+          ]]>
+        </script>
       </binding>
     </key>
-
     <!-- ###### -->
 
-    <!-- <key n="68">
+    <key n="68">
       <name>D</name>
       <desc>Passenger door</desc>
       <binding>
@@ -143,7 +159,7 @@
         <command>nasal</command>
         <script>doors.crew.toggle();</script>
       </binding>
-    </key> -->
+    </key>
 
     <key n="82">
       <name>R</name>
@@ -155,23 +171,6 @@
           setprop(p, !getprop(p));
         </script>
       </binding>
-    </key>
-
-    <key n="109">
-        	<name>m</name>
-        	<desc>Masterarm</desc>
-        	<binding>
-            	<command>nasal</command>
-            	<script><![CDATA[
-                		setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
-                		screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
-                		]]>
-				      </script>
-        	</binding>
-			<!-- <binding>
-          			<command>nasal</command>
-          			<script>switchclicksound.click("switch")</script>
-        	</binding> -->
     </key>
 
     <key n="114">
@@ -210,7 +209,11 @@
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>controls/lighting/strobe-lights</property>
+        <property>controls/lighting/beacon</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/strobe</property>
       </binding>
       <binding>
         <command>property-toggle</command>
@@ -223,6 +226,10 @@
       <binding>
         <command>property-toggle</command>
         <property>controls/engines/engine[1]/fuel-pump</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/ralt-switch</property>
       </binding>
       <binding>
         <condition>

@@ -5,31 +5,32 @@
   <chase-distance-m type="double" archive="y">-25</chase-distance-m>
 
   <view n="100">
-    <name>Copilot-Gunner View</name>
-    <internal archive="y">true</internal>
+    <name>Gunner View</name>
     <type>lookfrom</type>
+    <internal archive="y">true</internal>
     <config>
       <from-model type="bool">true</from-model>
-      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y"> 0.00 </x-offset-m> <!--right-->
-      <y-offset-m archive="y"> -1.1650 </y-offset-m> <!--up-->
-      <z-offset-m archive="y"> -6.868 </z-offset-m> <!--back-->
-      <pitch-offset-deg type="double">-16</pitch-offset-deg>
-      <default-field-of-view-deg type="double">105</default-field-of-view-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.1f</ground-level-nearplane-m>
+      <x-offset-m archive="y">  0.00000 </x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -1.11197 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -6.94481 </z-offset-m> <!--back-->
+      <pitch-offset-deg type="double">-15</pitch-offset-deg>
+      <default-field-of-view-deg type="double">100</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
       <limits>
-					<left>
-						<heading-max-deg>-100</heading-max-deg>
-						<x-offset-threshold-deg>0</x-offset-threshold-deg>
-						<x-offset-max-m>0</x-offset-max-m>
-					</left>
-					<right>
-						<heading-max-deg>100</heading-max-deg>
-						<x-offset-threshold-deg>0</x-offset-threshold-deg>
-						<x-offset-max-m>0</x-offset-max-m>
-					</right>
-					<enabled>1</enabled>
-			</limits>
+        <left>
+          <heading-max-deg>-100</heading-max-deg>
+          <x-offset-threshold-deg>0</x-offset-threshold-deg>
+          <x-offset-max-m>0</x-offset-max-m>
+        </left>
+        <right>
+          <heading-max-deg>100</heading-max-deg>
+          <x-offset-threshold-deg>0</x-offset-threshold-deg>
+          <x-offset-max-m>0</x-offset-max-m>
+        </right>
+        <enabled>1</enabled>
+      </limits>
     </config>
   </view>
 
@@ -53,10 +54,10 @@
     <internal archive="y">true</internal>
     <config>
       <x-offset-m archive="y">  0.000 </x-offset-m> <!--right-->
-      <y-offset-m archive="y"> -0.5217 </y-offset-m> <!--up-->
+      <y-offset-m archive="y"> -0.522 </y-offset-m> <!--up-->
       <z-offset-m archive="y"> -5.535 </z-offset-m> <!--back-->
-      <pitch-offset-deg type="double">-10</pitch-offset-deg>
-      <default-field-of-view-deg type="double">108</default-field-of-view-deg>
+      <pitch-offset-deg type="double">-14</pitch-offset-deg>
+      <default-field-of-view-deg type="double">104</default-field-of-view-deg>
     </config>
   </view>
 

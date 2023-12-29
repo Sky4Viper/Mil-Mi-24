@@ -31,7 +31,7 @@
 
   <rotor name="main"
          x="2.407" y="0.00" z="1.302"
-         nx="0.04" ny="0" nz="1."
+         nx="0.02" ny="0" nz="1."
          fx="1" fy="0" fz="0"
          ccw="0"
          mincollective="-80" maxcollective="80"
@@ -74,26 +74,20 @@
          cyclic-factor="0.8"
          rotor-correction-factor="0.95"
          downwashfactor="1.0">
-         <!-- <control-input control="CYCLICAIL"  axis="/controls/flight/aileron"             src0="-1" src1="1" dst0="-0.04" dst1=" 0.04"/>
+         <control-input control="CYCLICAIL"  axis="/controls/flight/aileron"             src0="-1" src1="1" dst0="-0.04" dst1=" 0.04"/>
          <control-input control="CYCLICAIL"  axis="/controls/flight/aileron-trim"/>
 
          <control-input control="CYCLICELE"  axis="/controls/flight/elevator"            src0="-1" src1="1" dst0="-0.04" dst1=" 0.04"/>
          <control-input control="CYCLICELE"  axis="/controls/flight/elevator-trim"/>
 
-         <control-input control="COLLECTIVE" axis="/controls/engines/engine[0]/throttle" src0="-1" src1="1" dst0=" 0.15" dst1="-0.01"/> -->
-
-         <control-input axis="/controls/flight/aileron-trim" control="CYCLICAIL"/>
-         <control-input axis="/controls/flight/aileron" control="CYCLICAIL" src0="-1.0" src1="1.0" dst0="-0.04" dst1="0.04"/>
-         <control-input axis="/controls/flight/elevator-trim" control="CYCLICELE"/>
-         <control-input axis="/controls/flight/elevator" control="CYCLICELE" src0="-1.0" src1="1.0" dst0="-0.04" dst1="0.04"/>
-         <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="0.15" dst1="-0.01"/>
+         <control-input control="COLLECTIVE" axis="/controls/engines/engine[0]/throttle" src0="-1" src1="1" dst0=" 0.15" dst1="-0.01"/>
   </rotor>
 
   <rotor name="tail"
          x="-7.795" y="0.803" z="1.534"
          nx="0.0" ny="-1.0" nz="0.1"
          fx="1" fy="0" fz="0"
-         ccw="1"
+         ccw="0"
          mincollective="-20" maxcollective="14"
          diameter="3.49"
          numblades="3"
@@ -123,11 +117,10 @@
          rel-len-blade-start="0.33"
          rotor-correction-factor="0.9">
          <control-input control="COLLECTIVE" axis="/controls/flight/rudder" invert="true" src0=" -1" src1="1" dst0="-1.400" dst1="1.4"/>
-         <control-input control="COLLECTIVE"  axis="/controls/flight/rudder-trim" invert="true"/>
          <control-input control="COLLECTIVE" axis="/controls/engines/engine[0]/throttle"  src0="0.1" src1="1" dst0="0.0007" dst1="-0.00055"/>
   </rotor>
 
-  <!-- <rotorgear max-power-engine="2200"
+  <rotorgear max-power-engine="2200"
              max-power-rotor-brake="250"
              rotorgear-friction="4"
              engine-prop-factor="0.01"
@@ -151,34 +144,7 @@
              <control-input control="ROTORBRAKE"              axis="/controls/rotor/brake"        src0="0" src1="1" dst0="0" dst1="1"/>
              <control-input control="ROTORRELTARGET"          axis="/controls/rotor/reltarget"    src0="0" src1="2" dst0="0" dst1="2"/>
              <control-input control="ROTORENGINEMAXRELTORQUE" axis="/controls/rotor/maxreltorque" src0="0" src1="2" dst0="0" dst1="2"/>
-  </rotorgear> -->
-
-     <!-- Engine:  Klimov TV3-117, power: 1,640kW each-->
-   <rotorgear max-power-engine="1640"
-     max-power-rotor-brake="300"
-     rotorgear-friction="0.5"
-     engine-prop-factor="0.005"
-     engine-accel-limit="3"
-     yasimdragfactor="60"
-     yasimliftfactor="100">
-     <control-input control="ROTORGEARENGINEON"       axis="/controls/engines/engine[0]/magnetos"/>
-     <control-input control="ROTORBRAKE"              axis="/controls/rotor/brake"        src0="0" src1="1" dst0="0" dst1="1"/>
-     <control-input control="ROTORRELTARGET"          axis="/controls/rotor/reltarget"    src0="0" src1="2" dst0="0" dst1="2"/>
-     <control-input control="ROTORENGINEMAXRELTORQUE" axis="/controls/rotor/maxreltorque" src0="0" src1="2" dst0="0" dst1="2"/>
-   </rotorgear>
-
-   <rotorgear max-power-engine="1640"
-     max-power-rotor-brake="300"
-     rotorgear-friction="0.5"
-     engine-prop-factor="0.005"
-     engine-accel-limit="3"
-     yasimdragfactor="60"
-     yasimliftfactor="100">
-     <control-input control="ROTORGEARENGINEON"       axis="/controls/engines/engine[1]/magnetos"/>
-     <control-input control="ROTORBRAKE"              axis="/controls/rotor/brake"        src0="0" src1="1" dst0="0" dst1="1"/>
-     <control-input control="ROTORRELTARGET"          axis="/controls/rotor/reltarget"    src0="0" src1="2" dst0="0" dst1="2"/>
-     <control-input control="ROTORENGINEMAXRELTORQUE" axis="/controls/rotor/maxreltorque" src0="0" src1="2" dst0="0" dst1="2"/>
-   </rotorgear>
+  </rotorgear>
 
   <!-- Fuse -->
   <fuselage ax=" 7.716" ay="0" az="-1.453" bx=" 7.298" by="0" bz="-1.453" width="1.188" taper="0.10" midpoint="1.0"
@@ -231,12 +197,12 @@
   </mstab>
 
   <!-- noze gear -->
-  <gear x="5.538" y="0" z="-2.958"
-        compression="0.1"
-        spring="3"
-        damp="1.0"
-        sfric="1.5"
-        dfric="0.8"
+  <gear x="5.538" y="0" z="-2.92836"
+        compression="0.14"
+        spring="4.0"
+        damp="0.9"
+        sfric="0.8"
+        dfric="0.7"
         stiction="0">
         
         <control-input  control="STEER"  axis="/controls/flight/rudder" square="true" src0="-1" dst0="-1.0" src1="1" dst1="1.0"/>
@@ -249,9 +215,9 @@
   </gear>
 
   <!-- left gear -->
-  <gear x="0.744" y="1.643" z="-2.695"
-        compression="0.1"
-        spring="3.2"
+  <gear x="0.744" y="1.643" z="-2.8704"
+        compression="0.11"
+        spring="4.21"
         damp="1.0"
         sfric="1.5"
         dfric="0.8"
@@ -267,9 +233,9 @@
   </gear>
 
   <!-- right gear -->
-  <gear x="0.744" y="-1.643" z="-2.695"
-        compression="0.1"
-        spring="3.2"
+  <gear x="0.744" y="-1.643" z="-2.8704"
+        compression="0.11"
+        spring="4.21"
         damp="1.0"
         sfric="1.5"
         dfric="0.8"
