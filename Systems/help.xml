@@ -27,11 +27,11 @@
   </key>
   <key>
     <name>&lt;</name>
-    <desc>Select gun</desc>
+    <desc>Select previous weapon</desc>
   </key>
   <key>
     <name>&gt;</name>
-    <desc>Select rockets</desc>
+    <desc>Select next weapon</desc>
   </key>
   <key>
     <name>e</name>

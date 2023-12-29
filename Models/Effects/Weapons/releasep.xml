@@ -83,7 +83,7 @@
 
   <missile-9m120>
     <name>Missiles</name>
-    <model>Aircraft/Mil-Mi-24/Models/Effects/Weapons/9m120/Tracer/rocket.xml</model>
+    <model>Aircraft/Mil-Mi-24/Models/Effects/Weapons/9m120/Tracer/9m120-missile.xml</model>
     <trigger>controls/armament/trigger-9m-1</trigger>
     <speed>1804</speed>
     <repeat>false</repeat>
