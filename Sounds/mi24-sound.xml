@@ -562,6 +562,67 @@ Updated by Helijah September 2012
       </volume>
     </inrange2>
 
+    <inrange3>
+      <name>9m120 launch authorized</name>
+      <mode>looped</mode>
+      <path>inrange.wav</path>
+      <type>avionics</type>
+      <condition>
+        <and>
+          <property>/controls/armament/master-arm</property>
+          <property>controls/electric/gunsight-auto</property>
+          <property>/controls/armament/ataka-inrange</property>
+          <property>/tracking/tgt-designated</property>
+          <or>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>3</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[0]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>4</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[1]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>5</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[2]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>6</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[3]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </inrange3>
+
     <!-- Gun fire -->
     <guns>
       <name>gunfire-YakB</name>

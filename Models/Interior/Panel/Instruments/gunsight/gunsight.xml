@@ -351,9 +351,12 @@
       <type>select</type>
       <object-name>lamp-yellow.on</object-name>
       <condition>
-        <property>/controls/armament/LAMarkerON</property>
         <property>controls/electric/gunsight-auto</property>
         <property>controls/electric/battery-switch</property>
+        <or>
+         <property>/controls/armament/LAMarkerON</property>
+         <property>/controls/armament/ataka-inrange</property>
+        </or>
       </condition>
     </animation>
 
@@ -361,10 +364,15 @@
       <type>select</type>
       <object-name>lamp-purple.on</object-name>
       <condition>
-        <equals>
-        <property>/controls/armament/weapon-type</property>
-        <value>3</value>
-        </equals>
+        <greater-than>
+         <property>/controls/armament/weapon-type</property>
+         <value>2</value>
+        </greater-than>
+        <less-than>
+         <property>/controls/armament/weapon-type</property>
+         <value>7</value>
+        </less-than>
+        <property>/tracking/tgt-designated</property>
         <property>controls/electric/battery-switch</property>
       </condition>
     </animation>
@@ -375,7 +383,7 @@
       <condition>
         <equals>
         <property>/controls/armament/weapon-type</property>
-        <value>4</value>
+        <value>8</value>
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
@@ -387,7 +395,7 @@
       <condition>
         <equals>
         <property>/controls/armament/weapon-type</property>
-        <value>5</value>
+        <value>9</value>
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
@@ -415,7 +423,7 @@
       <condition>
         <equals>
         <property>/controls/armament/weapon-type</property>
-        <value>3</value>
+        <value>7</value>
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>

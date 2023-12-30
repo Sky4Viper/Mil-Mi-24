@@ -57,9 +57,9 @@
     <path>Panel/Instruments/right/all-rights.xml</path>
   </model>
 
-  <model>
+  <!-- <model>
     <path>Panel/Instruments/raduga/all-radugas.xml</path>
-  </model>
+  </model> -->
 
   <model>
     <path>Panel/Instruments/fan/all-fans.xml</path>

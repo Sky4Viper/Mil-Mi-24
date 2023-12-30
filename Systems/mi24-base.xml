@@ -163,6 +163,9 @@
     <guns>
       <file>Aircraft/Mil-Mi-24/Nasal/weapons.nas</file>
     </guns>
+    <tracking>
+      <file>Aircraft/Mil-Mi-24/Nasal/tracking.nas</file>
+    </tracking>
     <launchauthorizer>
       <file>Aircraft/Mil-Mi-24/Nasal/launchauthorizer.nas</file>
     </launchauthorizer>

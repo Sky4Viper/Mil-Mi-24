@@ -2,13 +2,14 @@
 
 <PropertyList>
 
-  <path>9M120.ac</path>
+  <path>9M120-red.ac</path>
 
   <animation>
     <!-- Objets opaques -->
     <object-name>tube-outer</object-name>
     <object-name>tube-inner</object-name>
     <object-name>caps</object-name>
+    <object-name>caps.001</object-name>
     <object-name>9M120-missile</object-name>
 
     <!-- Transparence -->
@@ -47,7 +48,7 @@
 		    </entry>
 		    <entry>
 		      <ind> 1.0</ind>
-		      <dep> 2.3</dep>
+		      <dep> 4.3</dep>
 		    </entry>
 	    </interpolation>
   </animation>

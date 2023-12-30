@@ -18,8 +18,8 @@
          <phi-min-deg>-180</phi-min-deg>
          <phi-max-deg> 180</phi-max-deg>
          <speed-mps>
-            <value>5</value>
-            <spread>5</spread>
+            <value>4</value>
+            <spread>4</spread>
          </speed-mps>
          <rotation-speed>
             <x-min-deg-sec>0</x-min-deg-sec>
@@ -45,7 +45,7 @@
                <alpha><value>0.3</value></alpha>
             </color>
             <size>
-               <value>3.0</value>
+               <value>2.0</value>
             </size>
          </start>
          <end>
@@ -60,7 +60,7 @@
             </size>
          </end>
          <life-sec>
-            <value>14</value>
+            <value>19</value>
          </life-sec>
          <mass-kg>0.025</mass-kg>
          <radius-m>0.30</radius-m>

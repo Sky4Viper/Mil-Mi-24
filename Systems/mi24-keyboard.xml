@@ -70,22 +70,34 @@
       </binding>
     </key>
 
+    <!-- <key n="101">
+				<name>e</name>
+				<desc>Fire selected weapons</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/armament/trigger</property>
+					<value>true</value>
+				</binding>
+			  <mod-up>
+				  <binding>
+					  <command>property-assign</command>
+					  <property>controls/armament/trigger</property>
+					  <value>false</value>
+				  </binding>
+			  </mod-up>
+    </key> -->
+
     <key n="101">
       <name>e</name>
       <desc>Fire selected weapons</desc>
       <binding>
-        <condition>
-          <property>controls/armament/master-arm</property>
-        </condition>
-        <command>property-assign</command>
-        <property>controls/armament/trigger</property>
-        <value>true</value>
+        <command>nasal</command>
+        <script>guns.fire_MG()</script>
       </binding>
       <mod-up>
         <binding>
-          <command>property-assign</command>
-          <property>controls/armament/trigger</property>
-          <value>false</value>
+          <command>nasal</command>
+          <script>guns.stop_MG()</script>
         </binding>
       </mod-up>
     </key>
