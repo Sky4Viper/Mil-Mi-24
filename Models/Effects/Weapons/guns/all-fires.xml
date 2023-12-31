@@ -75,7 +75,7 @@
       <animation n="100">
         <type>scale</type>
         <property>constants/zero</property>
-        <x-offset> 1.4 </x-offset>
+        <x-offset> 2.4 </x-offset>
         <y-offset> 1.4 </y-offset>
         <z-offset> 1.4 </z-offset>
       </animation>
@@ -102,35 +102,7 @@
       <animation n="100">
         <type>scale</type>
         <property>constants/zero</property>
-        <x-offset> 1.4 </x-offset>
-        <y-offset> 1.4 </y-offset>
-        <z-offset> 1.4 </z-offset>
-      </animation>
-    </overlay>
-  </model>
-
-  <model>
-    <name>FireEffect-9m120-1</name>
-    <path>fire.xml</path>
-    <condition>
-      <property>controls/armament/trigger-9m-1</property>
-      <equals>
-        <property>/sim/variant-id</property>
-        <value>2</value>
-      </equals>
-    </condition>
-    <offsets>
-      <x-m> 2.479 </x-m>
-      <y-m> -3.892 </y-m>
-      <z-m> -1.721 </z-m>
-    </offsets>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-    <overlay>
-      <animation n="100">
-        <type>scale</type>
-        <property>constants/zero</property>
-        <x-offset> 1.4 </x-offset>
+        <x-offset> 2.4 </x-offset>
         <y-offset> 1.4 </y-offset>
         <z-offset> 1.4 </z-offset>
       </animation>
