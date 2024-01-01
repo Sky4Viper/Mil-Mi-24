@@ -15,7 +15,7 @@
       <x-offset-m archive="y">  0.00000 </x-offset-m> <!--right-->
       <y-offset-m archive="y"> -1.11197 </y-offset-m> <!--up-->
       <z-offset-m archive="y"> -6.94481 </z-offset-m> <!--back-->
-      <pitch-offset-deg type="double">-15</pitch-offset-deg>
+      <pitch-offset-deg type="double">-19</pitch-offset-deg>
       <default-field-of-view-deg type="double">100</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
       <limits>

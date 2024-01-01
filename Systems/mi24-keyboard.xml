@@ -7,34 +7,27 @@
     <!-- ###### -->
     <key n="60">
       <name>&lt;</name>
-      <desc>Select Gun</desc>
-      <!-- <binding>
+      <desc>Previous Weapon</desc>
+      <binding>
         <command>nasal</command>
         <script>
           <![CDATA[
-            setprop("controls/armament/weapon-type", 1);
             var mod = getprop("/sim/variant-id");
-            if (mod == 1 ) {
+            var wep = getprop("controls/armament/weapon-type");
+            if (wep == 2 ) {
+              setprop("controls/armament/weapon-type", wep -1);
+              if (mod == 1 ) {
               screen.log.write("YakB-12.7 machine gun selected", 0.5, 0.5, 1);
-            } elsif (mod == 2 ) {
+              } elsif (mod == 2 ) {
               screen.log.write("GSh-30-2K cannon selected", 0.5, 0.5, 1);
+              }
+            } elsif (wep == 3 ) {
+              setprop("controls/armament/weapon-type", wep -1);
+              screen.log.write("B8V20 rocket pods selected", 0.5, 0.5, 1);
+            } elsif (wep >= 4 and wep <= 7) {
+              setprop("controls/armament/weapon-type", wep -1);
+              screen.log.write("9M120-ATAKA missiles selected", 0.5, 0.5, 1);
             }
-          ]]>
-        </script>
-      </binding> -->
-      <binding>
-        <command>property-adjust</command>
-         <property>controls/armament/weapon-type</property>
-        <step>-1.0</step>
-        <min>1</min>
-        <max>6</max>
-        <wrap>false</wrap>
-      </binding>
-      <binding>
-        <command>nasal</command>
-        <script>
-          <![CDATA[
-            screen.log.write("Selected weapon: " ~ getprop("controls/armament/weapon-type"), 0.5, 0.5, 1);
           ]]>
         </script>
       </binding>
@@ -42,29 +35,27 @@
 
     <key n="62">
       <name>&gt;</name>
-      <desc>Select Rockets</desc>
-      <!-- <binding>
-        <command>nasal</command>
-        <script>
-          <![CDATA[
-            setprop("controls/armament/weapon-type", 2);
-            screen.log.write("S-8 rockets selected", 0.5, 0.5, 1);
-          ]]>
-        </script>
-      </binding> -->
-      <binding>
-        <command>property-adjust</command>
-         <property>controls/armament/weapon-type</property>
-        <step>1.0</step>
-        <min>1</min>
-        <max>6</max>
-        <wrap>false</wrap>
-      </binding>
+      <desc>Next weapon</desc>
       <binding>
         <command>nasal</command>
         <script>
           <![CDATA[
-            screen.log.write("Selected weapon: " ~ getprop("controls/armament/weapon-type"), 0.5, 0.5, 1);
+            var mod = getprop("/sim/variant-id");
+            var wep = getprop("controls/armament/weapon-type");
+            if (wep == 0 ) {
+              setprop("controls/armament/weapon-type", wep +1);
+              if (mod == 1 ) {
+              screen.log.write("YakB-12.7 machine gun selected", 0.5, 0.5, 1);
+              } elsif (mod == 2 ) {
+              screen.log.write("GSh-30-2K cannon selected", 0.5, 0.5, 1);
+              }
+            } elsif (wep == 1 ) {
+              setprop("controls/armament/weapon-type", wep +1);
+              screen.log.write("B8V20 rocket pods selected", 0.5, 0.5, 1);
+            } elsif (wep >= 2 and wep <= 5) {
+              setprop("controls/armament/weapon-type", wep +1);
+              screen.log.write("9M120-ATAKA missile selected", 0.5, 0.5, 1);
+            }
           ]]>
         </script>
       </binding>
@@ -148,11 +139,19 @@
         <command>nasal</command>
         <script>
           <![CDATA[
-            screen.log.write("Ripple mode: " ~ getprop("/controls/armament/salvo-ripple"), 0.5, 0.5, 1);
+            var mod = getprop("/controls/armament/salvo-ripple");
+            if (mod == 0 ) {
+              screen.log.write("Ripple Mode: SALVO", 0.5, 0.5, 1);
+              } elsif (mod == 1 ) {
+              screen.log.write("Ripple Mode: SINGLE", 0.5, 0.5, 1);
+              } elsif (mod == 2 ) {
+              screen.log.write("Ripple Mode: PAIR", 0.5, 0.5, 1);
+              }
           ]]>
         </script>
       </binding>
     </key>
+
     <!-- ###### -->
 
     <key n="68">

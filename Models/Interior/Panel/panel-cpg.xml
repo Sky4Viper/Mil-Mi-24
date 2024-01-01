@@ -16,8 +16,8 @@
     <path>Instruments/ai/pkp-72m.xml</path>
     <offsets>
       <x-m> -0.029141 </x-m>
-      <y-m>  0.000000 </y-m>
-      <z-m>  0.031090 </z-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.03109 </z-m>
     </offsets>
     <overlay>
       <animation n="100">

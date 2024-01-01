@@ -22,7 +22,7 @@ var getTrackData = func {
 	setprop("/tracking/tgt-designated",1);
  }
  else {
-    setprop("/tracking/rng-km", 100.0);
+    setprop("/tracking/rng-km",  0.0);
 	setprop("/tracking/rng-nml", 0.0);
 	setprop("/tracking/bearing", 0.0);
 	setprop("/tracking/tgt-designated", 0);

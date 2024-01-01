@@ -239,6 +239,10 @@ init_switches = func() {
   append(output_list,"kns80");
   append(watt_list,0.2);
 
+  append(switch_list,"controls/electric/ralt-switch");
+  append(output_list,"rv5m");
+  append(watt_list,0.2);
+
   for(var i=0; i<size(switch_list); i+=1) {
     var tmp = props.globals.getNode(switch_list[i],1);
     tmp.setBoolValue(0);

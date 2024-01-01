@@ -103,8 +103,6 @@
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/9m120/Impact/9m120-impact.xml</submodel-path>
-    <!-- <yaw-offset>sim/model/turret[0]/heading</yaw-offset>
-    <pitch-offset>sim/model/turret[0]/pitch</pitch-offset> -->
     <yaw-offset>/controls/armament/ataka_heading_offset</yaw-offset>
     <pitch-offset>/controls/armament/ataka_pitch_offset</pitch-offset>
   </missile-9m120>

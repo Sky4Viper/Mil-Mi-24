@@ -553,7 +553,10 @@ Updated by Helijah September 2012
         <and>
           <property>/controls/armament/master-arm</property>
           <property>controls/electric/gunsight-auto</property>
-          <property>/controls/armament/LAMarkerON</property>
+          <or>
+           <property>/controls/armament/LAMarkerON</property>
+           <property>/controls/armament/ataka-inrange</property>
+          </or>
         </and>
       </condition>
       <volume>

@@ -87,6 +87,14 @@
           <property>sim/model/mi24/ir-cooler</property>
         </binding>
       </item>
+      <item>
+        <label>HUD Extra Info (toggle)</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/mi24/hud-extra-info</property>
+        </binding>
+      </item>
+      
     </menu>
   </default>
 

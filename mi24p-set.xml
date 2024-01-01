@@ -12,7 +12,7 @@
         <name>BARANGER Emmanuel (3D/FDM)</name>
       </author>
       <author n="1">
-        <name>Sergei "Skydive" Solyshko</name>
+        <name>Sergei "Skydive" Solyshko (3D/Instruments/Weapons)</name>
       </author>
       <author n="2">
         <name>Zel (FDM), Raptor (Guns system)</name>
@@ -20,7 +20,7 @@
     </authors>
 
     <long-description>
-      Hind-F) The gunship version, which replaced the 12.7mm machine-gun with a fixed side-mounted 30mm GSh-30-2K twin-barrel autocannon. Entered production in 1981.
+      (Hind-F) The gunship version, which replaced the 12.7mm machine-gun with a fixed side-mounted 30mm GSh-30-2K twin-barrel autocannon. Entered production in 1981.
     </long-description>
 
     <aircraft-version>0.41</aircraft-version>
@@ -58,42 +58,47 @@
       <preview>
         <type>interior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-0.png</path>
+        <path>Previews/mi24p-0.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-1.png</path>
+        <path>Previews/mi24p-1.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-2.png</path>
+        <path>Previews/mi24p-2.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-3.png</path>
+        <path>Previews/mi24p-3.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-4.png</path>
+        <path>Previews/mi24p-4.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-5.png</path>
+        <path>Previews/mi24p-5.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-5.png</path>
+        <path>Previews/mi24p-6.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-5.png</path>
+        <path>Previews/mi24p-7.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/mi24p-8.png</path>
       </preview>
     </previews>
 
