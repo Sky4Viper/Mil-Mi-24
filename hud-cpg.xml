@@ -1232,6 +1232,10 @@
 
  <condition>
   <property>/tracking/tgt-designated</property>
+  <greater-than>
+   <property>controls/armament/weapon-type</property>
+  <value>2</value>
+  </greater-than>
  </condition>
 </label>
 
@@ -1248,9 +1252,9 @@
 
 <label>
  <name>TGTBOX 1</name>
- <x>-16</x>
- <y>-16</y>
- <width>32</width>
+ <x>-0</x>
+ <y>-44</y>
+ <width>1</width>
  <height>32</height>
  <format></format>
  <halign>left</halign>
@@ -1262,9 +1266,9 @@
 
 <label>
  <name>TGTBOX 2</name>
- <x>-16</x>
- <y>-16</y>
- <width>32</width>
+ <x>0</x>
+ <y>12</y>
+ <width>1</width>
  <height>32</height>
  <format></format>
  <halign>left</halign>
@@ -1276,10 +1280,10 @@
 
 <label>
  <name>TGTBOX 3</name>
- <x>-16</x>
- <y>-16</y>
+ <x>12</x>
+ <y>0</y>
  <width>32</width>
- <height>32</height>
+ <height>1</height>
  <format></format>
  <halign>left</halign>
  <box>true</box>
@@ -1290,10 +1294,10 @@
 
 <label>
  <name>TGTBOX 4</name>
- <x>-16</x>
- <y>-16</y>
+ <x>-44</x>
+ <y>0</y>
  <width>32</width>
- <height>32</height>
+ <height>1</height>
  <format></format>
  <halign>left</halign>
  <box>true</box>
