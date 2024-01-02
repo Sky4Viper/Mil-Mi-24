@@ -212,9 +212,12 @@
     <tracking>
       <file>Aircraft/Mil-Mi-24/Nasal/tracking.nas</file>
     </tracking>
-    <launchauthorizer>
+    <!-- <launchauthorizer>
       <file>Aircraft/Mil-Mi-24/Nasal/launchauthorizer.nas</file>
-    </launchauthorizer>
+    </launchauthorizer> -->
+    <raduga-sh>
+      <file>Aircraft/Mil-Mi-24/Nasal/raduga-sh.nas</file>
+    </raduga-sh>
     <rockets>
       <file>Aircraft/Mil-Mi-24/Nasal/rockets.nas</file>
     </rockets>

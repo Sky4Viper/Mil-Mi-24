@@ -3,7 +3,7 @@
 <PropertyList>
 
   <title>Mil Mi 24 Hind</title>
-  <line>______________________________________________</line>
+  
   <key>
     <name>}</name>
     <desc>AutoStart/AutoStop</desc>
@@ -41,6 +41,21 @@
     <name>f</name>
     <desc>Launch flares</desc>
   </key>
+
+  <!-- ################### -->
+  
+  <line>Using 9M120-Ataka missiles:</line>
+  <line>-select 9M120-Atacka missile (&gt; key)</line>
+  <line>-turn on sight "Auto" mode (switch on the sight unit)</line>
+  <line>-turn on master arm (m key)</line>
+  <line>-mouse click on the target to designate</line>
+  <line>-once you hear the tone, press the trigger (or e key) to launch missile</line>
+  <line>-missile launch FOV (+-30 horizontaly, +15 up -20 down)</line>
+  <line>-in CPG view, view padlocks on target once within launch paramters</line>
+
+  <line>______________________________________________</line>
+  <line>Parking break is ON</line>
+
   <!-- ################### -->
 
 </PropertyList>

@@ -266,6 +266,280 @@
   </condition>
 </label>
 
+<!-- WEAPON STATIONS -->
+
+<label>
+		<name>WPN Station 1</name>
+		<x>-55</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>1</format>
+		<halign>left</halign>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 1</name>
+		<x>-55</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>1</format>
+		<halign>left</halign>
+		<box>true</box>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>3</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 2</name>
+		<x>-45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>2</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 2</name>
+		<x>-45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>2</format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>4</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 3</name>
+		<x>-35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>3</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 3</name>
+		<x>-35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>3</format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 4</name>
+		<x>-25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>4</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 4</name>
+		<x>-25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>4</format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 5</name>
+		<x>15</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>5</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 5</name>
+		<x>15</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>5</format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 6</name>
+		<x>25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>6</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 6</name>
+		<x>25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>6</format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 7</name>
+		<x>35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>7</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 7</name>
+		<x>35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>7</format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>5</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 8</name>
+		<x>45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>8</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 8</name>
+		<x>45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>8</format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>6</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
 <!-- AUTOPILOT -->
 
  <label>
