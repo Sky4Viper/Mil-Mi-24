@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<PropertyList include="Systems/mi24p-base.xml">
+<PropertyList include="Systems/mi24-base.xml">
 
   <sim>
 
     <expected-aircraft-dir-name>Mil-Mi-24</expected-aircraft-dir-name>
     <description>Mil Mi 24 Hind-F (Yasim)</description>
 
-	<authors>
-		<author n="0">
-			<name>Sergei "Skydive" Solyshko (3D/Cockpit)</name>
-		</author>
-		<author n="1">
-			<name>BARANGER Emmanuel (3D/FDM)</name>
-		</author>
-    <author n="2">
-			<name>Zel (FDM)</name>
-		</author>
-    <author n="3">
-			<name>Raptor (Guns system)</name>
-		</author>
-	</authors>
+    <authors>
+      <author n="0">
+        <name>BARANGER Emmanuel (3D/FDM)</name>
+      </author>
+      <author n="1">
+        <name>Sergei "Skydive" Solyshko (3D/Instruments/Weapons)</name>
+      </author>
+      <author n="2">
+        <name>Zel (FDM), Raptor (Guns system)</name>
+      </author>
+    </authors>
 
     <long-description>
       (Hind-F) The gunship version, which replaced the 12.7mm machine-gun with a fixed side-mounted 30mm GSh-30-2K twin-barrel autocannon. Entered production in 1981.
@@ -31,7 +28,7 @@
     <minimum-fg-version>2018.2.0</minimum-fg-version>
 
     <flight-model>yasim</flight-model>
-    <aero>Systems/mi24p-yasim</aero>
+    <aero>Systems/FDM/mi24p-yasim</aero>
 
     <variant-of>mi24</variant-of>
 
@@ -43,6 +40,19 @@
       <cockpit type="int"> 3 </cockpit>
       <model   type="int"> 4 </model>
     </rating>
+
+    <!-- ##################### -->
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/releasep.xml</path>
+    </submodels>
+
+    <model>
+      <mi24>
+        <ir-cooler type="bool">true</ir-cooler>
+      </mi24>
+    </model>
+    <!-- ##################### -->
 
     <previews>
       <preview>
@@ -84,6 +94,11 @@
         <type>exterior</type>
         <splash type="bool">true</splash>
         <path>Previews/mi24p-7.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/mi24p-8.png</path>
       </preview>
     </previews>
 

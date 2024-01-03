@@ -6,8 +6,8 @@
 
     <model>
       <livery>
-        <name type="string">(Low)Hrz</name>
-        <texture>Liveries/1024x1024/HRZ.png</texture>
+        <name type="string">Hrz</name>
+        <texture>Liveries/2048x2048/HRZ.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>

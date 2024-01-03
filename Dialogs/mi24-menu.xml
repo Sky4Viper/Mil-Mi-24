@@ -7,7 +7,7 @@
       <label>Mil Mi 24</label>
       <enabled type="bool">true</enabled>
       <item>
-        <label>Autostart</label>
+        <label>AutoStart/AutoStop</label>
         <binding>
           <command>property-toggle</command>
           <property>controls/electric/battery-switch</property>
@@ -26,7 +26,11 @@
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>controls/lighting/strobe-lights</property>
+          <property>controls/lighting/beacon</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/strobe</property>
         </binding>
         <binding>
           <command>property-toggle</command>
@@ -63,19 +67,34 @@
         </binding>
       </item>
       <item>
-					<label>Reload S-8 rockets</label>
-					<binding>
-						<command>nasal</command>
-						<script>rockets.reload()</script>
-					</binding>
-			</item>
+       <label>Reload S-8 rockets</label>
+       <binding>
+         <command>nasal</command>
+         <script>rockets.reload()</script>
+       </binding>
+      </item>
       <item>
-					<label>Exaust IR coolers (toggle)</label>
-					<binding>
+       <label>Reload Ataka missiles</label>
+       <binding>
+         <command>nasal</command>
+         <script>guns.reload()</script>
+       </binding>
+      </item>
+      <item>
+        <label>Exaust IR coolers (toggle)</label>
+        <binding>
           <command>property-toggle</command>
           <property>sim/model/mi24/ir-cooler</property>
         </binding>
-			</item>
+      </item>
+      <item>
+        <label>HUD Extra Info (toggle)</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/mi24/hud-extra-info</property>
+        </binding>
+      </item>
+      
     </menu>
   </default>
 

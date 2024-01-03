@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Based on Bo105 and Alouette 2
-     Updated by Raptor
-     Updated by Helijah September 2012
+Updated by Raptor
+Updated by Helijah September 2012
 -->
 <PropertyList>
-  
+
   <fx>
-    
+
     <engine>
       <name>Start external</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
+      <path>turbine-start.wav</path>
       <condition>
         <and>
           <equals>
@@ -27,11 +27,11 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-    
+
     <engine>
       <name>Start internal</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-start.wav</path>
+      <path>turbine-start.wav</path>
       <condition>
         <and>
           <equals>
@@ -47,11 +47,11 @@
       <reference-dist>50</reference-dist>
       <max-dist>200</max-dist>
     </engine>
-    
+
     <engine>
       <name>Turbine external</name>
       <mode>looped</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-loop.wav</path>
+      <path>turbine-loop.wav</path>
       <condition>
         <and>
           <greater-than>
@@ -68,11 +68,11 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-    
+
     <engine>
       <name>Turbine internal</name>
       <mode>looped</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-loop.wav</path>
+      <path>turbine-loop.wav</path>
       <condition>
         <and>
           <greater-than>
@@ -89,11 +89,11 @@
       <reference-dist>50</reference-dist>
       <max-dist>200</max-dist>
     </engine>
-    
+
     <engine>
       <name>Shutdown external</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
+      <path>turbine-stop.wav</path>
       <condition>
         <and>
           <equals>
@@ -109,14 +109,14 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-    
+
     <engine>
       <name>Shutdown internal</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/turbine-stop.wav</path>
+      <path>turbine-stop.wav</path>
       <condition>
         <and>
-           <equals>
+          <equals>
             <property>sim/model/mi24/state</property>
             <value>6</value>
           </equals>
@@ -129,11 +129,11 @@
       <reference-dist>50</reference-dist>
       <max-dist>200</max-dist>
     </engine>
-    
+
     <rotor>
       <name>Rotor external</name>
       <mode>looped</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/rotor-loop.wav</path>
+      <path>rotor-loop.wav</path>
       <condition>
         <and>
           <greater-than>
@@ -161,11 +161,11 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rotor>
-    
+
     <rotor>
       <name>Rotor internal</name>
       <mode>looped</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/rotor-loop.wav</path>
+      <path>rotor-loop.wav</path>
       <condition>
         <and>
           <greater-than>
@@ -190,201 +190,269 @@
     </rotor>
 
     <!--================================= Gears =============================-->
-        <gears>
-            <name>gear</name>
-            <mode>in-transit</mode>
-            <path>Aircraft/Mil-Mi-24/Sounds/mi24_gear2.wav</path>
-            <!-- <type>avionics</type> -->
-            <condition>
-                <greater-than>
-                    <property>gear/gear[0]/position-norm</property>
-                    <value>0</value>
-                </greater-than>
-                <less-than>
-                    <property>gear/gear[0]/position-norm</property>
-                    <value>1</value>
-                </less-than>
-                <greater-than-equals>
-					        <property>position/altitude-agl-ft</property>
-					        <value>50</value>
-				        </greater-than-equals>
-                <!-- <equals>
-                    <property>controls/engines/engine[0]/cutoff</property>
-                    <value>0</value>
-                </equals> -->
-                <property>sim/current-view/internal</property>
-            </condition>
-            <!-- <pitch>
-				      <internal>dt_play</internal>
-				        <offset>1.0</offset>
-				      <factor>-0.01</factor>
-			      </pitch>
-            <pitch>
-              <factor>-0.25</factor>
-            </pitch>
-            <reference-dist>100</reference-dist>
-            <max-dist>1000</max-dist> -->
+    <gears>
+      <name>gear</name>
+      <mode>in-transit</mode>
+      <path>mi24_gear2.wav</path>
+      <!-- <type>avionics</type> -->
+      <condition>
+        <greater-than>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </greater-than>
+        <less-than>
+          <property>gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </less-than>
+        <greater-than-equals>
+          <property>position/altitude-agl-ft</property>
+          <value>50</value>
+        </greater-than-equals>
+        <!-- <equals>
+        <property>controls/engines/engine[0]/cutoff</property>
+        <value>0</value>
+        </equals> -->
+        <property>sim/current-view/internal</property>
+      </condition>
+      <!-- <pitch>
+      <internal>dt_play</internal>
+      <offset>1.0</offset>
+      <factor>-0.01</factor>
+      </pitch>
+      <pitch>
+      <factor>-0.25</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist> -->
+      <volume>
+        <max>0.3</max>
+      </volume>
+      <position>
+        <x>-5.5</x>
+        <y>0</y>
+        <z>0</z>
+      </position>
+      <reference-dist>1.0</reference-dist>
+      <max-dist>20.0</max-dist>
+    </gears>
 
-            <volume>
-				      <max>0.3</max>
-			      </volume>
-			      <position>
-				      <x>-5.5</x>
-				      <y>0</y>
-				      <z>0</z>
-			      </position>
-			      <reference-dist>1.0</reference-dist>
-			      <max-dist>20.0</max-dist>
-        </gears>
+    <gears>
+      <name>gear-open-door</name>
+      <path>mi24_open_gear_door.wav</path>
+      <!-- <type>avionics</type> -->
+      <condition>
+        <greater-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </greater-than>
+        <less-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </less-than>
+        <property>sim/current-view/internal</property>
+      </condition>
+      <volume>
+        <max>0.9</max>
+      </volume>
+      <position>
+        <x>-5.5</x>
+        <y>0</y>
+        <z>0</z>
+      </position>
+      <reference-dist>1.0</reference-dist>
+      <max-dist>20.0</max-dist>
+      <!-- <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist> -->
+    </gears>
 
-        <gears>
-            <name>gear-open-door</name>
-            <path>Aircraft/Mil-Mi-24/Sounds/mi24_open_gear_door.wav</path>
-            <!-- <type>avionics</type> -->
-            <condition>
-                <greater-than>
-                    <property>/gear/gear[0]/position-norm</property>
-                    <value>0</value>
-                </greater-than>
-                <less-than>
-                    <property>/gear/gear[0]/position-norm</property>
-                    <value>1</value>
-                </less-than>
-                <property>sim/current-view/internal</property>
-            </condition>
-            <volume>
-				      <max>0.9</max>
-			      </volume>
-			      <position>
-				      <x>-5.5</x>
-				      <y>0</y>
-				      <z>0</z>
-			      </position>
-			      <reference-dist>1.0</reference-dist>
-			      <max-dist>20.0</max-dist>
-            <!-- <reference-dist>100</reference-dist>
-            <max-dist>1000</max-dist> -->
-        </gears>
-        <gears>
-            <name>gear-close-door</name>
-            <path>Aircraft/Mil-Mi-24/Sounds/mi24_close_gear_door.wav</path>
-            <!-- <type>avionics</type> -->
-            <condition>
-                <or>
-                    <less-than>
-                        <property>/gear/gear[0]/position-norm</property>
-                        <value>0.1</value>
-                    </less-than>
-                    <greater-than>
-                        <property>/gear/gear[0]/position-norm</property>
-                        <value>0.9</value>
-                    </greater-than>
-                </or>
-                <greater-than>
-                    <property>/gear/gear[0]/position-norm</property>
-                    <value>0</value>
-                </greater-than>
-                <less-than>
-                    <property>/gear/gear[0]/position-norm</property>
-                    <value>1</value>
-                </less-than>
-                <property>sim/current-view/internal</property>
-            </condition>
-            <volume>
-				      <max>0.9</max>
-			      </volume>
-			      <position>
-				      <x>-5.5</x>
-				      <y>0</y>
-				      <z>0</z>
-			      </position>
-			      <reference-dist>1.0</reference-dist>
-			      <max-dist>20.0</max-dist>
-            <!-- <reference-dist>100</reference-dist>
-            <max-dist>1000</max-dist> -->
-        </gears>
-    
+    <gears>
+      <name>gear-close-door</name>
+      <path>mi24_close_gear_door.wav</path>
+      <!-- <type>avionics</type> -->
+      <condition>
+        <or>
+          <less-than>
+            <property>/gear/gear[0]/position-norm</property>
+            <value>0.1</value>
+          </less-than>
+          <greater-than>
+            <property>/gear/gear[0]/position-norm</property>
+            <value>0.9</value>
+          </greater-than>
+        </or>
+        <greater-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </greater-than>
+        <less-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </less-than>
+        <property>sim/current-view/internal</property>
+      </condition>
+      <volume>
+        <max>0.9</max>
+      </volume>
+      <position>
+        <x>-5.5</x>
+        <y>0</y>
+        <z>0</z>
+      </position>
+      <reference-dist>1.0</reference-dist>
+      <max-dist>20.0</max-dist>
+      <!-- <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist> -->
+    </gears>
+
     <contact>
       <name>ground contact</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/wheel.wav</path>
+      <path>wheel.wav</path>
       <condition>
         <property>gear/gear[0]/wow</property>
       </condition>
       <volume>
-				<property>/velocities/speed-down-fps</property>
-				<factor>0.5</factor>
-			</volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+      </volume>
       <pitch>
         <factor>0.01</factor>
       </pitch>
       <reference-dist>5.0</reference-dist>
       <max-dist>10.0</max-dist>
     </contact>
-    
+
     <contact>
       <name>ground contact</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/wheel.wav</path>
+      <path>wheel.wav</path>
       <condition>
         <property>gear/gear[1]/wow</property>
       </condition>
       <volume>
-				<property>/velocities/speed-down-fps</property>
-				<factor>0.5</factor>
-			</volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+      </volume>
       <pitch>
         <factor>0.01</factor>
       </pitch>
       <reference-dist>5.0</reference-dist>
       <max-dist>10.0</max-dist>
     </contact>
-    
+
     <contact>
       <name>ground contact</name>
       <mode>once</mode>
-      <path>Aircraft/Mil-Mi-24/Sounds/wheel.wav</path>
+      <path>wheel.wav</path>
       <condition>
         <property>gear/gear[2]/wow</property>
       </condition>
       <volume>
-				<property>/velocities/speed-down-fps</property>
-				<factor>0.5</factor>
-			</volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+      </volume>
       <pitch>
         <factor>0.01</factor>
       </pitch>
       <reference-dist>5.0</reference-dist>
       <max-dist>10.0</max-dist>
     </contact>
-    
+
+		<!-- Enviroment -->
+		
     <wind>
-      <name>wind</name>
-      <mode>looped</mode>
-      <path>Sounds/wind.wav</path>
+     <name>Wind</name>
+     <mode>looped</mode>
+     <path>Sounds/wind.wav</path>
+
       <condition>
+       <or>
         <and>
-          <property>velocities/airspeed-kt</property>
-          <not>
-            <property>sim/crashed</property>
-          </not>
+         <greater-than>
+          <property>sim/model/door-positions/crew/position-norm</property>
+          <value>0.0</value>
+         </greater-than>
+         <property>/sim/current-view/internal</property>
         </and>
+				<not><property>/sim/current-view/internal</property></not>
+       </or>
       </condition>
-      <volume>
-        <property>velocities/airspeed-kt</property>
-        <factor>0.0015</factor>
-        <min>0.00</min>
-        <max>0.25</max>
-      </volume>
-      <pitch>
-        <property>velocities/airspeed-kt</property>
-        <factor>0.01</factor>
-        <offset>1.25</offset>
-      </pitch>
-      <reference-dist>10.0</reference-dist>
-      <max-dist>20.0</max-dist>
-    </wind>
-    
+			
+			<property>/velocities/airspeed-kt</property>
+
+			<volume>
+				<property>/position/altitude-ft</property>
+				<factor>-0.000015</factor>
+				<offset>1.0</offset>
+				<min>0.1</min>
+				<max>0.7</max>
+			</volume>
+
+			<volume>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.015</factor>
+				<min>0.03</min>
+				<max>0.55</max>
+			</volume>
+
+			<pitch>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.01</factor>
+				<offset>0.75</offset>
+			</pitch>
+
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+		</wind>
+
+    <rain>
+      <name>rain</name>
+      <mode>looped</mode>
+      <path>rain.wav</path>
+      <type>avionics</type>
+        <condition>
+         <greater-than>
+          <property>/environment/rain-norm</property>
+          <value>0</value>
+         </greater-than>
+         <or>
+          <not><property>/sim/current-view/internal</property></not>
+          <greater-than>
+            <property>sim/model/door-positions/crew/position-norm</property>
+            <value>0</value>
+          </greater-than>
+         </or>
+        </condition>
+        <volume>
+         <property>velocities/airspeed-kt</property>
+         <factor>0.00075</factor>
+         <min>0.03</min>
+         <max>0.40</max>
+        </volume>
+    </rain>
+
+    <rain-windshield>
+            <name>rain-windshield</name>
+            <mode>looped</mode>
+            <path>rain-windshield.wav</path>
+            <type>avionics</type>
+            <condition>
+                <and>
+                    <property>/sim/current-view/internal</property>
+                    <greater-than>
+                        <property>/environment/rain-norm</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <volume>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.00075</factor>
+                <min>0.03</min>
+                <max>0.40</max>
+            </volume>
+    </rain-windshield>
+
     <crash>
       <name>intense ground contact</name>
       <mode>once</mode>
@@ -398,117 +466,178 @@
       </pitch>
     </crash>
 
-            <!-- Rita AoA warning -->
-		
+    <!-- Rita AoA warning -->
     <ritaaoa>
-			<name>Rita AoA Warning</name>
-			<mode>looped</mode>
-			<path>Aircraft/Mil-Mi-24/Sounds/RitaHighAoA.wav</path>
-			<type>avionics</type>
-			<condition>
-				<and>
-					<or>
-					<greater-than>
-						<property>/orientation/alpha-deg</property>
-						<value>24.8</value>
-					</greater-than>
-					<less-than>
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>-101.3156625</value>
-          			</less-than>
-          			<greater-than>
-            			<!-- G load < -1.0 = 31.17405-->
-            			<property>/accelerations/pilot/z-accel-fps_sec</property>
-            			<value>30.17405</value>
-          			</greater-than>
-					</or>
-					<not>
-					    <property>/gear/gear[0]/wow</property>
-					    <property>/gear/gear[1]/wow</property>
-					    <property>/gear/gear[2]/wow</property>
-					</not>
-				</and>
-			</condition>
-			<volume>
-        		<property>/sim/current-view/internal</property>
-        		<factor>1.0</factor>
-      		</volume>
-		</ritaaoa>
+      <name>Rita AoA Warning</name>
+      <mode>looped</mode>
+      <path>RitaHighAoA.wav</path>
+      <type>avionics</type>
+      <condition>
+        <and>
+          <or>
+            <greater-than>
+              <property>/orientation/alpha-deg</property>
+              <value>24.8</value>
+            </greater-than>
+            <less-than>
+              <property>/accelerations/pilot/z-accel-fps_sec</property>
+              <value>-101.3156625</value>
+            </less-than>
+            <greater-than>
+              <!-- G load < -1.0 = 31.17405-->
+              <property>/accelerations/pilot/z-accel-fps_sec</property>
+              <value>30.17405</value>
+            </greater-than>
+          </or>
+          <not>
+            <property>/gear/gear[0]/wow</property>
+            <property>/gear/gear[1]/wow</property>
+            <property>/gear/gear[2]/wow</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </ritaaoa>
 
-        <!-- Rita danger altitude warning -->
-
+    <!-- Rita danger altitude warning -->
     <ritadangeralt>
-            <name>Rita danger altitude</name>
-            <mode>once</mode>
-            <path>Aircraft/Mil-Mi-24/Sounds/RitaAltitude.wav</path>
-            <type>avionics</type>
-            <condition>
-                <property>/controls/electric/ralt-switch</property>
-                <less-than>
-                    <property>/position/altitude-agl-ft</property>
-                    <property>controls/instrumentation/danger-altitude-ft</property>
-                </less-than>
-                <less-than>
-                    <property>/gear/gear[0]/position-norm</property>
-                    <value>1</value>
-                </less-than>
-            </condition>
-            <volume>
-        		<property>/sim/current-view/internal</property>
-        		<factor>1.0</factor>
-      		</volume>
+      <name>Rita danger altitude</name>
+      <mode>once</mode>
+      <path>RitaAltitude.wav</path>
+      <type>avionics</type>
+      <condition>
+        <property>/controls/electric/ralt-switch</property>
+        <less-than>
+          <property>/position/altitude-agl-ft</property>
+          <property>controls/instrumentation/danger-altitude-ft</property>
+        </less-than>
+        <less-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </less-than>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
     </ritadangeralt>
 
     <!-- Weapons in-range beep -->
+    <inrange>
+      <name>inrange beep</name>
+      <mode>once</mode>
+      <path>inrange.wav</path>
+      <type>avionics</type>
+      <condition>
+        <and>
+          <property>/controls/armament/master-arm</property>
+          <property>controls/electric/gunsight-auto</property>
+          <property>/controls/armament/LAMarkerON</property>
+        </and>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </inrange>
 
-		<inrange>
-      		<name>inrange beep</name>
-      		<mode>once</mode>
-      		<path>Aircraft/Mil-Mi-24/Sounds/inrange.wav</path>
-      		<type>avionics</type>
-      		<condition>
-        		<and>
-          			<property>/controls/armament/master-arm</property>
-                <property>controls/electric/gunsight-auto</property>
-		  			    <property>/controls/armament/LAMarkerON</property>
-        		</and>
-      		</condition>
-      		<volume>
-        		<property>/sim/current-view/internal</property>
-        		<factor>1.0</factor>
-      		</volume>
-    	</inrange>
+    <inrange2>
+      <name>launch authorized</name>
+      <mode>once</mode>
+      <path>launch_ru.wav</path>
+      <type>avionics</type>
+      <condition>
+        <and>
+          <property>/controls/armament/master-arm</property>
+          <property>controls/electric/gunsight-auto</property>
+          <or>
+           <property>/controls/armament/LAMarkerON</property>
+           <property>/controls/armament/ataka-inrange</property>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </inrange2>
 
-		<inrange2>
-      		<name>launch authorized</name>
-      		<mode>once</mode>
-      		<path>Aircraft/Mil-Mi-24/Sounds/launch_ru.wav</path>
-      		<type>avionics</type>
-      		<condition>
-        		<and>
-          			<property>/controls/armament/master-arm</property>
-                <property>controls/electric/gunsight-auto</property>
-		  			    <property>/controls/armament/LAMarkerON</property>
-        		</and>
-      		</condition>
-      		<volume>
-        		<property>/sim/current-view/internal</property>
-        		<factor>1.0</factor>
-      		</volume>
-    	</inrange2>
-    
+    <inrange3>
+      <name>9m120 launch authorized</name>
+      <mode>looped</mode>
+      <path>inrange.wav</path>
+      <type>avionics</type>
+      <condition>
+        <and>
+          <property>/controls/armament/master-arm</property>
+          <property>controls/electric/gunsight-auto</property>
+          <property>/controls/armament/ataka-inrange</property>
+          <property>/tracking/tgt-designated</property>
+          <or>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>3</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[0]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>4</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[1]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>5</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[2]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+           <and>
+            <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>6</value>
+            </equals>
+            <equals>
+             <property>controls/armament/station[3]/release-stick</property>
+             <value>0</value>
+            </equals>
+           </and>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </inrange3>
+
     <!-- Gun fire -->
     <guns>
       <name>gunfire-YakB</name>
+      <path>gunsfire.wav</path>
       <mode>looped</mode>
       <condition>
         <property>controls/armament/trigger-mg</property>
         <equals>
-				<property>/sim/variant-id</property>
-				<value>1</value>
-			</equals>
+          <property>/sim/variant-id</property>
+          <value>1</value>
+        </equals>
       </condition>
-      <path>Aircraft/Mil-Mi-24/Sounds/gunsfire.wav</path>
       <!-- <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist> -->
       <pitch>
@@ -518,85 +647,82 @@
 
     <guns>
       <name>gunfire-GSh30</name>
+      <path>gsh-30-2.wav</path>
       <mode>looped</mode>
       <condition>
         <property>controls/armament/trigger-mg</property>
         <equals>
-				<property>/sim/variant-id</property>
-				<value>2</value>
-			</equals>
+          <property>/sim/variant-id</property>
+          <value>2</value>
+        </equals>
       </condition>
-      <path>Aircraft/Mil-Mi-24/Sounds/gsh-30-2.wav</path>
     </guns>
-    
+
     <!-- rockets away -->
     <rockets-salvo>
       <name>rockets-salvo</name>
       <condition>
         <property>controls/armament/trigger-s8</property>
       </condition>
-      <path>Aircraft/Mil-Mi-24/Sounds/rockets_ripple2.wav</path>
-
+      <path>rockets_ripple2.wav</path>
       <volume>
-				<factor>1.0</factor>
-				<max>3.0</max>
-			</volume>
-			
-			<reference-dist>100</reference-dist>
-			<max-dist>1000</max-dist>
-     </rockets-salvo>
+        <factor>1.0</factor>
+        <max>3.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rockets-salvo>
 
     <rocket-single>
-			<name>rocket-single</name>
-			<mode>once</mode>
-			<path>Aircraft/Mil-Mi-24/Sounds/rockets.wav</path>
-			
-			<condition>
+      <name>rocket-single</name>
+      <mode>once</mode>
+      <path>rockets.wav</path>
+      <condition>
+       <or>
         <property>controls/armament/trigger-s8</property>
+        <property>controls/armament/trigger-9m-1</property>
+        <property>controls/armament/trigger-9m-2</property>
+        <property>controls/armament/trigger-9m-3</property>
+        <property>controls/armament/trigger-9m-4</property>
+       </or>
       </condition>
-
-			<volume>
-				<factor>1.0</factor>
-				<max>3.0</max>
-			</volume>
-			
-			<reference-dist>100</reference-dist>
-			<max-dist>1000</max-dist>
-			
-		</rocket-single>
+      <volume>
+        <factor>1.0</factor>
+        <max>3.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rocket-single>
 
     <!-- Flare/Chaff release -->
-		
-		<flare>
-			<name>Flares</name>
-			<condition>
-				<property>controls/armament/pickle</property>
+    <flare>
+      <name>Flares</name>
+      <condition>
+        <property>controls/armament/pickle</property>
         <property>sim/current-view/internal</property>
-			</condition>
-			
-			<path>Aircraft/Mil-Mi-24/Sounds/Flare.wav</path>
-			<mode>looped</mode>
+      </condition>
+      <path>Flare.wav</path>
+      <mode>looped</mode>
       <volume>
-            <property>sim/current-view/internal</property>
-        		<factor>0.25</factor>
+        <property>sim/current-view/internal</property>
+        <factor>0.25</factor>
       </volume>
-		</flare>
+    </flare>
 
     <flare-external>
-			<name>Flares-External</name>
-			<condition>
+      <name>Flares-External</name>
+      <condition>
         <and>
-				  <property>controls/armament/pickle</property>
+          <property>controls/armament/pickle</property>
           <not><property>sim/current-view/internal</property></not>
         </and>
-			</condition>
-			
-			<path>Aircraft/Mil-Mi-24/Sounds/Flare.wav</path>
-			<mode>looped</mode>
+      </condition>
+      <path>Flare.wav</path>
+      <mode>looped</mode>
       <reference-dist>5.0</reference-dist>
-      <max-dist>50.0</max-dist>
-		</flare-external>
-    
+      <max-dist>250.0</max-dist>
+    </flare-external>
+
   </fx>
-  
+
 </PropertyList>

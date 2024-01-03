@@ -15,8 +15,12 @@
         <object-name>gunsight-base</object-name>
         <object-name>gunsight-base.001</object-name>
         <object-name>gunsight-base.002</object-name>
+        <object-name>gunsight-base.003</object-name>
         <object-name>gunsight-base-bg</object-name>
+        <object-name>index.001</object-name>
+        <object-name>index.002</object-name>
         <object-name>knobs</object-name>
+        <object-name>button.001</object-name>
         <object-name>knob.001</object-name>
         <object-name>knob.002</object-name>
         <object-name>knob.003</object-name>
@@ -25,13 +29,13 @@
         <object-name>switch.002</object-name>
         <object-name>switch.003</object-name>
         <object-name>lamp-green</object-name>
-        <object-name>lamp-green-on</object-name>
+        <object-name>lamp-green.on</object-name>
         <object-name>lamp-red</object-name>
-        <object-name>lamp-red-on</object-name>
+        <object-name>lamp-red.on</object-name>
         <object-name>lamp-yellow</object-name>
-        <object-name>lamp-yellow-on</object-name>
+        <object-name>lamp-yellow.on</object-name>
         <object-name>lamp-purple</object-name>
-        <object-name>lamp-purple-on</object-name>
+        <object-name>lamp-purple.on</object-name>
         <object-name>wpn-light.001</object-name>
         <object-name>wpn-light.002</object-name>
         <object-name>wpn-light.003</object-name>
@@ -89,6 +93,8 @@
     <animation>
       <type>material</type>
       <object-name>gunsight-base-bg</object-name>
+      <object-name>index.001</object-name>
+      <object-name>index.002</object-name>
       <emission>
         <red>0.6</red>
         <green>0.6</green>
@@ -103,6 +109,7 @@
     <animation>
       <type>material</type>
       <object-name>switch-base</object-name>
+      <object-name>button.001</object-name>
       <emission>
         <red>0.2</red>
         <green>0.2</green>
@@ -256,21 +263,30 @@
         <y>-1</y>
         <z>0</z>
       </axis>
-    </transform>
+    </transform> -->
+
     <transform>
       <property>instrumentation/turn-indicator/indicated-turn-rate</property>
       <subtype>textranslate</subtype>
-      <factor>0.05</factor>
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
       <axis>
         <x>1</x>
         <y>0</y>
         <z>0</z>
       </axis>
-    </transform> -->
+    </transform>
     <transform>
       <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
       <subtype>textranslate</subtype>
-      <factor>0.06</factor>
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
       <axis>
         <x>-1</x>
         <y>0</y>
@@ -279,10 +295,13 @@
     </transform>
     </animation>
 
+<!-- AUTOMATIC SIGHT -->
+
     <animation>
     <type>texmultiple</type>
     <object-name>Sight-Auto</object-name>
-    <transform>
+
+    <!-- <transform>
       <property>/accelerations/pilot/z-accel-fps_sec</property>
       <subtype>textranslate</subtype>
       <factor>0.0022</factor>
@@ -291,39 +310,168 @@
         <y>-1</y>
         <z>0</z>
       </axis>
-    </transform>
+    </transform> -->
+
     <transform>
-      <property>/controls/armament/pipperoffset</property>
+      <!-- <property>/controls/armament/ataka_heading_offset</property> -->
+      <property>/controls/armament/pipper_offset_h</property>
       <subtype>textranslate</subtype>
-      <factor>-15.0</factor>
-      <min>-7</min>
-      <max>7</max>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
-    </transform>
-    <transform>
-      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
-      <subtype>textranslate</subtype>
-      <factor>0.05</factor>
+      <interpolation>
+       <entry><ind>-8 </ind><dep>-0.5 </dep></entry>
+       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 8 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
       <axis>
         <x>1</x>
         <y>0</y>
         <z>0</z>
       </axis>
+      <condition>
+        <or>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>3</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>4</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>5</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>6</value>
+         </equals>
+        </or>
+      </condition>
     </transform>
+
+    <transform>
+      <!-- <property>/controls/armament/ataka_pitch_offset</property> -->
+      <property>/controls/armament/pipper_offset_v</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -1000.0 </ind><dep>0.59 </dep></entry>
+       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 170 </ind><dep> -0.17 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+        <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
+    <transform>
+      <!-- <property>/controls/armament/ataka_pitch_offset</property> -->
+      <property>/controls/armament/pipper_offset_v</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -9.0 </ind><dep>0.59 </dep></entry>
+       <entry><ind>   0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 2.5 </ind><dep> -0.176 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>3</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>4</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>5</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>6</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
+    <transform>
+      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+      <subtype>textranslate</subtype>
+      <!-- <factor>0.05</factor> -->
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+        <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
     <transform>
       <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
       <subtype>textranslate</subtype>
-      <factor>0.06</factor>
+      <!-- <factor>0.06</factor> -->
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
       <axis>
         <x>-1</x>
         <y>0</y>
         <z>0</z>
       </axis>
+      <condition>
+        <or>
+        <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
     </transform>
+
     </animation>
 
     <animation>
@@ -351,9 +499,12 @@
       <type>select</type>
       <object-name>lamp-yellow.on</object-name>
       <condition>
-        <property>/controls/armament/LAMarkerON</property>
         <property>controls/electric/gunsight-auto</property>
         <property>controls/electric/battery-switch</property>
+        <or>
+         <property>/controls/armament/LAMarkerON</property>
+         <property>/controls/armament/ataka-inrange</property>
+        </or>
       </condition>
     </animation>
 
@@ -361,10 +512,15 @@
       <type>select</type>
       <object-name>lamp-purple.on</object-name>
       <condition>
-        <equals>
-        <property>/controls/armament/weapon-type</property>
-        <value>3</value>
-        </equals>
+        <greater-than>
+         <property>/controls/armament/weapon-type</property>
+         <value>2</value>
+        </greater-than>
+        <less-than>
+         <property>/controls/armament/weapon-type</property>
+         <value>7</value>
+        </less-than>
+        <property>/tracking/tgt-designated</property>
         <property>controls/electric/battery-switch</property>
       </condition>
     </animation>
@@ -375,7 +531,7 @@
       <condition>
         <equals>
         <property>/controls/armament/weapon-type</property>
-        <value>4</value>
+        <value>8</value>
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
@@ -387,7 +543,7 @@
       <condition>
         <equals>
         <property>/controls/armament/weapon-type</property>
-        <value>5</value>
+        <value>9</value>
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
@@ -415,7 +571,7 @@
       <condition>
         <equals>
         <property>/controls/armament/weapon-type</property>
-        <value>3</value>
+        <value>7</value>
         </equals>
         <property>controls/electric/battery-switch</property>
       </condition>
@@ -486,6 +642,48 @@
     </animation>
 
     <animation>
+     <type>rotate</type>
+     <object-name>knob.003</object-name>
+     <property>/controls/armament/ataka-index</property>
+     <center>
+      <x-m> 0.010957 </x-m>
+      <y-m>-0.050462 </y-m>
+      <z-m>-0.033126 </z-m>
+     </center>
+     <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+     </axis>
+    </animation>
+
+    <animation>
+     <type>textranslate</type>
+     <object-name>index.001</object-name>
+     <property>/controls/armament/ataka-index</property>
+     <factor>0.0474</factor>
+     <offset>0</offset>
+     <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+     </axis>
+    </animation>
+
+    <animation>
+     <type>textranslate</type>
+     <object-name>index.002</object-name>
+     <property>/controls/armament/ataka-index</property>
+     <factor>0.474</factor>
+     <offset>0</offset>
+     <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+     </axis>
+    </animation>
+
+    <animation>
       <type>pick</type>
       <object-name>switch.001</object-name>
       <action>
@@ -534,5 +732,38 @@
        </binding>
       </hovered>
     </animation>
+
+    <animation>
+    <type>knob</type>
+    <object-name>knob.003</object-name>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/armament/ataka-index</property>
+        <step>0.05</step>
+        <min>-0.9</min>
+        <max>0.9</max>
+        <wrap>false</wrap>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/armament/ataka-index</property>
+        <step>-0.05</step>
+        <min>-0.9</min>
+        <max>0.9</max>
+        <wrap>false</wrap>
+      </binding>
+    </decrease>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>mis-index-adj</tooltip-id>
+        <label>Set ATAKA offset %1.2f</label>
+        <property>/controls/armament/ataka-index</property>
+      </binding>
+    </hovered>
+  </animation>
 
 </PropertyList>

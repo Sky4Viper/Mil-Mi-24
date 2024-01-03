@@ -34,30 +34,24 @@
       <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
-      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-      <!-- <red>0.8</red>
-      <green>0.3</green>
-      <blue>0.1</blue> -->
-
-      <red>1.0</red>
-      <green>0.94</green>
-      <blue>0.75</blue>
-
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
     </emission>
   </animation>
 
-<!--
-Airspeed Needle
-km/h to kts
-50 = 26.9978
-100 = 53.9957
-150 = 80.9935
-200 = 107.991
-250 = 134.989
-300 = 161.987
-350 = 188.985
-400 = 215.983
-450 = 242.981
+<!-- Airspeed Needle
+     km/h to kts
+      50 = 26.9978
+     100 = 53.9957
+     150 = 80.9935
+     200 = 107.991
+     250 = 134.989
+     300 = 161.987
+     350 = 188.985
+     400 = 215.983
+     450 = 242.981
 -->
 
   <animation>
@@ -65,16 +59,16 @@ km/h to kts
     <object-name>needle1</object-name>
     <property>velocities/airspeed-kt</property>
     <interpolation>
-      <entry><ind>   0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind> 26.9978 </ind><dep>  5.66 </dep></entry>
-      <entry><ind> 53.9957 </ind><dep> 53.5 </dep></entry>
-      <entry><ind> 80.9935 </ind><dep> 93.4 </dep></entry>
-      <entry><ind> 107.991 </ind><dep> 135.0 </dep></entry>
-      <entry><ind> 134.989 </ind><dep> 177.0 </dep></entry>
-      <entry><ind> 161.987 </ind><dep> 220.0 </dep></entry>
-      <entry><ind> 188.985 </ind><dep> 260.0 </dep></entry>
-      <entry><ind> 215.983 </ind><dep> 300.0 </dep></entry>
-      <entry><ind> 242.981 </ind><dep> 338.0 </dep></entry>
+      <entry><ind>   0.0000 </ind><dep>   0.00 </dep></entry>
+      <entry><ind>  26.9978 </ind><dep>   5.66 </dep></entry>
+      <entry><ind>  53.9957 </ind><dep>  53.50 </dep></entry>
+      <entry><ind>  80.9935 </ind><dep>  93.40 </dep></entry>
+      <entry><ind> 107.9910 </ind><dep> 135.00 </dep></entry>
+      <entry><ind> 134.9890 </ind><dep> 177.00 </dep></entry>
+      <entry><ind> 161.9870 </ind><dep> 220.00 </dep></entry>
+      <entry><ind> 188.9850 </ind><dep> 260.00 </dep></entry>
+      <entry><ind> 215.9830 </ind><dep> 300.00 </dep></entry>
+      <entry><ind> 242.9810 </ind><dep> 338.00 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>

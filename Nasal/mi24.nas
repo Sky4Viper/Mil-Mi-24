@@ -4,39 +4,39 @@ if (!contains(globals, "cprint")) {
   globals.cprint = func {};
 }
 
-var optarg = aircraft.optarg;
-var makeNode = aircraft.makeNode;
+var optarg                = aircraft.optarg;
+var makeNode              = aircraft.makeNode;
 
-var sin = func(a) { math.sin(a * math.pi / 180.0) }
-var cos = func(a) { math.cos(a * math.pi / 180.0) }
-var pow = func(v, w) { math.exp(math.ln(v) * w) }
-var npow = func(v, w) { math.exp(math.ln(abs(v)) * w) * (v < 0 ? -1 : 1) }
-var clamp = func(v, min = 0, max = 1) { v < min ? min : v > max ? max : v }
-var normatan = func(x) { math.atan2(x, 1) * 2 / math.pi }
+var sin                   = func(a) { math.sin(a * math.pi / 180.0) }
+var cos                   = func(a) { math.cos(a * math.pi / 180.0) }
+var pow                   = func(v, w) { math.exp(math.ln(v) * w) }
+var npow                  = func(v, w) { math.exp(math.ln(abs(v)) * w) * (v < 0 ? -1 : 1) }
+var clamp                 = func(v, min = 0, max = 1) { v < min ? min : v > max ? max : v }
+var normatan              = func(x) { math.atan2(x, 1) * 2 / math.pi }
 
 # timers ============================================================
-var turbine_timer = aircraft.timer.new("/sim/time/hobbs/turbines", 10);
+var turbine_timer         = aircraft.timer.new("/sim/time/hobbs/turbines", 10);
 aircraft.timer.new("/sim/time/hobbs/helicopter", nil).start();
 
 # engines/rotor =====================================================
-var state = props.globals.getNode("sim/model/mi24/state");
-var engine = props.globals.getNode("sim/model/mi24/engine");
-var rotor = props.globals.getNode("controls/engines/engine/magnetos");
-var rotor_rpm = props.globals.getNode("rotors/main/rpm");
-var torque = props.globals.getNode("rotors/gear/total-torque", 1);
-var collective = props.globals.getNode("controls/engines/engine[0]/throttle");
-var turbine = props.globals.getNode("sim/model/mi24/turbine-rpm-pct", 1);
-var torque_pct = props.globals.getNode("sim/model/mi24/torque-pct", 1);
-var stall = props.globals.getNode("rotors/main/stall", 1);
-var stall_filtered = props.globals.getNode("rotors/main/stall-filtered", 1);
+var state                 = props.globals.getNode("sim/model/mi24/state");
+var engine                = props.globals.getNode("sim/model/mi24/engine");
+var rotor                 = props.globals.getNode("controls/engines/engine/magnetos");
+var rotor_rpm             = props.globals.getNode("rotors/main/rpm");
+var torque                = props.globals.getNode("rotors/gear/total-torque", 1);
+var collective            = props.globals.getNode("controls/engines/engine[0]/throttle");
+var turbine               = props.globals.getNode("sim/model/mi24/turbine-rpm-pct", 1);
+var torque_pct            = props.globals.getNode("sim/model/mi24/torque-pct", 1);
+var stall                 = props.globals.getNode("rotors/main/stall", 1);
+var stall_filtered        = props.globals.getNode("rotors/main/stall-filtered", 1);
 var torque_sound_filtered = props.globals.getNode("rotors/gear/torque-sound-filtered", 1);
-var target_rel_rpm = props.globals.getNode("controls/rotor/reltarget", 1);
-var max_rel_torque = props.globals.getNode("controls/rotor/maxreltorque", 1);
-var cone = props.globals.getNode("rotors/main/cone-deg", 1);
-var cone1 = props.globals.getNode("rotors/main/cone1-deg", 1);
-var cone2 = props.globals.getNode("rotors/main/cone2-deg", 1);
-var cone3 = props.globals.getNode("rotors/main/cone3-deg", 1);
-var cone4 = props.globals.getNode("rotors/main/cone4-deg", 1);
+var target_rel_rpm        = props.globals.getNode("controls/rotor/reltarget", 1);
+var max_rel_torque        = props.globals.getNode("controls/rotor/maxreltorque", 1);
+var cone                  = props.globals.getNode("rotors/main/cone-deg", 1);
+var cone1                 = props.globals.getNode("rotors/main/cone1-deg", 1);
+var cone2                 = props.globals.getNode("rotors/main/cone2-deg", 1);
+var cone3                 = props.globals.getNode("rotors/main/cone3-deg", 1);
+var cone4                 = props.globals.getNode("rotors/main/cone4-deg", 1);
 
 # state:
 # 0 off
@@ -89,9 +89,9 @@ var update_state = func {
             if (new_state == (6)) {
               max_rel_torque.setValue(0.01);
               target_rel_rpm.setValue(0.002);
-            } 
+            }
           }
-          } 
+          }
         }
       }
     }
@@ -99,24 +99,26 @@ var update_state = func {
 }
 
 var engines = func {
-  if (props.globals.getNode("sim/crashed",1).getBoolValue()) {return; }
+  if (props.globals.getNode("sim/crashed",1).getBoolValue()) {
+    return;
+  }
   var s = state.getValue();
   if (arg[0] == 1) {
     if (s == 0) {
       update_state(1);
     }
   } else {
-		if (s >= 2 and s <= 5) {
-			turbine_timer.stop();
-			rotor.setValue(0);				
-			state.setValue(6);
-			settimer(func { state.setValue(0) }, 71);	# engines spooling down
-		} else {
+    if (s >= 2 and s <= 5) {
+      turbine_timer.stop();
+      rotor.setValue(0);
+      state.setValue(6);
+      settimer(func { state.setValue(0) }, 71);	# engines spooling down
+    } else {
       rotor.setValue(0);        # engines stopped
       state.setValue(0);
       interpolate(engine, 0, 4);
     }
-    }
+  }
 }
 
 var update_engine = func {
@@ -376,9 +378,9 @@ dynamic_view.register(func {
 });
 
 # main() ============================================================
-var delta_time = props.globals.getNode("/sim/time/delta-realtime-sec", 1);
+var delta_time   = props.globals.getNode("/sim/time/delta-realtime-sec", 1);
 var adf_rotation = props.globals.getNode("/instrumentation/adf/rotation-deg", 1);
-var hi_heading = props.globals.getNode("/instrumentation/heading-indicator/indicated-heading-deg", 1);
+var hi_heading   = props.globals.getNode("/instrumentation/heading-indicator/indicated-heading-deg", 1);
 
 var main_loop = func {
   # adf_rotation.setDoubleValue(hi_heading.getValue());

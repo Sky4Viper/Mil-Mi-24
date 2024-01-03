@@ -6,35 +6,33 @@
 
     <expected-aircraft-dir-name>Mil-Mi-24</expected-aircraft-dir-name>
     <description>Mil Mi 24V Hind-E (Yasim)</description>
-	
-	<authors>
-		<author n="0">
-			<name>Sergei "Skydive" Solyshko (3D/Cockpit)</name>
-		</author>
-		<author n="1">
-			<name>BARANGER Emmanuel (3D/FDM)</name>
-		</author>
-    <author n="2">
-			<name>Zel (FDM)</name>
-		</author>
-    <author n="3">
-			<name>Raptor (Guns system)</name>
-		</author>
-	</authors>
 
-  	<long-description>(Hind-E) Entered production in 1976. Manufactured 1976-1986. It was the most widely produced version with more than 1,500 made.
-    Armed with the more advanced 9M114 Shturm-V (AT-6 Spiral). Four of these missiles are mounted on four outer wing pylons. 
-    In 1986 it was modernised to carry 16 9M114 Shturm-V (AT-6 Spiral) missiles.Also armed with 12.7 mm turret,
-    B8V20 unguided missile launchers (20x S-8 rockets), B13L1 unguided missile launchers (S-13 rockets), heavy rockets S-24B. 
-    Engines TV3-117V
-	  </long-description>
+    <authors>
+      <author n="0">
+        <name>BARANGER Emmanuel (3D/FDM)</name>
+      </author>
+      <author n="1">
+        <name>Sergei "Skydive" Solyshko (3D/Instruments/Weapons)</name>
+      </author>
+      <author n="2">
+        <name>Zel (FDM), Raptor (Guns system)</name>
+      </author>
+    </authors>
+
+    <long-description>
+      (Hind-E) Entered production in 1976. Manufactured 1976-1986. It was the most widely produced version with more than 1,500 made.
+      Armed with the more advanced 9M114 Shturm-V (AT-6 Spiral). Four of these missiles are mounted on four outer wing pylons.
+      In 1986 it was modernised to carry 16 9M114 Shturm-V (AT-6 Spiral) missiles.Also armed with 12.7 mm turret,
+      B8V20 unguided missile launchers (20 S-8 rockets), B13L1 unguided missile launchers (S-13 rockets), heavy rockets S-24B.
+      Engines TV3-117V
+    </long-description>
 
     <aircraft-version>0.41</aircraft-version>
     <status>alpha</status>
     <minimum-fg-version>2018.2.0</minimum-fg-version>
 
     <flight-model>yasim</flight-model>
-    <aero>Systems/mi24-yasim</aero>
+    <aero>Systems/FDM/mi24-yasim</aero>
 
     <variant-id type="int">1</variant-id>
 
@@ -45,46 +43,64 @@
       <model   type="int"> 4 </model>
     </rating>
 
+    <!-- ##################### -->
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/release.xml</path>
+    </submodels>
+
+    <model>
+      <mi24>
+        <ir-cooler type="bool">false</ir-cooler>
+      </mi24>
+    </model>
+    <!-- ##################### -->
+
     <previews>
       <preview>
         <type>interior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-0.png</path>
+        <path>Previews/mi24p-0.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-1.png</path>
+        <path>Previews/mi24p-1.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-2.png</path>
+        <path>Previews/mi24p-2.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-3.png</path>
+        <path>Previews/mi24p-3.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-4.png</path>
+        <path>Previews/mi24p-4.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-5.png</path>
+        <path>Previews/mi24p-5.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-6.png</path>
+        <path>Previews/mi24p-6.png</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Previews/mi24-7.png</path>
+        <path>Previews/mi24p-7.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/mi24p-8.png</path>
       </preview>
     </previews>
 

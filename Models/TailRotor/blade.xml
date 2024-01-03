@@ -34,7 +34,6 @@
         <property>rotors/tail/rpm</property>
         <value>150</value>
       </greater-than>
-	<not><property>/sim/crashed</property></not>
     </condition>
   </animation>
 
@@ -51,7 +50,6 @@
           <property>rotors/tail/rpm</property>
           <value>150.001</value>
         </less-than>
-	<not><property>/sim/crashed</property></not>
       </and>
     </condition>
   </animation>

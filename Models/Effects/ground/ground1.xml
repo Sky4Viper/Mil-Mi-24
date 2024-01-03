@@ -19,7 +19,7 @@
         </greater-than>
       </and>
     </condition>
-    
+
     <attach>world</attach>
 
     <placer>
@@ -71,9 +71,9 @@
           <blue><value>  1.000 </value></blue>
           <alpha><value> 0.020 </value></alpha>
         </color>
-        <size><value> 3 </value></size>
+        <size><value> 2 </value></size>
       </end>
-      <life-sec><value> 0.5 </value></life-sec>
+      <life-sec><value> 0.05 </value></life-sec>
       <mass-kg>  0.025 </mass-kg>
       <radius-m> 0.175 </radius-m>
     </particle>

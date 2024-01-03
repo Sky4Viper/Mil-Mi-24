@@ -2,13 +2,13 @@
 
 <!-- © 2013 Martin Měřinský GPLv2+ -->
 <PropertyList>
-  
+
   <sim>
-    
+
     <model>
       <livery>
         <name type="string">Czech Air Force Black Tiger</name>
-        <texture>Liveries/1024x1024/czaf_black_tiger.png</texture>
+        <texture>Liveries/2048x2048/czaf_black_tiger.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
@@ -16,7 +16,7 @@
         </specular>
       </livery>
     </model>
-    
+
   </sim>
-  
+
 </PropertyList>

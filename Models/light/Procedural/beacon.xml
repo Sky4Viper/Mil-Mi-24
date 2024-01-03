@@ -6,7 +6,7 @@
     <type>select</type>
     <object-name>beaconlight</object-name>
     <condition>
-      <property>controls/lighting/strobe-lights</property>
+      <property>controls/lighting/beacon</property>
     </condition>
   </animation>
 

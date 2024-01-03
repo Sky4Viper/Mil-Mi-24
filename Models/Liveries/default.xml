@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-  
+
   <sim>
-    
+
     <model>
       <livery>
         <name type="string">Default - Soviet Armeiskaya Aviatsiya</name>
-        <texture>Liveries/2048x2048/default.png</texture>
+        <texture>texture.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
@@ -15,7 +15,7 @@
         </specular>
       </livery>
     </model>
-    
+
   </sim>
-  
+
 </PropertyList>

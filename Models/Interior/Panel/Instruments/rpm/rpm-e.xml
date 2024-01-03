@@ -40,25 +40,16 @@
   <object-name>needle3</object-name>
   <object-name>needle4</object-name>
   <object-name>face</object-name>
-    <condition>
-      <property>controls/electric/battery-switch</property>
-    </condition>
-    <emission>
-      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-      <!-- <red>1.0</red>
-      <green>0.94</green>
-      <blue>0.74</blue> -->
-
-      <!-- <red>0.8</red>
-      <green>0.3</green>
-      <blue>0.1</blue> -->
-
-      <red>1.0</red>
-      <green>0.94</green>
-      <blue>0.75</blue>
-
-    </emission>
-  </animation>
+  <condition>
+    <property>controls/electric/battery-switch</property>
+  </condition>
+  <emission>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    <red>   0.50 </red>
+    <green> 0.40 </green>
+    <blue>  0.30 </blue>
+  </emission>
+</animation>
 
   <animation>
     <type>rotate</type>
@@ -66,18 +57,18 @@
     <!-- <property>/engines/engine[0]/rpm</property> -->
     <property>controls/engines/engine[0]/throttle</property>
     <interpolation>
-      <entry><ind>  1.0 </ind><dep>  60.0 </dep></entry>
-      <entry><ind> 0.80 </ind><dep> 105.0 </dep></entry>
-      <entry><ind> 0.60 </ind><dep> 167.0 </dep></entry>
-      <entry><ind> 0.40 </ind><dep> 228.0 </dep></entry>
-      <entry><ind> 0.20 </ind><dep> 289.0 </dep></entry>
-      <entry><ind> 0.00 </ind><dep> 360.0 </dep></entry>
-      <entry><ind> -0.07 </ind><dep> 381.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep>  60 </dep></entry>
+      <entry><ind>  0.80 </ind><dep> 105 </dep></entry>
+      <entry><ind>  0.60 </ind><dep> 167 </dep></entry>
+      <entry><ind>  0.40 </ind><dep> 228 </dep></entry>
+      <entry><ind>  0.20 </ind><dep> 289 </dep></entry>
+      <entry><ind>  0.00 </ind><dep> 360 </dep></entry>
+      <entry><ind> -0.07 </ind><dep> 381 </dep></entry>
     </interpolation>
     <axis>
-      <x> -1.0 </x>
-      <y>  0.0 </y>
-      <z>  0.0 </z>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -87,21 +78,19 @@
     <!-- <property>/engines/engine[1]/rpm</property> -->
     <property>controls/engines/engine[0]/throttle</property>
     <interpolation>
-      <entry><ind>  1.0 </ind><dep>  60.0 </dep></entry>
-      <entry><ind> 0.80 </ind><dep> 105.0 </dep></entry>
-      <entry><ind> 0.60 </ind><dep> 167.0 </dep></entry>
-      <entry><ind> 0.40 </ind><dep> 228.0 </dep></entry>
-      <entry><ind> 0.20 </ind><dep> 289.0 </dep></entry>
-      <entry><ind> 0.00 </ind><dep> 360.0 </dep></entry>
-      <entry><ind> -0.07 </ind><dep> 381.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep>  60 </dep></entry>
+      <entry><ind>  0.80 </ind><dep> 105 </dep></entry>
+      <entry><ind>  0.60 </ind><dep> 167 </dep></entry>
+      <entry><ind>  0.40 </ind><dep> 228 </dep></entry>
+      <entry><ind>  0.20 </ind><dep> 289 </dep></entry>
+      <entry><ind>  0.00 </ind><dep> 360 </dep></entry>
+      <entry><ind> -0.07 </ind><dep> 381 </dep></entry>
     </interpolation>
     <axis>
-      <x> -1.0 </x>
-      <y>  0.0 </y>
-      <z>  0.0 </z>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
 </PropertyList>
-
-

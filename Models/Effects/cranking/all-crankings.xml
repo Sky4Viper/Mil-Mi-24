@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left no cooler-->
+  <model>
+    <path>cranking.xml</path>
+    <offsets>
+      <x-m> -3.0177 </x-m>
+      <y-m> -0.673682 </y-m>
+      <z-m>  0.043858 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+    <condition>
+      <not><property>/sim/model/mi24/ir-cooler</property></not>
+    </condition>
+  </model>
+
+  <!-- Right no cooler -->
+  <model>
+    <path>cranking.xml</path>
+    <offsets>
+      <x-m> -3.0177 </x-m>
+      <y-m> 0.673682 </y-m>
+      <z-m> 0.043858 </z-m>
+      <heading-deg> 90 </heading-deg>
+    </offsets>
+    <condition>
+      <not><property>/sim/model/mi24/ir-cooler</property></not>
+    </condition>
+  </model>
+
+  <!-- Left without cooler -->
+  <model>
+    <path>cranking.xml</path>
+    <offsets>
+      <x-m> -2.56741 </x-m>
+      <y-m>  -1.131 </y-m>
+      <z-m>  0.089855 </z-m>
+      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+    <condition>
+      <property>/sim/model/mi24/ir-cooler</property>
+    </condition>
+  </model>
+
+  <!-- Right with cooler -->
+  <model>
+    <path>cranking.xml</path>
+    <offsets>
+      <x-m> -2.56741 </x-m>
+      <y-m>  1.131 </y-m>
+      <z-m>  0.089855 </z-m>
+      <heading-deg> 0 </heading-deg>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+    <condition>
+      <property>/sim/model/mi24/ir-cooler</property>
+    </condition>
+  </model>
+
+</PropertyList>
