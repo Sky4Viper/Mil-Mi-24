@@ -720,7 +720,7 @@ Updated by Helijah September 2012
       <path>Flare.wav</path>
       <mode>looped</mode>
       <reference-dist>5.0</reference-dist>
-      <max-dist>50.0</max-dist>
+      <max-dist>250.0</max-dist>
     </flare-external>
 
   </fx>

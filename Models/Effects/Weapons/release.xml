@@ -68,7 +68,7 @@
     <trigger>controls/armament/pickle</trigger>
     <speed>400</speed>
     <repeat>true</repeat>
-    <delay>0.2</delay>
+    <delay>0.6</delay>
     <count>-1</count>
     <life>5</life>
     <buoyancy>25</buoyancy>

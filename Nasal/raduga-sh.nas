@@ -3,7 +3,8 @@ props.globals.initNode("/sim/is-MP-Aircraft", 0, "BOOL");
 # Primitive Range Finder for guns and Rockets
 ##########################################
 props.globals.initNode("/controls/armament/LAMarkerON", 0, "BOOL");
-props.globals.initNode("/controls/armament/ataka-index", 0.0, "DOUBLE");
+props.globals.initNode("/controls/armament/ataka-index", -0.1, "DOUBLE");
+props.globals.initNode("/controls/armament/sensor-index", 0.001, "DOUBLE");
 props.globals.initNode("/controls/armament/ataka-inrange", 0, "BOOL");
 props.globals.initNode("/controls/electric/gunsight-auto", 0, "BOOL");
 props.globals.initNode("/controls/armament/laserrange", 0, "DOUBLE");
@@ -27,8 +28,14 @@ var ac_alt        = 0.0;
 var ac_heading    = 0.0;
 var is_bomb       = 0.0;
 var tgt_locked    = 0;
-var tgt_bearing    = 0.0;
+var tgt_bearing   = 0.0;
 var tgt_range_km  = 0.0;
+var sensor_limit_horiz   =  30.0;
+var sensor_pitch_min     = -15.0;
+var sensor_pitch_max     =  20.0;
+var sensor_range_min     =  0.4;
+var sensor_range_max     =  6.0;
+var mi24type = getprop("/sim/variant-id");
 
 var WeaponsHot = func{
   var LAmarkerON   = getprop("/controls/armament/LAMarkerON");
@@ -63,15 +70,30 @@ setlistener("controls/armament/master-arm", WeaponsHot);
 
 var RangeSet = maketimer (0.1, func() {
   var typeweapon = getprop("controls/armament/weapon-type");
-  if (typeweapon == 1) {
+  #var mi24type = getprop("/sim/variant-id");
+  if (typeweapon == 1 and mi24type ==1) {
     #                                      YakB-12.7 mm machinegun
     LArange     = 2500.0;
     range_index = 0.05;
     is_bomb     = 0.1;
+    sensor_limit_horiz   =  90.0;
+    sensor_pitch_min     = -25.0;
+    sensor_pitch_max     =  25.0;
+    sensor_range_min     =  0.4;
+    sensor_range_max     =  3.0;
+    setprop("/controls/armament/larange", LArange);
+    RangeTest.stop();
+    RangeTest9m120.start();
+    #screen.log.write("LA Range 2500", 1, 0.6, 0.1);
+  } elsif (typeweapon == 1 and mi24type ==2) {
+    #                                      Rockets
+    LArange = 3500.0;
+    range_index = 0.1;
+    is_bomb = 0.01;
     setprop("/controls/armament/larange", LArange);
     RangeTest9m120.stop();
     RangeTest.start();
-    #screen.log.write("LA Range 2500", 1, 0.6, 0.1);
+    #screen.log.write("LA Range 4000 m", 1, 0.6, 0.1);
   } elsif (typeweapon == 2) {
     #                                      Rockets
     LArange = 3500.0;
@@ -86,6 +108,11 @@ var RangeSet = maketimer (0.1, func() {
     LArange = 6000.0;
     range_index = 0.1;
     is_bomb = 0.01;
+    sensor_limit_horiz   =  30.0;
+    sensor_pitch_min     = -15.0;
+    sensor_pitch_max     =  20.0;
+    sensor_range_min     =  0.4;
+    sensor_range_max     =  6.0;
     setprop("/controls/armament/larange", LArange);
     RangeTest.stop();
     RangeTest9m120.start();
@@ -124,13 +151,17 @@ var RangeTest = maketimer (0.02, func() {
     setprop("/controls/armament/laserrange", range);
     setprop("/controls/armament/LAMarkerON", 0);
     setprop("/controls/armament/pipperoffset", pipper_offset);
+    setprop("/controls/armament/ataka_heading_offset", 0.0);
     setprop("/controls/armament/pipper_offset_v", pipper_offset);
     #screen.log.write("Laser ON", 1, 0.6, 0.1);
   } else {
     setprop("/controls/armament/LAMarkerON", 0);
     setprop("/controls/armament/laserrange", 0);
     setprop("/controls/armament/pipperoffset", 0.001);
-    setprop("/controls/armament/pipper_offset_v", -0.1);
+    setprop("/controls/armament/pipper_offset_h", 0.0);
+    setprop("/controls/armament/pipper_offset_v", 0.0);
+    setprop("/controls/armament/ataka_heading_offset", 0.0);
+    setprop("/controls/armament/ataka_pitch_offset", 0.0);
     #screen.log.write("Range Test OFF", 1, 0.6, 0.1);
   }
 });
@@ -143,25 +174,17 @@ var RangeTest9m120 = maketimer (0.02, func() {
   var tgt_range_km  = getprop("/tracking/rng-km");
   var tgt_locked    = getprop("/tracking/tgt-designated");
   var mis_index     = getprop("/controls/armament/ataka-index");
+  var sen_index     = getprop("/controls/armament/sensor-index");
   var missile_alt   = ac_alt;
   var view_alt      = ac_alt;
   var dive_index    = is_bomb*(ac_pitch+90)/100;
-  
-  var sensor_limit_horiz   =  30.0;
-  var sensor_pitch_min     = -15.0;
-  var sensor_pitch_max     =  20.0;
-  var sensor_range_min     =  0.4;
-  var sensor_range_max     =  6.0;
-  var tgt_offset_abs = abs(abs(ac_heading -360) -abs(tgt_bearing -360));
-  var tgt_missile_pitch_sin = ((math.tan(missile_alt/3.281/((tgt_range_km +mis_index)*1000))) /D2R);
-  var tgt_sensor_pitch_sin  = ((math.tan(view_alt/3.281/(tgt_range_km*1000))) /D2R);
-  var tgt_missile_pitch = (tgt_missile_pitch_sin +ac_pitch);
-  var tgt_sensor_pitch = (tgt_sensor_pitch_sin +ac_pitch);
-  var tgt_sensor_hdg = (ac_heading -tgt_bearing);
 
-  #arc length, L = a x (Pi/180) x r, where a is in degrees
-  #var pipper_offset_a_h = tgt_sensor_hdg*0.01;
-  #var pipper_offset_a_v = 0.007276/(math.sin(tgt_sensor_pitch *D2R));
+  var tgt_offset_abs = abs(abs(ac_heading -360) -abs(tgt_bearing -360));
+  var tgt_missile_pitch_tan = ((math.tan(missile_alt/3.281/((tgt_range_km +mis_index)*1000))) /D2R);
+  var tgt_sensor_pitch_tan  = ((math.tan(view_alt/3.281/((tgt_range_km +sen_index)*1000))) /D2R);
+  var tgt_missile_pitch = (tgt_missile_pitch_tan +ac_pitch);
+  var tgt_sensor_pitch = (tgt_sensor_pitch_tan +ac_pitch);
+  var tgt_sensor_hdg = (ac_heading -tgt_bearing);
 
   #9M120 (tandem HEAT) 0.4-6 km
   #9M120 (termobaric Anti-personnel) 1-5.8 km
@@ -171,11 +194,9 @@ var RangeTest9m120 = maketimer (0.02, func() {
   if (tgt_locked and tgt_range_km < sensor_range_max and tgt_range_km > sensor_range_min and tgt_offset_abs < sensor_limit_horiz and tgt_sensor_pitch < sensor_pitch_max and tgt_sensor_pitch > sensor_pitch_min) {
     var my_view_number = getprop("/sim/current-view/view-number");
     var gunsight_auto = getprop("controls/electric/gunsight-auto");
+    var selected_wpn = getprop("controls/armament/weapon-type");
     setprop("/controls/armament/LAMarkerON", 0);
     setprop("/controls/armament/ataka-inrange", 1);
-    #setprop("/controls/armament/ataka-index", 0.2);
-    #setprop("/controls/armament/laserrange", tgt_range_km);
-    #setprop("/controls/armament/pipperoffset", -pipper_offset_a_v*0.7);
     setprop("/controls/armament/ataka_heading_offset", -tgt_sensor_hdg);
     setprop("/controls/armament/ataka_pitch_offset", -tgt_missile_pitch);
     setprop("/controls/armament/pipper_offset_h", tgt_sensor_hdg);
@@ -184,7 +205,12 @@ var RangeTest9m120 = maketimer (0.02, func() {
       setprop("/sim/current-view/heading-offset-deg", tgt_sensor_hdg);
       setprop("/sim/current-view/pitch-offset-deg", -tgt_sensor_pitch);
       #setprop("/controls/armament/ataka-index", 180.0);
-      #screen.log.write("Padlock", 1, 0.6, 0.1);
+      #screen.log.write("View lock", 1, 0.6, 0.1);
+    } elsif (my_view_number != 8 and gunsight_auto and selected_wpn ==1 and mi24type ==1){
+      setprop("/sim/model/turret[0]/heading", -tgt_sensor_hdg);
+      setprop("/sim/model/turret[0]/pitch", -tgt_sensor_pitch);
+      #setprop("/controls/armament/ataka-index", 180.0);
+      #screen.log.write("Turret lock", 1, 0.6, 0.1);
     }
     #screen.log.write("In range", 1, 0.6, 0.1);
     #screen.log.write(tgt_pitch_sin, 1, 0.6, 0.1);

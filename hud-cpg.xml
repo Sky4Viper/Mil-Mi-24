@@ -609,10 +609,22 @@
    <property>controls/electric/gunsight-auto</property>
    <not><property>/controls/armament/ataka-inrange</property></not>
    <property>/tracking/tgt-designated</property>
-   <greater-than>
+   <or>
+  <greater-than>
+   <property>controls/armament/weapon-type</property>
+   <value>2</value>
+  </greater-than>
+  <and>
+   <equals>
     <property>controls/armament/weapon-type</property>
-    <value>2</value>
-   </greater-than>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>1</value>
+   </equals>
+  </and>
+  </or>
   </condition>
  <x>-10</x>
  <y>-122</y>
@@ -631,10 +643,22 @@
  <property>controls/electric/gunsight-auto</property>
  <property>/controls/armament/ataka-inrange</property>
  <property>/tracking/tgt-designated</property>
- <greater-than>
-  <property>controls/armament/weapon-type</property>
- <value>2</value>
- </greater-than>
+ <or>
+  <greater-than>
+   <property>controls/armament/weapon-type</property>
+   <value>2</value>
+  </greater-than>
+  <and>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>1</value>
+   </equals>
+  </and>
+  </or>
   </condition>
  <x>-10</x>
  <y>-122</y>
@@ -1232,10 +1256,22 @@
 
  <condition>
   <property>/tracking/tgt-designated</property>
+  <or>
   <greater-than>
    <property>controls/armament/weapon-type</property>
-  <value>2</value>
+   <value>2</value>
   </greater-than>
+  <and>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>1</value>
+   </equals>
+  </and>
+  </or>
  </condition>
 </label>
 
