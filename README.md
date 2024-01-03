@@ -40,6 +40,16 @@ Some useful keys:
 - "d" - open pilot's door
 - "D" - open cargo compartment doors
 
+How to use guided missiles 
+==========================
+(they are not relly guided, just lauch at the designated spot):
+- select 9M120-Atacka missile (> key)
+- turn on sight "Auto" mode (switch on the sight unit)
+- turn on master arm (m key)
+- mouse click on the target to designate
+- if you are in gunner seat and target is within launch parameters (+-30 deg horizontaly, +15 up -20 down) the view will lock on target
+- once you hear the tone, press the trigger to launch missile
+
 Thanks
 ======
 
