@@ -137,7 +137,7 @@ var turret=
   {
     #settimer(loop, 0);
     if(me.viewChange == nil) {
-      me.viewChange = setlistener("sim/current-view/view-number", func(currentView) {
+      me.viewChange = setlistener("sim/current-view/view-number-raw", func(currentView) {
         #print("L1 ", me.loop_running);
         if(currentView.getValue() == me.view) {
           #print("L1 prime", me.loop_running);
@@ -155,7 +155,7 @@ var turret=
     #me.loop_running = 1;
     var loop = func {
       #print("3");
-      if(getprop("sim/current-view/view-number") == me.view) {
+      if(getprop("sim/current-view/view-number-raw") == me.view) {
         me.move();
         me.UPDATE_PERIOD = 0.04;
       } else {
@@ -179,7 +179,7 @@ var turret=
 
 #  nom     : TourelledeToit
 #  index   :  0 <-Il s'agit de la première tourelle, la variable est definie dans sim/model/turret[0]
-#  view    :  9 Il s'agit de l'index reel de la view, disponible ici : /sim/current-view/view-number
+#  view    :  9 Il s'agit de l'index reel de la view, disponible ici : /sim/current-view/view-number-raw
 #  heading : path de la variable heading du model 3D
 #  pitch   : path de la variable pitch du model 3D
 #  heading, min max : limitations en heading. Si max = min alors pas de limitation
@@ -189,7 +189,7 @@ var turret=
 #func(name,index, view_number,heading_path,pitch_path,minhead, maxhead,headdegsec,minpitch, maxpitch,pitchdegsec)
 #  name          : TourelledeToit (Name it as you wish)
 #  index         :  0 <-Here it's the first turret, so 0. Variable can be found here :  sim/model/turret[0]
-#  view          :  9 View index. Can be found here : /sim/current-view/view-number
+#  view          :  9 View index. Can be found here : /sim/current-view/view-number-raw
 #  heading_path  :  heading_path of the turret. 3D model move based on this.(Submodels&bullets too)
 #  pitch_path    :  pitch path  of the turret. 3D model move based on this.(Submodels&bullets too)
 #heading, min max: heading limitation, min & max. if max=min : no limitation
@@ -198,7 +198,7 @@ var turret=
 #pitchdegsec     : Turret pitch turn rate in degree/seconds
 
 #création de l'objet
-var tourelleCanon = turret.new("tourelleCanon",0,8,"sim/model/turret[0]/heading","sim/model/turret[0]/pitch",270,90,30,-25,25,30);
+var tourelleCanon = turret.new("tourelleCanon",0,100,"sim/model/turret[0]/heading","sim/model/turret[0]/pitch",270,90,30,-25,25,30);
 
 
 #init de l'objet

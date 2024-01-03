@@ -323,6 +323,10 @@
         <or>
          <equals>
              <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
              <value>3</value>
          </equals>
          <equals>

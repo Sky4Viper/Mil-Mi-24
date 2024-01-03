@@ -8,7 +8,7 @@ props.globals.initNode("/controls/armament/sensor-index", 0.001, "DOUBLE");
 props.globals.initNode("/controls/armament/ataka-inrange", 0, "BOOL");
 props.globals.initNode("/controls/electric/gunsight-auto", 0, "BOOL");
 props.globals.initNode("/controls/armament/laserrange", 0, "DOUBLE");
-props.globals.initNode("/controls/armament/pipperoffset", 0, "DOUBLE");
+#props.globals.initNode("/controls/armament/pipperoffset", 0, "DOUBLE");
 props.globals.initNode("/controls/armament/pipper_offset_h", 0, "DOUBLE");
 props.globals.initNode("/controls/armament/pipper_offset_v", 0, "DOUBLE");
 props.globals.initNode("/controls/armament/weapon-type", 2, "DOUBLE");
@@ -144,20 +144,22 @@ var RangeTest = maketimer (0.02, func() {
   if (ac_pitch < 0 and range < LArange and range < 15000.0) {
     setprop("/controls/armament/LAMarkerON", 1);
     setprop("/controls/armament/laserrange", range);
-    setprop("/controls/armament/pipperoffset", pipper_offset);
+    #setprop("/controls/armament/pipperoffset", pipper_offset);
+    setprop("/controls/armament/pipper_offset_h", 0.0);
     setprop("/controls/armament/pipper_offset_v", pipper_offset);
     #screen.log.write("In range", 1, 0.6, 0.1);
   } elsif (ac_pitch < 0 and range > LArange and range < 15000.0) {
     setprop("/controls/armament/laserrange", range);
     setprop("/controls/armament/LAMarkerON", 0);
-    setprop("/controls/armament/pipperoffset", pipper_offset);
+    #setprop("/controls/armament/pipperoffset", pipper_offset);
     setprop("/controls/armament/ataka_heading_offset", 0.0);
+    setprop("/controls/armament/pipper_offset_h", 0.0);
     setprop("/controls/armament/pipper_offset_v", pipper_offset);
     #screen.log.write("Laser ON", 1, 0.6, 0.1);
   } else {
     setprop("/controls/armament/LAMarkerON", 0);
     setprop("/controls/armament/laserrange", 0);
-    setprop("/controls/armament/pipperoffset", 0.001);
+    #setprop("/controls/armament/pipperoffset", 0.001);
     setprop("/controls/armament/pipper_offset_h", 0.0);
     setprop("/controls/armament/pipper_offset_v", 0.0);
     setprop("/controls/armament/ataka_heading_offset", 0.0);
@@ -181,7 +183,7 @@ var RangeTest9m120 = maketimer (0.02, func() {
 
   var tgt_offset_abs = abs(abs(ac_heading -360) -abs(tgt_bearing -360));
   var tgt_missile_pitch_tan = ((math.tan(missile_alt/3.281/((tgt_range_km +mis_index)*1000))) /D2R);
-  var tgt_sensor_pitch_tan  = ((math.tan(view_alt/3.281/((tgt_range_km +sen_index)*1000))) /D2R);
+  var tgt_sensor_pitch_tan  = ((math.tan(view_alt/3.281/((tgt_range_km -sen_index)*1000))) /D2R);
   var tgt_missile_pitch = (tgt_missile_pitch_tan +ac_pitch);
   var tgt_sensor_pitch = (tgt_sensor_pitch_tan +ac_pitch);
   var tgt_sensor_hdg = (ac_heading -tgt_bearing);
@@ -192,7 +194,7 @@ var RangeTest9m120 = maketimer (0.02, func() {
   #9M120M (Modernized anti-tank variant) 0.8-8 km
 
   if (tgt_locked and tgt_range_km < sensor_range_max and tgt_range_km > sensor_range_min and tgt_offset_abs < sensor_limit_horiz and tgt_sensor_pitch < sensor_pitch_max and tgt_sensor_pitch > sensor_pitch_min) {
-    var my_view_number = getprop("/sim/current-view/view-number");
+    var my_view_number = getprop("/sim/current-view/view-number-raw");
     var gunsight_auto = getprop("controls/electric/gunsight-auto");
     var selected_wpn = getprop("controls/armament/weapon-type");
     setprop("/controls/armament/LAMarkerON", 0);
@@ -201,12 +203,12 @@ var RangeTest9m120 = maketimer (0.02, func() {
     setprop("/controls/armament/ataka_pitch_offset", -tgt_missile_pitch);
     setprop("/controls/armament/pipper_offset_h", tgt_sensor_hdg);
     setprop("/controls/armament/pipper_offset_v", -tgt_missile_pitch);
-    if (my_view_number == 8 and gunsight_auto){
+    if (my_view_number == 100 and gunsight_auto){
       setprop("/sim/current-view/heading-offset-deg", tgt_sensor_hdg);
       setprop("/sim/current-view/pitch-offset-deg", -tgt_sensor_pitch);
       #setprop("/controls/armament/ataka-index", 180.0);
       #screen.log.write("View lock", 1, 0.6, 0.1);
-    } elsif (my_view_number != 8 and gunsight_auto and selected_wpn ==1 and mi24type ==1){
+    } elsif (my_view_number != 100 and gunsight_auto and selected_wpn ==1 and mi24type ==1){
       setprop("/sim/model/turret[0]/heading", -tgt_sensor_hdg);
       setprop("/sim/model/turret[0]/pitch", -tgt_sensor_pitch);
       #setprop("/controls/armament/ataka-index", 180.0);
@@ -220,7 +222,7 @@ var RangeTest9m120 = maketimer (0.02, func() {
     setprop("/controls/armament/LAMarkerON", 0);
     setprop("/controls/armament/ataka-inrange", 0);
     setprop("/controls/armament/laserrange", 0);
-    setprop("/controls/armament/pipperoffset", 0.001);
+    #setprop("/controls/armament/pipperoffset", 0.001);
     setprop("/controls/armament/pipper_offset_h", 0.0);
     setprop("/controls/armament/pipper_offset_v", 0.0);
     setprop("/controls/armament/ataka_heading_offset", 0.0);
