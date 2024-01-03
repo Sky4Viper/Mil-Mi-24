@@ -15,7 +15,10 @@
         <object-name>gunsight-base</object-name>
         <object-name>gunsight-base.001</object-name>
         <object-name>gunsight-base.002</object-name>
+        <object-name>gunsight-base.003</object-name>
         <object-name>gunsight-base-bg</object-name>
+        <object-name>index.001</object-name>
+        <object-name>index.002</object-name>
         <object-name>knobs</object-name>
         <object-name>knob.001</object-name>
         <object-name>knob.002</object-name>
@@ -89,6 +92,8 @@
     <animation>
       <type>material</type>
       <object-name>gunsight-base-bg</object-name>
+      <object-name>index.001</object-name>
+      <object-name>index.002</object-name>
       <emission>
         <red>0.6</red>
         <green>0.6</green>
@@ -635,6 +640,48 @@
     </animation>
 
     <animation>
+     <type>rotate</type>
+     <object-name>knob.003</object-name>
+     <property>/controls/armament/ataka-index</property>
+     <center>
+      <x-m> 0.010957 </x-m>
+      <y-m>-0.050462 </y-m>
+      <z-m>-0.033126 </z-m>
+     </center>
+     <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+     </axis>
+    </animation>
+
+    <animation>
+     <type>textranslate</type>
+     <object-name>index.001</object-name>
+     <property>/controls/armament/ataka-index</property>
+     <factor>0.0474</factor>
+     <offset>0</offset>
+     <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+     </axis>
+    </animation>
+
+    <animation>
+     <type>textranslate</type>
+     <object-name>index.002</object-name>
+     <property>/controls/armament/ataka-index</property>
+     <factor>0.474</factor>
+     <offset>0</offset>
+     <axis>
+      <x> 0</x>
+      <y> 1</y>
+      <z> 0</z>
+     </axis>
+    </animation>
+
+    <animation>
       <type>pick</type>
       <object-name>switch.001</object-name>
       <action>
@@ -691,9 +738,9 @@
       <binding>
         <command>property-adjust</command>
         <property>/controls/armament/ataka-index</property>
-        <step>0.1</step>
-        <min>-10</min>
-        <max>10</max>
+        <step>0.05</step>
+        <min>-0.9</min>
+        <max>0.9</max>
         <wrap>false</wrap>
       </binding>
     </increase>
@@ -701,9 +748,9 @@
       <binding>
         <command>property-adjust</command>
         <property>/controls/armament/ataka-index</property>
-        <step>-0.1</step>
-        <min>-10</min>
-        <max>10</max>
+        <step>-0.05</step>
+        <min>-0.9</min>
+        <max>0.9</max>
         <wrap>false</wrap>
       </binding>
     </decrease>
@@ -711,7 +758,7 @@
       <binding>
         <command>set-tooltip</command>
         <tooltip-id>mis-index-adj</tooltip-id>
-        <label>Set ATAKA offset %1.1f</label>
+        <label>Set ATAKA offset %1.2f</label>
         <property>/controls/armament/ataka-index</property>
       </binding>
     </hovered>
