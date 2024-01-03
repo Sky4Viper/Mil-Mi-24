@@ -36,7 +36,9 @@ Some useful keys:
 - ">" - select rockets
 - "q" - ripple mode select (0-salvo / 1-1 x rocket /2-4 x rockets)
 - "f" - launch flares (pickle)
-- "d" - fire selected weapon (trigger)
+- "e" - fire selected weapon (trigger)
+- "d" - open pilot's door
+- "D" - open cargo compartment doors
 
 Thanks
 ======
