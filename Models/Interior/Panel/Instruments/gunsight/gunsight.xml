@@ -109,7 +109,6 @@
     <animation>
       <type>material</type>
       <object-name>switch-base</object-name>
-      <object-name>button.001</object-name>
       <emission>
         <red>0.2</red>
         <green>0.2</green>

@@ -1,6 +1,6 @@
 AC3Db
-MATERIAL "glass_mat" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 1.000 1.000 1.000  spec 1.000 1.000 1.000  shi 64 trans 0.802
 MATERIAL "base_mat" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.543 0.543 0.543  shi 64 trans 0.000
+MATERIAL "glass_mat" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 1.000 1.000 1.000  spec 1.000 1.000 1.000  shi 64 trans 0.802
 MATERIAL "gray-metal" rgb 0.550 0.560 0.550  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.543 0.543 0.543  shi 64 trans 0.000
 MATERIAL "index_mat" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "light-green" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 1.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
