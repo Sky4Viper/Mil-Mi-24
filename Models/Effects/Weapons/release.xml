@@ -4,7 +4,7 @@
 
   <cannon>
     <name>Guns</name>
-    <model>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/apibullet-tracer.xml</model>
+    <model>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/12mm/12apibullet-tracer.xml</model>
     <trigger>controls/armament/trigger-mg</trigger>
     <speed>2755.9</speed>
     <repeat>true</repeat>
@@ -21,7 +21,7 @@
     <expiry>true</expiry>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
-    <submodel-path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/bullet-submodel.xml</submodel-path>
+    <submodel-path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/12mm/12bullet-submodel.xml</submodel-path>
   </cannon>
 
   <rocket-bullet>

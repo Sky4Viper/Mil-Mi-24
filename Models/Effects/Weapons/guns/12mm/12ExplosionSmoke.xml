@@ -5,7 +5,7 @@
 
   <particlesystem>
 
-    <name>BulletSmoke</name>
+    <name>12BulletSmoke</name>
     <texture>smoke.png</texture>
 
     <emissive type="bool">false</emissive>
@@ -23,7 +23,7 @@
       <phi-min-deg>-180</phi-min-deg>
       <phi-max-deg>180</phi-max-deg>
       <speed-mps>
-        <value>25</value>
+        <value>20</value>
         <spread>3</spread>
       </speed-mps>
       <rotation-speed>
@@ -39,7 +39,7 @@
     <counter>
       <particles-per-sec>
         <value>10</value>
-        <spread>10</spread>
+        <spread>8</spread>
       </particles-per-sec>
     </counter>
 
@@ -54,7 +54,7 @@
           <alpha><value> 0.5 </value></alpha>
         </color>
         <size>
-          <value>20</value>
+          <value>7</value>
         </size>
       </start>
 
@@ -66,12 +66,12 @@
           <alpha><value> 0.04 </value></alpha>
         </color>
         <size>
-          <value>30</value>
+          <value>12</value>
         </size>
       </end>
 
       <life-sec>
-        <value>10</value>
+        <value>4</value>
       </life-sec>
 
       <mass-kg>  5 </mass-kg>

@@ -151,6 +151,7 @@ var RangeTest = maketimer (0.02, func() {
   } elsif (ac_pitch < 0 and range > LArange and range < 15000.0) {
     setprop("/controls/armament/laserrange", range);
     setprop("/controls/armament/LAMarkerON", 0);
+    setprop("/controls/armament/ataka-inrange", 0);
     #setprop("/controls/armament/pipperoffset", pipper_offset);
     setprop("/controls/armament/ataka_heading_offset", 0.0);
     setprop("/controls/armament/pipper_offset_h", 0.0);
@@ -159,9 +160,11 @@ var RangeTest = maketimer (0.02, func() {
   } else {
     setprop("/controls/armament/LAMarkerON", 0);
     setprop("/controls/armament/laserrange", 0);
+    setprop("/controls/armament/ataka-inrange", 0);
     #setprop("/controls/armament/pipperoffset", 0.001);
     setprop("/controls/armament/pipper_offset_h", 0.0);
     setprop("/controls/armament/pipper_offset_v", 0.0);
+    setprop("/controls/armament/ataka-inrange", 0);
     setprop("/controls/armament/ataka_heading_offset", 0.0);
     setprop("/controls/armament/ataka_pitch_offset", 0.0);
     #screen.log.write("Range Test OFF", 1, 0.6, 0.1);

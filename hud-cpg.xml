@@ -278,6 +278,27 @@
 		<halign>left</halign>
     <condition>
       <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[0]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 1 Out</name>
+		<x>-55</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[0]/release-stick</property>
+        <value>1</value>
+      </equals>
     </condition>
 </label>
 
@@ -287,7 +308,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>1</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
     <condition>
@@ -312,6 +333,27 @@
 		<halign>left</halign>
 		<condition>
       <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[1]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 2 Out</name>
+		<x>-45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[1]/release-stick</property>
+        <value>1</value>
+      </equals>
     </condition>
 </label>
 
@@ -321,7 +363,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>2</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
 		<condition>
@@ -346,6 +388,27 @@
 		<halign>left</halign>
 		<condition>
       <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 3 Out</name>
+		<x>-35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
     </condition>
 </label>
 
@@ -355,7 +418,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>3</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
 		<condition>
@@ -380,6 +443,27 @@
 		<halign>left</halign>
 		<condition>
       <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 4 Out</name>
+		<x>-25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
     </condition>
 </label>
 
@@ -389,7 +473,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>4</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
 		<condition>
@@ -414,6 +498,27 @@
 		<halign>left</halign>
 		<condition>
       <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 5 Out</name>
+		<x>15</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
     </condition>
 </label>
 
@@ -423,7 +528,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>5</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
 		<condition>
@@ -448,6 +553,27 @@
 		<halign>left</halign>
 		<condition>
       <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 6 Out</name>
+		<x>25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
     </condition>
 </label>
 
@@ -457,7 +583,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>6</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
 		<condition>
@@ -482,6 +608,27 @@
 		<halign>left</halign>
 		<condition>
       <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[2]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 7 Out</name>
+		<x>35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[2]/release-stick</property>
+        <value>1</value>
+      </equals>
     </condition>
 </label>
 
@@ -491,7 +638,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>7</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
 		<condition>
@@ -516,6 +663,27 @@
 		<halign>left</halign>
 		<condition>
       <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[3]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 8 Out</name>
+		<x>45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[3]/release-stick</property>
+        <value>1</value>
+      </equals>
     </condition>
 </label>
 
@@ -525,7 +693,7 @@
 		<y>-145</y>
 		<width>10</width>
 		<height>10</height>
-		<format>8</format>
+		<format></format>
 		<halign>left</halign>
 		<box>true</box>
 		<condition>

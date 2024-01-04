@@ -4,7 +4,7 @@
 
   <submodel>
     <name>bullet splash</name>
-    <model>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/explosion.xml</model>
+    <model>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/12mm/12Explosion.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>
@@ -19,7 +19,7 @@
     <buoyancy>32.1</buoyancy>
     <aero-stabilised>false</aero-stabilised>
     <fuse-range>0</fuse-range>
-    <life>6</life>
+    <life>2.5</life>
   </submodel>
 
 </PropertyList>

@@ -4,7 +4,7 @@
 
   <particlesystem>
 
-    <name>BulletExplosion</name>
+    <name>12BulletExplosion</name>
     <texture>smoke.png</texture>
 
     <emissive type="bool">true</emissive>
@@ -22,8 +22,8 @@
       <phi-min-deg>   -180 </phi-min-deg>
       <phi-max-deg>    180 </phi-max-deg>
       <speed-mps>
-        <value> 50 </value>
-        <spread> 8 </spread>
+        <value> 10 </value>
+        <spread> 1 </spread>
       </speed-mps>
       <rotation-speed>
         <x-min-deg-sec> 0 </x-min-deg-sec>
@@ -37,7 +37,7 @@
 
     <counter>
       <particles-per-sec>
-        <value>  15 </value>
+        <value>  1 </value>
         <spread> 10 </spread>
       </particles-per-sec>
     </counter>
@@ -65,7 +65,7 @@
           <alpha><value> 0.1 </value></alpha>
         </color>
         <size>
-          <value> 10 </value>
+          <value> 6 </value>
         </size>
       </end>
 

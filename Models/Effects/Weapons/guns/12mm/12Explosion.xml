@@ -3,11 +3,11 @@
 <PropertyList>
 
   <model>
-    <path>ExplosionFire.xml</path>
+    <path>12ExplosionFire.xml</path>
   </model>
 
   <model>
-    <path>ExplosionSmoke.xml</path>
+    <path>12ExplosionSmoke.xml</path>
   </model>
 
 </PropertyList>

@@ -316,9 +316,9 @@
       <property>/controls/armament/pipper_offset_h</property>
       <subtype>textranslate</subtype>
       <interpolation>
-       <entry><ind>-8 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>-6 </ind><dep>-0.375 </dep></entry>
        <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 8 </ind><dep> 0.5 </dep></entry>
+       <entry><ind> 6 </ind><dep> 0.375 </dep></entry>
       </interpolation>
       <axis>
         <x>1</x>
@@ -384,9 +384,9 @@
       <property>/controls/armament/pipper_offset_v</property>
       <subtype>textranslate</subtype>
       <interpolation>
-       <entry><ind> -9.0 </ind><dep>0.59 </dep></entry>
+       <entry><ind> -11.5 </ind><dep>0.678 </dep></entry>
        <entry><ind>   0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 2.5 </ind><dep> -0.176 </dep></entry>
+       <entry><ind> 2.175 </ind><dep> -0.134 </dep></entry>
       </interpolation>
       <axis>
         <x>0</x>
