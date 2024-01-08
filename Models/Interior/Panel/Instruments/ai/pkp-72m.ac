@@ -1,8 +1,8 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.7
+MATERIAL "transparent" rgb 0.961 0.941 0.922  amb 0.961 0.941 0.922  emis 0.0000 0.0000 0.0000  spec 0.1536 0.1536 0.1536  shi 50 trans 0.91
 OBJECT world
-name "Blender_exporter_v3.3__pkp-72m.ac"
+name "pkp-72m.ac"
 kids 19
 OBJECT poly
 name "pkp-ball"

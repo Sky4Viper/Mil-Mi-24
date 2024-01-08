@@ -15,42 +15,37 @@
     <!-- Transparence -->
   </animation>
 
-  <effect>
+  <!-- <effect>
     <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/ArmReflect</inherits-from>
     <object-name>tube-outer</object-name>
-  </effect>
+  </effect> -->
 
-  <animation>
+ <animation>
 		<type>select</type>
 		<object-name>caps</object-name>
-    <object-name>9M120-missile</object-name>
+        <object-name>9M120-missile</object-name>
 		<condition>
-			<equals>
-				<property>controls/armament/station[1]/release-stick</property>
-				<value>0</value>
-			</equals>
+			<not><property>controls/armament/station[1]/release-stick</property></not>
 		</condition>
-	</animation>
+ </animation>
 
   <animation>
     <type>translate</type>
-		  <object-name>9M120-missile</object-name>
-    	<property>controls/armament/trigger-9m-2</property>
-    	<axis>
-      		<x>-1</x>
-      		<y>0</y>
-      		<z>0</z>
-    	</axis>
-      <interpolation>
-		    <entry>
-		      <ind> 0.0</ind>
-		      <dep> 0.0</dep>
-		    </entry>
-		    <entry>
-		      <ind> 1.0</ind>
-		      <dep> 4.3</dep>
-		    </entry>
-	    </interpolation>
+	<object-name>9M120-missile</object-name>
+    <property>controls/armament/trigger-9m-2</property>
+    <axis>
+	 <x>-1</x>
+	 <y>0</y>
+	 <z>0</z>
+    </axis>
+	<interpolation>
+	 <entry>
+	  <ind> 0.0</ind><dep> 0.0</dep>
+	 </entry>
+	 <entry>
+	  <ind> 1.0</ind><dep> 4.3</dep>
+	 </entry>
+    </interpolation>
   </animation>
 
 </PropertyList>

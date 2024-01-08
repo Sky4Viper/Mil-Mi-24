@@ -5,29 +5,36 @@
     <effect>
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>Glass</object-name>
+        <object-name>wpn-light.001</object-name>
+        <object-name>wpn-light.002</object-name>
+        <object-name>wpn-light.003</object-name>
+        <object-name>wpn-light.004</object-name>
+        <object-name>wpn-light.005</object-name>
+        <object-name>wpn-light.006</object-name>
     </effect>
 
     <animation>
 		<type>noshadow</type>
-		    <object-name>Sight-Fixed</object-name>
-        <object-name>Sight-Auto</object-name>
+		    <!-- <object-name>Sight-Fixed</object-name>
+        <object-name>Sight-Auto</object-name> -->
         <object-name>Glass</object-name>
-        <object-name>gunsight-base</object-name>
+        <!-- <object-name>gunsight-base</object-name> -->
         <object-name>gunsight-base.001</object-name>
         <object-name>gunsight-base.002</object-name>
         <object-name>gunsight-base.003</object-name>
         <object-name>gunsight-base-bg</object-name>
         <object-name>index.001</object-name>
         <object-name>index.002</object-name>
-        <object-name>knobs</object-name>
+        <!-- <object-name>knobs</object-name>
         <object-name>button.001</object-name>
         <object-name>knob.001</object-name>
         <object-name>knob.002</object-name>
         <object-name>knob.003</object-name>
+        <object-name>knob.004</object-name> -->
         <object-name>switch-base</object-name>
-        <object-name>switch.001</object-name>
+        <!-- <object-name>switch.001</object-name>
         <object-name>switch.002</object-name>
-        <object-name>switch.003</object-name>
+        <object-name>switch.003</object-name> -->
         <object-name>lamp-green</object-name>
         <object-name>lamp-green.on</object-name>
         <object-name>lamp-red</object-name>
@@ -43,52 +50,12 @@
         <object-name>wpn-light.005</object-name>
         <object-name>wpn-light.006</object-name>
 	  </animation>
-    
-    <!-- <animation>
-        <type>material</type>
-        <object-name>Sight-Fixed</object-name>
-        <emission>
-            <red>1.0</red>
-            <green>1.0</green>
-            <blue>1.0</blue>
-        </emission>
-    </animation> -->
 
+    <!-- working for Compositor -->
     <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-        <condition>
-            <property>/sim/rendering/rembrandt/enabled</property>
-        </condition>
-        <object-name>Sight-Fixed</object-name>
-        <object-name>Sight-Auto</object-name>
-        <object-name>Glass</object-name>
+     <inherits-from>../../../../Effects/Glass/glass</inherits-from>
+     <object-name>Glass</object-name>
     </effect>
-
-    <animation>
-    <type>select</type>
-    <object-name>Sight-Fixed</object-name>
-    <condition>
-      <property>controls/electric/battery-switch</property>
-      <not><property>controls/electric/gunsight-auto</property></not>
-      <equals>
-        <property>sim/current-view/internal</property>
-        <value>true</value>     
-      </equals>
-    </condition>
-    </animation>
-
-    <animation>
-    <type>select</type>
-    <object-name>Sight-Auto</object-name>
-    <condition>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/gunsight-auto</property>
-      <equals>
-        <property>sim/current-view/internal</property>
-        <value>true</value>     
-      </equals>
-    </condition>
-    </animation>
 
     <animation>
       <type>material</type>
@@ -197,9 +164,6 @@
         <object-name>wpn-light.006</object-name>
         <emission> 
             <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-            <!-- <red>0.4</red>
-            <green>0.3</green>
-            <blue>0.1</blue> -->
             <red>2.0</red>
             <green>1.94</green>
             <blue>1.75</blue>
@@ -209,269 +173,16 @@
       </condition>
     </animation>
 
-    <animation>
-    <type>material</type>
-    <object-name>Sight-Fixed</object-name>
-    <object-name>Sight-Auto</object-name>
-    <emission>
-        <red>1</red>
-        <green>0.7</green>
-        <blue>0.5</blue>
-        <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-      </emission>
-      <ambient>
-        <red>1</red>
-        <green>0.7</green>
-        <blue>0.5</blue>
-      </ambient>
-      <diffuse>
-        <red>1</red>
-        <green>0.7</green>
-        <blue>0.5</blue>
-      </diffuse>
-      <condition>
-      <property>controls/electric/battery-switch</property>
-      <equals>
-        <property>sim/current-view/internal</property>
-        <value>true</value>     
-      </equals>
-    </condition>
-    </animation>
-
-    <animation>
-    <type>texmultiple</type>
-    <object-name>Sight-Fixed</object-name>
-    <transform>
-      <property>/accelerations/pilot/z-accel-fps_sec</property>
-      <subtype>textranslate</subtype>
-      <factor>0.0022</factor>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
-    </transform>
-    <!-- <transform>
-      <property>/controls/armament/pipperoffset</property>
-      <subtype>textranslate</subtype>
-      <factor>-15.0</factor>
-      <min>-7</min>
-      <max>7</max>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
-    </transform> -->
-
-    <transform>
-      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
-      <subtype>textranslate</subtype>
-      <interpolation>
-       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
-       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-      </axis>
-    </transform>
-    <transform>
-      <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
-      <subtype>textranslate</subtype>
-      <interpolation>
-       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
-       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>-1</x>
-        <y>0</y>
-        <z>0</z>
-      </axis>
-    </transform>
-    </animation>
-
-<!-- AUTOMATIC SIGHT -->
-
-    <animation>
-    <type>texmultiple</type>
-    <object-name>Sight-Auto</object-name>
-
-    <!-- <transform>
-      <property>/accelerations/pilot/z-accel-fps_sec</property>
-      <subtype>textranslate</subtype>
-      <factor>0.0022</factor>
-      <axis>
-        <x>0</x>
-        <y>-1</y>
-        <z>0</z>
-      </axis>
-    </transform> -->
-
-    <transform>
-      <!-- <property>/controls/armament/ataka_heading_offset</property> -->
-      <property>/controls/armament/pipper_offset_h</property>
-      <subtype>textranslate</subtype>
-      <interpolation>
-       <entry><ind>-6 </ind><dep>-0.375 </dep></entry>
-       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 6 </ind><dep> 0.375 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-      </axis>
-      <condition>
-        <or>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>1</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>3</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>4</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>5</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>6</value>
-         </equals>
-        </or>
-      </condition>
-    </transform>
-
-    <transform>
-      <!-- <property>/controls/armament/ataka_pitch_offset</property> -->
-      <property>/controls/armament/pipper_offset_v</property>
-      <subtype>textranslate</subtype>
-      <interpolation>
-       <entry><ind> -1000.0 </ind><dep>0.59 </dep></entry>
-       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 170 </ind><dep> -0.17 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>0</x>
-        <y>1</y>
-        <z>0</z>
-      </axis>
-      <condition>
-        <or>
-        <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>1</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>2</value>
-         </equals>
-        </or>
-      </condition>
-    </transform>
-
-    <transform>
-      <!-- <property>/controls/armament/ataka_pitch_offset</property> -->
-      <property>/controls/armament/pipper_offset_v</property>
-      <subtype>textranslate</subtype>
-      <interpolation>
-       <entry><ind> -11.5 </ind><dep>0.678 </dep></entry>
-       <entry><ind>   0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 2.175 </ind><dep> -0.134 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>0</x>
-        <y>1</y>
-        <z>0</z>
-      </axis>
-      <condition>
-        <or>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>3</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>4</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>5</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>6</value>
-         </equals>
-        </or>
-      </condition>
-    </transform>
-
-    <transform>
-      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
-      <subtype>textranslate</subtype>
-      <!-- <factor>0.05</factor> -->
-      <interpolation>
-       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
-       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-      </axis>
-      <condition>
-        <or>
-        <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>1</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>2</value>
-         </equals>
-        </or>
-      </condition>
-    </transform>
-
-    <transform>
-      <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
-      <subtype>textranslate</subtype>
-      <!-- <factor>0.06</factor> -->
-      <interpolation>
-       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
-       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>-1</x>
-        <y>0</y>
-        <z>0</z>
-      </axis>
-      <condition>
-        <or>
-        <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>1</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>2</value>
-         </equals>
-        </or>
-      </condition>
-    </transform>
-
-    </animation>
+    <!-- **************************** -->
+   <model>
+    <path>Sightglass/sightglass.xml</path>
+    <offsets>
+      <x-m> -0.08770 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.02352 </z-m>
+      <pitch-deg> 20.44 </pitch-deg>
+    </offsets>
+   </model>
 
     <animation>
       <type>select</type>

@@ -2,7 +2,7 @@ AC3Db
 MATERIAL "DefaultWhite.005" rgb 0.800 0.800 0.800  amb 0.750 0.750 0.750  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 10 trans 0.000
 MATERIAL "light" rgb 0.800 0.800 0.800  amb 0.100 0.100 0.100  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 10 trans 0.000
 OBJECT world
-name "Blender_exporter_v3.3__rwr.ac"
+name "rwr.ac"
 kids 12
 OBJECT poly
 name "rwrHousing"

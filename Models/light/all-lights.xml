@@ -65,4 +65,25 @@
     </offsets>
   </model>
 
+  <model>
+    <path>light-cone.xml</path>
+    <offsets>
+      <x-m>  -6.87717 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -2.35923 </z-m>
+      <pitch-deg> -10 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>light-cone.xml</path>
+    <offsets>
+      <x-m>  -6.0998 </x-m>
+      <y-m>  -0.699186 </y-m>
+      <z-m> -1.84405 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+      <heading-deg> 12 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>

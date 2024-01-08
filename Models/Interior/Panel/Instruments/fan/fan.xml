@@ -10,13 +10,28 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>pick</type>
+    <object-name>fan-unit</object-name>
+    <object-name>fan-propeller</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/fan</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>spin</type>
     <object-name>fan-propeller</object-name>
     <condition>
       <property>controls/electric/battery-switch</property>
     </condition>
-    <object-name>fan-propeller</object-name>
-    <property>rotors/tail/blade[0]/position-deg</property>
+    <property>controls/electric/fan</property>
+    <factor>1024</factor>
     <axis>
       <x> -1 </x>
       <y>  0 </y>

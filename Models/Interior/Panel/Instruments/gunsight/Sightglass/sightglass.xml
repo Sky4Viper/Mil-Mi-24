@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>sightglass.ac</path>
+
+  <animation>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
+    <object-name>Sight-Fixed-3D</object-name>
+    <object-name>Sight-Auto-3D</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
+    <object-name>Sight-Fixed-3D</object-name>
+    <object-name>Sight-Auto-3D</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+
+  <effect>
+        <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Glass/mi-24-hud</inherits-from>
+        <object-name>Sight-Fixed</object-name>
+        <object-name>Sight-Auto</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>Sight-Fixed-3D</object-name>
+    <object-name>Sight-Auto-3D</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <!-- <factor-prop>controls/lighting/instruments-norm</factor-prop> -->
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   2.0 </red>
+      <green> 2.0 </green>
+      <blue>  2.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
+    <emission>
+        <red>1</red>
+        <green>0.7</green>
+        <blue>0.5</blue>
+        <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      </emission>
+      <ambient>
+        <red>1</red>
+        <green>0.7</green>
+        <blue>0.5</blue>
+      </ambient>
+      <diffuse>
+        <red>1</red>
+        <green>0.7</green>
+        <blue>0.5</blue>
+      </diffuse>
+      <condition>
+      <property>controls/electric/battery-switch</property>
+      <equals>
+        <property>sim/current-view/internal</property>
+        <value>true</value>     
+      </equals>
+    </condition>
+    </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Sight-Fixed</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+      <not><property>controls/electric/gunsight-auto</property></not>
+      <not><property>/sim/rendering/hdr/hdr-enabled</property></not>
+      <equals>
+        <property>sim/current-view/internal</property>
+        <value>true</value>     
+      </equals>
+    </condition>
+    </animation>
+
+    <animation>
+    <type>select</type>
+    <object-name>Sight-Auto</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+      <property>controls/electric/gunsight-auto</property>
+      <not><property>/sim/rendering/hdr/hdr-enabled</property></not>
+      <equals>
+        <property>sim/current-view/internal</property>
+        <value>true</value>     
+      </equals>
+    </condition>
+    </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Sight-Fixed-3D</object-name>
+    <condition>
+      <property>/sim/rendering/hdr/hdr-enabled</property>
+      <property>controls/electric/battery-switch</property>
+      <not><property>controls/electric/gunsight-auto</property></not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Sight-Auto-3D</object-name>
+    <condition>
+      <property>/sim/rendering/hdr/hdr-enabled</property>
+      <property>controls/electric/battery-switch</property>
+      <property>controls/electric/gunsight-auto</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>texmultiple</type>
+    <object-name>Sight-Fixed</object-name>
+    <transform>
+      <property>/accelerations/pilot/z-accel-fps_sec</property>
+      <subtype>textranslate</subtype>
+      <factor>0.0022</factor>
+      <axis>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </transform>
+
+    <transform>
+      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </transform>
+    <transform>
+      <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </transform>
+    </animation>
+
+<!-- AUTOMATIC SIGHT TEX -->
+
+    <animation>
+    <type>texmultiple</type>
+    <object-name>Sight-Auto</object-name>
+
+    <transform>
+      <property>/controls/armament/pipper_offset_h</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind>-6 </ind><dep>-0.375 </dep></entry>
+       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 6 </ind><dep> 0.375 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>3</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>4</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>5</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>6</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
+    <transform>
+      <property>/controls/armament/pipper_offset_v</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -1000.0 </ind><dep>0.59 </dep></entry>
+       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 170 </ind><dep> -0.17 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+        <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
+    <transform>
+      <property>/controls/armament/pipper_offset_v</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -11.5 </ind><dep>0.678 </dep></entry>
+       <entry><ind>   0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 2.175 </ind><dep> -0.134 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>3</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>4</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>5</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>6</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
+    <transform>
+      <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+        <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
+    <transform>
+      <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+      <subtype>textranslate</subtype>
+      <interpolation>
+       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+      <condition>
+        <or>
+        <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
+    </transform>
+
+    </animation>
+
+  <!-- ******** SIGHT 3D ******** -->
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Fixed-3D</object-name>
+    <property>/accelerations/pilot/z-accel-fps_sec</property>
+    <factor> 0.0005 </factor>
+    <min> -0.035 </min>
+    <max>  0.020 </max>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Fixed-3D</object-name>
+    <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.015 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.015 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Fixed-3D</object-name>
+    <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.015 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.015 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  <!-- *********************** -->
+
+  <!-- *** AUTOMATIC SIGHT 3D *** -->
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto-3D</object-name>
+    <condition>
+      <or>
+        <and>
+          <equals>
+            <property>controls/armament/weapon-type</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/sim/variant-id</property>
+            <value>1</value>
+          </equals>
+        </and>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>3</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>4</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>5</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>6</value>
+        </equals>
+      </or>
+    </condition>
+    <property>/controls/armament/pipper_offset_h</property>
+    <interpolation>
+      <entry><ind> -5 </ind><dep>  0.02 </dep></entry>
+      <entry><ind>  0 </ind><dep>  0.00 </dep></entry>
+      <entry><ind>  5 </ind><dep> -0.02 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+    </animation>
+
+    <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto-3D</object-name>
+    <condition>
+      <or>
+       <and>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>1</value>
+        </equals>
+        <equals>
+            <property>/sim/variant-id</property>
+            <value>2</value>
+        </equals>
+       </and>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>2</value>
+        </equals>
+      </or>
+    </condition>
+    <property>/controls/armament/pipper_offset_v</property>
+    <interpolation>
+      <entry><ind> -1000 </ind><dep> -0.035 </dep></entry>
+      <entry><ind>     0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind>   170 </ind><dep>  0.023 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto-3D</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>3</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>4</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>5</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>6</value>
+        </equals>
+      </or>
+    </condition>
+    <property>/controls/armament/pipper_offset_v</property>
+    <interpolation>
+      <entry><ind> -16.0 </ind><dep> -0.05 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind>  2.5 </ind><dep>  0.025 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto-3D</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>2</value>
+        </equals>
+      </or>
+    </condition>
+    <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.015 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.015 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Sight-Auto-3D</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>controls/armament/weapon-type</property>
+          <value>2</value>
+        </equals>
+      </or>
+    </condition>
+    <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.010 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.010 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  <!-- *********************** -->
+
+</PropertyList>

@@ -230,6 +230,7 @@ var RangeTest9m120 = maketimer (0.02, func() {
     setprop("/controls/armament/pipper_offset_v", 0.0);
     setprop("/controls/armament/ataka_heading_offset", 0.0);
     setprop("/controls/armament/ataka_pitch_offset", 0.0);
+    RangeTest9m120.stop();
     #screen.log.write("Range Test OFF", 1, 0.6, 0.1);
   }
 });

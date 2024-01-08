@@ -143,10 +143,10 @@ var reload = func {
     screen.log.write("Ataka (9M120) missils reloaded", 1, 0.6, 0.1);
   } else {
     screen.log.write("You must be still on the ground to reaload! ", 1, 0.6, 0.1);
-    #setprop("/controls/armament/station[0]/release-stick", 0); #for test
-    #setprop("/controls/armament/station[1]/release-stick", 0); #for test
-    #setprop("/controls/armament/station[2]/release-stick", 0); #for test
-    #setprop("/controls/armament/station[3]/release-stick", 0); #for test
+    setprop("/controls/armament/station[0]/release-stick", 0); #for test
+    setprop("/controls/armament/station[1]/release-stick", 0); #for test
+    setprop("/controls/armament/station[2]/release-stick", 0); #for test
+    setprop("/controls/armament/station[3]/release-stick", 0); #for test
   }
 }
 

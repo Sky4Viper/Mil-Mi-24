@@ -23,6 +23,9 @@
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
     <object-name>fuselage-chin.001</object-name>
+    <object-name>headlight.001</object-name>
+    <object-name>headlight.002</object-name>
+    <object-name>headlight.003</object-name>
     <object-name>porteGH</object-name>
     <object-name>porteGB</object-name>
     <object-name>porteDH</object-name>
@@ -84,12 +87,16 @@
     <object-name>lampes</object-name>
     <object-name>lampeRed</object-name>
     <object-name>lampeGreen</object-name>
+    <object-name>headlight.glass</object-name>
   </animation>
 
   <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>fuselage-chin.001</object-name>
+    <object-name>headlight.001</object-name>
+    <object-name>headlight.002</object-name>
+    <object-name>headlight.003</object-name>
     <object-name>porteGH</object-name>
     <object-name>porteGB</object-name>
     <object-name>porteDH</object-name>
@@ -156,7 +163,10 @@
   <effect>
     <inherits-from>Effects/Bump/bumpspec</inherits-from>
     <object-name>fuselage</object-name>
+    <object-name>cachesentrees</object-name>
     <object-name>fuselage-chin.001</object-name>
+    <object-name>headlight.001</object-name>
+    <object-name>headlight.003</object-name>
     <object-name>porteGH</object-name>
     <object-name>porteGB</object-name>
     <object-name>porteDH</object-name>
@@ -197,6 +207,7 @@
     <object-name>lampes</object-name>
     <object-name>lampeRed</object-name>
     <object-name>lampeGreen</object-name>
+    <object-name>headlight.glass</object-name>
   </effect>
 
   <animation>
@@ -272,7 +283,6 @@
     <path>TailRotor/rotor.xml</path>
   </model>
 
-  <!-- Les portes des trains -->
   <animation>
     <type>rotate</type>
     <object-name>porteA</object-name>
@@ -282,6 +292,26 @@
       <x-m> -5.701 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -2.107 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Les portes des trains -->
+  <animation>
+    <type>rotate</type>
+    <object-name>headlight.001</object-name>
+    <object-name>headlight.002</object-name>
+    <object-name>headlight.glass</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor> 86 </factor>
+    <center>
+      <x-m> -6.83886 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.24581 </z-m>
     </center>
     <axis>
       <x> 0 </x>

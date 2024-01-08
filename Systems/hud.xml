@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path            n="1">Aircraft/Mil-Mi-24/Models/Effects/Hud/hud-cpg.xml</path>
+
+  <visibility      n="1">false</visibility>
+
+  <palette>
+    <color         n="0">
+      <alpha       type="float">0.85</alpha>
+      <antialiased type="bool">true</antialiased>
+      <brightness  type="float">0.85</brightness>
+      <transparent type="bool">true</transparent>
+      <red         type="float">0.38</red>
+      <green       type="float">1.0</green>
+      <blue        type="float">0.22</blue>
+    </color>
+
+    <color         n="1">
+      <alpha       type="float">0.85</alpha>
+      <antialiased type="bool">true</antialiased>
+      <brightness  type="float">0.85</brightness>
+      <transparent type="bool">true</transparent>
+      <red         type="float">1.0</red>
+      <green       type="float">1.0</green>
+      <blue        type="float">1.0</blue>
+    </color>
+
+    <color         n="2">
+      <alpha       type="float">0.85</alpha>
+      <antialiased type="bool">true</antialiased>
+      <brightness  type="float">0.85</brightness>
+      <transparent type="bool">true</transparent>
+      <red         type="float">1.0</red>
+      <green       type="float">0.2</green>
+      <blue        type="float">0.0</blue>
+    </color>
+
+    <color         n="3">
+      <alpha       type="float">0.85</alpha>
+      <antialiased type="bool">true</antialiased>
+      <brightness  type="float">0.85</brightness>
+      <transparent type="bool">false</transparent>
+      <red         type="float">0.0</red>
+      <green       type="float">0.0</green>
+      <blue        type="float">0.0</blue>
+    </color>
+  </palette>
+
+</PropertyList>

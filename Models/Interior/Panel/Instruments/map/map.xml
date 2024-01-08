@@ -30,6 +30,7 @@
     <type>material</type>
     <object-name>canvasCadre</object-name>
     <condition>
+      <not><property>/sim/rendering/hdr/hdr-enabled</property></not>
       <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
@@ -44,6 +45,7 @@
     <type>select</type>
     <object-name>canvasCadre</object-name>
     <condition>
+      <not><property>/sim/rendering/hdr/hdr-enabled</property></not>
       <property>controls/electric/battery-switch</property>
     </condition>
   </animation>

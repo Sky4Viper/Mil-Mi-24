@@ -4,7 +4,7 @@ MATERIAL "panels_mat" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64
 MATERIAL "interiour_mat.001" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "transparent_mat" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 81 trans 0.85
 OBJECT world
-name "Blender_exporter_v3.3__interior.ac"
+name "interior.ac"
 kids 24
 OBJECT poly
 name "instruments_front"

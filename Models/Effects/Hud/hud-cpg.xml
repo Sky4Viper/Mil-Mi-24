@@ -1,0 +1,1515 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <name>HUD</name>
+
+ <enable3d>false</enable3d>
+
+ <tape>
+  <name>Gyrocompass</name>
+  <input>
+   <property>/orientation/heading-deg</property>
+   <factor>0.1</factor>
+  </input>
+  <x>-100</x>
+  <y>170</y>
+  <width>200</width>
+  <height>28</height>
+  <display-span>4.0</display-span>
+  <modulo>36</modulo>
+  <option>top</option>
+  <label-gap-width>22</label-gap-width>
+  <major-divisions>1</major-divisions>
+  <minor-divisions>0.5</minor-divisions>
+  <tick-bottom>false</tick-bottom>
+  <tick-top>false</tick-top>
+  <tick-right>false</tick-right>
+  <tick-left>false</tick-left>
+  <cap-bottom>false</cap-bottom>
+  <cap-top>false</cap-top>
+  <cap-right>false</cap-right>
+  <cap-left>false</cap-left>
+  <marker-offset>0.0</marker-offset>
+  <enable-pointer>false</enable-pointer>
+  <pointer-type>fixed</pointer-type>
+  <tick-type>line</tick-type>
+  <tick-length>variable</tick-length>
+ </tape>
+
+ <label>
+  <name>Heading</name>
+  <x>-9</x>
+  <y>186</y>
+  <width>18</width>
+  <height>10</height>
+  <halign>center</halign>
+  <format>%03.0f</format>
+  <box>true</box>
+  <option>bottom</option>
+  <pointer-width>7</pointer-width>
+  <input>
+ <property>/orientation/heading-deg</property>
+  </input>
+ </label>
+
+<tape>
+ <name>LTMS tape</name>
+ <input>
+  <property>/sim/current-view/goal-heading-offset-deg</property>
+  <factor>-1.0</factor>
+ </input>
+
+ <x>-100</x>
+ <y>150</y>
+ <width>200</width>
+ <height>20</height>
+
+ <display-span>4.0</display-span>
+ <modulo>36</modulo>
+
+ <option>bottom</option>
+ <option>notext</option>
+ <label-gap-width>22</label-gap-width>
+
+ <major-divisions>1</major-divisions>
+ <minor-divisions>0.5</minor-divisions>
+ <tick-bottom>false</tick-bottom>
+ <tick-top>false</tick-top>
+ <tick-right>false</tick-right>
+ <tick-left>false</tick-left>
+ <cap-bottom>false</cap-bottom>
+ <cap-top>true</cap-top>
+ <cap-right>false</cap-right>
+ <cap-left>false</cap-left>
+ <marker-offset>0.0</marker-offset>
+ <enable-pointer>false</enable-pointer>
+ <pointer-type>fixed</pointer-type>
+ <tick-type>line</tick-type>
+ <tick-length>variable</tick-length>
+</tape>
+
+<label>
+  <name>Turret Heading</name>
+  <condition>
+   <less-than>
+    <property>controls/armament/weapon-type</property>
+    <value>3</value>
+   </less-than>
+  </condition>
+  <x>-9</x>
+  <y>140</y>
+  <width>18</width>
+  <height>10</height>
+  <halign>center</halign>
+  <format>%03.0f</format>
+  <option>top</option>
+  <box>true</box>
+  <input>
+ <property>sim/model/turret[0]/heading</property>
+ <factor>1.0</factor>
+  </input>
+</label>
+
+<label>
+  <name>Target Bearing</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <greater-than>
+    <property>controls/armament/weapon-type</property>
+    <value>2</value>
+   </greater-than>
+  </condition>
+  <x>-9</x>
+  <y>140</y>
+  <width>18</width>
+  <height>10</height>
+  <halign>center</halign>
+  <format>%03.0f</format>
+  <option>top</option>
+  <box>true</box>
+  <input>
+ <property>/tracking/bearing</property>
+ <factor>1.0</factor>
+  </input>
+</label>
+
+<!-- <label>
+ <name>LTMCTXT</name>
+ <x>-100</x>
+ <y>150</y>
+ <width>20</width>
+ <height>10</height>
+ <format>LTMC</format>
+ <box>false</box>
+</label> -->
+
+<!-- Weapon stations -->
+
+<label>
+  <name>9M120 Selected</name>
+  <x>-100</x>
+  <y>150</y>
+  <width>1</width>
+  <height>1</height>
+  <format>9M120-ATAKA x1</format>
+  <halign>right</halign>
+  <condition>
+   <and>
+    <property>/controls/armament/master-arm</property>
+    <or>
+     <and>
+      <equals>
+      <property>controls/armament/weapon-type</property>
+      <value>3</value>
+      </equals>
+      <equals>
+      <property>controls/armament/station[0]/release-stick</property>
+      <value>0</value>
+      </equals>
+     </and>
+     <and>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>4</value>
+      </equals>
+      <equals>
+       <property>controls/armament/station[1]/release-stick</property>
+       <value>0</value>
+      </equals>
+     </and>
+     <and>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>5</value>
+      </equals>
+      <equals>
+       <property>controls/armament/station[2]/release-stick</property>
+       <value>0</value>
+      </equals>
+      </and>
+      <and>
+     <equals>
+      <property>controls/armament/weapon-type</property>
+      <value>6</value>
+     </equals>
+     <equals>
+      <property>controls/armament/station[3]/release-stick</property>
+      <value>0</value>
+      </equals>
+     </and>
+    </or>
+   </and>
+  </condition>
+</label>
+
+<label>
+  <name>Yak-127 Selected</name>
+  <x>-100</x>
+  <y>150</y>
+  <width>1</width>
+  <height>1</height>
+  <format>YAK-12.7mm x2500</format>
+  <halign>right</halign>
+  <condition>
+   <property>/controls/armament/master-arm</property>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>1</value>
+   </equals>
+  </condition>
+</label>
+
+<label>
+  <name>GSh-30-2K Selected</name>
+  <x>-100</x>
+  <y>150</y>
+  <width>1</width>
+  <height>1</height>
+  <format>GSH-30 x250</format>
+  <halign>right</halign>
+  <condition>
+   <property>/controls/armament/master-arm</property>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>2</value>
+   </equals>
+  </condition>
+</label>
+
+<label>
+  <name>B8V20 Selected</name>
+  <x>-100</x>
+  <y>150</y>
+  <width>1</width>
+  <height>1</height>
+  <format>%2d</format>
+  <halign>right</halign>
+  <input>
+   <property>/controls/armament/rocketsLeft1</property>
+  </input>
+  <prefix>B8V20 x4 x</prefix>
+  <condition>
+   <property>/controls/armament/master-arm</property>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>2</value>
+   </equals>
+  </condition>
+</label>
+
+<!-- WEAPON STATIONS -->
+
+<label>
+		<name>WPN Station 1</name>
+		<x>-55</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>1</format>
+		<halign>left</halign>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[0]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 1 Out</name>
+		<x>-55</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[0]/release-stick</property>
+        <value>1</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 1</name>
+		<x>-55</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>3</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 2</name>
+		<x>-45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>2</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[1]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 2 Out</name>
+		<x>-45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[1]/release-stick</property>
+        <value>1</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 2</name>
+		<x>-45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>4</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 3</name>
+		<x>-35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>3</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 3 Out</name>
+		<x>-35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 3</name>
+		<x>-35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 4</name>
+		<x>-25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>4</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 4 Out</name>
+		<x>-25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 4</name>
+		<x>-25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 5</name>
+		<x>15</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>5</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 5 Out</name>
+		<x>15</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 5</name>
+		<x>15</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 6</name>
+		<x>25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>6</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <greater-than>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </greater-than>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 6 Out</name>
+		<x>25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>/controls/armament/rocketsLeft1</property>
+       <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 6</name>
+		<x>25</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 7</name>
+		<x>35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>7</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[2]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 7 Out</name>
+		<x>35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[2]/release-stick</property>
+        <value>1</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 7</name>
+		<x>35</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>5</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<label>
+		<name>WPN Station 8</name>
+		<x>45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>8</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[3]/release-stick</property>
+        <value>0</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>WPN Station 8 Out</name>
+		<x>45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format>X</format>
+		<halign>left</halign>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+        <property>controls/armament/station[3]/release-stick</property>
+        <value>1</value>
+      </equals>
+    </condition>
+</label>
+
+<label>
+		<name>Sel WPN Station 8</name>
+		<x>45</x>
+		<y>-145</y>
+		<width>10</width>
+		<height>10</height>
+		<format> </format>
+		<halign>left</halign>
+		<box>true</box>
+		<condition>
+      <property>/controls/armament/master-arm</property>
+      <equals>
+       <property>controls/armament/weapon-type</property>
+       <value>6</value>
+      </equals>
+    </condition>
+		<blinking>
+			<interval>0.25</interval>
+		</blinking>
+</label>
+
+<!-- AUTOPILOT -->
+
+ <label>
+  <name>Autopilot Altitude Hold</name>
+  <x>197</x>
+  <y>0</y>
+  <width>1</width>
+  <height>1</height>
+  <box>true</box>
+  <format>%04d</format>
+  <halign>left</halign>
+  <input>
+   <property>/autopilot/settings/target-altitude-ft</property>
+  </input>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+   <equals>
+    <property>/autopilot/locks/altitude</property>
+    <value>altitude-hold</value>
+   </equals>
+  </condition>
+ </label>
+
+ <label>
+  <name>Autopilot AGL Hold</name>
+  <x>197</x>
+  <y>0</y>
+  <width>1</width>
+  <height>1</height>
+  <box>true</box>
+  <format>%04d</format>
+  <halign>left</halign>
+  <postfix> R</postfix>
+  <input>
+   <property>/autopilot/settings/target-agl-ft</property>
+  </input>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+   <equals>
+    <property>/autopilot/locks/altitude</property>
+    <value>agl-hold</value>
+   </equals>
+  </condition>
+ </label>
+
+ <label>
+  <name>Autopilot Wing Level</name>
+  <x>-30</x>
+  <y>-176</y>
+  <width>60</width>
+  <height>10</height>
+  <box>true</box>
+  <format>ROLL</format>
+  <halign>center</halign>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+   <equals>
+    <property>/autopilot/locks/heading</property>
+    <value>wing-leveler</value>
+   </equals>
+  </condition>
+ </label>
+
+<label>
+ <name>TGTLOSTTXT</name>
+  <condition>
+   <property>controls/electric/gunsight-auto</property>
+   <not><property>/controls/armament/ataka-inrange</property></not>
+   <property>/tracking/tgt-designated</property>
+   <or>
+  <greater-than>
+   <property>controls/armament/weapon-type</property>
+   <value>2</value>
+  </greater-than>
+  <and>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>1</value>
+   </equals>
+  </and>
+  </or>
+  </condition>
+ <x>-10</x>
+ <y>-122</y>
+ <width>20</width>
+ <height>10</height>
+ <format>TGT LOST</format>
+ <box>false</box>
+ <blinking>
+ <interval>0.25</interval>
+ </blinking>
+</label>
+
+<label>
+ <name>TGTLOCKEDTXT</name>
+  <condition>
+ <property>controls/electric/gunsight-auto</property>
+ <property>/controls/armament/ataka-inrange</property>
+ <property>/tracking/tgt-designated</property>
+ <or>
+  <greater-than>
+   <property>controls/armament/weapon-type</property>
+   <value>2</value>
+  </greater-than>
+  <and>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>1</value>
+   </equals>
+  </and>
+  </or>
+  </condition>
+ <x>-10</x>
+ <y>-122</y>
+ <width>20</width>
+ <height>10</height>
+ <format>TGT LOCKED</format>
+ <box>false</box>
+</label>
+
+<label>
+ <name>GEARTXT</name>
+ <condition>
+ <greater-than>
+ <property>gear/gear[1]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+  </condition>
+ <x>-297</x>
+ <y>-227</y>
+ <width>20</width>
+ <height>10</height>
+ <format>GEAR</format>
+ <box>false</box>
+  <blinking>
+ <interval>0.25</interval>
+  <condition>
+ <greater-than>
+ <property>gear/gear[1]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+ <less-than>
+ <property>gear/gear[1]/position-norm</property>
+ <value>1</value>
+ </less-than>
+  </condition>
+ </blinking>
+</label>
+
+ <label>
+ <name>GEAR1</name>
+ <condition>
+ <greater-than>
+ <property>gear/gear[0]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+  </condition>
+ <x>-292</x>
+ <y>-199</y>
+ <width>10</width>
+ <height>10</height>
+ <format>1</format>
+ <box>true</box>
+ <blinking>
+ <interval>0.25</interval>
+  <condition>
+ <greater-than>
+ <property>gear/gear[0]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+ <less-than>
+ <property>gear/gear[0]/position-norm</property>
+ <value>1</value>
+ </less-than>
+  </condition>
+ </blinking>
+</label>
+
+ <label>
+ <name>GEAR2</name>
+  <condition>
+ <greater-than>
+ <property>gear/gear[1]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+  </condition>
+ <x>-304</x>
+ <y>-213</y>
+ <width>10</width>
+ <height>10</height>
+ <format>2</format>
+ <box>true</box>
+ <blinking>
+ <interval>0.25</interval>
+  <condition>
+ <greater-than>
+ <property>gear/gear[1]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+ <less-than>
+ <property>gear/gear[1]/position-norm</property>
+ <value>1</value>
+ </less-than>
+  </condition>
+ </blinking>
+</label>
+
+ <label>
+ <name>GEAR3</name>
+ <condition>
+ <greater-than>
+ <property>gear/gear[2]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+  </condition>
+ <x>-280</x>
+ <y>-213</y>
+ <width>10</width>
+ <height>10</height>
+ <format>3</format>
+ <box>true</box>
+ <blinking>
+ <interval>0.25</interval>
+  <condition>
+ <greater-than>
+ <property>gear/gear[2]/position-norm</property>
+ <value>0</value>
+ </greater-than>
+ <less-than>
+ <property>gear/gear[2]/position-norm</property>
+ <value>1</value>
+ </less-than>
+  </condition>
+ </blinking>
+</label>
+
+<!-- Time Local -->
+ <label>
+  <name>CLOCK</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>358</x>
+  <y>-228</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/instrumentation/clock/local-short-string</property>
+  </input>
+  <prefix>Time </prefix>
+  <halign>left</halign>
+ </label>
+ 
+ <label>
+  <name>Wind direction</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>235</x>
+  <y>-228</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/environment/wind-from-heading-deg</property>
+ <factor>1</factor>
+ <damp>0.0</damp>
+  </input>
+  <format>%5.0f</format>
+  <prefix>Wind</prefix>
+  <halign>left</halign>
+ </label>
+
+ <label>
+  <name>Wind speed</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>317</x>
+  <y>-228</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/environment/wind-speed-kt</property>
+ <factor>1</factor>
+ <damp>0.0</damp>
+  </input>
+  <format>%3.0f kt</format>
+  <prefix>@</prefix>
+  <halign>right</halign>
+ </label>
+
+ <dial>
+  <name>SIGHTDIAL1</name>
+ <x>0</x>
+ <y>0</y>
+ <input>
+  <property>sim/model/turret[0]/heading</property>
+ </input>
+ <major-divisions>10</major-divisions>
+ <minor-divisions>1</minor-divisions>
+ <display-span>10</display-span>
+ <modulo>64</modulo>
+ <radius>160</radius>
+ <divisions>64</divisions>
+ <format>%3d</format>
+ <halign>center</halign>
+ <condition>
+  <less-than>
+   <property>controls/armament/weapon-type</property>
+   <value>3</value>
+  </less-than>
+ </condition>
+ </dial>
+
+  <dial>
+  <name>SIGHTDIAL2</name>
+   <x>0</x>
+   <y>0</y>
+   <input>
+    <property>/controls/armament/ataka_heading_offset</property>
+   </input>
+   <major-divisions>10</major-divisions>
+   <minor-divisions>1</minor-divisions>
+   <display-span>10</display-span>
+   <modulo>64</modulo>
+   <radius>160</radius>
+   <divisions>64</divisions>
+   <format>%3d</format>
+   <halign>center</halign>
+   <condition>
+    <greater-than>
+     <property>controls/armament/weapon-type</property>
+     <value>2</value>
+   </greater-than>
+  </condition>
+ </dial>
+
+ <!-- <label>
+  <name>TGTRNG1</name>
+  <x>15</x>
+  <y>-10</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+   <property>/controls/armament/laserrange</property>
+   <factor>0.001</factor>
+  </input>
+  <format>%2.1fkm</format>
+  <halign>left</halign>
+  <condition>
+  <property>/controls/armament/master-arm</property>
+  <less-than>
+   <property>controls/armament/weapon-type</property>
+   <value>3</value>
+  </less-than>
+ </condition>
+</label> -->
+
+<label>
+  <name>TGTRNG2</name>
+  <x>15</x>
+  <y>-10</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/tracking/rng-km</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%2.1fkm</format>
+  <halign>left</halign>
+  <condition>
+  <property>/controls/armament/master-arm</property>
+  <property>/tracking/tgt-designated</property>
+  <greater-than>
+   <property>controls/armament/weapon-type</property>
+   <value>2</value>
+  </greater-than>
+ </condition>
+</label>
+
+<!-- SENSOR TURRET -->
+
+<label>
+  <name>TURRETPITCH</name>
+  <x>-150</x>
+  <y>0</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/sim/current-view/goal-pitch-offset-deg</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.2f</format>
+  <halign>left</halign>
+  <prefix>PITCH: </prefix>
+</label>
+
+<label>
+  <name>FOV</name>
+  <x>110</x>
+  <y>0</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/sim/current-view/field-of-view</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.0f</format>
+  <halign>left</halign>
+  <prefix>FOV: </prefix>
+</label>
+
+<label>
+ <name>Sensor TV Mode</name>
+ <x>-127</x>
+ <y>-10</y>
+ <width>1</width>
+ <height>1</height>
+ <format>TV</format>
+ <box>false</box>
+ <condition>
+ <equals>
+ <property>/sim/hud/current-color</property>
+ <value>0</value>
+ </equals>
+ </condition>
+</label>
+
+<label>
+ <name>Sensor IR Mode</name>
+ <x>-127</x>
+ <y>-10</y>
+ <width>1</width>
+ <height>1</height>
+ <format>IR</format>
+ <box>false</box>
+ <condition>
+ <equals>
+ <property>/sim/hud/current-color</property>
+ <value>1</value>
+ </equals>
+ </condition>
+</label>
+
+<!-- Aircraft Info -->
+
+ <label>
+  <name>AIRCRAFTINFO</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>315</x>
+  <y>110</y>
+  <input>
+  <property>/sim/</property>
+  </input>
+  <halign>left</halign>
+  <prefix>ACFT</prefix>
+ </label>
+
+ <label>
+  <name>LON</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>100</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/position/longitude-deg</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.4f</format>
+  <halign>left</halign>
+  <prefix>LON </prefix>
+ </label>
+
+ <label>
+  <name>LAT</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>90</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/position/latitude-deg</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.4f</format>
+  <halign>left</halign>
+  <prefix>LAT </prefix>
+ </label>
+
+ <label>
+  <name>AGL</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>80</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/position/altitude-agl-ft</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.4f</format>
+  <halign>left</halign>
+  <prefix>AGL </prefix>
+ </label>
+
+ <label>
+  <name>ACFTBRG</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>70</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/orientation/heading-deg</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.2f</format>
+  <halign>left</halign>
+  <prefix>BRG </prefix>
+ </label>
+
+ <label>
+  <name>IAS</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>60</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+  <property>/velocities/airspeed-kt</property>
+ <factor>1.852</factor>
+  </input>
+  <format>IAS  %5.0f km/h</format>
+  <halign>left</halign>
+ </label>
+
+ <label>
+  <name>Altitude</name>
+  <condition>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>50</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/position/altitude-ft</property>
+ <factor>0.3048</factor>
+  </input>
+  <format>ALT  %5.0f m</format>
+  <halign>left</halign>
+ </label>
+
+<!-- Target Info -->
+
+ <label>
+  <name>TGTINFO</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>315</x>
+  <y>-40</y>
+  <input>
+  <property>/sim/</property>
+  </input>
+  <halign>left</halign>
+  <prefix>TGT</prefix>
+ </label>
+
+ <label>
+  <name>TGTLON</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>-50</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/sim/input/click/longitude-deg</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.4f</format>
+  <halign>left</halign>
+  <prefix>LON </prefix>
+ </label>
+
+ <label>
+  <name>TGTLAT</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>-60</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/sim/input/click/latitude-deg</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.4f</format>
+  <halign>left</halign>
+  <prefix>LAT </prefix>
+ </label>
+
+ <label>
+  <name>TGTELEV</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>-70</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/sim/input/click/elevation-m</property>
+ <factor>1.0</factor>
+  </input>
+  <format>%3.4f</format>
+  <halign>left</halign>
+  <prefix>ELEV </prefix>
+ </label>
+
+ <label>
+  <name>TGTBRG</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>-80</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/tracking/bearing</property>
+ <factor>1.0</factor>
+  </input>
+  <format>BRG %3.2f</format>
+  <halign>left</halign>
+ </label>
+
+ <label>
+  <name>TGTRNGKM</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>-90</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/tracking/rng-km</property>
+ <factor>1.0</factor>
+  </input>
+  <format>RNG KM %3.2f</format>
+  <halign>left</halign>
+ </label>
+
+ <label>
+  <name>TGTRNGNM</name>
+  <condition>
+   <property>/tracking/tgt-designated</property>
+   <property>sim/model/mi24/hud-extra-info</property>
+  </condition>
+  <x>295</x>
+  <y>-100</y>
+  <width>1</width>
+  <height>1</height>
+  <input>
+ <property>/tracking/rng-nml</property>
+ <factor>1.0</factor>
+  </input>
+  <format>RNG NML %3.2f</format>
+  <halign>left</halign>
+ </label>
+
+<!-- Aiming Cross -->
+
+<label>
+ <name>TGTBOX 0</name>
+ <x>-9</x>
+ <y>-9</y>
+ <width>18</width>
+ <height>18</height>
+ <format>+</format>
+ <halign>center</halign>
+ <box>true</box>
+
+ <condition>
+  <property>/tracking/tgt-designated</property>
+  <or>
+  <greater-than>
+   <property>controls/armament/weapon-type</property>
+   <value>2</value>
+  </greater-than>
+  <and>
+   <equals>
+    <property>controls/armament/weapon-type</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/sim/variant-id</property>
+    <value>1</value>
+   </equals>
+  </and>
+  </or>
+ </condition>
+</label>
+
+<label>
+ <name>TGTBOX 0-1</name>
+ <x>-16</x>
+ <y>-16</y>
+ <width>32</width>
+ <height>32</height>
+ <format>+</format>
+ <halign>center</halign>
+ <box>true</box>
+</label>
+
+<label>
+ <name>TGTBOX 1</name>
+ <x>-0</x>
+ <y>-44</y>
+ <width>1</width>
+ <height>32</height>
+ <format> </format>
+ <halign>left</halign>
+ <box>true</box>
+ <option>bottom</option>
+ <pointer-width>0</pointer-width>
+ <pointer-length>40</pointer-length>
+</label>
+
+<label>
+ <name>TGTBOX 2</name>
+ <x>0</x>
+ <y>12</y>
+ <width>1</width>
+ <height>32</height>
+ <format> </format>
+ <halign>left</halign>
+ <box>true</box>
+ <option>top</option>
+ <pointer-width>0</pointer-width>
+ <pointer-length>40</pointer-length>
+</label>
+
+<label>
+ <name>TGTBOX 3</name>
+ <x>12</x>
+ <y>0</y>
+ <width>32</width>
+ <height>1</height>
+ <format> </format>
+ <halign>left</halign>
+ <box>true</box>
+ <option>right</option>
+ <pointer-width>0</pointer-width>
+ <pointer-length>40</pointer-length>
+</label>
+
+<label>
+ <name>TGTBOX 4</name>
+ <x>-44</x>
+ <y>0</y>
+ <width>32</width>
+ <height>1</height>
+ <format> </format>
+ <halign>left</halign>
+ <box>true</box>
+ <option>left</option>
+ <pointer-width>0</pointer-width>
+ <pointer-length>40</pointer-length>
+</label>
+
+
+
+</PropertyList>

@@ -11,9 +11,9 @@
     <!-- Transparence -->
   </animation>
 
-  <effect>
+  <!-- <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>rocket</object-name>
-  </effect>
+  </effect> -->
 
 </PropertyList>
