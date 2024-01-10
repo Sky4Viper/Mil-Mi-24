@@ -45,7 +45,6 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>flame-one</object-name>
-		<object-name>smoke</object-name>
 		<property>/sim/time/elapsed-sec</property>
 		<factor>-30</factor>
 		<center>
@@ -63,6 +62,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>flame-two</object-name>
+		<!-- <object-name>smoke</object-name> -->
 		<property>/sim/time/elapsed-sec</property>
 		<factor>40</factor>
 		<center>

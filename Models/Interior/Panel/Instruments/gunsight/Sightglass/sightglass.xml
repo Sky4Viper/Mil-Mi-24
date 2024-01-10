@@ -26,13 +26,16 @@
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitre</object-name>
+    <object-name>Sight-Fixed</object-name>
+    <object-name>Sight-Auto</object-name>
   </effect>
 
-  <effect>
+  <!-- <effect>
         <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Glass/mi-24-hud</inherits-from>
         <object-name>Sight-Fixed</object-name>
         <object-name>Sight-Auto</object-name>
-  </effect>
+        <object-name>vitre</object-name>
+  </effect> -->
 
   <animation>
     <type>material</type>
@@ -48,6 +51,16 @@
       <green> 2.0 </green>
       <blue>  2.0 </blue>
     </emission>
+    <ambient>
+        <red>   2.0 </red>
+      <green> 2.0 </green>
+      <blue>  2.0 </blue>
+      </ambient>
+      <diffuse>
+        <red>   2.0 </red>
+      <green> 2.0 </green>
+      <blue>  2.0 </blue>
+      </diffuse>
   </animation>
 
   <animation>
@@ -130,6 +143,7 @@
   <animation>
     <type>texmultiple</type>
     <object-name>Sight-Fixed</object-name>
+    
     <transform>
       <property>/accelerations/pilot/z-accel-fps_sec</property>
       <subtype>textranslate</subtype>
@@ -155,6 +169,7 @@
         <z>0</z>
       </axis>
     </transform>
+
     <transform>
       <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
       <subtype>textranslate</subtype>
@@ -169,6 +184,7 @@
         <z>0</z>
       </axis>
     </transform>
+
     </animation>
 
 <!-- AUTOMATIC SIGHT TEX -->
@@ -180,16 +196,6 @@
     <transform>
       <property>/controls/armament/pipper_offset_h</property>
       <subtype>textranslate</subtype>
-      <interpolation>
-       <entry><ind>-6 </ind><dep>-0.375 </dep></entry>
-       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 6 </ind><dep> 0.375 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>1</x>
-        <y>0</y>
-        <z>0</z>
-      </axis>
       <condition>
         <or>
          <equals>
@@ -214,11 +220,33 @@
          </equals>
         </or>
       </condition>
+      <interpolation>
+       <entry><ind>-7.5 </ind><dep>-0.41 </dep></entry>
+       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 7.5 </ind><dep> 0.41 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
     </transform>
 
     <transform>
       <property>/controls/armament/pipper_offset_v</property>
       <subtype>textranslate</subtype>
+      <condition>
+        <or>
+        <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
       <interpolation>
        <entry><ind> -1000.0 </ind><dep>0.59 </dep></entry>
        <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
@@ -229,33 +257,12 @@
         <y>1</y>
         <z>0</z>
       </axis>
-      <condition>
-        <or>
-        <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>1</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>2</value>
-         </equals>
-        </or>
-      </condition>
+      
     </transform>
 
     <transform>
       <property>/controls/armament/pipper_offset_v</property>
       <subtype>textranslate</subtype>
-      <interpolation>
-       <entry><ind> -11.5 </ind><dep>0.678 </dep></entry>
-       <entry><ind>   0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 2.175 </ind><dep> -0.134 </dep></entry>
-      </interpolation>
-      <axis>
-        <x>0</x>
-        <y>1</y>
-        <z>0</z>
-      </axis>
       <condition>
         <or>
          <equals>
@@ -276,11 +283,33 @@
          </equals>
         </or>
       </condition>
+      <interpolation>
+       <entry><ind> -11.5 </ind><dep>0.677 </dep></entry>
+       <entry><ind>   0 </ind><dep> 0.0 </dep></entry>
+       <entry><ind> 2.259 </ind><dep>-0.133 </dep></entry>
+      </interpolation>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
     </transform>
 
     <transform>
       <property>instrumentation/turn-indicator/indicated-turn-rate</property>
       <subtype>textranslate</subtype>
+      <condition>
+        <or>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>1</value>
+         </equals>
+         <equals>
+             <property>controls/armament/weapon-type</property>
+             <value>2</value>
+         </equals>
+        </or>
+      </condition>
       <interpolation>
        <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
        <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
@@ -291,9 +320,14 @@
         <y>0</y>
         <z>0</z>
       </axis>
+    </transform>
+
+    <!-- <transform>
+      <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+      <subtype>textranslate</subtype>
       <condition>
         <or>
-        <equals>
+         <equals>
              <property>controls/armament/weapon-type</property>
              <value>1</value>
          </equals>
@@ -303,34 +337,17 @@
          </equals>
         </or>
       </condition>
-    </transform>
-
-    <transform>
-      <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
-      <subtype>textranslate</subtype>
       <interpolation>
-       <entry><ind> -10.0 </ind><dep>-0.5 </dep></entry>
+       <entry><ind> -10.0 </ind><dep> 0.5 </dep></entry>
        <entry><ind>  0.0 </ind><dep> 0.0 </dep></entry>
-       <entry><ind> 10.0 </ind><dep> 0.5 </dep></entry>
+       <entry><ind> 10.0 </ind><dep> -0.5 </dep></entry>
       </interpolation>
       <axis>
-        <x>-1</x>
+        <x>1</x>
         <y>0</y>
         <z>0</z>
       </axis>
-      <condition>
-        <or>
-        <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>1</value>
-         </equals>
-         <equals>
-             <property>controls/armament/weapon-type</property>
-             <value>2</value>
-         </equals>
-        </or>
-      </condition>
-    </transform>
+    </transform> -->
 
     </animation>
 
@@ -488,9 +505,9 @@
     </condition>
     <property>/controls/armament/pipper_offset_v</property>
     <interpolation>
-      <entry><ind> -16.0 </ind><dep> -0.05 </dep></entry>
+      <entry><ind> -16.0 </ind><dep> -0.076 </dep></entry>
       <entry><ind>  0.0 </ind><dep>  0.000 </dep></entry>
-      <entry><ind>  2.5 </ind><dep>  0.025 </dep></entry>
+      <entry><ind>  2.5 </ind><dep>  0.022 </dep></entry>
     </interpolation>
     <axis>
       <x> 0 </x>

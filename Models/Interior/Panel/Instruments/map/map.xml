@@ -14,7 +14,7 @@
 
   <animation>
     <type>noshadow</type>
-    <object-name>fond</object-name>
+    <!-- <object-name>fond</object-name> -->
     <object-name>switches</object-name>
     <object-name>canvasCadre</object-name>
     <object-name>vitre</object-name>

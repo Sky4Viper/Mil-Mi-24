@@ -56,9 +56,7 @@
 
   <!-- ################ -->
   <armament>
-    <trigger>  0 </trigger>
-    <trigger1> 0 </trigger1>
-    <trigger2> 0 </trigger2>
+    <trigger type="bool">true</trigger>
   </armament>
   <!-- ################ -->
 

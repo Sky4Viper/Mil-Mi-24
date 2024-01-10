@@ -390,7 +390,7 @@ Updated by Helijah September 2012
 
 			<volume>
 				<property>/velocities/airspeed-kt</property>
-				<factor>0.015</factor>
+				<factor>0.0015</factor>
 				<min>0.03</min>
 				<max>0.55</max>
 			</volume>
@@ -401,8 +401,8 @@ Updated by Helijah September 2012
 				<offset>0.75</offset>
 			</pitch>
 
-			<reference-dist>100</reference-dist>
-			<max-dist>1000</max-dist>
+			<reference-dist>200</reference-dist>
+			<max-dist>500</max-dist>
 		</wind>
 
     <rain>

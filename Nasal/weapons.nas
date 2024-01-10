@@ -143,21 +143,21 @@ var reload = func {
     screen.log.write("Ataka (9M120) missils reloaded", 1, 0.6, 0.1);
   } else {
     screen.log.write("You must be still on the ground to reaload! ", 1, 0.6, 0.1);
-    setprop("/controls/armament/station[0]/release-stick", 0); #for test
-    setprop("/controls/armament/station[1]/release-stick", 0); #for test
-    setprop("/controls/armament/station[2]/release-stick", 0); #for test
-    setprop("/controls/armament/station[3]/release-stick", 0); #for test
+    #setprop("/controls/armament/station[0]/release-stick", 0); #for test
+    #setprop("/controls/armament/station[1]/release-stick", 0); #for test
+    #setprop("/controls/armament/station[2]/release-stick", 0); #for test
+    #setprop("/controls/armament/station[3]/release-stick", 0); #for test
   }
 }
 
-var flash_trigger    = props.globals.getNode("controls/armament/trigger", 0);
-var flash_trigger_mg = props.globals.getNode("controls/armament/trigger-mg", 0);
-var flash_trigger_s8 = props.globals.getNode("controls/armament/fire-s8-rockets", 0);
+var flash_trigger     = props.globals.getNode("controls/armament/trigger", 0);
+var flash_trigger_mg  = props.globals.getNode("controls/armament/trigger-mg", 0);
+var flash_trigger_s8  = props.globals.getNode("controls/armament/fire-s8-rockets", 0);
 var flash_trigger_9m1 = props.globals.getNode("controls/armament/trigger-9m-1", 0);
 var flash_trigger_9m2 = props.globals.getNode("controls/armament/trigger-9m-2", 0);
 var flash_trigger_9m3 = props.globals.getNode("controls/armament/trigger-9m-3", 0);
 var flash_trigger_9m4 = props.globals.getNode("controls/armament/trigger-9m-4", 0);
-var flash_pickle     = props.globals.getNode("controls/armament/pickle", 0);
+var flash_pickle      = props.globals.getNode("controls/armament/pickle", 0);
 
 #timers########################################################################################################
 

@@ -4,6 +4,7 @@ props.globals.initNode("/sim/is-MP-Aircraft", 0, "BOOL");
 props.globals.initNode("/controls/armament/fire-s8-rockets", 0, "BOOL");
 #setprop("/controls/armament/fire-s8-rockets", 0);
 
+#props.globals.initNode("/controls/armament/trigger", 0, "BOOL");
 props.globals.initNode("/controls/armament/trigger-s8", 0, "BOOL");
 props.globals.initNode("/controls/armament/trigger-s8-r", 0, "BOOL");
 props.globals.initNode("/controls/armament/weapon-type", 2, "DOUBLE");

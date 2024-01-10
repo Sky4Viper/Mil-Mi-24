@@ -61,7 +61,7 @@
       </binding>
     </key>
 
-    <!-- <key n="101">
+    <key n="101">
 				<name>e</name>
 				<desc>Fire selected weapons</desc>
 				<binding>
@@ -76,9 +76,9 @@
 					  <value>false</value>
 				  </binding>
 			  </mod-up>
-    </key> -->
+    </key>
 
-    <key n="101">
+    <!-- <key n="101">
       <name>e</name>
       <desc>Fire selected weapons</desc>
       <binding>
@@ -91,7 +91,7 @@
           <script>guns.stop_MG()</script>
         </binding>
       </mod-up>
-    </key>
+    </key> -->
 
     <key n="102">
       <name>f</name>

@@ -26,21 +26,35 @@
     <object-name>raduga</object-name>
     <!-- <object-name>separation</object-name> -->
 
-    <!-- Objets transparents -->
+    <!-- Objets transparents ALS -->
     <object-name>intvitres</object-name>
     <object-name>intvitresG</object-name>
     <object-name>intvitresD</object-name>
     <object-name>intvitrepilote</object-name>
+
+    <!-- Objets transparents HDR-->
+    <object-name>intvitres.hdr</object-name>
+    <object-name>intvitresG.hdr</object-name>
+    <object-name>intvitresD.hdr</object-name>
+    <object-name>intvitrepilote.hdr</object-name>
   </animation>
 
-  <!-- working for Compositor -->
+  <!-- GLASS ALS -->
   <effect>
-    <inherits-from>../Effects/Glass/glass</inherits-from>
-    <!-- <inherits-from>../Effects/Glass/glassrain</inherits-from> -->
+    <inherits-from>../Effects/Glass/glassrain</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitresG</object-name>
     <object-name>intvitresD</object-name>
     <object-name>intvitrepilote</object-name>
+  </effect>
+
+ <!-- GLASS HDR -->
+  <effect>
+    <inherits-from>../Effects/Glass/glass</inherits-from>
+    <object-name>intvitres.hdr</object-name>
+    <object-name>intvitresG.hdr</object-name>
+    <object-name>intvitresD.hdr</object-name>
+    <object-name>intvitrepilote.hdr</object-name>
   </effect>
 
   <model>
@@ -75,11 +89,37 @@
     <path>Cyclic/all-cyclics.xml</path>
   </model>
 
+  <!-- SWITCH GLASS -->
+
+  <animation>
+    <type>select</type>
+    <object-name>intvitres</object-name>
+    <object-name>intvitresG</object-name>
+    <object-name>intvitresD</object-name>
+    <object-name>intvitrepilote</object-name>
+    <condition>
+      <not><property>/sim/rendering/hdr/hdr-enabled</property></not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>intvitres.hdr</object-name>
+    <object-name>intvitresG.hdr</object-name>
+    <object-name>intvitresD.hdr</object-name>
+    <object-name>intvitrepilote.hdr</object-name>
+    <condition>
+      <property>/sim/rendering/hdr/hdr-enabled</property>
+    </condition>
+  </animation>
+
   <!-- Porte pilote -->
   <animation>
     <name>IntLaPortePilote</name>
     <object-name>intportepilote</object-name>
     <object-name>intvitrepilote</object-name>
+    <object-name>intportepilote.hdr</object-name>
+    <object-name>intvitrepilote.hdr</object-name>
   </animation>
 
   <animation>
@@ -116,12 +156,16 @@
     <name>IntPorteCargoGauche</name>
     <object-name>intporteGH</object-name>
     <object-name>intvitresG</object-name>
+    <object-name>intporteGH.hdr</object-name>
+    <object-name>intvitresG.hdr</object-name>
   </animation>
 
   <animation>
     <name>IntPorteCargoDroite</name>
     <object-name>intporteDH</object-name>
     <object-name>intvitresD</object-name>
+    <object-name>intporteDH.hdr</object-name>
+    <object-name>intvitresD.hdr</object-name>
   </animation>
 
   <animation>

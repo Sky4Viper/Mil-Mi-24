@@ -92,9 +92,9 @@
     <object-name>Glass</object-name>
     <emission>
       <factor-prop>controls/lighting/luminosite-lights</factor-prop>
-        <red>0.05</red>
-        <green>0.01</green>
-      	<blue>0.01</blue>
+        <red>0.08</red>
+        <green>0.08</green>
+      	<blue>0.09</blue>
     </emission>
     </animation>
 
@@ -402,6 +402,10 @@
         <repeatable>false</repeatable>
         <interval-sec>0.1</interval-sec>
         <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/gunsight-sync</property>
+        </binding>
+        <!-- <binding>
           <command>property-assign</command>
           <property>sim/model/turret[0]/heading</property>
           <value>0.1</value>
@@ -410,13 +414,13 @@
           <command>property-assign</command>
           <property>sim/model/turret[0]/pitch</property>
           <value>1</value>
-        </binding>
+        </binding> -->
       </action>
       <hovered>
        <binding>
         <command>set-tooltip</command>
          <tooltip-id>turret-reset</tooltip-id>
-         <label>Reset Turret Rotation Angle</label>
+         <label>Lock Turret Rotation</label>
        </binding>
       </hovered>
     </animation>
