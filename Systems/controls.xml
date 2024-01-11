@@ -56,7 +56,19 @@
 
   <!-- ################ -->
   <armament>
-    <trigger type="bool">true</trigger>
+    <trigger type="bool">false</trigger>
+    <station n="0">
+     <release-stick type="bool">false</release-stick>
+    </station>
+    <station n="1">
+     <release-stick type="bool">false</release-stick>
+    </station>
+    <station n="2">
+     <release-stick type="bool">false</release-stick>
+    </station>
+    <station n="3">
+     <release-stick type="bool">false</release-stick>
+    </station>
   </armament>
   <!-- ################ -->
 

@@ -16,11 +16,6 @@ props.globals.initNode("/controls/armament/weapon-type", 2, "DOUBLE");
 props.globals.initNode("/controls/armament/ataka_pitch_offset", 0, "DOUBLE");
 props.globals.initNode("/controls/armament/ataka_heading_offset", 0, "DOUBLE");
 
-props.globals.initNode("/controls/armament/station[0]/release-stick", 0, "BOOL");
-props.globals.initNode("/controls/armament/station[1]/release-stick", 0, "BOOL");
-props.globals.initNode("/controls/armament/station[2]/release-stick", 0, "BOOL");
-props.globals.initNode("/controls/armament/station[3]/release-stick", 0, "BOOL");
-
 var range         = 0.0;
 var LArange       = 5500.0;
 var LAmarkerON    = 0;

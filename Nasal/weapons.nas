@@ -1,3 +1,8 @@
+#props.globals.initNode("/controls/armament/station[0]/release-stick", 0, "BOOL");
+#props.globals.initNode("/controls/armament/station[1]/release-stick", 0, "BOOL");
+#props.globals.initNode("/controls/armament/station[2]/release-stick", 0, "BOOL");
+#props.globals.initNode("/controls/armament/station[3]/release-stick", 0, "BOOL");
+
 # for Flares
 fire_Flare = func {
   setprop("/controls/armament/pickle", 1);
@@ -59,10 +64,10 @@ Pickle = func {
 
     AtakaLA = (getprop("/controls/armament/ataka-inrange") ==1);
 
-    Ataka1OUT = (getprop("controls/armament/station[0]/release-stick") ==1);
-    Ataka2OUT = (getprop("controls/armament/station[1]/release-stick") ==1);
-    Ataka3OUT = (getprop("controls/armament/station[2]/release-stick") ==1);
-    Ataka4OUT = (getprop("controls/armament/station[3]/release-stick") ==1);
+    Ataka1OUT = getprop("controls/armament/station[0]/release-stick");
+    Ataka2OUT = getprop("controls/armament/station[1]/release-stick");
+    Ataka3OUT = getprop("controls/armament/station[2]/release-stick");
+    Ataka4OUT = getprop("controls/armament/station[3]/release-stick");
 
     if (MasterArm and S8RocketsON) {
       #screen.log.write("Fire selected weapon: Rockets ", 1, 0.6, 0.1);
@@ -78,7 +83,6 @@ Pickle = func {
       #screen.log.write("Fire selected weapon: Ataka Guided Missiles ", 1, 0.6, 0.1);
       print("Fire selected weapon: 9M120 - 1");
       setprop("/controls/armament/trigger-9m-1", 1);
-      #setprop("/controls/armament/station[0]/release-stick", 1);
       hide_9m120_1.singleShot = 1; # timer will only be run once
 			hide_9m120_1.start();
     }
@@ -86,7 +90,6 @@ Pickle = func {
       #screen.log.write("Fire selected weapon: Ataka Guided Missiles ", 1, 0.6, 0.1);
       print("Fire selected weapon: 9M120 - 2");
       setprop("/controls/armament/trigger-9m-2", 1);
-      #setprop("/controls/armament/station[1]/release-stick", 1);
       hide_9m120_2.singleShot = 1; # timer will only be run once
 			hide_9m120_2.start();
     }
@@ -94,7 +97,6 @@ Pickle = func {
       #screen.log.write("Fire selected weapon: Ataka Guided Missiles ", 1, 0.6, 0.1);
       print("Fire selected weapon: 9M120 - 3");
       setprop("/controls/armament/trigger-9m-3", 1);
-      #setprop("/controls/armament/station[2]/release-stick", 1);
       hide_9m120_3.singleShot = 1; # timer will only be run once
 			hide_9m120_3.start();
     }
@@ -102,7 +104,6 @@ Pickle = func {
       #screen.log.write("Fire selected weapon: Ataka Guided Missiles ", 1, 0.6, 0.1);
       print("Fire selected weapon: 9M120 - 4");
       setprop("/controls/armament/trigger-9m-4", 1);
-      #setprop("/controls/armament/station[3]/release-stick", 1);
       hide_9m120_4.singleShot = 1; # timer will only be run once
 			hide_9m120_4.start();
     }
