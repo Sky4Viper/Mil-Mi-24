@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>upk-23-250.ac</path>
+
+	<effect>
+     <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/ArmReflect</inherits-from>
+     <object-name>upk-23-250-container</object-name>
+	</effect>
+
+</PropertyList>

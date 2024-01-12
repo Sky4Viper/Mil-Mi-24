@@ -13,6 +13,13 @@
     <!-- Transparence -->
   </animation>
 
+  <effect>
+    <!-- <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from> -->
+    <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/ArmReflect</inherits-from>
+    <object-name>tubes</object-name>
+    <object-name>tubes.001</object-name>
+  </effect>
+
   <!-- Les roquettes -->
   <!-- Gauche -->
   <model>

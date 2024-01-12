@@ -10,6 +10,27 @@
       <y-m> -2.016 </y-m>
       <z-m> -1.367 </z-m>
     </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/upk-23-250/upk-23-250-2.xml</path>
+    <offsets>
+      <x-m> -1.436 </x-m>
+      <y-m> -2.016 </y-m>
+      <z-m> -1.367 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
   </model>
 
   <model>
@@ -91,6 +112,27 @@
       <y-m>  2.016 </y-m>
       <z-m> -1.367 </z-m>
     </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>/upk-23-250/upk-23-250-3.xml</path>
+    <offsets>
+      <x-m> -1.436 </x-m>
+      <y-m>  2.016 </y-m>
+      <z-m> -1.367 </z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>/sim/variant-id</property>
+        <value>2</value>
+      </equals>
+    </condition>
   </model>
 
   <model>

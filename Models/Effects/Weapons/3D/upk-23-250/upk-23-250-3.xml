@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>upk-23-250.ac</path>
+
+	<effect>
+     <inherits-from>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/ArmReflect</inherits-from>
+	 <!-- <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from> -->
+     <object-name>upk-23-250-container</object-name>
+	</effect>
+
+	<model>
+		<name>flame1r</name>
+		<path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/fire.xml</path>
+		<condition>
+			<equals>
+				<property>controls/armament/trigger-mg</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-1.57707</x-m>
+			<y-m>-0.059543</y-m>
+			<z-m>0.042784</z-m>
+			<heading-deg>180</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<overlay>
+		<animation n="100">
+		  <type>scale</type>
+		  <property>constants/zero</property>
+		  <x-offset> 1.4 </x-offset>
+		  <y-offset> 1.3 </y-offset>
+		  <z-offset> 1.3 </z-offset>
+        </animation>
+        </overlay>
+	</model>
+
+	<model>
+		<name>flame2r</name>
+		<path>Aircraft/Mil-Mi-24/Models/Effects/Weapons/guns/fire.xml</path>
+		<condition>
+			<equals>
+				<property>controls/armament/trigger-mg</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-1.57707</x-m>
+			<y-m> 0.059543</y-m>
+			<z-m> 0.042784</z-m>
+			<heading-deg>180</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<overlay>
+		<animation n="100">
+		  <type>scale</type>
+		  <property>constants/zero</property>
+		  <x-offset> 1.4 </x-offset>
+		  <y-offset> 1.3 </y-offset>
+		  <z-offset> 1.3 </z-offset>
+        </animation>
+        </overlay>
+	</model>
+
+
+	<!-- <model>
+		<name>PK-3-smoke</name>
+    	<path>Aircraft/L-39/Models/Effects/Gun/Flack.xml</path>
+		<condition>
+			<equals>
+				<property>controls/armament/trigger-mg</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+    	<offsets>
+      			<x-m>-0.438929</x-m>
+      			<y-m>0.0</y-m>
+      			<z-m>-0.089223</z-m>
+    	</offsets>
+  	</model>
+  	
+  	<model>
+  		<name>PK-3-smoke2</name>
+    		<path>Aircraft/L-39/Models/Effects/Engine/L-39ZA-blur.xml</path>
+    		<offsets>
+    			<x-m>-0.438929</x-m>
+      			<y-m>0.0</y-m>
+      			<z-m>-0.089223</z-m>
+    		</offsets>
+    		<condition>
+			<equals>
+				<property>controls/armament/trigger-mg</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+  	</model> -->
+
+</PropertyList>

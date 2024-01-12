@@ -69,8 +69,10 @@
 -->
 
 <PropertyList>
+
  <name>Aircraft/Mil-Mi-24/Models/Effects/Weapons/3D/ArmReflect</name>
- <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+ <!-- <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from> -->
+ <inherits-from>Effects/model-combined</inherits-from>
  <parameters>
   <rain-enabled type="int"> 2 </rain-enabled>
   <normalmap-enabled type="int"> 1 </normalmap-enabled>
@@ -87,6 +89,5 @@
   <reflection-correction type="float">-0.12</reflection-correction>
   <reflection-fresnel type="float">0.1</reflection-fresnel>
  </parameters>
-
 
 </PropertyList>
