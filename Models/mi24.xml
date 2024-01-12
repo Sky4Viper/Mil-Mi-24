@@ -63,7 +63,7 @@
     <object-name>axeA1</object-name>
     <object-name>axeA2</object-name>
     <object-name>axeA3</object-name>
-    <object-name>axeA4</object-name>
+    <!-- <object-name>axeA4</object-name> -->
     <object-name>roueA</object-name>
     <object-name>axeG</object-name>
     <object-name>roueG</object-name>
@@ -134,7 +134,7 @@
     <object-name>axeA1</object-name>
     <object-name>axeA2</object-name>
     <object-name>axeA3</object-name>
-    <object-name>axeA4</object-name>
+    <!-- <object-name>axeA4</object-name> -->
     <object-name>roueA</object-name>
     <object-name>axeG</object-name>
     <object-name>roueG</object-name>
@@ -407,7 +407,7 @@
     <object-name>axeA1</object-name>
     <object-name>axeA2</object-name>
     <object-name>axeA3</object-name>
-    <object-name>axeA4</object-name>
+    <!-- <object-name>axeA4</object-name> -->
     <object-name>roueA</object-name>
   </animation>
 
