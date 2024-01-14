@@ -54,16 +54,14 @@
   <animation>
     <type>rotate</type>
     <object-name>needle1</object-name>
-    <!-- <property>/engines/engine[0]/rpm</property> -->
-    <property>controls/engines/engine[0]/throttle</property>
+    <property>sim/model/mi24/engine</property>
     <interpolation>
-      <entry><ind>  1.00 </ind><dep>  60 </dep></entry>
-      <entry><ind>  0.80 </ind><dep> 105 </dep></entry>
-      <entry><ind>  0.60 </ind><dep> 167 </dep></entry>
-      <entry><ind>  0.40 </ind><dep> 228 </dep></entry>
-      <entry><ind>  0.20 </ind><dep> 289 </dep></entry>
-      <entry><ind>  0.00 </ind><dep> 360 </dep></entry>
-      <entry><ind> -0.07 </ind><dep> 381 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  60 </dep></entry>
+      <entry><ind>  0.10 </ind><dep>  90 </dep></entry>
+      <entry><ind>  0.40 </ind><dep>  180 </dep></entry>
+      <entry><ind>  0.70 </ind><dep>  270 </dep></entry>
+      <entry><ind>  1.00 </ind><dep>  360 </dep></entry>
+      <entry><ind>  1.03 </ind><dep>  361 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
@@ -76,15 +74,15 @@
     <type>rotate</type>
     <object-name>needle2</object-name>
     <!-- <property>/engines/engine[1]/rpm</property> -->
-    <property>controls/engines/engine[0]/throttle</property>
+    <!-- <property>controls/engines/engine[0]/throttle</property> -->
+    <property>sim/model/mi24/engine</property>
     <interpolation>
-      <entry><ind>  1.00 </ind><dep>  60 </dep></entry>
-      <entry><ind>  0.80 </ind><dep> 105 </dep></entry>
-      <entry><ind>  0.60 </ind><dep> 167 </dep></entry>
-      <entry><ind>  0.40 </ind><dep> 228 </dep></entry>
-      <entry><ind>  0.20 </ind><dep> 289 </dep></entry>
-      <entry><ind>  0.00 </ind><dep> 360 </dep></entry>
-      <entry><ind> -0.07 </ind><dep> 381 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  60 </dep></entry>
+      <entry><ind>  0.10 </ind><dep>  90 </dep></entry>
+      <entry><ind>  0.40 </ind><dep>  180 </dep></entry>
+      <entry><ind>  0.70 </ind><dep>  270 </dep></entry>
+      <entry><ind>  1.00 </ind><dep>  360 </dep></entry>
+      <entry><ind>  1.03 </ind><dep>  361 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>

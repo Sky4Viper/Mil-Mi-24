@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel-pwr.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>pwr-panel-base</object-name>
+    <object-name>pwr-switches-base</object-name>
+    <object-name>pwr-panel-frame</object-name>
+    <object-name>pwr-instruments</object-name>
+    <object-name>pwr-knob.001</object-name>
+    <object-name>pwr-light-frame.001</object-name>
+    <object-name>pwr-light-frame.002</object-name>
+    <object-name>pwr-light-frame.003</object-name>
+    <object-name>pwr-light-frame.004</object-name>
+    <object-name>pwr-light-frame.005</object-name>
+    <object-name>pwr-light-frame.006</object-name>
+    <object-name>pwr-switch.001</object-name>
+    <object-name>pwr-button.001</object-name>
+    <object-name>pwr-switch.001</object-name>
+    <object-name>pwr-switch.002</object-name>
+    <object-name>pwr-switch.003</object-name>
+    <object-name>pwr-switch.004</object-name>
+    <object-name>pwr-switch.005</object-name>
+    <object-name>pwr-switch.006</object-name>
+    <object-name>pwr-switch.007</object-name>
+    <object-name>pwr-switch.008</object-name>
+    <object-name>pwr-switch.009</object-name>
+    <object-name>pwr-switch.010</object-name>
+    <object-name>pwr-switch.011</object-name>
+    <object-name>pwr-switch.012</object-name>
+    <object-name>pwr-switch.013</object-name>
+    <object-name>pwr-switch.014</object-name>
+    <object-name>pwr-switch.015</object-name>
+    <object-name>pwr-switch.016</object-name>
+    <object-name>pwr-switch.017</object-name>
+    <object-name>pwr-switch.018</object-name>
+    <object-name>pwr-switch.019</object-name>
+    <object-name>pwr-switch.020</object-name>
+    <object-name>pwr-switch.021</object-name>
+    <object-name>pwr-needle.001</object-name>
+    <object-name>pwr-needle.002</object-name>
+    <object-name>pwr-needle.003</object-name>
+    <object-name>pwr-needle.004</object-name>
+    <object-name>pwr-needle.005</object-name>
+    <object-name>pwr-needle.006</object-name>
+    <object-name>pwr-needle.007</object-name>
+    <object-name>pwr-needle.008</object-name>
+    <object-name>pwr-switch-cover.001</object-name>
+    <object-name>pwr-twisters</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>pwr-panel-base</object-name>
+    <object-name>pwr-switches-base</object-name>
+    <object-name>pwr-panel-frame</object-name>
+    <object-name>pwr-instruments.001</object-name>
+    <object-name>pwr-instruments-face</object-name>
+    <object-name>pwr-knob.001</object-name>
+    <object-name>pwr-light-frame.001</object-name>
+    <object-name>pwr-light-frame.002</object-name>
+    <object-name>pwr-light-frame.003</object-name>
+    <object-name>pwr-light-frame.004</object-name>
+    <object-name>pwr-light-frame.005</object-name>
+    <object-name>pwr-light-frame.006</object-name>
+    <object-name>pwr-switch.001</object-name>
+    <object-name>pwr-button.001</object-name>
+    <object-name>pwr-switch.001</object-name>
+    <object-name>pwr-switch.002</object-name>
+    <object-name>pwr-switch.003</object-name>
+    <object-name>pwr-switch.004</object-name>
+    <object-name>pwr-switch.005</object-name>
+    <object-name>pwr-switch.006</object-name>
+    <object-name>pwr-switch.007</object-name>
+    <object-name>pwr-switch.008</object-name>
+    <object-name>pwr-switch.009</object-name>
+    <object-name>pwr-switch.010</object-name>
+    <object-name>pwr-switch.011</object-name>
+    <object-name>pwr-switch.012</object-name>
+    <object-name>pwr-switch.013</object-name>
+    <object-name>pwr-switch.014</object-name>
+    <object-name>pwr-switch.015</object-name>
+    <object-name>pwr-switch.016</object-name>
+    <object-name>pwr-switch.017</object-name>
+    <object-name>pwr-switch.018</object-name>
+    <object-name>pwr-switch.019</object-name>
+    <object-name>pwr-switch.020</object-name>
+    <object-name>pwr-switch.021</object-name>
+    <object-name>pwr-needle.001</object-name>
+    <object-name>pwr-needle.002</object-name>
+    <object-name>pwr-needle.003</object-name>
+    <object-name>pwr-needle.004</object-name>
+    <object-name>pwr-needle.005</object-name>
+    <object-name>pwr-needle.006</object-name>
+    <object-name>pwr-needle.007</object-name>
+    <object-name>pwr-needle.008</object-name>
+    <object-name>pwr-switch-cover.001</object-name>
+    <object-name>pwr-twisters</object-name>
+  </animation>
+
+  <animation>
+      <type>material</type>
+      <object-name>pwr-instruments-face</object-name>
+      <emission>
+        <red>0.6</red>
+        <green>0.6</green>
+        <blue>0.6</blue>
+        <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      </emission>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+  </animation>
+
+  <animation>
+      <type>material</type>
+      <object-name>pwr-switches-base</object-name>
+      <object-name>pwr-panel-frame</object-name>
+      <object-name>pwr-switch.001</object-name>
+      <object-name>pwr-button.001</object-name>
+      <object-name>pwr-switch.001</object-name>
+      <object-name>pwr-switch.002</object-name>
+      <object-name>pwr-switch.003</object-name>
+      <object-name>pwr-switch.004</object-name>
+      <object-name>pwr-switch.005</object-name>
+      <object-name>pwr-switch.006</object-name>
+      <object-name>pwr-switch.007</object-name>
+      <object-name>pwr-switch.008</object-name>
+      <object-name>pwr-switch.009</object-name>
+      <object-name>pwr-switch.010</object-name>
+      <object-name>pwr-switch.011</object-name>
+      <object-name>pwr-switch.012</object-name>
+      <object-name>pwr-switch.013</object-name>
+      <object-name>pwr-switch.014</object-name>
+      <object-name>pwr-switch.015</object-name>
+      <object-name>pwr-switch.016</object-name>
+      <object-name>pwr-switch.017</object-name>
+      <object-name>pwr-switch.018</object-name>
+      <object-name>pwr-switch.019</object-name>
+      <object-name>pwr-switch.020</object-name>
+      <object-name>pwr-switch.021</object-name>
+      <object-name>pwr-needle.001</object-name>
+      <object-name>pwr-needle.002</object-name>
+      <object-name>pwr-needle.003</object-name>
+      <object-name>pwr-needle.004</object-name>
+      <object-name>pwr-needle.005</object-name>
+      <object-name>pwr-needle.006</object-name>
+      <object-name>pwr-needle.007</object-name>
+      <object-name>pwr-needle.008</object-name>
+      <object-name>pwr-knob.001</object-name>
+      <emission>
+        <red>0.1</red>
+        <green>0.1</green>
+        <blue>0.1</blue>
+        <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      </emission>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.001</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -99.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m>-0.164586</x-m>
+        <y-m> 0.11654</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.002</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -99.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m>-0.164586</x-m>
+        <y-m> 0.047987</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.003</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -120.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m>-0.164586</x-m>
+        <y-m>-0.03421</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.004</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -120.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m>-0.164586</x-m>
+        <y-m>-0.119505</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.005</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -99.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m>-0.015664</x-m>
+        <y-m> 0.116485</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.006</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -117.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   70.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m> 0.028133</x-m>
+        <y-m> 0.116485</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.007</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -117.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   47.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m> 0.004991</x-m>
+        <y-m>-0.029354</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pwr-needle.008</object-name>
+    <property>controls/electric/battery-switch</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   -99.0 </dep></entry>
+      <entry><ind> 1 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m> 0.078251</x-m>
+        <y-m> 0.010877</y-m>
+        <z-m> 0.01062</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+
+
+</PropertyList>

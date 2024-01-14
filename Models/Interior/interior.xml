@@ -8,8 +8,6 @@
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
     <object-name>interieur.001</object-name>
-    <object-name>interieur.002</object-name>
-    <object-name>interieur.003</object-name>
     <object-name>intcockpit</object-name>
     <object-name>intcockpit.001</object-name>
     <object-name>intcockpit.002</object-name>
@@ -73,9 +71,9 @@
     <path>Panel/Instruments/gear/gear-panel.xml</path>
   </model>
 
-  <model>
+  <!-- <model>
     <path>Panel/Instruments/right/all-rights.xml</path>
-  </model>
+  </model> -->
 
   <!-- <model>
     <path>Panel/Instruments/raduga/all-radugas.xml</path>
