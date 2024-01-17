@@ -184,66 +184,6 @@
     </axis>
   </animation>
 
-
-  <!--     Danger altitude Bug control    -->
-  <!--
-  <animation>
-    <type>pick</type>
-    <object-name>knob_alt</object-name>
-    <action>
-      <name>small increase</name>
-      <button>0</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/instrumentation/danger-altitude-ft</property>
-        <step>32.81</step>
-        <min>0</min>
-        <max>2296.7</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <name>large increase</name>
-      <button>1</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/instrumentation/danger-altitude-ft</property>
-        <step>328.1</step>
-        <min>0</min>
-        <max>2296.7</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <name>small increase (scrollwheel)</name>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/instrumentation/danger-altitude-ft</property>
-        <step>32.81</step>
-        <min>0</min>
-        <max>2296.7</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <name>small decrease (scrollwheel)</name>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/instrumentation/danger-altitude-ft</property>
-        <step>-32.81</step>
-        <min>0</min>
-        <max>2296.7</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-  </animation> -->
-
   <animation>
     <type>knob</type>
     <object-name>knob_alt</object-name>
@@ -258,7 +198,7 @@
       </binding>
       <binding>
         <command>nasal</command>
-        <script>switchclicksound.click("adf-dial")</script>
+        <script>switchclicksound.click("dial")</script>
       </binding>
     </increase>
     <decrease>
@@ -272,7 +212,7 @@
       </binding>
       <binding>
         <command>nasal</command>
-        <script>switchclicksound.click("adf-dial")</script>
+        <script>switchclicksound.click("dial")</script>
       </binding>
     </decrease>
     <hovered>

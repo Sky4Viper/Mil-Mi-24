@@ -723,6 +723,62 @@ Updated by Helijah September 2012
       <max-dist>250.0</max-dist>
     </flare-external>
 
+    <dial>
+      <name>dial-adf</name>
+      <mode>once</mode>
+      <path>scroll.wav</path>
+      <type>avionics</type>
+      <condition>
+        <property>/controls/sound/click-dial</property>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </dial>
+
+    <switch>
+      <name>switch-click1</name>
+      <mode>once</mode>
+      <path>click1.wav</path>
+      <type>avionics</type>
+      <condition>
+        <property>/controls/sound/click-switch1</property>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </switch>
+
+    <switch>
+      <name>switch-click2</name>
+      <mode>once</mode>
+      <path>click2.wav</path>
+      <type>avionics</type>
+      <condition>
+        <property>/controls/sound/click-switch2</property>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </switch>
+
+    <switch>
+      <name>switch-click3</name>
+      <mode>once</mode>
+      <path>click3.wav</path>
+      <type>avionics</type>
+      <condition>
+        <property>/controls/sound/click-switch3</property>
+      </condition>
+      <volume>
+        <property>/sim/current-view/internal</property>
+        <factor>1.0</factor>
+      </volume>
+    </switch>
+
   </fx>
 
 </PropertyList>

@@ -227,6 +227,10 @@
         <max>10</max>
         <wrap>0</wrap>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
+      </binding>
     </increase>
     <decrease>
       <binding>
@@ -236,6 +240,10 @@
         <min>0</min>
         <max>10</max>
         <wrap>0</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
       </binding>
     </decrease>
     <hovered>

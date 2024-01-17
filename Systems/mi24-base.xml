@@ -171,9 +171,6 @@
     <tracking>
       <file>Aircraft/Mil-Mi-24/Nasal/tracking.nas</file>
     </tracking>
-    <!-- <launchauthorizer>
-      <file>Aircraft/Mil-Mi-24/Nasal/launchauthorizer.nas</file>
-    </launchauthorizer> -->
     <raduga-sh>
       <file>Aircraft/Mil-Mi-24/Nasal/raduga-sh.nas</file>
     </raduga-sh>
@@ -184,6 +181,9 @@
 			<file>Aircraft/Mil-Mi-24/Nasal/hud.nas</file>
 		</hud>
     <!-- ########### -->
+    <switchclicksound>
+      <file>Aircraft/Mil-Mi-24/Nasal/switchclicksound.nas</file>
+    </switchclicksound>
   </nasal>
 
 </PropertyList>

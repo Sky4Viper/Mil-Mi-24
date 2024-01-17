@@ -405,16 +405,10 @@
           <command>property-toggle</command>
           <property>controls/electric/gunsight-sync</property>
         </binding>
-        <!-- <binding>
-          <command>property-assign</command>
-          <property>sim/model/turret[0]/heading</property>
-          <value>0.1</value>
-        </binding>
         <binding>
-          <command>property-assign</command>
-          <property>sim/model/turret[0]/pitch</property>
-          <value>1</value>
-        </binding> -->
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+        </binding>
       </action>
       <hovered>
        <binding>
@@ -436,6 +430,10 @@
         <binding>
           <command>property-toggle</command>
           <property>controls/electric/gunsight-auto</property>
+        </binding>
+        <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
         </binding>
       </action>
       <hovered>
@@ -459,6 +457,10 @@
         <max>0.9</max>
         <wrap>false</wrap>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
+      </binding>
     </increase>
     <decrease>
       <binding>
@@ -468,6 +470,10 @@
         <min>-0.9</min>
         <max>0.9</max>
         <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
       </binding>
     </decrease>
     <hovered>

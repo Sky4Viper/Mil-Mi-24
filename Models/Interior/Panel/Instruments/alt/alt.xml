@@ -134,6 +134,10 @@
         <max> 33 </max>
         <wrap>0</wrap>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
+      </binding>
     </action>
     <action>
       <button>4</button>
@@ -145,6 +149,10 @@
         <min> 22 </min>
         <max> 33 </max>
         <wrap>0</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
       </binding>
     </action>
   </animation>

@@ -123,12 +123,10 @@
         <max>361</max>
         <wrap>true</wrap>
       </binding>
-      <!--
       <binding>
         <command>nasal</command>
-        <script>switchclicksound.click("adf-dial")</script>
+        <script>switchclicksound.click("dial")</script>
       </binding>
-      -->
     </increase>
     <decrease>
       <binding>
@@ -139,12 +137,10 @@
         <max>361</max>
         <wrap>true</wrap>
       </binding>
-      <!--
       <binding>
         <command>nasal</command>
-        <script>switchclicksound.click("adf-dial")</script>
+        <script>switchclicksound.click("dial")</script>
       </binding>
-      -->
     </decrease>
     <hovered>
       <binding>
