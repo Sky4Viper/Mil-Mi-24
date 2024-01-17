@@ -6,16 +6,27 @@
 
   <animation>
     <!-- Objets opaques -->
+    <object-name>ark-base.001</object-name>
+    <object-name>ark-face-1.001</object-name>
+    <object-name>ark-face-2.001</object-name>
+    <object-name>ark-face-1.002</object-name>
+    <object-name>ark-face-2.002</object-name>
+    <object-name>ark-knob.001</object-name>
+    <object-name>ark-knob.002</object-name>
+
     <object-name>left-panel-base</object-name>
     <object-name>left-switches-base</object-name>
+
     <object-name>lft-button.001</object-name>
-    <object-name>lft-button.002</object-name>
-    <object-name>lft-button.003</object-name>
+    <object-name>lft-button.010</object-name>
 
     <object-name>lft-knob.001</object-name>
-    <object-name>lft-knob.002</object-name>
 
     <object-name>lft-light-frame.004</object-name>
+
+    <object-name>lft-rail</object-name>
+    <object-name>lft-screws</object-name>
+    <object-name>lft-twisters</object-name>
 
     <object-name>lft-switch.001</object-name>
     <object-name>lft-switch.002</object-name>
@@ -24,23 +35,73 @@
     <object-name>lft-switch.005</object-name>
     <object-name>lft-switch.006</object-name>
     <object-name>lft-switch.007</object-name>
+    <object-name>lft-switch.008</object-name>
+    <object-name>lft-switch.009</object-name>
+    <object-name>lft-switch.010</object-name>
+    <object-name>lft-switch.011</object-name>
+    <object-name>lft-switch.012</object-name>
+    <object-name>lft-switch.013</object-name>
+    <object-name>lft-switch.014</object-name>
+    <object-name>lft-switch.015</object-name>
+    <object-name>lft-switch.016</object-name>
+    <object-name>lft-switch.017</object-name>
+    <object-name>lft-switch.018</object-name>
+    <object-name>lft-switch.019</object-name>
+    <object-name>lft-switch.020</object-name>
     <object-name>lft-switch.021</object-name>
+    <object-name>lft-switch.022</object-name>
+    <object-name>lft-switch.023</object-name>
+    <object-name>lft-switch.024</object-name>
+    <object-name>lft-switch.025</object-name>
+    <object-name>lft-switch.026</object-name>
+    <object-name>lft-switch.027</object-name>
+    <object-name>lft-switch.028</object-name>
+    <object-name>lft-switch.029</object-name>
+    <object-name>lft-switch.030</object-name>
+    <object-name>lft-switch.031</object-name>
+    <object-name>lft-switch.032</object-name>
+    <object-name>lft-switch.033</object-name>
+    <object-name>lft-switch.034</object-name>
+    <object-name>lft-switch.035</object-name>
+    <object-name>lft-switch.036</object-name>
+    <object-name>lft-switch.037</object-name>
+    <object-name>lft-switch.038</object-name>
+    <object-name>lft-switch.039</object-name>
+    <object-name>lft-switch.040</object-name>
+    <object-name>lft-switch.041</object-name>
+    <object-name>lft-switch.042</object-name>
+    <object-name>lft-switch.043</object-name>
+    <object-name>lft-switch.044</object-name>
+    <object-name>lft-switch.045</object-name>
+    <object-name>lft-switch.046</object-name>
 
     <object-name>lft-switch-cover.001</object-name>
+    <object-name>lft-switch-cover.002</object-name>
   </animation>
 
   <animation>
     <type>noshadow</type>
+    <object-name>ark-base.001</object-name>
+    <object-name>ark-face-1.001</object-name>
+    <object-name>ark-face-2.001</object-name>
+    <object-name>ark-face-1.002</object-name>
+    <object-name>ark-face-2.002</object-name>
+    <object-name>ark-knob.001</object-name>
+    <object-name>ark-knob.002</object-name>
+
     <object-name>left-panel-base</object-name>
     <object-name>left-switches-base</object-name>
+
     <object-name>lft-button.001</object-name>
-    <object-name>lft-button.002</object-name>
-    <object-name>lft-button.003</object-name>
+    <object-name>lft-button.010</object-name>
 
     <object-name>lft-knob.001</object-name>
-    <object-name>lft-knob.002</object-name>
 
     <object-name>lft-light-frame.004</object-name>
+
+    <object-name>lft-rail</object-name>
+    <object-name>lft-screws</object-name>
+    <object-name>lft-twisters</object-name>
 
     <object-name>lft-switch.001</object-name>
     <object-name>lft-switch.002</object-name>
@@ -49,18 +110,58 @@
     <object-name>lft-switch.005</object-name>
     <object-name>lft-switch.006</object-name>
     <object-name>lft-switch.007</object-name>
+    <object-name>lft-switch.008</object-name>
+    <object-name>lft-switch.009</object-name>
+    <object-name>lft-switch.010</object-name>
+    <object-name>lft-switch.011</object-name>
+    <object-name>lft-switch.012</object-name>
+    <object-name>lft-switch.013</object-name>
+    <object-name>lft-switch.014</object-name>
+    <object-name>lft-switch.015</object-name>
+    <object-name>lft-switch.016</object-name>
+    <object-name>lft-switch.017</object-name>
+    <object-name>lft-switch.018</object-name>
+    <object-name>lft-switch.019</object-name>
+    <object-name>lft-switch.020</object-name>
     <object-name>lft-switch.021</object-name>
+    <object-name>lft-switch.022</object-name>
+    <object-name>lft-switch.023</object-name>
+    <object-name>lft-switch.024</object-name>
+    <object-name>lft-switch.025</object-name>
+    <object-name>lft-switch.026</object-name>
+    <object-name>lft-switch.027</object-name>
+    <object-name>lft-switch.028</object-name>
+    <object-name>lft-switch.029</object-name>
+    <object-name>lft-switch.030</object-name>
+    <object-name>lft-switch.031</object-name>
+    <object-name>lft-switch.032</object-name>
+    <object-name>lft-switch.033</object-name>
+    <object-name>lft-switch.034</object-name>
+    <object-name>lft-switch.035</object-name>
+    <object-name>lft-switch.036</object-name>
+    <object-name>lft-switch.037</object-name>
+    <object-name>lft-switch.038</object-name>
+    <object-name>lft-switch.039</object-name>
+    <object-name>lft-switch.040</object-name>
+    <object-name>lft-switch.041</object-name>
+    <object-name>lft-switch.042</object-name>
+    <object-name>lft-switch.043</object-name>
+    <object-name>lft-switch.044</object-name>
+    <object-name>lft-switch.045</object-name>
+    <object-name>lft-switch.046</object-name>
 
     <object-name>lft-switch-cover.001</object-name>
+    <object-name>lft-switch-cover.002</object-name>
   </animation>
 
   <animation>
       <type>material</type>
       <object-name>left-switches-base</object-name>
       <object-name>lft-light-frame.004</object-name>
+
       <object-name>lft-button.001</object-name>
-      <object-name>lft-button.002</object-name>
-      <object-name>lft-button.003</object-name>
+      <object-name>lft-button.010</object-name>
+
       <object-name>lft-switch.001</object-name>
       <object-name>lft-switch.002</object-name>
       <object-name>lft-switch.003</object-name>
@@ -68,8 +169,50 @@
       <object-name>lft-switch.005</object-name>
       <object-name>lft-switch.006</object-name>
       <object-name>lft-switch.007</object-name>
+      <object-name>lft-switch.008</object-name>
+      <object-name>lft-switch.009</object-name>
+      <object-name>lft-switch.010</object-name>
+      <object-name>lft-switch.011</object-name>
+      <object-name>lft-switch.012</object-name>
+      <object-name>lft-switch.013</object-name>
+      <object-name>lft-switch.014</object-name>
+      <object-name>lft-switch.015</object-name>
+      <object-name>lft-switch.016</object-name>
+      <object-name>lft-switch.017</object-name>
+      <object-name>lft-switch.018</object-name>
+      <object-name>lft-switch.019</object-name>
+      <object-name>lft-switch.020</object-name>
       <object-name>lft-switch.021</object-name>
+      <object-name>lft-switch.022</object-name>
+      <object-name>lft-switch.023</object-name>
+      <object-name>lft-switch.024</object-name>
+      <object-name>lft-switch.025</object-name>
+      <object-name>lft-switch.026</object-name>
+      <object-name>lft-switch.027</object-name>
+      <object-name>lft-switch.028</object-name>
+      <object-name>lft-switch.029</object-name>
+      <object-name>lft-switch.030</object-name>
+      <object-name>lft-switch.031</object-name>
+      <object-name>lft-switch.032</object-name>
+      <object-name>lft-switch.033</object-name>
+      <object-name>lft-switch.034</object-name>
+      <object-name>lft-switch.035</object-name>
+      <object-name>lft-switch.036</object-name>
+      <object-name>lft-switch.037</object-name>
+      <object-name>lft-switch.038</object-name>
+      <object-name>lft-switch.039</object-name>
+      <object-name>lft-switch.040</object-name>
+      <object-name>lft-switch.041</object-name>
+      <object-name>lft-switch.042</object-name>
+      <object-name>lft-switch.043</object-name>
+      <object-name>lft-switch.044</object-name>
+      <object-name>lft-switch.045</object-name>
+      <object-name>lft-switch.046</object-name>
+      
+      <object-name>lft-rail</object-name>
+      <object-name>lft-twisters</object-name>
       <object-name>lft-switch-cover.001</object-name>
+      <object-name>lft-switch-cover.002</object-name>
       <emission>
         <red>0.1</red>
         <green>0.1</green>
@@ -80,5 +223,181 @@
         <property>controls/electric/battery-switch</property>
       </condition>
   </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>lft-switch.030</object-name>
+      <property>controls/electric/fan</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>-5.25993</x-m>
+        <y-m>-0.550805</y-m>
+        <z-m>-0.95242</z-m>
+      </center>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>lft-switch.031</object-name>
+      <property>controls/lighting/beacon</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>-5.28369</x-m>
+        <y-m>-0.549542</y-m>
+        <z-m>-0.95242</z-m>
+      </center>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>lft-switch.032</object-name>
+      <property>controls/lighting/strobe</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>-5.30673</x-m>
+        <y-m>-0.547572</y-m>
+        <z-m>-0.95242</z-m>
+      </center>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>lft-switch.033</object-name>
+      <property>controls/lighting/nav-lights</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>-5.33134</x-m>
+        <y-m>-0.546876</y-m>
+        <z-m>-0.95242</z-m>
+      </center>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>lft-switch.030</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/fan</property>
+        </binding>
+        <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+        </binding>
+      </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-fan</tooltip-id>
+         <label>Fan Toggle</label>
+       </binding>
+      </hovered>
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>lft-switch.031</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/beacon</property>
+        </binding>
+        <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+        </binding>
+      </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-beacon-lights</tooltip-id>
+         <label>Beacon Lights Toggle</label>
+       </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>lft-switch.032</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/strobe</property>
+        </binding>
+        <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+        </binding>
+      </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-strobe-lights</tooltip-id>
+         <label>Conture Lights Toggle</label>
+       </binding>
+      </hovered>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>lft-switch.033</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/nav-lights</property>
+        </binding>
+        <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+        </binding>
+      </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-nav-lights</tooltip-id>
+         <label>Formation Lights Toggle</label>
+       </binding>
+      </hovered>
+    </animation>
 
 </PropertyList>
