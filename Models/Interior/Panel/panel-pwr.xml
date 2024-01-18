@@ -322,6 +322,50 @@
     </axis>
   </animation>
 
+  <animation>
+      <type>rotate</type>
+      <object-name>pwr-switch.001</object-name>
+      <property>controls/electric/battery-switch</property>
+      <offset-deg>20</offset-deg>
+      <factor>-40</factor>
+      <center>
+        <x-m>-0.116979</x-m>
+        <y-m> 0.113927</y-m>
+        <z-m> 0.00961</z-m>
+      </center>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>pwr-switch.001</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/battery-switch</property>
+        </binding>
+        <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+        </binding>
+      </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-batt-1</tooltip-id>
+         <label>Battery 1 Toggle</label>
+       </binding>
+      </hovered>
+  </animation>
+
 
 
 </PropertyList>
