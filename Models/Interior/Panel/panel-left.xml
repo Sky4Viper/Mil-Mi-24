@@ -493,8 +493,8 @@
       <hovered>
        <binding>
         <command>set-tooltip</command>
-         <tooltip-id>switch-nav-lights</tooltip-id>
-         <label>Formation Lights Toggle</label>
+         <tooltip-id>switch-adf-chanel</tooltip-id>
+         <label>ADF Chanel Toggle</label>
        </binding>
       </hovered>
     </animation>

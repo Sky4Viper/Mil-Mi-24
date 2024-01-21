@@ -6,12 +6,15 @@
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>interieur</object-name>
+    <object-name>cockpit-tub.001</object-name>
+    <object-name>cockpit-tub.002</object-name>
+    <object-name>panel-hood.001</object-name>
+    <object-name>panel-hood.002</object-name>
+    <object-name>cockpit-separator</object-name>
+
     <object-name>interieur.001</object-name>
     <object-name>intcockpit</object-name>
     <object-name>intcockpit.001</object-name>
-    <object-name>intcockpit.002</object-name>
-    <object-name>intcockpit.004</object-name>
     <object-name>intportepilote</object-name>
     <object-name>intporteGH</object-name>
     <object-name>intporteGB</object-name>
@@ -21,7 +24,7 @@
     <object-name>planchet</object-name>
     <object-name>interieur_bench</object-name>
     <object-name>left-paanel</object-name>
-    <object-name>raduga</object-name>
+    <!-- <object-name>raduga</object-name> -->
     <!-- <object-name>separation</object-name> -->
 
     <!-- Objets transparents ALS -->
@@ -75,9 +78,9 @@
     <path>Panel/Instruments/right/all-rights.xml</path>
   </model> -->
 
-  <!-- <model>
+  <model>
     <path>Panel/Instruments/raduga/all-radugas.xml</path>
-  </model> -->
+  </model>
 
   <model>
     <path>Panel/Instruments/fan/all-fans.xml</path>

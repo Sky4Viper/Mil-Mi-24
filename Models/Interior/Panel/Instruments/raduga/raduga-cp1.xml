@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>raduga-cp1.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>cp1-base</object-name>
+    <object-name>cp1-button.001</object-name>
+    <object-name>cp1-switch.002</object-name>
+    <object-name>cp1-knob.001</object-name>
+    <object-name>cp1-lamp</object-name>
+    <object-name>cp1-lamp-on.001</object-name>
+    <object-name>cp1-lamp-on.002</object-name>
+    <object-name>cp1-lamp-on.003</object-name>
+    <object-name>cp1-lamp-on.004</object-name>
+    <object-name>cp1-lamp-on.005</object-name>
+    <object-name>cp1-lamp-on.006</object-name>
+  </animation>
+
+  <animation> 
+    <type>material</type>
+    <object-name>cp1-lamp-on.001</object-name>
+    <object-name>cp1-lamp-on.004</object-name>
+    <object-name>cp1-lamp-on.005</object-name>
+    <emission> 
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>0</red>
+      <green>1.2</green>
+      <blue>0</blue>
+    </emission>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation> 
+    <type>material</type>
+    <object-name>cp1-lamp-on.002</object-name>
+    <object-name>cp1-lamp-on.003</object-name>
+    <emission> 
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>1.2</blue>
+    </emission>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation> 
+    <type>material</type>
+    <object-name>cp1-lamp-on.006</object-name>
+    <emission> 
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>1.2</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </emission>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cp1-lamp-on.001</object-name>
+    <object-name>cp1-lamp-on.002</object-name>
+    <object-name>cp1-lamp-on.003</object-name>
+    <object-name>cp1-lamp-on.004</object-name>
+    <object-name>cp1-lamp-on.005</object-name>
+    <object-name>cp1-lamp-on.006</object-name>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+</PropertyList>

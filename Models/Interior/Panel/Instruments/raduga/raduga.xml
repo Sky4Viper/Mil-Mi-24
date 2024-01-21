@@ -9,4 +9,14 @@
     <object-name>raduga</object-name>
   </animation>
 
+  <model>
+    <path>raduga-cp1.xml</path>
+    <offsets>
+      <x-m> -0.301396 </x-m>
+      <y-m> -0.00291 </y-m>
+      <z-m> -0.022768 </z-m>
+      <heading-deg> 51.3555 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
