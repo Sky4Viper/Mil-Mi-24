@@ -34,9 +34,9 @@
   <model>
     <path>Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.007435 </x-m>
+      <x-m>  0.005654 </x-m>
       <y-m> -0.088406 </y-m>
-      <z-m>  0.031263 </z-m>
+      <z-m>  0.041888 </z-m>
     </offsets>
     <overlay>
       <animation n="100">
@@ -53,9 +53,9 @@
   <model>
     <path>Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m> 0.007435 </x-m>
+      <x-m>  0.005654 </x-m>
       <y-m> 0.088405 </y-m>
-      <z-m> 0.031263 </z-m>
+      <z-m>  0.041888 </z-m>
     </offsets>
     <overlay>
       <animation n="100">
@@ -104,7 +104,7 @@
     <offsets>
       <x-m>  0.007435 </x-m>
       <y-m> -0.088406 </y-m>
-      <z-m> -0.051797 </z-m>
+      <z-m> -0.055797 </z-m>
     </offsets>
     <overlay>
       <animation n="100">
@@ -123,7 +123,7 @@
     <offsets>
       <x-m>  0.007435 </x-m>
       <y-m>  0.088405 </y-m>
-      <z-m> -0.051797 </z-m>
+      <z-m> -0.055797 </z-m>
     </offsets>
     <overlay>
       <animation n="100">
