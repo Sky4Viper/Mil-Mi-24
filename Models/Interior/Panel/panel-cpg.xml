@@ -6,10 +6,185 @@
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>cover</object-name>
     <object-name>panel-base</object-name>
-    <object-name>instruments_placehold</object-name>
+    <object-name>cpg-switchbase.001</object-name>
+    <object-name>cpg-light-base.001</object-name>
+    <object-name>cpg-switch-cover.001</object-name>
+    <object-name>cpg-twisters</object-name>
+    <object-name>cpg-knob.001</object-name>
+    <object-name>cpg-knob.002</object-name>
+    <object-name>cpg-switch.001</object-name>
+    <object-name>cpg-button.001</object-name>
+
+    <object-name>cpg-lights-load.001</object-name>
+    <object-name>cpg-lights-load.002</object-name>
+    <object-name>cpg-lights-load.003</object-name>
+    <object-name>cpg-lights-load.004</object-name>
+
+    <object-name>cpg-light.001</object-name>
+    <object-name>cpg-light.002</object-name>
+    <object-name>cpg-light.003</object-name>
+    <object-name>cpg-light.004</object-name>
+    <object-name>cpg-light.005</object-name>
+    <object-name>cpg-light.006</object-name>
+    <object-name>cpg-light.007</object-name>
+    <object-name>cpg-light.008</object-name>
+    <object-name>cpg-light.009</object-name>
+    <object-name>cpg-light.010</object-name>
   </animation>
+
+  <animation>
+		<type>noshadow</type>
+    <object-name>cpg-switchbase.001</object-name>
+    <object-name>cpg-light-base.001</object-name>
+    <object-name>cpg-switch-cover.001</object-name>
+    <object-name>cpg-twisters</object-name>
+    <object-name>cpg-knob.001</object-name>
+    <object-name>cpg-knob.002</object-name>
+    <object-name>cpg-switch.001</object-name>
+    <object-name>cpg-button.001</object-name>
+
+    <object-name>cpg-lights-load.001</object-name>
+    <object-name>cpg-lights-load.002</object-name>
+    <object-name>cpg-lights-load.003</object-name>
+    <object-name>cpg-lights-load.004</object-name>
+
+    <object-name>cpg-light.001</object-name>
+    <object-name>cpg-light.002</object-name>
+    <object-name>cpg-light.003</object-name>
+    <object-name>cpg-light.004</object-name>
+    <object-name>cpg-light.005</object-name>
+    <object-name>cpg-light.006</object-name>
+    <object-name>cpg-light.007</object-name>
+    <object-name>cpg-light.008</object-name>
+    <object-name>cpg-light.009</object-name>
+    <object-name>cpg-light.010</object-name>
+	</animation>
+
+  <animation> 
+    <type>material</type>
+    <object-name>cpg-lights-load.001</object-name>
+    <object-name>cpg-lights-load.002</object-name>
+    <object-name>cpg-lights-load.003</object-name>
+    <object-name>cpg-lights-load.004</object-name>
+
+    <object-name>cpg-light.001</object-name>
+    <object-name>cpg-light.002</object-name>
+    <object-name>cpg-light.003</object-name>
+    <object-name>cpg-light.004</object-name>
+    <object-name>cpg-light.005</object-name>
+    <object-name>cpg-light.006</object-name>
+    <object-name>cpg-light.007</object-name>
+    <object-name>cpg-light.008</object-name>
+    <object-name>cpg-light.009</object-name>
+    <object-name>cpg-light.010</object-name>
+        <emission> 
+            <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+            <red>0.20</red>
+            <green>0.194</green>
+            <blue>0.175</blue>
+        </emission>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+  </animation>
+
+  <animation>
+      <type>select</type>
+      <object-name>cpg-light.005</object-name>
+      <condition>
+        <equals>
+        <property>/controls/armament/weapon-type</property>
+        <value>8</value>
+        </equals>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>cpg-light.006</object-name>
+      <condition>
+        <equals>
+        <property>/controls/armament/weapon-type</property>
+        <value>9</value>
+        </equals>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>cpg-light.007</object-name>
+      <condition>
+        <equals>
+        <property>/controls/armament/weapon-type</property>
+        <value>1</value>
+        </equals>
+        <equals>
+				  <property>/sim/variant-id</property>
+				  <value>1</value>
+			  </equals>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>cpg-light.008</object-name>
+      <condition>
+        <equals>
+        <property>/controls/armament/weapon-type</property>
+        <value>7</value>
+        </equals>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>cpg-light.009</object-name>
+      <condition>
+        <equals>
+          <property>/controls/armament/weapon-type</property>
+          <value>1</value>
+        </equals>
+        <equals>
+				  <property>/sim/variant-id</property>
+				  <value>2</value>
+			  </equals>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>cpg-light.010</object-name>
+      <condition>
+        <equals>
+        <property>/controls/armament/weapon-type</property>
+        <value>2</value>
+        </equals>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>cpg-light.002</object-name>
+      <condition>
+        <greater-than>
+         <property>/controls/armament/weapon-type</property>
+         <value>2</value>
+        </greater-than>
+        <less-than>
+         <property>/controls/armament/weapon-type</property>
+         <value>7</value>
+        </less-than>
+        <property>/tracking/tgt-designated</property>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+    </animation>
 
   <!-- AI -->
   <model>

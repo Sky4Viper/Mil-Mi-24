@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel-bus.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>bus-fuse-base</object-name>
+    <object-name>bus-fuse.001</object-name>
+    <object-name>bus-switch.001</object-name>
+    <object-name>bus-switch.002</object-name>
+    <object-name>bus-switch-lever.001</object-name>
+    <object-name>bus-switch-lever.002</object-name>
+    <object-name>bus-text.001</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+     <object-name>bus-fuse-base</object-name>
+     <object-name>bus-fuse.001</object-name>
+     <object-name>bus-switch.001</object-name>
+     <object-name>bus-switch.002</object-name>
+     <object-name>bus-switch-lever.001</object-name>
+     <object-name>bus-switch-lever.002</object-name>
+     <object-name>bus-text.001</object-name>
+	</animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>bus-fuse.001</object-name>
+    <object-name>bus-switch.001</object-name>
+    <object-name>bus-switch.002</object-name>
+    <object-name>bus-switch-lever.001</object-name>
+    <object-name>bus-switch-lever.002</object-name>
+    <object-name>bus-text.001</object-name>
+      <emission>
+        <red>0.1</red>
+        <green>0.1</green>
+        <blue>0.1</blue>
+        <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      </emission>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+  </animation>
+
+</PropertyList>
