@@ -26,6 +26,10 @@
     <object-name>panel-hood.002</object-name>
     <object-name>planchet</object-name>
     <object-name>rotorbreak-lever</object-name>
+    <object-name>engine-lever.001</object-name>
+    <object-name>collective-stick.001</object-name>
+    <object-name>console.001</object-name>
+    <object-name>console.002</object-name>
 
     <!-- Objets transparents ALS -->
     <object-name>intvitres</object-name>
@@ -263,6 +267,48 @@
       <y2-m>  0.822 </y2-m>
       <z2-m> -1.770 </z2-m>
     </axis>
+  </animation>
+
+  <!-- Collective -->
+
+  <animation>
+   <type>rotate</type>
+   <object-name>collective-stick.001</object-name>
+   <property>/controls/engines/engine/throttle</property>
+   <offset-deg>15</offset-deg>
+   <factor>-20</factor>
+   <center>
+    <x-m>-5.21597</x-m>
+    <y-m>-0.443104</y-m>
+    <z-m>-1.5363</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <!-- Engine levers -->
+
+  <animation>
+   <type>rotate</type>
+   <object-name>engine-lever.001</object-name>
+   <property>sim/model/mi24/engine</property>
+   <interpolation>
+      <entry><ind>  0.00 </ind><dep> 0 </dep></entry>
+      <entry><ind>  1.03 </ind><dep> 65 </dep></entry>
+  </interpolation>
+   <center>
+    <x-m>-4.88769</x-m>
+    <y-m>-0.445449</y-m>
+    <z-m>-1.48379 m</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+   </axis>
   </animation>
 
 </PropertyList>
