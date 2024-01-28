@@ -94,6 +94,17 @@
   </model>
 
   <model>
+    <path>Panel/Instruments/autopilot/autopilot.xml</path>
+    <offsets>
+      <x-m> -5.95009 </x-m>
+      <y-m> -0.464241 </y-m>
+      <z-m> -1.37532 </z-m>
+      <pitch-deg> -11.1826 </pitch-deg>
+      <heading-deg> 19.6347 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
     <path>Panel/Instruments/fan/all-fans.xml</path>
   </model>
 

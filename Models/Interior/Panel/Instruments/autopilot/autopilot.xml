@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>autopilot.ac</path>
+
+  <animation>
+    <object-name>autopilot-base</object-name>
+    <object-name>autopilot-face.001</object-name>
+    <object-name>autopilot-trim-knob.001</object-name>
+    <object-name>autopilot-trim-knob.002</object-name>
+    <object-name>autopilot-trim-knob.003</object-name>
+    <object-name>autopilot-trim-knob.004</object-name>
+    <object-name>autopilot-trim-knob.005</object-name>
+    <object-name>autopilot-trim-knob.006</object-name>
+
+    <object-name>autopilot-light-on.001</object-name>
+    <object-name>autopilot-light-on.002</object-name>
+    <object-name>autopilot-light-on.003</object-name>
+    <object-name>autopilot-light-on.004</object-name>
+    <object-name>autopilot-light-on.005</object-name>
+    <object-name>autopilot-light-on.006</object-name>
+    <object-name>autopilot-light-on.007</object-name>
+    <object-name>autopilot-light-on.008</object-name>
+    <object-name>autopilot-light-on.009</object-name>
+    <object-name>autopilot-light-on.010</object-name>
+    <object-name>autopilot-light-on.011</object-name>
+    <object-name>autopilot-light-on.012</object-name>
+    <object-name>autopilot-light-on.013</object-name>
+    <object-name>autopilot-light-on.014</object-name>
+
+    <object-name>autopilot-btn.001</object-name>
+    <object-name>autopilot-btn.002</object-name>
+    <object-name>autopilot-btn.003</object-name>
+    <object-name>autopilot-btn.004</object-name>
+    <object-name>autopilot-btn.005</object-name>
+    <object-name>autopilot-btn.006</object-name>
+    <object-name>autopilot-btn.007</object-name>
+    <object-name>autopilot-btn.008</object-name>
+    <object-name>autopilot-btn.009</object-name>
+    <object-name>autopilot-btn.010</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>autopilot-base</object-name>
+    <object-name>autopilot-face.001</object-name>
+    <object-name>autopilot-trim-knob.001</object-name>
+    <object-name>autopilot-trim-knob.002</object-name>
+    <object-name>autopilot-trim-knob.003</object-name>
+    <object-name>autopilot-trim-knob.004</object-name>
+    <object-name>autopilot-trim-knob.005</object-name>
+    <object-name>autopilot-trim-knob.006</object-name>
+
+    <object-name>autopilot-light-on.001</object-name>
+    <object-name>autopilot-light-on.002</object-name>
+    <object-name>autopilot-light-on.003</object-name>
+    <object-name>autopilot-light-on.004</object-name>
+    <object-name>autopilot-light-on.005</object-name>
+    <object-name>autopilot-light-on.006</object-name>
+    <object-name>autopilot-light-on.007</object-name>
+    <object-name>autopilot-light-on.008</object-name>
+    <object-name>autopilot-light-on.009</object-name>
+    <object-name>autopilot-light-on.010</object-name>
+    <object-name>autopilot-light-on.011</object-name>
+    <object-name>autopilot-light-on.012</object-name>
+    <object-name>autopilot-light-on.013</object-name>
+    <object-name>autopilot-light-on.014</object-name>
+
+    <object-name>autopilot-btn.001</object-name>
+    <object-name>autopilot-btn.002</object-name>
+    <object-name>autopilot-btn.003</object-name>
+    <object-name>autopilot-btn.004</object-name>
+    <object-name>autopilot-btn.005</object-name>
+    <object-name>autopilot-btn.006</object-name>
+    <object-name>autopilot-btn.007</object-name>
+    <object-name>autopilot-btn.008</object-name>
+    <object-name>autopilot-btn.009</object-name>
+    <object-name>autopilot-btn.010</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>autopilot-base</object-name>
+    <object-name>autopilot-trim-knob.001</object-name>
+    <object-name>autopilot-trim-knob.002</object-name>
+    <object-name>autopilot-trim-knob.003</object-name>
+    <object-name>autopilot-trim-knob.004</object-name>
+    <object-name>autopilot-trim-knob.005</object-name>
+    <object-name>autopilot-trim-knob.006</object-name>
+    <object-name>autopilot-btn.001</object-name>
+    <object-name>autopilot-btn.002</object-name>
+    <object-name>autopilot-btn.003</object-name>
+    <object-name>autopilot-btn.004</object-name>
+    <object-name>autopilot-btn.005</object-name>
+    <object-name>autopilot-btn.006</object-name>
+    <object-name>autopilot-btn.007</object-name>
+    <object-name>autopilot-btn.008</object-name>
+    <object-name>autopilot-btn.009</object-name>
+    <object-name>autopilot-btn.010</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   0.1 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>autopilot-face.001</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   0.9 </red>
+      <green> 0.8 </green>
+      <blue>  0.8 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>autopilot-light-on.001</object-name>
+    <object-name>autopilot-light-on.003</object-name>
+    <object-name>autopilot-light-on.006</object-name>
+    <object-name>autopilot-light-on.007</object-name>
+    <object-name>autopilot-light-on.008</object-name>
+    <object-name>autopilot-light-on.009</object-name>
+    <object-name>autopilot-light-on.013</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 1.6 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>autopilot-light-on.002</object-name>
+    <object-name>autopilot-light-on.004</object-name>
+    <object-name>autopilot-light-on.005</object-name>
+    <object-name>autopilot-light-on.010</object-name>
+    <object-name>autopilot-light-on.011</object-name>
+    <object-name>autopilot-light-on.012</object-name>
+    <object-name>autopilot-light-on.014</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <red>   1.6 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.001</object-name>
+    <name>HOVER-ON</name>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/heading</property>
+        <value type="string">true-heading-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.003</object-name>
+    <name>ROUTE-ON</name>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/heading</property>
+        <value type="string">nav1-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.005</object-name>
+    <name>R-ALT-OFF</name>
+    <condition>
+      <not-equals>
+        <property>/autopilot/locks/altitude</property>
+        <value type="string">agl-hold</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.006</object-name>
+    <name>R-ALT-ON</name>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value type="string">agl-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.007</object-name>
+    <name>HDG-ON</name>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/heading</property>
+        <value type="string">dg-heading-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.010</object-name>
+    <name>HDG-OFF</name>
+    <condition>
+      <not-equals>
+        <property>/autopilot/locks/heading</property>
+        <value type="string">dg-heading-hold</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.012</object-name>
+    <name>ALT-OFF</name>
+    <condition>
+      <not-equals>
+        <property>/autopilot/locks/altitude</property>
+        <value type="string">altitude-hold</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.009</object-name>
+    <name>ALT-ON</name>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value type="string">altitude-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.008</object-name>
+    <name>WING-ON</name>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/heading</property>
+        <value type="string">wing-leveler</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.011</object-name>
+    <name>WING-OFF</name>
+    <condition>
+      <not-equals>
+        <property>/autopilot/locks/heading</property>
+        <value type="string">wing-leveler</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.014</object-name>
+    <name>PITCH-OFF</name>
+    <condition>
+      <not-equals>
+        <property>/autopilot/locks/altitude</property>
+        <value type="string">pitch-hold</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.013</object-name>
+    <name>PITCH-ON</name>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value type="string">pitch-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+</PropertyList>
