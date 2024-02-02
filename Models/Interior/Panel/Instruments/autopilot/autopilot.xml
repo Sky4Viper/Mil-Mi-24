@@ -39,6 +39,10 @@
     <object-name>autopilot-btn.008</object-name>
     <object-name>autopilot-btn.009</object-name>
     <object-name>autopilot-btn.010</object-name>
+    <object-name>autopilot-btn.011</object-name>
+    <object-name>autopilot-btn.012</object-name>
+    <object-name>autopilot-btn.013</object-name>
+    <object-name>autopilot-btn.014</object-name>
   </animation>
 
   <animation>
@@ -77,6 +81,10 @@
     <object-name>autopilot-btn.008</object-name>
     <object-name>autopilot-btn.009</object-name>
     <object-name>autopilot-btn.010</object-name>
+    <object-name>autopilot-btn.011</object-name>
+    <object-name>autopilot-btn.012</object-name>
+    <object-name>autopilot-btn.013</object-name>
+    <object-name>autopilot-btn.014</object-name>
   </animation>
 
   <animation>
@@ -98,6 +106,10 @@
     <object-name>autopilot-btn.008</object-name>
     <object-name>autopilot-btn.009</object-name>
     <object-name>autopilot-btn.010</object-name>
+    <object-name>autopilot-btn.011</object-name>
+    <object-name>autopilot-btn.012</object-name>
+    <object-name>autopilot-btn.013</object-name>
+    <object-name>autopilot-btn.014</object-name>
     <condition>
       <property>controls/electric/battery-switch</property>
     </condition>
@@ -162,6 +174,141 @@
   </animation>
 
   <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.002</object-name>
+    <object-name>autopilot-light-on.002</object-name>
+    <property>sim/model/mi24/autopilot/button3</property>
+    <factor>0.008</factor>
+    <offset-m>-0.008</offset-m>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.003</object-name>
+    <object-name>autopilot-light-on.003</object-name>
+    <property>sim/model/mi24/autopilot/button3</property>
+    <factor>-0.008</factor>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.005</object-name>
+    <object-name>autopilot-light-on.005</object-name>
+    <property>sim/model/mi24/autopilot/button5</property>
+    <factor>0.008</factor>
+    <offset-m>-0.008</offset-m>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.006</object-name>
+    <object-name>autopilot-light-on.006</object-name>
+    <property>sim/model/mi24/autopilot/button5</property>
+    <factor>-0.008</factor>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.007</object-name>
+    <object-name>autopilot-light-on.007</object-name>
+    <property>sim/model/mi24/autopilot/button7</property>
+    <factor>-0.008</factor>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.010</object-name>
+    <object-name>autopilot-light-on.010</object-name>
+    <property>sim/model/mi24/autopilot/button7</property>
+    <factor>0.008</factor>
+    <offset-m>-0.008</offset-m>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.008</object-name>
+    <object-name>autopilot-light-on.008</object-name>
+    <property>sim/model/mi24/autopilot/button8</property>
+    <factor>-0.008</factor>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.011</object-name>
+    <object-name>autopilot-light-on.011</object-name>
+    <property>sim/model/mi24/autopilot/button8</property>
+    <factor>0.008</factor>
+    <offset-m>-0.008</offset-m>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.009</object-name>
+    <object-name>autopilot-light-on.009</object-name>
+    <property>sim/model/mi24/autopilot/button9</property>
+    <factor>-0.008</factor>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>autopilot-btn.012</object-name>
+    <object-name>autopilot-light-on.012</object-name>
+    <property>sim/model/mi24/autopilot/button9</property>
+    <factor>0.008</factor>
+    <offset-m>-0.008</offset-m>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>select</type>
     <object-name>autopilot-light-on.001</object-name>
     <name>HOVER-ON</name>
@@ -170,6 +317,29 @@
         <property>/autopilot/locks/heading</property>
         <value type="string">true-heading-hold</value>
       </equals>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.002</object-name>
+    <name>ROUTE-OFF</name>
+    <condition>
+      <not-equals>
+        <property>/autopilot/locks/heading</property>
+        <value type="string">nav1-hold</value>
+      </not-equals>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>autopilot-light-on.004</object-name>
+    <name>TEST-OFF</name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -182,6 +352,7 @@
         <property>/autopilot/locks/heading</property>
         <value type="string">nav1-hold</value>
       </equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -194,6 +365,7 @@
         <property>/autopilot/locks/altitude</property>
         <value type="string">agl-hold</value>
       </not-equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -206,6 +378,7 @@
         <property>/autopilot/locks/altitude</property>
         <value type="string">agl-hold</value>
       </equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -218,6 +391,7 @@
         <property>/autopilot/locks/heading</property>
         <value type="string">dg-heading-hold</value>
       </equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -230,6 +404,7 @@
         <property>/autopilot/locks/heading</property>
         <value type="string">dg-heading-hold</value>
       </not-equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -242,6 +417,7 @@
         <property>/autopilot/locks/altitude</property>
         <value type="string">altitude-hold</value>
       </not-equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -254,6 +430,7 @@
         <property>/autopilot/locks/altitude</property>
         <value type="string">altitude-hold</value>
       </equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -266,6 +443,7 @@
         <property>/autopilot/locks/heading</property>
         <value type="string">wing-leveler</value>
       </equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -278,6 +456,7 @@
         <property>/autopilot/locks/heading</property>
         <value type="string">wing-leveler</value>
       </not-equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -290,6 +469,7 @@
         <property>/autopilot/locks/altitude</property>
         <value type="string">pitch-hold</value>
       </not-equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
 
@@ -302,7 +482,351 @@
         <property>/autopilot/locks/altitude</property>
         <value type="string">pitch-hold</value>
       </equals>
+      <property>controls/electric/battery-switch</property>
     </condition>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.002</object-name>
+    <action>
+      <name>NAV1 Button</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/heading</property>
+          <value type="string"> </value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button3</property>
+          <value>0</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-nav-on</tooltip-id>
+         <label>NAV1 Hold OFF</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.003</object-name>
+    <action>
+      <name>NAV1 Button</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/heading</property>
+          <value type="string">nav1-hold</value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button3</property>
+          <value>1</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-nav-on</tooltip-id>
+         <label>NAV1 Hold ON</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.005</object-name>
+    <action>
+      <name>ALT Button OFF</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/altitude</property>
+          <value type="string"> </value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button5</property>
+          <value>0</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-agl-off</tooltip-id>
+         <label>AGL Hold OFF</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.006</object-name>
+    <action>
+      <name>ALT Button ON</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/altitude</property>
+          <value type="string">agl-hold</value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button5</property>
+          <value>1</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-agl-on</tooltip-id>
+         <label>AGL Hold ON</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.010</object-name>
+    <action>
+      <name>HEAD Button OFF</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/heading</property>
+          <value type="string"> </value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button7</property>
+          <value>0</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-hdg-off</tooltip-id>
+         <label>Heading Hold OFF</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.007</object-name>
+    <action>
+      <name>HEAD Button ON</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/heading</property>
+          <value type="string">dg-heading-hold</value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button7</property>
+          <value>1</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-hdg-on</tooltip-id>
+         <label>Heading Hold ON</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.011</object-name>
+    <action>
+      <name>WING Button OFF</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/heading</property>
+          <value type="string"> </value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button8</property>
+          <value>0</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-hdg-off</tooltip-id>
+         <label>Wing Level OFF</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.008</object-name>
+    <action>
+      <name>WING Button ON</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/heading</property>
+          <value type="string">wing-leveler</value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button8</property>
+          <value>1</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-hdg-on</tooltip-id>
+         <label>Wing Level ON</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.012</object-name>
+    <action>
+      <name>AGL Button OFF</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/altitude</property>
+          <value type="string"> </value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button9</property>
+          <value>0</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-alt-off</tooltip-id>
+         <label>Altitude Hold OFF</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>autopilot-btn.009</object-name>
+    <action>
+      <name>AGL Button ON</name>
+      <button>0</button>
+      <binding>
+          <command>property-assign</command>
+          <property>/autopilot/locks/altitude</property>
+          <value type="string">altitude-hold</value>
+      </binding>
+      <binding>
+          <command>property-assign</command>
+          <property>sim/model/mi24/autopilot/button9</property>
+          <value>1</value>
+      </binding>
+      <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+    <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-autopilot-alt-on</tooltip-id>
+         <label>Altitude Hold ON</label>
+       </binding>
+    </hovered>
+  </animation>
+
+  <!-- autopilot/settings/target-agl-ft -->
+
+  <animation>
+    <type>knob</type>
+    <object-name>autopilot-trim-knob.006</object-name>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>autopilot/settings/target-agl-ft</property>
+        <step>20.0</step>
+        <min>0</min>
+        <max>1000</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <property>autopilot/settings/target-agl-ft</property>
+        <step>-20.0</step>
+        <min>0</min>
+        <max>1000</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("dial")</script>
+      </binding>
+    </decrease>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>adf2-kHz</tooltip-id>
+          <label>Adjust AGL Hold by 20ft: %4.0f</label>
+          <property>autopilot/settings/target-agl-ft</property>
+      </binding>
+    </hovered>
   </animation>
 
 </PropertyList>
