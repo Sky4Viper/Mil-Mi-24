@@ -66,16 +66,221 @@
 
   <animation>
     <type>select</type>
-    <object-name>cp1-lamp-on.001</object-name>
-    <object-name>cp1-lamp-on.002</object-name>
     <object-name>cp1-lamp-on.003</object-name>
-    <object-name>cp1-lamp-on.004</object-name>
-    <object-name>cp1-lamp-on.005</object-name>
-    <object-name>cp1-lamp-on.006</object-name>
     <condition>
       <property>/controls/armament/master-arm</property>
       <property>controls/electric/battery-switch</property>
     </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cp1-lamp-on.001</object-name>
+    <condition>
+      <property>controls/electric/test/9m120</property>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cp1-lamp-on.002</object-name>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <property>controls/electric/battery-switch</property>
+      <not><property>controls/electric/gunsight-auto</property></not>
+      <greater-than>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cp1-lamp-on.004</object-name>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <property>controls/electric/battery-switch</property>
+      <property>controls/electric/gunsight-auto</property>
+      <property>/tracking/tgt-designated</property>
+      <greater-than>
+       <property>controls/armament/weapon-type</property>
+       <value>2</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cp1-lamp-on.005</object-name>
+    <condition>
+      <property>/controls/armament/master-arm</property>
+      <property>controls/electric/battery-switch</property>
+      <property>controls/electric/gunsight-auto</property>
+      <or>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>3</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[0]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>4</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[1]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>5</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[2]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>6</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[3]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cp1-lamp-on.006</object-name>
+    <condition>
+     <and>
+      <property>/controls/armament/master-arm</property>
+      <property>controls/electric/gunsight-auto</property>
+      <property>/controls/armament/ataka-inrange</property>
+      <property>/tracking/tgt-designated</property>
+      <or>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>3</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[0]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>4</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[1]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>5</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[2]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+       <and>
+        <equals>
+         <property>controls/armament/weapon-type</property>
+         <value>6</value>
+        </equals>
+        <equals>
+         <property>controls/armament/station[3]/release-stick</property>
+         <value>0</value>
+        </equals>
+       </and>
+      </or>
+     </and>
+    </condition>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>cp1-knob.001</object-name>
+      <property>controls/armament/weapon-type</property>
+      <interpolation>
+        <entry><ind> 0</ind><dep>-111 </dep></entry>
+			  <entry><ind> 1</ind><dep>-111 </dep></entry>
+			  <entry><ind> 2</ind><dep>-111 </dep></entry>
+			  <entry><ind> 3</ind><dep>-90  </dep></entry>
+			  <entry><ind> 4</ind><dep> 113 </dep></entry>
+        <entry><ind> 5</ind><dep>-56  </dep></entry>
+        <entry><ind> 6</ind><dep> 90  </dep></entry>
+		  </interpolation>
+    <center>
+      <x-m>0.0424</x-m>
+	    <y-m>-0.009429</y-m>
+	    <z-m>-0.008416</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>cp1-knob.001</object-name>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/armament/weapon-type</property>
+        <step>1.0</step>
+        <min>3</min>
+        <max>6</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/armament/weapon-type</property>
+        <step>-1.0</step>
+        <min>3</min>
+        <max>6</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </decrease>
+    <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>ataka-sel</tooltip-id>
+          <label>9M120 Ataka Station Select</label>
+      </binding>
+    </hovered>
   </animation>
 
 </PropertyList>
