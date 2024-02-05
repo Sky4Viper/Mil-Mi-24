@@ -10,8 +10,19 @@
     <object-name>bus-fuse.001</object-name>
     <object-name>bus-switch.001</object-name>
     <object-name>bus-switch.002</object-name>
+    <object-name>bus-switch.003</object-name>
+    <object-name>bus-switch.004</object-name>
+    <object-name>bus-switch.005</object-name>
+    <object-name>bus-switch.006</object-name>
+    <object-name>bus-switch.007</object-name>
+    <object-name>bus-switch.008</object-name>
+    <object-name>bus-switch.009</object-name>
     <object-name>bus-switch-lever.001</object-name>
     <object-name>bus-switch-lever.002</object-name>
+    <object-name>bus-switch-lever.003</object-name>
+    <object-name>bus-switch-lever.004</object-name>
+    <object-name>bus-switch-lever.005</object-name>
+    <object-name>bus-switch-lever.006</object-name>
     <object-name>bus-text.001</object-name>
   </animation>
 
@@ -21,8 +32,19 @@
      <object-name>bus-fuse.001</object-name>
      <object-name>bus-switch.001</object-name>
      <object-name>bus-switch.002</object-name>
+     <object-name>bus-switch.003</object-name>
+     <object-name>bus-switch.004</object-name>
+     <object-name>bus-switch.005</object-name>
+     <object-name>bus-switch.006</object-name>
+     <object-name>bus-switch.007</object-name>
+     <object-name>bus-switch.008</object-name>
+     <object-name>bus-switch.009</object-name>
      <object-name>bus-switch-lever.001</object-name>
      <object-name>bus-switch-lever.002</object-name>
+     <object-name>bus-switch-lever.003</object-name>
+     <object-name>bus-switch-lever.004</object-name>
+     <object-name>bus-switch-lever.005</object-name>
+     <object-name>bus-switch-lever.006</object-name>
      <object-name>bus-text.001</object-name>
 	</animation>
 
@@ -31,8 +53,19 @@
     <object-name>bus-fuse.001</object-name>
     <object-name>bus-switch.001</object-name>
     <object-name>bus-switch.002</object-name>
+    <object-name>bus-switch.003</object-name>
+    <object-name>bus-switch.004</object-name>
+    <object-name>bus-switch.005</object-name>
+    <object-name>bus-switch.006</object-name>
+    <object-name>bus-switch.007</object-name>
+    <object-name>bus-switch.008</object-name>
+    <object-name>bus-switch.009</object-name>
     <object-name>bus-switch-lever.001</object-name>
     <object-name>bus-switch-lever.002</object-name>
+    <object-name>bus-switch-lever.003</object-name>
+    <object-name>bus-switch-lever.004</object-name>
+    <object-name>bus-switch-lever.005</object-name>
+    <object-name>bus-switch-lever.006</object-name>
     <object-name>bus-text.001</object-name>
       <emission>
         <red>0.1</red>
@@ -43,6 +76,330 @@
       <condition>
         <property>controls/electric/battery-switch</property>
       </condition>
+  </animation>
+
+  <animation>
+   <type>rotate</type>
+    <object-name>bus-switch-lever.001</object-name>
+    <property>controls/electric/bus1-lever</property>
+    <factor>20</factor>
+      <center>
+        <x-m>-0.023616</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.099302</z-m>
+      </center>
+    	<axis>
+      		<x>0</x>
+      		<y>1</y>
+      		<z>0</z>
+    	</axis>
+  </animation>
+
+  <animation>
+   <type>rotate</type>
+    <object-name>bus-switch-lever.003</object-name>
+    <property>controls/electric/bus1-lever</property>
+    <factor>20</factor>
+      <center>
+        <x-m>-0.023616</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.163243</z-m>
+      </center>
+    	<axis>
+      		<x>0</x>
+      		<y>1</y>
+      		<z>0</z>
+    	</axis>
+  </animation>
+
+  <animation>
+   <type>rotate</type>
+    <object-name>bus-switch-lever.004</object-name>
+    <property>controls/electric/bus2-lever</property>
+    <factor>20</factor>
+      <center>
+        <x-m>-0.023616</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.147224</z-m>
+      </center>
+    	<axis>
+      		<x>0</x>
+      		<y>1</y>
+      		<z>0</z>
+    	</axis>
+  </animation>
+
+  <animation>
+   <type>rotate</type>
+    <object-name>bus-switch-lever.006</object-name>
+    <property>controls/electric/bus2-lever</property>
+    <factor>20</factor>
+      <center>
+        <x-m>-0.023616</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.15872</z-m>
+      </center>
+    	<axis>
+      		<x>0</x>
+      		<y>1</y>
+      		<z>0</z>
+    	</axis>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+    <object-name>bus-switch-lever.001</object-name>
+    <object-name>bus-switch-lever.002</object-name>
+    <object-name>bus-switch-lever.003</object-name>
+    <property>controls/electric/bus1-lever</property>
+    <factor>0.014</factor>
+    	<axis>
+      		<x>0</x>
+      		<y>0</y>
+      		<z>1</z>
+    	</axis>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+    <object-name>bus-switch-lever.004</object-name>
+    <object-name>bus-switch-lever.005</object-name>
+    <object-name>bus-switch-lever.006</object-name>
+    <property>controls/electric/bus2-lever</property>
+    <factor>0.014</factor>
+    	<axis>
+      		<x>0</x>
+      		<y>0</y>
+      		<z>1</z>
+    	</axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.001</object-name>
+      <property>controls/electric/bus1</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.055687</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.002</object-name>
+      <property>controls/electric/bus1</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.125517</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.003</object-name>
+      <property>controls/electric/bus1</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.195347</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.004</object-name>
+      <property>controls/electric/bus2</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.196303</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.005</object-name>
+      <property>controls/electric/bus2</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.119064</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.006</object-name>
+      <property>controls/electric/bus2</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.041833</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.007</object-name>
+      <property>controls/electric/bus2</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.035397</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.008</object-name>
+      <property>controls/electric/bus2</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.112637</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>bus-switch.009</object-name>
+      <property>controls/electric/bus2</property>
+      <offset-deg>-20</offset-deg>
+      <factor>40</factor>
+      <center>
+        <x-m>0.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.189867</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+    <object-name>bus-switch-lever.001</object-name>
+    <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+      <command>property-assign</command>
+      <property>controls/electric/bus1</property>
+      <value>1</value>
+     </binding>
+     <binding>
+      <command>property-toggle</command>
+      <property>controls/electric/bus1-lever</property>
+     </binding>
+     <binding>
+      <command>nasal</command>
+      <script>switchclicksound.click("switch3")</script>
+     </binding>
+     <mod-up>
+      <binding>
+       <command>property-toggle</command>
+       <property>controls/electric/bus1-lever</property>
+      </binding>
+      <binding>
+       <command>nasal</command>
+       <script>switchclicksound.click("switch3")</script>
+      </binding>
+     </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+    <object-name>bus-switch-lever.004</object-name>
+    <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+      <command>property-assign</command>
+      <property>controls/electric/bus2</property>
+      <value>1</value>
+     </binding>
+     <binding>
+      <command>property-toggle</command>
+      <property>controls/electric/bus2-lever</property>
+     </binding>
+     <binding>
+      <command>nasal</command>
+      <script>switchclicksound.click("switch3")</script>
+     </binding>
+     <mod-up>
+      <binding>
+       <command>property-toggle</command>
+       <property>controls/electric/bus2-lever</property>
+      </binding>
+      <binding>
+       <command>nasal</command>
+       <script>switchclicksound.click("switch3")</script>
+      </binding>
+     </mod-up>
+    </action>
   </animation>
 
 </PropertyList>

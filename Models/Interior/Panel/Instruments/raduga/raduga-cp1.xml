@@ -77,7 +77,7 @@
     <type>select</type>
     <object-name>cp1-lamp-on.001</object-name>
     <condition>
-      <property>controls/electric/test/9m120</property>
+      <property>controls/electric/test/ataka</property>
       <property>controls/electric/battery-switch</property>
     </condition>
   </animation>
