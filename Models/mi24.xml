@@ -54,6 +54,9 @@
     <object-name>IR-cooler-tube</object-name>
     <object-name>gsh30</object-name>
 
+    <object-name>raduga-door-left</object-name>
+    <object-name>raduga-door-right</object-name>
+
     <object-name>trous</object-name>
     <object-name>cachesentrees</object-name>
     <object-name>entreecentrale</object-name>
@@ -125,6 +128,9 @@
     <object-name>IR-cooler-tube</object-name>
     <object-name>gsh30</object-name>
 
+    <object-name>raduga-door-left</object-name>
+    <object-name>raduga-door-right</object-name>
+
     <object-name>trous</object-name>
     <object-name>cachesentrees</object-name>
     <object-name>entreecentrale</object-name>
@@ -194,6 +200,8 @@
     <object-name>IR-cooler-housing</object-name>
     <object-name>IR-cooler-tube</object-name>
     <object-name>gsh30</object-name>
+    <object-name>raduga-door-left</object-name>
+    <object-name>raduga-door-right</object-name>
   </effect>
 
   <!-- working for Compositor -->
@@ -790,6 +798,48 @@
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Raduga Doors -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>raduga-door-left</object-name>
+    <property>sim/view[101]/enabled</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 39 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -7.15344 </x-m>
+      <y-m>  0.273322 </y-m>
+      <z-m> -2.38004 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>raduga-door-right</object-name>
+    <property>sim/view[101]/enabled</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -39 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -7.15344 </x-m>
+      <y-m>  0.497401 </y-m>
+      <z-m> -2.38004 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 

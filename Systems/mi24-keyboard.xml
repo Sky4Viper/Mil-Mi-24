@@ -18,12 +18,24 @@
               setprop("controls/armament/weapon-type", wep -1);
               if (mod == 1 ) {
               screen.log.write("YakB-12.7 machine gun selected", 0.5, 0.5, 1);
+              setprop("sim/view[101]/enabled", 0);
+              if (getprop("/sim/current-view/view-number-raw") ==101) {
+                setprop("/sim/current-view/view-number-raw", 100);
+              }
               } elsif (mod == 2 ) {
               screen.log.write("GSh-30-2K cannon selected", 0.5, 0.5, 1);
+              setprop("sim/view[101]/enabled", 0);
+              if (getprop("/sim/current-view/view-number-raw") ==101) {
+                setprop("/sim/current-view/view-number-raw", 100);
+              }
               }
             } elsif (wep == 3 ) {
               setprop("controls/armament/weapon-type", wep -1);
               screen.log.write("B8V20 rocket pods selected", 0.5, 0.5, 1);
+              setprop("sim/view[101]/enabled", 0);
+              if (getprop("/sim/current-view/view-number-raw") ==101) {
+                setprop("/sim/current-view/view-number-raw", 100);
+              }
             } elsif (wep >= 4 and wep <= 7) {
               setprop("controls/armament/weapon-type", wep -1);
               screen.log.write("9M120-ATAKA missiles selected", 0.5, 0.5, 1);
@@ -55,6 +67,7 @@
             } elsif (wep >= 2 and wep <= 5) {
               setprop("controls/armament/weapon-type", wep +1);
               screen.log.write("9M120-ATAKA missile selected", 0.5, 0.5, 1);
+              setprop("sim/view[101]/enabled", 1);
             }
           ]]>
         </script>

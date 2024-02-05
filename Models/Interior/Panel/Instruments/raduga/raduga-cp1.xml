@@ -283,4 +283,32 @@
     </hovered>
   </animation>
 
+  <!-- Temp Sight Covers Open/Close (sigh view enable/disable) switch -->
+
+  <animation>
+      <type>pick</type>
+      <object-name>cp1-switch.002</object-name>
+      <action>
+        <button>0</button>
+        <button>1</button>
+        <repeatable>false</repeatable>
+        <interval-sec>0.1</interval-sec>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/view[101]/enabled</property>
+        </binding>
+        <binding>
+         <command>nasal</command>
+         <script>switchclicksound.click("switch3")</script>
+        </binding>
+      </action>
+      <hovered>
+       <binding>
+        <command>set-tooltip</command>
+         <tooltip-id>switch-raduga-view</tooltip-id>
+         <label>Open Sight Doors</label>
+       </binding>
+      </hovered>
+  </animation>
+
 </PropertyList>

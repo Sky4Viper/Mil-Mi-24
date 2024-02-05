@@ -35,18 +35,32 @@
   </view>
 
   <view n="101">
-    <name>Tail Camera View</name>
+    <name>Raduga-Sh Sight View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
-      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <x-offset-m archive="y">  0.000 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y">  1.801 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y"> 10.637 </z-offset-m> <!--Back-->
-      <pitch-offset-deg type="double">-5</pitch-offset-deg>
-      <default-field-of-view-deg type="double">30</default-field-of-view-deg>
+      <ground-level-nearplane-m type="double">0.1f</ground-level-nearplane-m>
+      <x-offset-m archive="y">  0.38553 </x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -2.37907 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -7.3 </z-offset-m> <!--back-->
+      <pitch-offset-deg type="double">-10</pitch-offset-deg>
+      <default-field-of-view-deg type="double">100</default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+      <limits>
+        <left>
+          <heading-max-deg archive="y">-30</heading-max-deg>
+          <x-offset-threshold-deg>0</x-offset-threshold-deg>
+          <x-offset-max-m>0</x-offset-max-m>
+        </left>
+        <right>
+          <heading-max-deg archive="y">30</heading-max-deg>
+          <x-offset-threshold-deg>0</x-offset-threshold-deg>
+          <x-offset-max-m>0</x-offset-max-m>
+        </right>
+        <enabled>1</enabled>
+      </limits>
     </config>
   </view>
 

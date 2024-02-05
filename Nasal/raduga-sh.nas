@@ -87,12 +87,12 @@ var RangeSet = maketimer (0.2, func() {
     setprop("/controls/armament/larange", LArange);
     #screen.log.write("LA Range 2500", 1, 0.6, 0.1);
     var turret_lock = getprop("controls/electric/gunsight-sync");
-      if (!turret_lock or (getprop("/sim/current-view/view-number-raw") == 100)){
+      if (!turret_lock or (getprop("/sim/current-view/view-number-raw") >= 100)){
          RangeTest.stop();
          RangeTest9m120.start();
          #screen.log.write("Turret Auto Tracking", 1, 0.6, 0.1);
       }
-      elsif (turret_lock and (getprop("/sim/current-view/view-number-raw") != 100)){
+      elsif (turret_lock and ((getprop("/sim/current-view/view-number-raw") != 100) or (getprop("/sim/current-view/view-number-raw") != 101))){
          RangeTest9m120.stop();
          setprop("/sim/model/turret[0]/heading", 0.1);
          setprop("/sim/model/turret[0]/pitch", 1.0);
@@ -232,12 +232,12 @@ var RangeTest9m120 = maketimer (0.01, func() {
       setprop("/controls/armament/ataka_heading_offset", ataka_hdg);
       #screen.log.write(ataka_hdg, 1, 0.8, 0.1);
     }
-    if (my_view_number == 100 and gunsight_auto){
+    if ((my_view_number == 100 or my_view_number == 101) and gunsight_auto){
       setprop("/sim/current-view/heading-offset-deg", tgt_sensor_hdg);
       setprop("/sim/current-view/pitch-offset-deg", -tgt_sensor_pitch);
       #setprop("/controls/armament/ataka-index", 180.0);
       #screen.log.write("View lock", 1, 0.6, 0.1);
-    } elsif (my_view_number != 100 and gunsight_auto and selected_wpn ==1 and mi24type ==1){
+    } elsif ((my_view_number != 100 or my_view_number != 101) and gunsight_auto and selected_wpn ==1 and mi24type ==1){
 
       setprop("/sim/model/turret[0]/heading", -tgt_sensor_hdg);
       setprop("/sim/model/turret[0]/pitch", -tgt_sensor_pitch);
